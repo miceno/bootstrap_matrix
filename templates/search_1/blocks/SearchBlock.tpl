@@ -18,14 +18,14 @@
       {g->hiddenFormVars}
       <input type="hidden" name="{g->formVar var="view"}" value="search.SearchScan"/>
       <input type="hidden" name="{g->formVar var="form[formName]"}" value="search_SearchBlock"/>
-      <div class="search-form-group {* has-feedback *}">
+      <div class="search-form-group has-feedback">
             <label for="search" class="sr-only">{g->text text="Search"}</label>            
             <input type="text" id="searchCriteria" size="18"
       	     name="{g->formVar var="form[searchCriteria]"}"
       	     value="{g->text text="Search the Gallery"}"
       	     placeholder="{g->text text="Search the Gallery"}"
-      	     {* onfocus="search_SearchBlock_focus()"
-      	     onblur="search_SearchBlock_blur()" *}
+      	     onfocus="search_SearchBlock_focus()"
+      	     onblur="search_SearchBlock_blur()"
       	     class="form-control textbox"/>
         
             <span class="glyphicon glyphicon-search form-control-feedback"></span>
