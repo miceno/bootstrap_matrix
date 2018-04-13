@@ -14,13 +14,10 @@
 {/g->addToTrailer}
 
 <!-- <div class="{$class}"> -->
-  <form id="search_SearchBlock" class="container navbar-form navbar-left search-form" action="{g->url}" method="get" onsubmit="return search_SearchBlock_checkForm()">
-    <div class="row">
-      <div class="form-group">
+  <form id="search_SearchBlock" class="navbar-form navbar-left search-form" action="{g->url}" method="get" onsubmit="return search_SearchBlock_checkForm()">
       {g->hiddenFormVars}
       <input type="hidden" name="{g->formVar var="view"}" value="search.SearchScan"/>
       <input type="hidden" name="{g->formVar var="form[formName]"}" value="search_SearchBlock"/>
-      </div>
       <div class="search-form-group has-feedback form-group">
             <label for="search" class="sr-only">{g->text text="Search"}</label>            
             <input type="text" id="searchCriteria" size="{$inputWidth}"
@@ -33,14 +30,11 @@
         
             <span class="glyphicon glyphicon-search form-control-feedback"></span>
       </div>
-      <input type="hidden" name="{g->formVar var="form[useDefaultSettings]"}" value="1" />
-    </div>
+      <input class="hidden" type="hidden" name="{g->formVar var="form[useDefaultSettings]"}" value="1" />
     {if $showAdvancedLink}
-    <div class="row">
       <a href="{g->url arg1="view=search.SearchScan" arg2="form[useDefaultSettings]=1"
 		       arg3="return=1"}"
 	 class="advanced">{g->text text="Advanced Search"}</a>
-    </div>
     {/if}
   </form>
 <!-- </div> -->
