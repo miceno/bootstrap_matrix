@@ -3,6 +3,7 @@
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
 {if !isset($showAdvancedLink)} {assign var="showAdvancedLink" value="true"} {/if}
+{if !isset($inputWidth)} {assign var="inputWidth" value="18"} {/if}
 
 {g->addToTrailer}
 <script type="text/javascript">
@@ -22,7 +23,7 @@
       </div>
       <div class="search-form-group has-feedback form-group">
             <label for="search" class="sr-only">{g->text text="Search"}</label>            
-            <input type="text" id="searchCriteria" size="18"
+            <input type="text" id="searchCriteria" size="{$inputWidth}"
       	     name="{g->formVar var="form[searchCriteria]"}"
       	     value="{g->text text="Search your Gallery"}"
       	     placeholder="{g->text text="Search your Gallery"}"
