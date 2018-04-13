@@ -31,7 +31,7 @@
 	</div>
 
 	<div class="collapse navbar-collapse" id="gallery-navbar-collapse-systemlinks">
-                {g->block type=search.SearchBlock showAdvancedLink=false}
+                {g->block type=search.SearchBlock showAdvancedLink=false inputWidth=18}
 		<ul class="nav navbar-nav">
 		{foreach from=$order key=index item=linkId}
 		  {if $index==$othersAt}
