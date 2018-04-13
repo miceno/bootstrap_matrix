@@ -7,7 +7,7 @@
 {g->addToTrailer}
 <script type="text/javascript">
   // <![CDATA[
-  search_SearchBlock_init('{g->text text="Search the Gallery" forJavascript=true}', '{g->text text="Please enter a search term." forJavascript=true}', '{g->text text="Searching in progress, please wait!" forJavascript=true}');
+  search_SearchBlock_init('{g->text text="Search your Gallery" forJavascript=true}', '{g->text text="Please enter a search term." forJavascript=true}', '{g->text text="Searching in progress, please wait!" forJavascript=true}');
   // ]]>
 </script>
 {/g->addToTrailer}
@@ -15,15 +15,17 @@
 <!-- <div class="{$class}"> -->
   <form id="search_SearchBlock" class="container navbar-form navbar-left search-form" action="{g->url}" method="get" onsubmit="return search_SearchBlock_checkForm()">
     <div class="row">
+      <div class="form-group">
       {g->hiddenFormVars}
       <input type="hidden" name="{g->formVar var="view"}" value="search.SearchScan"/>
       <input type="hidden" name="{g->formVar var="form[formName]"}" value="search_SearchBlock"/>
-      <div class="search-form-group has-feedback">
+      </div>
+      <div class="search-form-group has-feedback form-group">
             <label for="search" class="sr-only">{g->text text="Search"}</label>            
             <input type="text" id="searchCriteria" size="18"
       	     name="{g->formVar var="form[searchCriteria]"}"
-      	     value="{g->text text="Search the Gallery"}"
-      	     placeholder="{g->text text="Search the Gallery"}"
+      	     value="{g->text text="Search your Gallery"}"
+      	     placeholder="{g->text text="Search your Gallery"}"
       	     onfocus="search_SearchBlock_focus()"
       	     onblur="search_SearchBlock_blur()"
       	     class="form-control textbox"/>
