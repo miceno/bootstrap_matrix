@@ -11,7 +11,7 @@ p.giDescription + ul {
 	list-style-type: decimal;
 }
 
-#gallery h2, #gallery h3, #gallery h4, #gallery form {
+#gallery h2, #gallery h3, #gallery h4 {
     margin: 0;
     padding: 0;
 }
