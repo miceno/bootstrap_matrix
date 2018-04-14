@@ -2,7 +2,7 @@
  * $Revision: 17650 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
-{if !isset($showAdvancedLink)} {assign var="showAdvancedLink" value="true"} {/if}
+{if !isset($showAdvancedLink)} {assign var="showAdvancedLink" value="false"} {/if}
 {if !isset($inputWidth)} {assign var="inputWidth" value="18"} {/if}
 
 {g->addToTrailer}
@@ -31,12 +31,11 @@
             <span class="glyphicon glyphicon-search form-control-feedback"></span>
       </div>
       <input class="hidden" type="hidden" name="{g->formVar var="form[useDefaultSettings]"}" value="1" />
-    {if $showAdvancedLink}
+<!--    {if $showAdvancedLink}
       <a href="{g->url arg1="view=search.SearchScan" arg2="form[useDefaultSettings]=1"
 		       arg3="return=1"}"
 	 class="advanced">{g->text text="Advanced Search"}</a>
-    {/if}
+    {/if} -->
   </form>
-<!-- </div> -->
 
 

@@ -39,7 +39,7 @@
       {if $theme.useFullScreen}
         {include file="gallery:`$theme.moduleTemplate`" l10Domain=$theme.moduleL10Domain}
       {elseif $theme.pageType == 'progressbar'}
-        <div id="gsHeader" class="row">
+        <div id="gsHeader" class="row-fluid">
           <img src="{g->url href="images/galleryLogo_sm.gif"}" width="107" height="48" alt=""/>
         </div>
         {g->theme include="progressbar.tpl"}
@@ -69,7 +69,7 @@
         {g->theme include="module.tpl"}
       {/if}
 
-      <div id="gsFooter row">
+      <div id="gsFooter row-fluid">
         {g->logoButton type="validation"}
         {g->logoButton type="gallery2"}
         {g->logoButton type="gallery2-version"}
