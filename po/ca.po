@@ -22,7 +22,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Gallery: MobileMatrix Theme 1.1.7\n"
+"Project-Id-Version: Gallery: BootstrapMatrix Theme 1.0.0\n"
 "Report-Msgid-Bugs-To: <gallery-devel@lists.sourceforge.net>\n"
 "POT-Creation-Date: 2005-10-30 16:42+0100\n"
 "PO-Revision-Date: 2006-06-15 15:08+0100\n"
@@ -33,11 +33,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#, fuzzy
-msgid "MobileMatrix"
-msgstr "Matrix"
+msgid "BootstrapMatrix"
+msgstr ""
 
-msgid "Standard Gallery2 look and feel"
+#, fuzzy
+msgid "Bootstrap Gallery2 look and feel"
 msgstr "\"Look and feel\" est&agrave;ndar de Gallery2"
 
 msgid "This album is empty."
@@ -72,3 +72,43 @@ msgstr "Descarrega %s en format original"
 
 msgid "Continue..."
 msgstr "Continuar..."
+
+msgid "Pagination"
+msgstr ""
+
+msgid "next"
+msgstr ""
+
+msgid "last"
+msgstr ""
+
+msgid "first"
+msgstr ""
+
+msgid "previous"
+msgstr ""
+
+msgid "Page navigation"
+msgstr ""
+
+msgid "Page:"
+msgstr ""
+
+msgid "More"
+msgstr "Més"
+
+msgid "Search your Gallery"
+msgstr ""
+
+msgid "Please enter a search term."
+msgstr ""
+
+msgid "Searching in progress, please wait!"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Advanced Search"
+msgstr ""
+

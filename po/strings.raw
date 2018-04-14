@@ -1,8 +1,8 @@
 # $Id: strings.raw 15342 2006-12-01 21:14:46Z andy_st $
 
 /* theme.inc */
-gettext("MobileMatrix")
-gettext("Standard Gallery2 look and feel")
+gettext("BootstrapMatrix")
+gettext("Bootstrap Gallery2 look and feel")
 
 /* templates/album.tpl */
 gettext("This album is empty.") /* also in: templates/local/album.tpl */
@@ -21,3 +21,24 @@ gettext("Download %s in original format") /* also in: templates/local/photo.tpl 
 
 /* templates/progressbar.tpl */
 gettext("Continue...")
+
+/* templates/core_1/blocks/Navigator.tpl */
+gettext("Pagination")
+gettext("next")
+gettext("last")
+gettext("first")
+gettext("previous")
+
+/* templates/core_1/blocks/Pager.tpl */
+gettext("Page navigation")
+gettext("Page:")
+
+/* templates/local/sidebar.tpl */
+gettext("More")
+
+/* templates/search_1/blocks/SearchBlock.tpl */
+gettext("Search your Gallery")
+gettext("Please enter a search term.")
+gettext("Searching in progress, please wait!")
+gettext("Search")
+gettext("Advanced Search")

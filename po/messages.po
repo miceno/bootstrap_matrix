@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: gallery-translations@lists.sourceforge.net\n"
-"POT-Creation-Date: 2015-04-17 22:59+0200\n"
+"POT-Creation-Date: 2018-04-14 01:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,10 +31,10 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "MobileMatrix"
+msgid "BootstrapMatrix"
 msgstr ""
 
-msgid "Standard Gallery2 look and feel"
+msgid "Bootstrap Gallery2 look and feel"
 msgstr ""
 
 msgid "This album is empty."
@@ -68,4 +68,43 @@ msgid "Download %s in original format"
 msgstr ""
 
 msgid "Continue..."
+msgstr ""
+
+msgid "Pagination"
+msgstr ""
+
+msgid "next"
+msgstr ""
+
+msgid "last"
+msgstr ""
+
+msgid "first"
+msgstr ""
+
+msgid "previous"
+msgstr ""
+
+msgid "Page navigation"
+msgstr ""
+
+msgid "Page:"
+msgstr ""
+
+msgid "More"
+msgstr ""
+
+msgid "Search your Gallery"
+msgstr ""
+
+msgid "Please enter a search term."
+msgstr ""
+
+msgid "Searching in progress, please wait!"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Advanced Search"
 msgstr ""
