@@ -142,29 +142,15 @@ body.gallery {
     direction: rtl;
 }
 
-/*
-#gsNavBar {
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-}
-
-#gsNavBar div.gbSystemLinks {
-    padding: 4px 6px;
-}
-*/
 
 #gsNavBar div.gbSystemLinks span {
     padding: 0 4px;
 }
 
 #gsSidebar {
-/*    border-right-width: 1px;*/
-/*    width: 175px;*/
-    overflow: hidden;
 }
+
 #gsSidebarCol {
-    /*width: 1%;*//* Expand to fit content ("0" bad4 firefox, "1px" bad4 opera) */
-/*    float: left;*/
 }
 
 div.giAlbumCell, div.giItemCell {
@@ -289,7 +275,10 @@ body.gallery {
     font-size: 1em;
 }
 
-.giTitle, #gallery h2, #gallery h3, #gallery h4 {
+.giTitle,
+/* #gallery h2, */
+#gallery h3,
+#gallery h4 {
         font-size: 1em;
         line-height: 1.2em;
 }
@@ -558,6 +547,10 @@ div.gbTabBar span.o {
     color: #999;
 }
 
+#gsSidebar .dropdown-actions {
+    min-width: 18em;
+}
+
 div.gbNavigator div.next-and-last {
   float: right;
 }
@@ -757,7 +750,7 @@ td.bsw_BlockCommands {
  * Overriden theme styles go here
 */
 
-#gsContent h2{
+.gHeader h2{
     font-size: 2em;
     font-weight: bold;
 }

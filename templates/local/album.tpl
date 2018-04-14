@@ -2,46 +2,35 @@
  * $Revision: 16349 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
-<div class="theme-body row-fluid">
-    <div class="theme-content">
-      {if !empty($theme.params.sidebarBlocks)}
-      <script type="text/javascript">
-         {* hide the sidebar if there-s nothing in it *}
-         // <![CDATA[
-         var el = document.getElementById("gsSidebarCol");
-         var text = el.innerText;  // IE
-         if (!text) text = el.textContent; // Firefox
-         if (!text || !text.match(/\S/)) el.style.display = 'none';
-         // ]]>
-      </script>
-      {/if}
-      <div id="gsContent" class="gcBorder1">
-        <div class="gbBlock gcBackground1 container-fluid">
-            <div class="header row-fluid">
+<div class="theme-body panel panel-default gcBackground1 ">
+{*    <div class="theme-content"> *}
+{*      <div id="gsContent" class="container-fluid"> *}
+
+        <div class="gHeader panel-header">
                 {if !empty($theme.item.title)}
                 <h2 class="col-md-10" data-toggle="collapse" data-target="#description-{$theme.item.id}"><a href="#">{$theme.item.title|markup}</a></h2>
                 {/if}
               {if !empty($theme.params.sidebarBlocks)}
-              <div id="gsSidebarCol" class="col-md-2">
+              <div {* id="gsSidebarCol" *} class="col-md-2">
                 {g->theme include="sidebar.tpl"}
                 {g->block type="core.BreadCrumb"}
               </div>
               {/if}
-            </div>
-            <div id="description-{$theme.item.id}" class="collapse row-fluid">
+
+            <div id="description-{$theme.item.id}" class="collapse">
                 {if !empty($theme.item.description)}
                 <div class="giDescription">
                   {$theme.item.description|markup}
                 </div>
                 {/if}
-                {g->block type="core.ItemInfo"
+                <!-- {g->block type="core.ItemInfo"
                           item=$theme.item
                           showDate=false
                           showSize=true
                           showOwner=false
-                          class="giInfo"}    
+                          class="giInfo"} -->
             </div>   {* description *}
-          </div> {* gBlock *}
+          </div> {* gHeader *}
 
         {if !empty($theme.navigator)}
         <div class="gbBlock gcBackground2 gbNavigator row">
@@ -62,7 +51,7 @@
 		</div>
 		{else}
 
-		<div class="gbBlock row">
+		<div class="gbBlock panel-body">
 			<div id="gsThumbMatrix">
 				{foreach from=$theme.children item=child name=child}
 
@@ -167,6 +156,19 @@
         {foreach from=$theme.params.albumBlocks item=block}
           {g->block type=$block.0 params=$block.1}
         {/foreach}
-      </div> {* gsContent *}
-    </div> {* theme-content *}
+{*       </div> gsContent *}
+{*    </div> theme-content *}
 </div> {* theme-body *}
+
+<!-- {if !empty($theme.params.sidebarBlocks)}
+      <script type="text/javascript">
+         {* hide the sidebar if there-s nothing in it *}
+         // <![CDATA[
+         var el = document.getElementById("gsSidebarCol");
+         var text = el.innerText;  // IE
+         if (!text) text = el.textContent; // Firefox
+         if (!text || !text.match(/\S/)) el.style.display = 'none';
+         // ]]>
+      </script>
+      {/if}
+-->
