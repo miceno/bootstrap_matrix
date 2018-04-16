@@ -6,12 +6,12 @@
 {*    <div class="theme-content"> *}
 {*      <div id="gsContent" class="container-fluid"> *}
 
-        <div class="gHeader panel-header">
+        <div class="gHeader panel-heading clearfix">
             {if !empty($theme.item.title)}
-            <h2 class="col-md-10" data-toggle="collapse" data-target="#description-{$theme.item.id}"><a href="#">{$theme.item.title|markup}</a></h2>
+            <h2 class="visible-lg-inline panel-title" data-toggle="collapse" data-target="#description-{$theme.item.id}"><a href="#">{$theme.item.title|markup}</a></h2>
             {/if}
             {if !empty($theme.params.sidebarBlocks)}
-            <div {* id="gsSidebarCol" *} class="col-md-2">
+            <div class="pull-right">
                     {g->theme include="sidebar.tpl"}
                     {g->block type="core.BreadCrumb"}
             </div>
