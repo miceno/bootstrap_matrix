@@ -37,8 +37,8 @@ p.giDescription + ul {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	padding-left: 1%;
-	padding-right: 1%;
+    padding: 0 1%;
+    box-sizing: border-box;
 
         color: white;
 }
@@ -153,9 +153,19 @@ body.gallery {
 #gsSidebarCol {
 }
 
+/*
 div.giAlbumCell, div.giItemCell {
 	position: relative;
     font-size: 15px;
+}
+*/
+div.giItemCell {
+	background-color: palevioletred;
+}
+
+
+div.giAlbumCell:nth-child(even), div.giItemCell:nth-child(even) {
+	background-color: dodgerblue;
 }
 
 #gallery div.giAlbumCell select, #gallery div.giItemCell select {
@@ -226,6 +236,7 @@ body.gallery {
 
 .gcBackground2 {
     background-color: #e7e7e7;
+    background-color: palevioletred;
 }
 
 .gcBorder1 {
@@ -364,9 +375,11 @@ body.gallery {
     white-space: nowrap;
 }
 
+/*
 #gsThumbMatrix {
     width: 100%;
 }
+*/
 
 #gallery.IE div.gbBreadCrumb span {
     display: inline-block;   /* IE loses padding-left on wrapped inline nowrap element */
@@ -688,12 +701,17 @@ div.block-comment-ViewComments p.info {
   font-size: 0.95em;
 }
 
+/*
 div.block-core-GuestPreview {
   float: right;
 }
+*/
+
+/*
 #gallery.rtl div.block-core-GuestPreview {
   float: left;
 }
+*/
 
 span.block-core-SystemLink {
 }
