@@ -51,9 +51,7 @@
             {* Top navigator *}
             {*               *}
             {if !empty($theme.navigator)}
-                <div class="gbBlock alert-danger gcBackground2 gbNavigator row-fluid">
-                    {g->block type="core.Navigator" navigator=$theme.navigator reverseOrder=false}
-                </div>
+                {g->block type="core.Navigator" navigator=$theme.navigator reverseOrder=false}
             {/if}
             {*               *}
             {* Image matrix  *}
