@@ -780,14 +780,31 @@ div.giAlbumCell table, div.giItemCell table {
     padding: 5px 10px;
 }
 
-.pagination>li{
-    display: table-cell;
-    text-align: center;
+.pagination select.form-control{
+    height: inherit;
 }
-.pagination>li>a, .pagination>li>span{
-    width:100%;
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
 }
-.pagination {
-    display: table;
-    width: 100%;
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .g-pagination {
+        display: table;
+        width: 100%;
+    }
+    .pagination>li{
+        display: table-cell;
+        text-align: center;
+    }
+    .pagination>li>a, .pagination>li>span{
+        width:100%;
+    }
+}
+
+@media (max-width: 1200px){
+    .g-pagination {
+        text-align: center;
+    }
 }
