@@ -16,8 +16,6 @@
 </script>
 
 
-{* <nav class="{$class}" aria-label="{g->text text="Page navigation"}"> *}
-{* {g->text text="Page:"} *}
 {assign var="lastPage" value=0}
 {foreach name=jumpRange from=$theme.jumpRange item=page}
     {if ($page - $lastPage >= 2)}
@@ -29,7 +27,7 @@
             {/if}
         </li>
     {/if}
-    <li><span>
+    <li {if ($theme.currentPage == $page)}class="active"{/if}><span class="jump-pager">
     {if ($theme.currentPage == $page)}
         <form name="form" class="form-inline">
           {assign var="page" value=1}
