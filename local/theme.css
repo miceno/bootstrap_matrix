@@ -160,12 +160,12 @@ div.giAlbumCell, div.giItemCell {
 }
 */
 div.giItemCell {
-	background-color: palevioletred;
+	/*background-color: palevioletred;*/
 }
 
 
 div.giAlbumCell:nth-child(even), div.giItemCell:nth-child(even) {
-	background-color: dodgerblue;
+	/*background-color: dodgerblue;*/
 }
 
 #gallery div.giAlbumCell select, #gallery div.giItemCell select {
@@ -236,9 +236,12 @@ body.gallery {
 
 .gcBackground2 {
     background-color: #e7e7e7;
-    background-color: palevioletred;
+    /*background-color: palevioletred;*/
 }
 
+.bgDebug {
+    background-color: palevioletred;
+}
 .gcBorder1 {
     border: 0 solid #ccc;
 }
