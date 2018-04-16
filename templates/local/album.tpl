@@ -56,7 +56,7 @@
             {*               *}
             {* Image matrix  *}
             {*               *}
-            <div id="gsThumbMatrix" class="row-fluid">
+            <div id="gsThumbMatrix" class="row-fluid clearfix">
                 {foreach from=$theme.children item=child name=child}
 
                     {assign var=childrenInColumnCount value="`$childrenInColumnCount+1`"}
@@ -149,16 +149,7 @@
             {* Bottom navigator *}
             {*                  *}
             {if !empty($theme.navigator)}
-                <div class="gbBlock alert-success gcBackground2 gbNavigator row-fluid">
-                    <div class="col-md-6 col-md-push-6">
-                        {g->block type="core.Navigator" navigator=$theme.navigator reverseOrder=false}
-                    </div>
-                    {* {if !empty($theme.jumpRange)}
-                    <div class="col-md-6 col-md-pull-6">
-                    {g->block type="core.Pager"}
-                    </div>
-                    {/if} *}
-                </div>
+                {g->block type="core.Navigator" navigator=$theme.navigator reverseOrder=false}
             {/if}
         </div>
         <!-- gbBlock panel-body -->
