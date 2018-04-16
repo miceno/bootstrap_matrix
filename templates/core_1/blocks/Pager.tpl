@@ -23,29 +23,27 @@
             {if ($page - $lastPage == 2)}
                 <a href="{g->url params=$theme.pageUrl arg1="page=`$page-1`"}">{$page-1}</a>
             {else}
-                ...
+                <a href="{g->url params=$theme.pageUrl arg1="page=`$page-1`"}">...</a>
             {/if}
         </li>
     {/if}
-    <li {if ($theme.currentPage == $page)}class="active"{/if}><span class="jump-pager">
-    {if ($theme.currentPage == $page)}
-        <form name="form" class="form-inline">
-          {assign var="page" value=1}
-            <select class="form-control" name="jumpMenu" onchange="MM_jumpMenu('parent',this,0)">
-              {section name=selectPage loop=$theme.totalPages}
-                  <option value="{g->url params=$theme.pageUrl arg1="page=$page"}"
-                          {if $page==$theme.currentPage}selected="selected"{/if}>{$page}</option>
-                  {assign var="page" value=$page+1}
-              {/section}
-            </select>
-        </form>
-
-{else}
-
-        <a href="{g->url params=$theme.pageUrl arg1="page=$page"}">{$page}</a>
-    {/if}
-  </span></li>
+    <li {if ($theme.currentPage == $page)}class="active"{/if}>
+        <span class="jump-pager">
+            {if ($theme.currentPage == $page)}
+            <form name="form" class="form-inline">
+              {assign var="page" value=1}
+                <select class="form-control" name="jumpMenu" onchange="MM_jumpMenu('parent',this,0)">
+                  {section name=selectPage loop=$theme.totalPages}
+                      <option value="{g->url params=$theme.pageUrl arg1="page=$page"}"
+                              {if $page==$theme.currentPage}selected="selected"{/if}>{$page}</option>
+                      {assign var="page" value=$page+1}
+                  {/section}
+                </select>
+            </form>
+            {else}
+            <a href="{g->url params=$theme.pageUrl arg1="page=$page"}">{$page}</a>
+            {/if}
+        </span>
+    </li>
     {assign var="lastPage" value=$page}
 {/foreach}
-{* </nav> *}
-
