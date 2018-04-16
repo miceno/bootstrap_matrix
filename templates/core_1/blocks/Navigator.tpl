@@ -14,53 +14,45 @@
  * in floated containers for elements that have whitespace before the closing tag.
  *}
 <nav class="{$class} row-fluid clearfix" aria-label="{g->text text="Pagination"}">
-    <ul class="pagination pagination-lg center-block">
+    <ul class="pagination pagination-lg">
         {foreach from=$order|split item="which"}
             {if $which=="next-and-last"}
                 {strip}
                     {if isset($navigator.next)}    {* Uncomment to omit next when same as last:
 	&& (!isset($navigator.last) || $navigator.next.urlParams != $navigator.last.urlParams)} *}
-                        <li class="next"><a href="{g->url params=$navigator.next.urlParams}" class="next">
-                                {g->text text="next"}{$suffix}
-                                {if isset($navigator.next.thumbnail)}
-                                    {g->image item=$navigator.next.item image=$navigator.next.thumbnail
-                                maxSize=40 class="next"}
-                                {/if}
+                        <li class="next">
+                            <a href="{g->url params=$navigator.next.urlParams}" aria-label="{g->text text="next"}"
+                            class="next">
+                                <span class="sr-only">{g->text text="next"}{$suffix}</span>
+                                <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
                             </a>
                         </li>
                     {else}
                         <li class="next disabled">
                             <span class="next">
                                 <span aria-hidden="true">
-                                {g->text text="next"}{$suffix}
-                                {if isset($navigator.next.thumbnail)}
-                                    {g->image item=$navigator.next.item image=$navigator.next.thumbnail
-                                maxSize=40 class="next"}
-                                {/if}
+                                    <span class="sr-only">{g->text text="next"}{$suffix}</span>
+                                    <span class="glyphicon glyphicon-forward" aria-hidden="true"></span>
                                 </span>
                             </span>
                         </li>
                     {/if}
 
                     {if isset($navigator.last)}
-                        <li class="next"><a href="{g->url params=$navigator.last.urlParams}" class="last">
-                                {g->text text="last"}{$suffix}
-                                {if isset($navigator.last.thumbnail)}
-                                    {g->image item=$navigator.last.item image=$navigator.last.thumbnail
-                                maxSize=40 class="last"}
-                                {/if}
+                        <li class="next">
+                            <a href="{g->url params=$navigator.last.urlParams}" class="last"
+                               aria-label="{g->text text="last"}">
+                                <span class="sr-only">{g->text text="last"}{$suffix}</span>
+                                <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
                             </a>
                         </li>
                     {else}
                         <li class="next disabled">
                             <span class="last">
                                 <span aria-hidden="true">
-                                {g->text text="last"}{$suffix}
-                                    {if isset($navigator.last.thumbnail)}
-                                        {g->image item=$navigator.last.item image=$navigator.last.thumbnail
-                                    maxSize=40 class="last"}
-                                    {/if}
-                                    </span>
+                                    <span class="sr-only">{g->text text="last"}{$suffix}</span>
+                                    <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+                                </span>
                             </span>
                         </li>
                     {/if}
@@ -70,45 +62,36 @@
             {else}
                 {strip}
                     {if isset($navigator.first)}
-                        <li class="previous"><a href="{g->url params=$navigator.first.urlParams}" class="first">
-                                {if isset($navigator.first.thumbnail)}
-                                    {g->image item=$navigator.first.item image=$navigator.first.thumbnail
-                                maxSize="40" class="first"}
-                                {/if}
-                                {$prefix}{g->text text="first"}
+                        <li class="previous">
+                            <a href="{g->url params=$navigator.first.urlParams}" class="first"
+                                                aria-label="{g->text text="first"}">
+                                <span class="sr-only">{$prefix}{g->text text="first"}</span>
+                                <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
                             </a>
                         </li>
                     {else}
                         <li class="previous disabled">
                             <span class="first">
-                                {if isset($navigator.first.thumbnail)}
-                                    {g->image item=$navigator.first.item image=$navigator.first.thumbnail
-                                maxSize="40" class="first"}
-                                {/if}
-                                <span aria-hidden="true">
-                                {$prefix}{g->text text="first"}</span>
+                                <span class="sr-only">{$prefix}{g->text text="first"}</span>
+                                <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
                             </span>
                         </li>
                     {/if}
 
                     {if isset($navigator.back)}    {* Uncomment to omit previous when same as first:
 	&& (!isset($navigator.first) || $navigator.back.urlParams != $navigator.first.urlParams)} *}
-                        <li class="previous"><a href="{g->url params=$navigator.back.urlParams}" class="previous">
-                                {if isset($navigator.back.thumbnail)}
-                                    {g->image item=$navigator.back.item image=$navigator.back.thumbnail
-                                maxSize="40" class="previous"}
-                                {/if}
-                                {$prefix}{g->text text="previous"}
+                        <li class="previous">
+                            <a href="{g->url params=$navigator.back.urlParams}" class="previous"
+                                                aria-label="{g->text text="previous"}">
+                                <span class="sr-only">{$prefix}{g->text text="previous"}</span>
+                                <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
                             </a>
                         </li>
                     {else}
                         <li class="previous disabled">
                             <span class="previous">
-                                {if isset($navigator.back.thumbnail)}
-                                    {g->image item=$navigator.back.item image=$navigator.back.thumbnail
-                                maxSize="40" class="previous"}
-                                {/if}
-                                {$prefix}{g->text text="previous"}
+                                <span class="sr-only">{$prefix}{g->text text="previous"}</span>
+                                <span class="glyphicon glyphicon-backward" aria-hidden="true"></span>
                             </span>
                         </li>
                     {/if}
