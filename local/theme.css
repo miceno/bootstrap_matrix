@@ -367,84 +367,6 @@ div.gbTabBar span.o {
     min-width: 18em;
 }
 
-div.gbNavigator div.next-and-last {
-  float: right;
-}
-div.gbNavigator div.next-and-last.no-previous {
-  float: none;
-  text-align: right;
-}
-
-div.gbNavigator a.first {
-  padding-left: 27px;
-  background: url('images/nav_first.gif') left no-repeat;
-}
-
-div.gbNavigator a.previous {
-  padding-left: 27px;
-  background: url('images/nav_prev.gif') left no-repeat;
-}
-
-div.gbNavigator a.next {
-  padding-right: 27px;
-  background: url('images/nav_next.gif') right no-repeat;
-}
-
-div.gbNavigator a.last {
-  padding-right: 27px;
-  background: url('images/nav_last.gif') right no-repeat;
-}
-
-div.gbNavigator div.first-and-previous img {
-  vertical-align: middle;
-  padding-right: 0.5em;
-}
-div.gbNavigator div.next-and-last img {
-  vertical-align: middle;
-  padding-left: 0.5em;
-}
-
-#gallery.rtl div.gbNavigator div.next-and-last {
-  float: left;
-}
-#gallery.rtl div.gbNavigator div.next-and-last.no-previous {
-  float: none;
-  text-align: left;
-}
-#gallery.rtl div.gbNavigator div.first-and-previous {
-  text-align: right;
-}
-/* Both IE and Gecko have bugs with omitting padding on rtl inline content */
-#gallery.IE.rtl div.gbNavigator a {
-  display: inline-block;
-}
-#gallery.gecko.rtl div.gbNavigator a {
-  display: -moz-inline-box;
-}
-
-#gallery.rtl div.gbNavigator a.first {
-  padding: 0 27px 0 0;
-  background: url('images/nav_last.gif') right no-repeat;
-}
-#gallery.rtl div.gbNavigator a.previous {
-  padding: 0 27px 0 0;
-  background: url('images/nav_next.gif') right no-repeat;
-}
-#gallery.rtl div.gbNavigator a.next {
-  padding: 0 0 0 27px;
-  background: url('images/nav_prev.gif') left no-repeat;
-}
-#gallery.rtl div.gbNavigator a.last {
-  padding: 0 0 0 27px;
-  background: url('images/nav_first.gif') left no-repeat;
-}
-#gallery.rtl div.gbNavigator div.first-and-previous img {
-  padding: 0 0 0 0.5em;
-}
-#gallery.rtl div.gbNavigator div.next-and-last img {
-  padding: 0 0.5em 0 0;
-}
-
 div.block-core-ItemLinks {
   margin: 0 0;
 }
@@ -851,4 +773,38 @@ div.giAlbumCell table, div.giItemCell table {
 
 #gallery #gsSidebar ul {
     font-size: 1em;
+}
+
+
+.pagination .active .jump-pager {
+    padding: 5px 10px;
+}
+
+.pagination select.form-control{
+    height: inherit;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .g-pagination {
+        display: table;
+        width: 100%;
+    }
+    .pagination>li{
+        display: table-cell;
+        text-align: center;
+    }
+    .pagination>li>a, .pagination>li>span{
+        width:100%;
+    }
+}
+
+@media (max-width: 1200px){
+    .g-pagination {
+        text-align: center;
+    }
 }
