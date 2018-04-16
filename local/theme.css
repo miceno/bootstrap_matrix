@@ -774,3 +774,20 @@ div.giAlbumCell table, div.giItemCell table {
 #gallery #gsSidebar ul {
     font-size: 1em;
 }
+
+
+.pagination .active .jump-pager {
+    padding: 5px 10px;
+}
+
+.pagination>li{
+    display: table-cell;
+    text-align: center;
+}
+.pagination>li>a, .pagination>li>span{
+    width:100%;
+}
+.pagination {
+    display: table;
+    width: 100%;
+}
