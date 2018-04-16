@@ -13,7 +13,7 @@
  * The strip calls in this tpl are to avoid a safari bug where padding-right is lost
  * in floated containers for elements that have whitespace before the closing tag.
  *}
-<nav class="{$class}" aria-label="{g->text text="Pagination"}" class="">
+<nav class="{$class} col-md-12" aria-label="{g->text text="Pagination"}">
 <ul class="pagination center-block">
 {foreach from=$order|split item="which"}
 {if $which=="next-and-last"}
