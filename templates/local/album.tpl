@@ -33,6 +33,7 @@
         </div> {* gHeader *}
 
 		{if !count($theme.children)}
+		{* TODO: Empty album *}
 		<div class="gbBlock giDescription gbEmptyAlbum row">
 			<h3 class="emptyAlbum">
 				{g->text text="This album is empty."}
@@ -48,26 +49,24 @@
 		    {* Top navigator *}
 		    {*               *}
             {if !empty($theme.navigator)}
-            <div class="gbBlock gcBackground2 gbNavigator row">
+            <div class="gbBlock alert-danger gcBackground2 gbNavigator row-fluid">
               {g->block type="core.Navigator" navigator=$theme.navigator reverseOrder=false}
             </div>
             {/if}
 		    {*               *}
 		    {* Image matrix  *}
 		    {*               *}
-			<div id="gsThumbMatrix" class="row">
+			<div id="gsThumbMatrix" class="row-fluid">
 				{foreach from=$theme.children item=child name=child}
 
 				{assign var=childrenInColumnCount value="`$childrenInColumnCount+1`"}
 				<div class="{strip}
                     {if $child.canContainChildren}
-                        giAlbumCell gcBackground1 {* empty *}
+                        giAlbumCell gcBackground2 {* empty *}
                     {else}
-                        {* giItemCell *}
+                        giItemCell {* empty *}
                     {/if}
-                    {* col-xs-6 *}
-                    col-lg-3
-                    {* col-md-5 *}"
+                    col-xs-6 col-lg-3 col-md-4"
                     {* style="width: {$theme.columnWidthPct}%" *}
                     {/strip}>
     				{if ($child.canContainChildren || $child.entityType == 'GalleryLinkItem')}
@@ -138,6 +137,8 @@
 						</div>{* thumbnail-description-wrapper *}
 						{g->block type="core.ItemLinks" item=$child links=$child.itemLinks}
 					</div> {* thumbnail-wrapper *}
+					<!-- Add the extra clearfix for only the required viewport -->
+
 				</div> {* giCell *}
 				{/foreach}
 			</div> {* gsThumbMatrix *}
@@ -146,7 +147,7 @@
 		    {* Bottom navigator *}
 		    {*                  *}
 			{if !empty($theme.navigator)}
-            <div class="gbBlock gcBackground2 gbNavigator row">
+            <div class="gbBlock alert-success gcBackground2 gbNavigator row-fluid">
                 <div class="col-md-6 col-md-push-6">
                 {g->block type="core.Navigator" navigator=$theme.navigator reverseOrder=false}
                 </div>
@@ -157,11 +158,11 @@
                 {/if} *}
             </div>
             {/if}
-		</div> <!-- gbBlock -->
+		</div> <!-- gbBlock panel-body -->
 		{/if} {* endif theme.children *}
 
+        <div class="panel-footer">
         {g->block type="core.GuestPreview" class="gbBlock"}
-
         {* Our emergency edit link, if the user removes all blocks containing edit links *}
         {g->block type="core.EmergencyEditItemLink" class="gbBlock" checkBlocks="sidebar,album"}
 
@@ -169,6 +170,8 @@
         {foreach from=$theme.params.albumBlocks item=block}
           {g->block type=$block.0 params=$block.1}
         {/foreach}
+        </div>
+
 {*       </div> gsContent *}
 {*    </div> theme-content *}
 </div> {* theme-body *}
