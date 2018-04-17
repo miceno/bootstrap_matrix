@@ -9,10 +9,15 @@
 {if !empty($item.keywords)}
 {g->callback type="keyalbum.SplitKeywords" keywords=$item.keywords}
 <div class="{$class}">
-  {g->text text="Keywords:"}
+    <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+    <span class="sr-only">{g->text text="Keywords:"}</span>
   {foreach from=$block.keyalbum.keywords key=rawKeyword item=keyword name=keywords}
-    <a href="{g->url arg1="view=keyalbum.KeywordAlbum" arg2="keyword=$rawKeyword"|ireplace:'/':'_'
-		     arg3="highlightId=`$item.id`"}">{$keyword}</a>{if $smarty.foreach.keywords.index< $smarty.foreach.keywords.total}, {/if}
+    {strip}
+        <a href="{g->url arg1="view=keyalbum.KeywordAlbum" arg2="keyword=$rawKeyword"|ireplace:'/':'_'
+    arg3="highlightId=`$item.id`"}">
+        <span class="label label-primary">{$keyword}</span>
+        </a>
+    {/strip}
   {/foreach}
 </div>
 {/if}
