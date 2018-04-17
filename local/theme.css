@@ -808,6 +808,12 @@ div.giAlbumCell table, div.giItemCell table {
         text-align: center;
     }
 }
+
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
 .nav-arrow {
     font-size: 4em;
 }

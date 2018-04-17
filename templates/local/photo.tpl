@@ -8,7 +8,7 @@
 {if !empty($theme.navigator)}
     {assign var="navigator" value=$theme.navigator}
 {/if}
-<div class="theme-photo-wrapper jumbotron">
+<div class="theme-photo-wrapper panel panel-default">
 
     {strip}
         {assign var=parent value=$theme.parents|@end}
@@ -24,7 +24,7 @@
     {*{g->theme include="sidebar.tpl"}*}
     {*</div>*}
     {*{/if}*}
-    <div class="theme-photo row">
+    <div class="theme-photo panel-body vcenter">
 
 
         {* Next and previous *}
@@ -140,7 +140,7 @@
 
     </div>
     {* Footer *}
-    <div class="row-fluid photo-footer">
+    <div class="panel-footer">
         <div class="giTitle-wrapper">
             <div class="giTitle">
                 {if !empty($theme.item.title)}
