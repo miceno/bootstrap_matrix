@@ -33,7 +33,7 @@
         {*{g->block type="core.Navigator" navigator=$theme.navigator reverseOrder=true}*}
         {*</div>*}
         {*{/if}*}
-        <div class="gbNavigator previous col-md-1">
+        <div class="gbNavigator nav-arrow previous col-md-1">
             {strip}
             {if isset($navigator.back)}
             <a href="{g->url params=$navigator.back.urlParams}" aria-label="{g->text text="previous"}"
@@ -95,7 +95,7 @@
             {/if}
 
         </div>
-        <div class="gbNavigator next col-md-1">
+        <div class="gbNavigator nav-arrow next col-md-1">
             {strip}
                 {if isset($navigator.next)}
                     <a href="{g->url params=$navigator.next.urlParams}" aria-label="{g->text text="next"}"
