@@ -5,8 +5,18 @@
 {if !empty($theme.imageViews)}
     {assign var="image" value=$theme.imageViews[$theme.imageViewsIndex]}
 {/if}
+{if !empty($theme.navigator)}
+    {assign var="navigator" value=$theme.navigator}
+{/if}
 <div class="theme-photo-wrapper jumbotron">
-    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"><a href="#">Back</a></span>
+
+    {strip}
+        {assign var=parent value=$theme.parents|@end}
+        <a href="{g->url params=$parent.urlParams}" class="BreadCrumb">
+            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+            {$parent.title|markup:strip|default:$parent.pathComponent}
+        </a>
+    {/strip}
 
     {* Sidebar *}
     {*{if !empty($theme.params.sidebarBlocks)}*}
