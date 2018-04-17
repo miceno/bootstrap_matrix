@@ -96,8 +96,20 @@
 
         </div>
         <div class="gbNavigator next col-md-1">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true">
-                <a href="#">Next</a></span>
+            {strip}
+                {if isset($navigator.next)}
+                    <a href="{g->url params=$navigator.next.urlParams}" aria-label="{g->text text="next"}"
+                    class="next">
+                {else}
+                    <span>
+                {/if}
+                <span class="sr-only">{g->text text="next"}{$suffix}</span>
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                {if isset($navigator.next)}</a>
+                {else}
+                    </span>
+                {/if}
+            {/strip}
         </div>
 
 
