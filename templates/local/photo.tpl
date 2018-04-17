@@ -26,13 +26,6 @@
     {*{/if}*}
     <div class="theme-photo panel-body vcenter">
 
-
-        {* Next and previous *}
-        {*{if !empty($theme.navigator)}*}
-        {*<div class="gbBlock gcBackground2 gbNavigator">*}
-        {*{g->block type="core.Navigator" navigator=$theme.navigator reverseOrder=true}*}
-        {*</div>*}
-        {*{/if}*}
         <div class="gbNavigator nav-arrow previous col-md-1">
             {strip}
             {if isset($navigator.back)}
@@ -130,18 +123,10 @@
             </div>
         {/if}
 
-
-        {*{if !empty($theme.navigator)}*}
-        {*<div class="gbBlock gcBackground2 gbNavigator">*}
-        {*{g->block type="core.Navigator" navigator=$theme.navigator reverseOrder=true}*}
-        {*</div>*}
-        {*{/if}*}
-
-
     </div>
     {* Footer *}
-    <div class="panel-footer">
-        <div class="giTitle-wrapper">
+    <div class="panel-footer container-fluid">
+        <div class="giTitle-wrapper row-fluid">
             <div class="giTitle">
                 {if !empty($theme.item.title)}
                     <h2> {$theme.item.title|markup} </h2>
@@ -163,13 +148,17 @@
 
         </div>
         {* Show any other photo blocks (comments, exif etc) *}
+        <div class="row-fluid photo-blocks">
         {foreach from=$theme.params.photoBlocks item=block}
-            {g->block type=$block.0 params=$block.1}
+            {g->block class="gbBlock col-xs-12 col-md-6 col-lg-3" type=$block.0 params=$block.1}
         {/foreach}
+        </div>
 
-        {g->block type="core.GuestPreview" class="gbBlock"}
+        <div class="row-fluid">
+        {g->block type="core.GuestPreview" class="gbBlock col-xs-12"}
+        </div>
         {* Our emergency edit link, if the user removes all blocks containing edit links *}
-        {g->block type="core.EmergencyEditItemLink" class="gbBlock" checkBlocks="sidebar,photo"}
+        {g->block type="core.EmergencyEditItemLink" class="gbBlock row-fluid" checkBlocks="sidebar,photo"}
 
     </div>
 </div>
