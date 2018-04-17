@@ -49,7 +49,7 @@
         </div>
         {g->theme include="progressbar.tpl"}
     {else}
-        <div id="gsHeader" class="row-fluid navbar navbar-default">
+        <div id="gsHeader" class="row-fluid navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="{g->url}"><img src="{g->url href="images/galleryLogo_sm.gif"}"
