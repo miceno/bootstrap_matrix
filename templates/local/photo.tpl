@@ -34,8 +34,20 @@
         {*</div>*}
         {*{/if}*}
         <div class="gbNavigator previous col-md-1">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true">
-                <a href="#">Previous</a></span>
+            {strip}
+            {if isset($navigator.back)}
+            <a href="{g->url params=$navigator.back.urlParams}" aria-label="{g->text text="previous"}"
+               class="previous">
+            {else}
+            <span>
+            {/if}
+                <span class="sr-only">{g->text text="previous"}{$suffix}</span>
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            {if isset($navigator.back)}</a>
+            {else}
+            </span>
+            {/if}
+            {/strip}
         </div>
 
         <div id="gsImageView" class="gbBlock col-md-10">
