@@ -24,7 +24,7 @@
     font-size: 100%;
     color: #757575;
     line-height: 26px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-transform: none;
     -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale;
@@ -32,6 +32,8 @@
 }
 body.gallery {
     background-color: #fff;
+    padding: 50px 0 0;
+    margin: 0;
 }
 
 .gcBackground1 {
@@ -98,7 +100,7 @@ body.gallery {
 }
 
 #gallery pre, #gallery tt {
-    font-family: Courier New;
+    font-family: Courier New, monospace;
     font-size: 1.2em;
 }
 
@@ -143,8 +145,7 @@ body.gallery {
 .giError { color: #a44; }
 
 .giNew, .giUpdated {
-    border-width: 2px;
-    border-style: ridge;
+    border: 2px ridge;
     padding: 0 6px;
     line-height: 1.9em;
 }
@@ -442,7 +443,7 @@ span.block-core-SystemLink {
 }
 
 div.block-exif-ExifInfo {
-  margin: 5px;
+  /*margin: 5px;*/
 }
 
 span.bsw_ButtonDisabled {
@@ -650,9 +651,6 @@ p.giDescription + ul {
     border-width: 0;
     border-style: inherit;
     border-color: inherit;
-    /* IE can't inherit these */
-    border-style: expression(parentElement.currentStyle.borderStyle);
-    border-color: expression(parentElement.currentStyle.borderColor);
 }
 
 .gbBlock > ul {
@@ -715,16 +713,7 @@ table.gbDataTable th, table.gbDataTable td {
  * #gsContent       Main content
  */
 
-body.gallery {
-    margin: 0;
-    padding: 0;
-}
 
-/*
-#gallery {
-    padding: 8px;
-}
-*/
 #gallery.rtl {
     direction: rtl;
 }
@@ -807,4 +796,13 @@ div.giAlbumCell table, div.giItemCell table {
     .g-pagination {
         text-align: center;
     }
+}
+
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
+.nav-arrow {
+    font-size: 4em;
 }
