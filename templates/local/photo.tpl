@@ -126,8 +126,8 @@
     </div>
     {* Footer *}
     <div class="panel-footer container-fluid">
-        <div class="giTitle-wrapper row-fluid">
-            <div class="giTitle">
+        <div class="giTitle-wrapper row-fluid clearfix">
+            <div class="giTitle col-xs-12 col-sm-8">
                 {if !empty($theme.item.title)}
                     <h2> {$theme.item.title|markup} </h2>
                 {/if}
@@ -137,14 +137,14 @@
                     </p>
                 {/if}
             </div>
-            <div class="giInfo-wrapper">
+            <div class="giInfo-wrapper hidden-xs pull-right">
                 {g->block type="core.ItemInfo"
                 item=$theme.item
                 showDate=true
                 showOwner=$theme.params.showImageOwner
                 class="giInfo"}
+                {g->block type="core.PhotoSizes" class="giInfo"}
             </div>
-            <div class="gInfo-wrapper">{g->block type="core.PhotoSizes" class="giInfo"}</div>
 
         </div>
         {* Show any other photo blocks (comments, exif etc) *}
