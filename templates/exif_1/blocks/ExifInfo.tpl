@@ -54,21 +54,18 @@
         {/if}</p>
 
         {if !empty($exif.exifData)}
-            <div class="gbDataTable">
-                {section name=outer loop=$exif.exifData step=2}
-                    {section name=inner loop=$exif.exifData start=$smarty.section.outer.index max=2}
-                        <p class="exif-data">
-      <span class="exif-tag">
-	{g->text text=$exif.exifData[inner].title}
-      </span>
-                            <span class="exif-value label label-default">
-	{$exif.exifData[inner].value}
-      </span>
-                        </p>
-                    {/section}
-                {/section}
-            </div>
+        <div class="gbDataTable">
+        {section name=outer loop=$exif.exifData step=2}
+        {section name=inner loop=$exif.exifData start=$smarty.section.outer.index max=2}
+            <p class="exif-data">
+            <span class="exif-tag">{g->text text=$exif.exifData[inner].title}</span>
+            <span class="exif-value label label-default">{$exif.exifData[inner].value}</span>
+            </p>
+        {/section}
+        {/section}
+        </div>
         {/if}
+
         {if empty($ajax)}</div>
 {/if}
 {/if}
