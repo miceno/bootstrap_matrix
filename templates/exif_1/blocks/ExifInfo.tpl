@@ -39,24 +39,18 @@
     {/if}
     <div id="ExifInfoBlock{$exif.blockNum}" class="{$class}">
         {/if}
-
         <p class="lead"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
         <span class="sr-only">{g->text text="Exif"}</span>
         {if isset($exif.mode)}
-            {strip}<button class="btn btn-default">
+            {strip}<button class="btn btn-xs btn-default"
                 {if ($exif.mode == 'summary')}
-                    <a href="#"
                        onclick="return exifSwitchDetailMode({$exif.blockNum},{$item.id},'detailed')">
                         {g->text text="details"}
-                    </a>
                 {else}
-                    <a href="#"
                        onclick="return exifSwitchDetailMode({$exif.blockNum},{$item.id},'summary')">
                         {g->text text="summary"}
-                    </a>
                 {/if}
                 </button>{/strip}<span id="ExifInfoLabel{$exif.blockNum}" aria-hidden="true"></span>
-
         {/if}</p>
 
         {if !empty($exif.exifData)}
