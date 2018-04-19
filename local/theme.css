@@ -677,11 +677,11 @@ p.giDescription + ul {
     /*    padding: 4px 8px;*/
 }
 
-table.gbDataTable {
+.gbDataTable {
     padding-bottom: 4px;
 }
 
-table.gbDataTable th, table.gbDataTable td {
+.gbDataTable th, .gbDataTable td {
     padding: 4px;
 }
 
@@ -805,4 +805,8 @@ div.giAlbumCell table, div.giItemCell table {
 
 .nav-arrow {
     font-size: 4em;
+}
+
+.gbDataTable p {
+    margin: 0;
 }
