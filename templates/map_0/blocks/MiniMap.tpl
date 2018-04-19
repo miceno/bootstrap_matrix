@@ -13,7 +13,7 @@
 {if !empty($block.map.MiniMap) and $block.map.MiniMap.APIKey neq '' and !(empty($block.map.MiniMap.mapCenter) and empty($block.map.MiniMap.markers))}
 <div class="{$class} boostrap-map">
 {if $block.map.MiniMap.blockNum == 1}{* Only include Google Maps script once *}
-<script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key={$block.map.MiniMap.APIKey}"
+<script src="//maps.google.com/maps?file=api&amp;v=2.x&amp;key={$block.map.MiniMap.APIKey}"
 	type="text/javascript"></script>
 {/if}
 <script type="text/javascript"> 
