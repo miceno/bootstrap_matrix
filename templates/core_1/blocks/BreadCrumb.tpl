@@ -1,4 +1,4 @@
-<div class="{$class} btn-group pull-right">
+<div class="{$class} btn-group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-folder-open"></span>
   </button>
