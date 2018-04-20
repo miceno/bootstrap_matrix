@@ -20,8 +20,6 @@
     {* Bootstrap CSS *}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    {* OpenSans font *}
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
     {* Include this theme's style sheet *}
     <link rel="stylesheet" type="text/css" href="{g->theme url="theme.css"}"/>
 
@@ -31,8 +29,9 @@
         include($includefilepath);
         }
     {/php}
+    {* OpenSans font *}
     <link rel="stylesheet" id="google-fonts-css"
-          href="http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%7CMontserrat%3A400%7CRaleway%3A400%7CCrimson+Text%3A400Italic&amp;subset=latin&amp;ver=1472669696"
+          href="https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%7CMontserrat%3A400%7CRaleway%3A400%7CCrimson+Text%3A400Italic&amp;subset=latin&amp;ver=1472669696"
           type="text/css" media="all">
 </head>
 <body class="gallery">
