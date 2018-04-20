@@ -52,14 +52,22 @@
         <div id="gsHeader" class="row-fluid navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gallery-navbar-collapse-systemlinks" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
                     <a class="navbar-brand" href="{g->url}"><img src="{g->url href="images/galleryLogo_sm.gif"}"
                                                                  width="107" height="48" alt=""/></a>
                 </div> {* navbar-header *}
-                <div class="gbSystemLinks navbar-right">
-                    {g->block type="core.SystemLinks"
+                <div class="collapse navbar-collapse" id="gallery-navbar-collapse-systemlinks">
+                {g->block type="core.SystemLinks"
                     order="core.SiteAdmin core.YourAccount core.Login core.Logout"
                     othersAt=4}
                 </div>
+
             </div> {* container-fluid *}
         </div>
         {* gsHeader *}

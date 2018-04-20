@@ -9,46 +9,30 @@
 {assign var="separator" value=$separator|default:""}
 
 {capture name="SystemLinks"}
-  {foreach from=$theme.systemLinks key=linkId item=link}
-    {if !in_array($linkId, $order)}
-    <li class="{$class}">
-      <a href="{g->url params=$link.params}">{$link.text}</a>
-    </li>
-    {$separator}
-    {/if}
-  {/foreach}
+    {foreach from=$theme.systemLinks key=linkId item=link}
+        {if !in_array($linkId, $order)}
+            <li class="{$class}">
+                <a href="{g->url params=$link.params}">{$link.text}</a>
+            </li>
+            {$separator}
+        {/if}
+    {/foreach}
 {/capture}
 
-<nav class="navbar navbar-nav">
-  <div class="container-fluid">
-	<div class="navbar-header navbar-right">
-	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gallery-navbar-collapse-systemlinks" aria-expanded="false">
-	    <span class="sr-only">Toggle navigation</span>
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	  </button>
-	</div>
+{g->block type=search.SearchBlock showAdvancedLink=false inputWidth=18}
+<ul class="nav navbar-nav navbar-right">
+    {foreach from=$order key=index item=linkId}
+        {if $index==$othersAt}
+            {assign var="SystemLinksShown" value=true}
+            {$smarty.capture.SystemLinks}
+        {/if}
+        {if isset($theme.systemLinks[$linkId])}
+            <li class="{$class}">
+                <a href="{g->url
+                params=$theme.systemLinks[$linkId].params}">{$theme.systemLinks[$linkId].text}</a>
+            </li>
+        {/if}
+    {/foreach}
+    {if !isset($SystemLinksShown)}{$smarty.capture.SystemLinks}{/if}
+</ul>
 
-	<div class="collapse navbar-collapse" id="gallery-navbar-collapse-systemlinks">
-                {g->block type=search.SearchBlock showAdvancedLink=false inputWidth=18}
-		<ul class="nav navbar-nav">
-		{foreach from=$order key=index item=linkId}
-		  {if $index==$othersAt}
-		    {assign var="SystemLinksShown" value=true}
-		    {$smarty.capture.SystemLinks}
-		  {/if}
-		  {if isset($theme.systemLinks[$linkId])}
-		  <li class="{$class}">
-		    <a href="{g->url
-		       params=$theme.systemLinks[$linkId].params}">{$theme.systemLinks[$linkId].text}</a>
-		  </li>
-		  {/if}
-		{/foreach}
-		{if !isset($SystemLinksShown)}{$smarty.capture.SystemLinks}{/if}
-		</ul>
-
-
-	</div>
-  </div> {* container-fluid *}
-</nav>
