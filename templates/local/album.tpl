@@ -9,7 +9,7 @@
     <div class="gHeader panel-heading clearfix">
         {if !empty($theme.item.title)}
             {g->block type="core.BreadCrumb"}
-            <h2 class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block panel-title"
+            <h2 class="visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline panel-title"
                 data-toggle="collapse" data-target="#description-{$theme.item.id}"><a
                         href="#">{$theme.item.title|markup}</a></h2>
             {if !empty($theme.params.sidebarBlocks)}
