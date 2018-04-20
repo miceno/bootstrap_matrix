@@ -19,8 +19,10 @@
     {/foreach}
 {/capture}
 
-{g->block type=search.SearchBlock showAdvancedLink=false inputWidth=18}
 <ul class="nav navbar-nav navbar-right">
+    <li>
+    {g->block type=search.SearchBlock showAdvancedLink=false inputWidth=18}
+    </li>
     {foreach from=$order key=index item=linkId}
         {if $index==$othersAt}
             {assign var="SystemLinksShown" value=true}
