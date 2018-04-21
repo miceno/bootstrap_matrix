@@ -567,23 +567,6 @@ td.bsw_BlockCommands {
 }
 
 
-
-@media (min-width: 1px)  {
-    #gsSidebar .navbar-collapse.collapse {
-        display: none !important;
-    }
-    #gsSidebar .navbar-collapse.collapse.in {
-        display: block !important;
-    }
-    #gsSidebar .navbar-header .collapse, #gsSidebar .navbar-toggle {
-        display:block !important;
-    }
-    #gsSidebar .navbar-header {
-        float:none;
-    }
-}
-
-
 /* ********************************************************************************
  * Building blocks
  * h2, h3, p, etc        Standard html tags
@@ -807,4 +790,8 @@ div.giAlbumCell table, div.giItemCell table {
 
 .gbDataTable p {
     margin: 0;
+}
+
+.theme-photo {
+    height: 80vh;
 }
