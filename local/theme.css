@@ -513,6 +513,7 @@ td.bsw_BlockCommands {
 
 #gsImageView{
     font-size: 3em;
+    height: 100%;
 }
 
 .giDescription br{
@@ -794,4 +795,14 @@ div.giAlbumCell table, div.giItemCell table {
 
 .theme-photo {
     height: 80vh;
+}
+
+.gcPhotoImage {
+    width: auto;
+    height: 100%;
+}
+
+.giPortrait {
+    height: 100%;
+    width: auto;
 }
