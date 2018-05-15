@@ -11,11 +11,13 @@
 <div class="theme-photo-wrapper">
 
     {strip}
-        {assign var=parent value=$theme.parents|@end}
-        <a href="{g->url params=$parent.urlParams}" class="BreadCrumb">
-            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-            {$parent.title|markup:strip|default:$parent.pathComponent}
-        </a>
+        <div class="photo-header">
+            {assign var=parent value=$theme.parents|@end}
+            <a href="{g->url params=$parent.urlParams}" class="BreadCrumb">
+                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                {$parent.title|markup:strip|default:$parent.pathComponent}
+            </a>
+        </div>
     {/strip}
 
     {* Sidebar *}
