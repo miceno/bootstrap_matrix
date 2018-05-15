@@ -794,10 +794,10 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .theme-photo {
-    height: 80vh;
+    height: 75vh;
 }
 
-.gcPhotoImage {
+.img-responsive.gcPhotoImage {
     width: auto;
     height: 100%;
 }
