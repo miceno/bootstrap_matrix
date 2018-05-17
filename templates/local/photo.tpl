@@ -45,7 +45,7 @@
             {/strip}
         </div>
 
-        <div id="gsImageView" class="col-md-10">
+        <div id="gsImageView" class="col-xs-10">
             {if !empty($theme.imageViews)}
                 {capture name="fallback"}
                     <a href="{g->url arg1="view=core.DownloadItem" arg2="itemId=`$theme.item.id`"

@@ -798,11 +798,9 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .img-responsive.gcPhotoImage {
-    width: auto;
     height: 100%;
+    width: auto;
 }
 
-.giPortrait {
-    height: 100%;
-    width: auto;
+.img-responsive.gcPhotoImage.giPortrait {
 }
