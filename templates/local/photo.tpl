@@ -18,8 +18,9 @@
                     {g->block type="core.BreadCrumb"}
                 {/if}
             {/strip}
-
-
+            <div class="item-position">
+                {$theme.itemPosition} {g->text text="of"} {$theme.totalItems}
+            </div>
             <div class="gbNavigator nav-arrow previous">
                 {strip}
                 <div class="arrow">
