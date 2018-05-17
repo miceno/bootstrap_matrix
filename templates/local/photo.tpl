@@ -10,25 +10,16 @@
 {/if}
 <div class="theme-photo-wrapper">
 
-    {strip}
-        <div class="photo-header">
-            {assign var=parent value=$theme.parents|@end}
-            <a href="{g->url params=$parent.urlParams}" class="BreadCrumb">
-                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                {$parent.title|markup:strip|default:$parent.pathComponent}
-            </a>
-        </div>
-    {/strip}
-
-    {* Sidebar *}
-    {*{if !empty($theme.params.sidebarBlocks)}*}
-    {*<div id="gsSidebarCol">*}
-    {*{g->theme include="sidebar.tpl"}*}
-    {*</div>*}
-    {*{/if}*}
     <div class="photo-container vcenter">
 
         <div id="gsImageView" class="photo-overlay">
+            {strip}
+                {if !empty($theme.item.title)}
+                    {g->block type="core.BreadCrumb"}
+                {/if}
+            {/strip}
+
+
             <div class="gbNavigator nav-arrow previous">
                 {strip}
                 <div class="arrow">

@@ -791,6 +791,7 @@ div.giAlbumCell table, div.giItemCell table {
     top: 0;
     bottom: 0;
     width: 25%;
+    z-index: 2;
 }
 
 .nav-arrow.previous {
@@ -842,4 +843,10 @@ div.giAlbumCell table, div.giItemCell table {
     width: 100%;
     top: 0;
     bottom: 0;
+}
+
+.photo-overlay .block-core-BreadCrumb {
+    position: absolute;
+    top: 0;
+    z-index: 20;
 }
