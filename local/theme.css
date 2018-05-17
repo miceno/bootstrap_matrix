@@ -513,6 +513,7 @@ td.bsw_BlockCommands {
 
 #gsImageView{
     font-size: 3em;
+    height: 100%;
 }
 
 .giDescription br{
@@ -564,23 +565,6 @@ td.bsw_BlockCommands {
 
 .form-inline {
     display: inline;
-}
-
-
-
-@media (min-width: 1px)  {
-    #gsSidebar .navbar-collapse.collapse {
-        display: none !important;
-    }
-    #gsSidebar .navbar-collapse.collapse.in {
-        display: block !important;
-    }
-    #gsSidebar .navbar-header .collapse, #gsSidebar .navbar-toggle {
-        display:block !important;
-    }
-    #gsSidebar .navbar-header {
-        float:none;
-    }
 }
 
 
@@ -802,9 +786,60 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .nav-arrow {
-    font-size: 4em;
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+}
+
+.nav-arrow.previous {
+    left: 0;
+}
+
+.nav-arrow.next {
+    right: 0;
+}
+
+.nav-arrow .arrow {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.next .arrow{
+    right: 10px;
+}
+
+.previous .arrow{
+    left: 10px;
 }
 
 .gbDataTable p {
     margin: 0;
+}
+
+.photo-container {
+    height: 75vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-responsive.gcPhotoImage {
+    height: 100%;
+    width: auto;
+}
+
+.img-responsive.gcPhotoImage.giPortrait {
+}
+
+.photo-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
 }
