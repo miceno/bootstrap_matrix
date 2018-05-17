@@ -26,26 +26,27 @@
     {*{g->theme include="sidebar.tpl"}*}
     {*</div>*}
     {*{/if}*}
-    <div class="theme-photo vcenter">
+    <div class="photo-container vcenter">
 
-        <div class="gbNavigator nav-arrow previous col-md-1">
-            {strip}
-            {if isset($navigator.back)}
-            <a href="{g->url params=$navigator.back.urlParams}" aria-label="{g->text text="previous"}"
-               class="previous">
-            {else}
-            <span>
-            {/if}
-                <span class="sr-only">{g->text text="previous"}{$suffix}</span>
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            {if isset($navigator.back)}</a>
-            {else}
-            </span>
-            {/if}
-            {/strip}
-        </div>
-
-        <div id="gsImageView" class="col-xs-10">
+        <div id="gsImageView" class="photo-overlay">
+            <div class="gbNavigator nav-arrow previous">
+                {strip}
+                <div class="arrow">
+                    {if isset($navigator.back)}
+                        <a href="{g->url params=$navigator.back.urlParams}" aria-label="{g->text text="previous"}"
+                        class="previous">
+                    {else}
+                        <span>
+                    {/if}
+                    <span class="sr-only">{g->text text="previous"}{$suffix}</span>
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    {if isset($navigator.back)}</a>
+                    {else}
+                        </span>
+                    {/if}
+                </div>
+                {/strip}
+            </div>
             {if !empty($theme.imageViews)}
                 {capture name="fallback"}
                     <a href="{g->url arg1="view=core.DownloadItem" arg2="itemId=`$theme.item.id`"
@@ -89,22 +90,24 @@
                 {g->text text="There is nothing to view for this item."}
             {/if}
 
-        </div>
-        <div class="gbNavigator nav-arrow next col-md-1">
-            {strip}
-                {if isset($navigator.next)}
-                    <a href="{g->url params=$navigator.next.urlParams}" aria-label="{g->text text="next"}"
-                    class="next">
-                {else}
-                    <span>
-                {/if}
-                <span class="sr-only">{g->text text="next"}{$suffix}</span>
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                {if isset($navigator.next)}</a>
-                {else}
-                    </span>
-                {/if}
-            {/strip}
+            <div class="gbNavigator nav-arrow next">
+                {strip}
+                <div class="arrow">
+                    {if isset($navigator.next)}
+                        <a href="{g->url params=$navigator.next.urlParams}" aria-label="{g->text text="next"}"
+                        class="next">
+                    {else}
+                        <span>
+                    {/if}
+                    <span class="sr-only">{g->text text="next"}{$suffix}</span>
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    {if isset($navigator.next)}</a>
+                    {else}
+                        </span>
+                    {/if}
+                </div>
+                {/strip}
+            </div>
         </div>
 
 

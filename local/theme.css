@@ -786,15 +786,46 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .nav-arrow {
-    font-size: 4em;
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+}
+
+.nav-arrow.previous {
+    left: 0;
+}
+
+.nav-arrow.next {
+    right: 0;
+}
+
+.nav-arrow .arrow {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.next .arrow{
+    right: 10px;
+}
+
+.previous .arrow{
+    left: 10px;
 }
 
 .gbDataTable p {
     margin: 0;
 }
 
-.theme-photo {
+.photo-container {
     height: 75vh;
+    overflow: hidden;
+    position: relative;
 }
 
 .img-responsive.gcPhotoImage {
@@ -803,4 +834,12 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .img-responsive.gcPhotoImage.giPortrait {
+}
+
+.photo-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
 }
