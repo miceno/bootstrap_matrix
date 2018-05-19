@@ -496,6 +496,7 @@ td.bsw_BlockCommands {
 .gHeader h2{
     font-size: 2em;
     font-weight: bold;
+    vertical-align: middle;
 }
 
 #gsContent .gcBackground1,
