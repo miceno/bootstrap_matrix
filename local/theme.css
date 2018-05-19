@@ -340,6 +340,10 @@ div.gbTabBar span.o {
     height: 32px
 }
 
+.dropdown-menu .search-form {
+    float: none!important;
+}
+
 /* ********************************************************************************
  * Sections
  * #gallery         Page container
