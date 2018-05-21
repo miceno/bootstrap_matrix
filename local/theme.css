@@ -859,6 +859,6 @@ div.giAlbumCell table, div.giItemCell table {
 
 .photo-overlay .block-core-BreadCrumb {
     position: absolute;
-    top: 0;
+    top: 5px;
     z-index: 20;
 }
