@@ -38,6 +38,7 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 	$this->setRequiredThemeApi(array(2, 4));
 	$this->setStandardSettings(
 	    array('rows' => 6, 'columns' => 4,
+		  'blockLayout' => 'left',
 		  'showImageOwner' => 0, 'showAlbumOwner' => 1,
 		  'albumFrame' => '', 'itemFrame' => '', 'photoFrame' => '',
 		  'colorpack' => '', 'showMicroThumbs' => 0, 'dynamicLinks' => 'browse',
@@ -136,6 +137,35 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 	}
 
 	return array(null, 'theme.tpl');
+    }
+    
+    /**
+     * @see GalleryTheme::getSettings
+     */
+    function getSettings($itemId=null) {
+	list ($ret, $settings, $params) = parent::getSettings($itemId);
+	if ($ret) {
+	    return array($ret, null, null);
+	}
+ 
+	list ($ret, $core) = GalleryCoreApi::loadPlugin('module', 'core');
+	if ($ret) {
+	    return array($ret, null, null);
+	}
+	
+	/* Add in our custom settings */
+	$settings[] = array(
+	    'key' => 'blockLayout',
+	    'name' => $this->translate('Block layout'),
+	    'type' => 'single-select',
+	    'choices' => array(
+		'left' => $core->translate('To the left'),
+		'bottom' => $core->translate('To the bottom'),
+		'right' => $core->translate('To the right'),
+		'disable' => $core->translate('Disable')),
+	    'value' => $params['blockLayout']);
+	
+	return array(null, $settings, $params);
     }
 }
 ?>
