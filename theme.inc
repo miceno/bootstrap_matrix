@@ -147,11 +147,6 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 	if ($ret) {
 	    return array($ret, null, null);
 	}
- 
-	list ($ret, $core) = GalleryCoreApi::loadPlugin('module', 'core');
-	if ($ret) {
-	    return array($ret, null, null);
-	}
 	
 	/* Add in our custom settings */
 	$settings[] = array(
@@ -159,10 +154,10 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 	    'name' => $this->translate('Block layout'),
 	    'type' => 'single-select',
 	    'choices' => array(
-		'left' => $core->translate('To the left'),
-		'bottom' => $core->translate('To the bottom'),
-		'right' => $core->translate('To the right'),
-		'disable' => $core->translate('Disable')),
+		'left' => $this->translate('To the left'),
+		'bottom' => $this->translate('To the bottom'),
+		'right' => $this->translate('To the right'),
+		'disable' => $this->translate('Disable')),
 	    'value' => $params['blockLayout']);
 	
 	return array(null, $settings, $params);

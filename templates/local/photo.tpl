@@ -8,6 +8,14 @@
 {if !empty($theme.navigator)}
     {assign var="navigator" value=$theme.navigator}
 {/if}
+
+<div>
+{if isset($theme.params.blockLayout)}
+    Block : {$theme.params.blockLayout}
+{else}
+    Block: display none
+{/if}
+</div>
 <div class="theme-photo-wrapper">
 
     <div class="photo-container vcenter">
