@@ -16,8 +16,8 @@
             function exifSwitchDetailMode(num, itemId, mode) {ldelim}
                 url = '{g->url arg1="view=exif.SwitchDetailMode" arg2="itemId=__ITEMID__"
                         arg3="mode=__MODE__" arg4="blockNum=__NUM__" htmlEntities=false forceDirect=true}';
-                document.getElementById('ExifInfoLabel' + num).innerHTML =
-                    '{g->text text="Loading.." forJavascript=true}';
+                {strip}document.getElementById('ExifInfoLabel' + num).innerHTML =
+                    '{g->text text="Loading.." forJavascript=true}';{/strip}
             {literal}
                 YAHOO.util.Connect.asyncRequest('GET',
                     url.replace('__ITEMID__', itemId).replace('__MODE__', mode).replace('__NUM__', num),
@@ -38,8 +38,9 @@
         {/if} {* $exif.blockNum == 1 *}
     <div id="ExifInfoBlock{$exif.blockNum}" class="{$class}">
         {/if}
-        <p class="lead"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
-        <span class="sr-only">{g->text text="Exif"}</span>
+        <div class="block_expandable_header">
+            <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+            {g->text text="EXIF Photo Properties"}
         {if isset($exif.mode)}
             {strip}
         <button class="btn btn-xs btn-default"
@@ -53,15 +54,16 @@
         </button>
         <span id="ExifInfoLabel{$exif.blockNum}" aria-hidden="true"></span>
             {/strip}
-        {/if}{* isset($exif.mode) *}</p>
+        {/if}{* isset($exif.mode) *}
+        </div>
 
         {if !empty($exif.exifData)}
         <div class="gbDataTable">
         {section name=outer loop=$exif.exifData step=2}
         {section name=inner loop=$exif.exifData start=$smarty.section.outer.index max=2}
             <p class="exif-data">
-            <span class="exif-tag">{g->text text=$exif.exifData[inner].title}</span>
-            <span class="exif-value label label-default">{$exif.exifData[inner].value}</span>
+            <span class="exif-tag small">{g->text text=$exif.exifData[inner].title}</span>
+            <span class="h4"><span class="exif-value label label-default">{$exif.exifData[inner].value}</span></span>
             </p>
         {/section}
         {/section}
