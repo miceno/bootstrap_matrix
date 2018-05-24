@@ -850,7 +850,6 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .photo-overlay {
-    position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
@@ -861,4 +860,9 @@ div.giAlbumCell table, div.giItemCell table {
     position: absolute;
     top: 5px;
     z-index: 20;
+}
+
+.sidebar-right {
+    height: 100%;
+    overflow-y: scroll;
 }

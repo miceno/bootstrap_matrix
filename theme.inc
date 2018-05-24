@@ -38,7 +38,7 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 	$this->setRequiredThemeApi(array(2, 4));
 	$this->setStandardSettings(
 	    array('rows' => 6, 'columns' => 4,
-		  'blockLayout' => 'left',
+		  'boxesLayout' => 'left',
 		  'showImageOwner' => 0, 'showAlbumOwner' => 1,
 		  'albumFrame' => '', 'itemFrame' => '', 'photoFrame' => '',
 		  'colorpack' => '', 'showMicroThumbs' => 0, 'dynamicLinks' => 'browse',
@@ -147,25 +147,21 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 	if ($ret) {
 	    return array($ret, null, null);
 	}
- 
-	list ($ret, $core) = GalleryCoreApi::loadPlugin('module', 'core');
-	if ($ret) {
-	    return array($ret, null, null);
-	}
 	
 	/* Add in our custom settings */
 	$settings[] = array(
-	    'key' => 'blockLayout',
+	    'key' => 'boxesLayout',
 	    'name' => $this->translate('Block layout'),
 	    'type' => 'single-select',
 	    'choices' => array(
-		'left' => $core->translate('To the left'),
-		'bottom' => $core->translate('To the bottom'),
-		'right' => $core->translate('To the right'),
-		'disable' => $core->translate('Disable')),
-	    'value' => $params['blockLayout']);
-	
+		'left' => $this->translate('To the left'),
+		'bottom' => $this->translate('To the bottom'),
+		'right' => $this->translate('To the right'),
+		'disable' => $this->translate('Disable')),
+	    'value' => $params['boxesLayout']);
+    
 	return array(null, $settings, $params);
     }
+    
 }
 ?>

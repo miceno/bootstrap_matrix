@@ -8,11 +8,17 @@
 {if !empty($theme.navigator)}
     {assign var="navigator" value=$theme.navigator}
 {/if}
+
+<div>
+{if !isset($theme.params.boxesLayout) || !empty($theme.params.boxesLayout)}
+    {assign var="boxesLayout" value=$theme.params.boxesLayout}
+{/if}
+</div>
 <div class="theme-photo-wrapper">
 
     <div class="photo-container vcenter">
 
-        <div id="gsImageView" class="photo-overlay">
+        <div id="gsImageView" class="photo-overlay {if $boxesLayout == "right" }col-xs-12 col-md-8{/if}">
             {strip}
                 {if !empty($theme.item.title)}
                     {g->block type="core.BreadCrumb"}
@@ -102,7 +108,16 @@
             </div>
         </div>
 
-
+        {if $boxesLayout == "right" }
+        {* Show any other photo blocks (comments, exif etc) *}
+        <div class="col-xs-12 col-md-4 sidebar-{$boxesLayout}">
+            <div class="photo-blocks ">
+                {foreach from=$theme.params.photoBlocks item=block}
+                    {g->block class="gbBlock col-xs-12 col-md-12 col-lg-12" type=$block.0 params=$block.1}
+                {/foreach}
+            </div>
+        </div>
+        {/if}
         {if $theme.pageUrl.view != 'core.ShowItem' && $theme.params.dynamicLinks == 'jumplink'}
             <div class="gbBlock">
                 <a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$theme.item.id`"}">
@@ -144,12 +159,16 @@
             </div>
 
         </div>
-        {* Show any other photo blocks (comments, exif etc) *}
-        <div class="row-fluid photo-blocks">
-        {foreach from=$theme.params.photoBlocks item=block}
-            {g->block class="gbBlock col-xs-12 col-md-6 col-lg-3" type=$block.0 params=$block.1}
-        {/foreach}
-        </div>
+        {if $boxesLayout == "bottom" }
+            {* Show any other photo blocks (comments, exif etc) *}
+            <div class="row-fluid sidebar-bottom">
+                <div class="photo-blocks sidebar-{$boxesLayout}">
+                    {foreach from=$theme.params.photoBlocks item=block}
+                        {g->block class="gbBlock col-xs-12 col-md-6 col-lg-3" type=$block.0 params=$block.1}
+                    {/foreach}
+                </div>
+            </div>
+        {/if}
 
         <div class="row-fluid">
         {g->block type="core.GuestPreview" class="gbBlock col-xs-12"}
