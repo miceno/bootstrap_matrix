@@ -7,13 +7,12 @@
 <div class="{$class}">
 {* Add this link *}
 <!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style">
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
 <span class="sr-only">{g->text text="Share:"}</span>
 <a class="addthis_button_facebook"></a>
 <a class="addthis_button_twitter"></a>
 <a class="addthis_button_email"></a>
 <a class="addthis_button_favorites"></a>
-<a class="addthis_button_print"></a>
 <span class="addthis_separator">|</span>
 <a href="http://www.addthis.com/bookmark.php?v=300&amp;pubid=ahpn" class="addthis_button_expanded">{g->text text="More"}</a>
 </div>
