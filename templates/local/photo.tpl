@@ -110,10 +110,10 @@
 
         {if $boxesLayout == "right" }
         {* Show any other photo blocks (comments, exif etc) *}
-        <div class="col-xs-12 col-md-4 sidebar-right">
-            <div class="photo-blocks sidebar-{$boxesLayout}">
+        <div class="col-xs-12 col-md-4 sidebar-{$boxesLayout}">
+            <div class="photo-blocks ">
                 {foreach from=$theme.params.photoBlocks item=block}
-                    {g->block class="gbBlock col-xs-12 col-md-6 col-lg-3" type=$block.0 params=$block.1}
+                    {g->block class="gbBlock col-xs-12 col-md-12 col-lg-12" type=$block.0 params=$block.1}
                 {/foreach}
             </div>
         </div>

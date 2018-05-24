@@ -861,3 +861,8 @@ div.giAlbumCell table, div.giItemCell table {
     top: 5px;
     z-index: 20;
 }
+
+.sidebar-right {
+    height: 100%;
+    overflow-y: scroll;
+}
