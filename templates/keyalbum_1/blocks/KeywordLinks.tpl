@@ -9,11 +9,11 @@
 {if !empty($item.keywords)}
 {g->callback type="keyalbum.SplitKeywords" keywords=$item.keywords}
 <div class="{$class}">
-    <div class="block_expandable_header">
+    <div class="block-expandable-header">
         <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
         {g->text text="Keywords"}
     </div>
-    <div class="block_expandable_content">
+    <div class="block-expandable-content">
   {foreach from=$block.keyalbum.keywords key=rawKeyword item=keyword name=keywords}
     {strip}
         <a href="{g->url arg1="view=keyalbum.KeywordAlbum" arg2="keyword=$rawKeyword"|ireplace:'/':'_'

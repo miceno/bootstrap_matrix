@@ -38,7 +38,7 @@
         {/if} {* $exif.blockNum == 1 *}
     <div id="ExifInfoBlock{$exif.blockNum}" class="{$class}">
         {/if}
-        <div class="block_expandable_header">
+        <div class="block-expandable-header">
             <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
             {g->text text="EXIF Photo Properties"}
         {if isset($exif.mode)}
@@ -58,7 +58,7 @@
         </div>
 
         {if !empty($exif.exifData)}
-        <div class="gbDataTable">
+        <div class="gbDataTable block-expandable-content">
         {section name=outer loop=$exif.exifData step=2}
         {section name=inner loop=$exif.exifData start=$smarty.section.outer.index max=2}
             <p class="exif-data">
