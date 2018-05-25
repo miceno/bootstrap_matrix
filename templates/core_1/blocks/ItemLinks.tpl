@@ -39,15 +39,15 @@
             {g->text text="Item actions"}
         {/if}
         </div>
-
-<div class="block-expandable-content">      <ul class="action-list">
-
-      {foreach from=$links item="link"}
-        <li class="action-link">
-	{g->itemLink link=$link lowercase=$lowercase}
-	</li>
-      {/foreach}
-      </ul>
-</div>    {/if}
+        <div class="block-expandable-content">
+            <ul class="action-list">
+                {foreach from=$links item="link"}
+                    <li class="action-link">
+                        {g->itemLink link=$link lowercase=$lowercase}
+                    </li>
+                {/foreach}
+            </ul>
+        </div>
+    {/if}
   </div>
 {/if}

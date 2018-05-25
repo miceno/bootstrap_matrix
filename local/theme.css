@@ -641,7 +641,7 @@ p.giDescription + ul {
     border-color: inherit;
 }
 
-.gbBlock > ul {
+.gbBlock .action-list {
     margin: 0;
     padding: 0;
     list-style-type: none;
