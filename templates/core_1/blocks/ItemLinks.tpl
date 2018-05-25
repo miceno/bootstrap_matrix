@@ -32,13 +32,22 @@
 	{/foreach}
       </select>
     {else}
-      <ul class="">
+        <div class="block-expandable-header">
+        {if $item.canContainChildren}
+            {g->text text="Album actions"}
+        {else}
+            {g->text text="Item actions"}
+        {/if}
+        </div>
+
+<div class="block-expandable-content">      <ul class="action-list">
+
       {foreach from=$links item="link"}
-        <li class="">
+        <li class="action-link">
 	{g->itemLink link=$link lowercase=$lowercase}
 	</li>
       {/foreach}
       </ul>
-    {/if}
+</div>    {/if}
   </div>
 {/if}
