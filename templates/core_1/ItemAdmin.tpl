@@ -15,9 +15,10 @@
     <input type="hidden" name="{g->formVar var="itemId"}" value="{$ItemAdmin.item.id}"/>
   </div>
 
-  <table width="100%" cellspacing="0" cellpadding="0">
-    <tr valign="top">
-    <td id="gsSidebarCol"><div id="gsSidebar" class="gcBorder1">
+  <div class="admin-container">
+    <div class="row">
+    <div id="gsSidebarCol" class="col-xs-12 col-md-3">
+        <div id="gsSidebar" class="gcBorder1">
       {if $ItemAdmin.item.parentId or !empty($ItemAdmin.thumbnail)}
       <div class="gbBlock">
 	{if empty($ItemAdmin.thumbnail)}
@@ -51,12 +52,12 @@
 	  {/foreach}
 	</ul>
       </div>
-    </div></td>
+    </div></div>
 
-    <td>
+    <div id="admin-content" class="col-xs-12 col-md-9">
       <div id="gsContent" class="gcBorder1">
 	{include file="gallery:`$ItemAdmin.viewBodyFile`" l10Domain=$ItemAdmin.viewL10Domain}
       </div>
-    </td>
-  </tr></table>
+    </div>
+  </div></div>
 </form>
