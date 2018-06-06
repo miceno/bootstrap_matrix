@@ -93,8 +93,6 @@
 
         <style>
             .gallery-google-map-wrapper {ldelim}
-                max-width: {$mapWidth};
-                width: auto;
             {rdelim}
             .gallery-google-map-container {ldelim}
                 border:1px solid black;
@@ -102,6 +100,7 @@
                 max-height: 100%;
             {rdelim}
         </style>
+
         <div class="gallery-google-map-wrapper">
             <div class="block-expandable-header">
                 <h3>{g->text text="%s Location Map" arg1=$block.mapv3.MiniMap.ItemType}</h3>
