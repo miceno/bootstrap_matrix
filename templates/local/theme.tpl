@@ -57,9 +57,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
-                    <a class="navbar-brand" href="{g->url}"><img src="{g->url href="images/galleryLogo_sm.gif"}"
-                                                                 width="107" height="48" alt=""/></a>
+                    {strip}
+                    <a class="navbar-brand" href="{g->url}">
+                        <img src="{g->url href="`$theme.themeUrl`/images/gallery_logo.png"}" alt="Logo de l'Arxiu Històric del Poblenou"/>
+                    </a>
+                    {/strip}
                 </div> {* navbar-header *}
                 <div class="collapse navbar-collapse" id="gallery-navbar-collapse-systemlinks">
                 {g->block type="core.SystemLinks"
