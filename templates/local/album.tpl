@@ -9,9 +9,12 @@
     <div class="gHeader panel-heading clearfix">
         {if !empty($theme.item.title)}
             {g->block type="core.BreadCrumb"}
+            {strip}
             <h2 class="visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline panel-title"
-                data-toggle="collapse" data-target="#description-{$theme.item.id}"><a
-                        href="#">{$theme.item.title|markup}</a></h2>
+                data-toggle="collapse" data-target="#description-{$theme.item.id}">
+                <span class="album-title">{$theme.item.title|markup}</span>
+            </h2>
+            {/strip}
             {if !empty($theme.params.sidebarBlocks)}
                 {g->theme include="sidebar.tpl"}
             {/if}
@@ -130,7 +133,8 @@
                                     showOwner=$showOwner
                                     showSize=true
                                     showViewCount=false
-                                    showSummaries=true
+                                    showSummaries=false
+                                    showKeywords=true
                                     class="giInfo"}
                                 </div> {* collapse *}
 

@@ -44,4 +44,13 @@
             </div>
         {/foreach}
     {/if}
+
+    {if !empty($showKeywords)}
+        {g->block type="keyalbum.KeywordLinks"
+        item=$child
+        forItem=true
+        showHeader=false
+        class="giInfo"}
+    {/if}
+
 </div>
