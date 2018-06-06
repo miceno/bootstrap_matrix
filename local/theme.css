@@ -357,6 +357,10 @@ div.gbTabBar span.o {
     font-weight: bold;
 }
 
+#gbSiteAdminLinks ul, ul#gbSiteAdminLinks {
+    -webkit-padding-start: 1em;
+}
+
 #gsSidebar div ul {   /* no > in IE */
     font-size: 1.1em;
     font-weight: bold;
