@@ -11,7 +11,7 @@
 <div class="{$class}">
     <div class="block-expandable-header">
         <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
-        {g->text text="Keywords"}
+        <span class="hidden-xs hidden-sm">{g->text text="Keywords"}</span>
     </div>
     <div class="block-expandable-content">
   {foreach from=$block.keyalbum.keywords key=rawKeyword item=keyword name=keywords}

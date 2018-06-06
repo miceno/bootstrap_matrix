@@ -40,7 +40,7 @@
         {/if}
         <div class="block-expandable-header">
             <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
-            {g->text text="EXIF Photo Properties"}
+            <span class="hidden-xs hidden-sm">{g->text text="EXIF Photo Properties"}</span>
         {if isset($exif.mode)}
             {strip}
         <button class="btn btn-xs btn-default"
