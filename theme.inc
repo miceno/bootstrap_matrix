@@ -58,6 +58,8 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
      * @see GalleryTheme::showAlbumPage
      */
     function showAlbumPage(&$template, $item, $params, $childIds) {
+	global $gallery;
+ 
 	$ret = $this->loadCommonTemplateData(
 	    $template, $item, $params,
 	    array('owner', 'viewCount', 'childCount', 'descendentCount', 'parents',
@@ -70,7 +72,7 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 
 	/* Add in our extra stuff */
 	$theme =& $template->getVariableByReference('theme');
-	$theme['columnWidthPct'] = floor(100 / $params['columns']);
+	$theme['debug'] = $gallery->getDebug();
 
 	/* Add our header and styles */
 	return array(null, 'theme.tpl');
@@ -80,6 +82,8 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
      * @see GalleryTheme::showPhotoPage
      */
     function showPhotoPage(&$template, $item, $params) {
+	global $gallery;
+ 
 	$dataTypes = array('owner', 'parents', 'systemLinks', 'itemLinks', 'permissions',
 			   'itemLinksDetailed', 'itemNavigator', 'imageViews');
 	if (!empty($params['showMicroThumbs'])) {
@@ -89,7 +93,11 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 	if ($ret) {
 	    return array($ret, null);
 	}
-
+ 
+	/* Add in our extra stuff */
+	$theme =& $template->getVariableByReference('theme');
+	$theme['debug'] = $gallery->getDebug();
+ 
 	return array(null, 'theme.tpl');
     }
 
@@ -97,11 +105,15 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
      * @see GalleryTheme::showModulePage
      */
     function showModulePage(&$template, $item, $params, $templateFile) {
+	global $gallery;
 	$ret = $this->loadCommonTemplateData(
 	    $template, $item, $params, array('parents', 'systemLinks'));
 	if ($ret) {
 	    return array($ret, null);
 	}
+	/* Add in our extra stuff */
+	$theme =& $template->getVariableByReference('theme');
+	$theme['debug'] = $gallery->getDebug();
 
 	return array(null, 'theme.tpl');
     }
@@ -110,12 +122,16 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
      * @see GalleryTheme::showAdminPage
      */
     function showAdminPage(&$template, $item, $params, $templateFile) {
+	global $gallery;
 	$ret = $this->loadCommonTemplateData(
 	    $template, $item, $params, array('parents', 'systemLinks'));
 	if ($ret) {
 	    return array($ret, null);
 	}
-
+	/* Add in our extra stuff */
+	$theme =& $template->getVariableByReference('theme');
+	$theme['debug'] = $gallery->getDebug();
+	
 	return array(null, 'theme.tpl');
     }
 
@@ -123,6 +139,12 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
      * @see GalleryTheme::showErrorPage
      */
     function showErrorPage(&$template) {
+	global $gallery;
+	
+	/* Add in our extra stuff */
+	$theme =& $template->getVariableByReference('theme');
+	$theme['debug'] = $gallery->getDebug();
+	
 	return array(null, 'error.tpl');
     }
 
@@ -130,7 +152,13 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
      * @see GalleryTheme::showProgressBarPage
      */
     function showProgressBarPage(&$template, $item, $params) {
-	$ret = $this->loadCommonTemplateData(
+	global $gallery;
+ 
+	/* Add in our extra stuff */
+	$theme =& $template->getVariableByReference('theme');
+	$theme['debug'] = $gallery->getDebug();
+	
+        $ret = $this->loadCommonTemplateData(
 	    $template, $item, $params, array('parents', 'systemLinks'));
 	if ($ret) {
 	    return array($ret, null);
