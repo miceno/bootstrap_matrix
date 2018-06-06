@@ -5,6 +5,7 @@
 
 <div class="theme-body panel panel-default gcBackground1 ">
     <div class="gbBlock panel-body">
+{* {literal}
         {if !empty($theme.params.sidebarBlocks)}
         <div class="col-xs-12 col-sm-12 col-md-2">
             <div id="gsSidebarCol">
@@ -12,8 +13,9 @@
             </div>
         </div>
         {/if}
+{/literal} *}
 
-        <div class="col-xs-12 col-sm-12 col-md-10">
+        <div class="col-xs-12">
             {include file="gallery:`$theme.moduleTemplate`" l10Domain=$theme.moduleL10Domain}
         </div>
     </div>
