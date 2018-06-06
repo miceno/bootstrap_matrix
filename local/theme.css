@@ -402,7 +402,16 @@ div#gsSidebar div.block-core-PeerList span.current {
 .thumbnail-wrapper div.block-core-ItemLinks {
 	position: absolute;
 	top: 0;
-	margin: 0;
+    right: 0;
+	margin-left: 1em;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e5e5e5+30,000000+100&0+72,1+100 */
+    background: -moz-linear-gradient(45deg, rgba(229,229,229,0) 30%, rgba(92,92,92,0) 72%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(229,229,229,0) 30%,rgba(92,92,92,0) 72%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgba(229,229,229,0) 30%,rgba(92,92,92,0) 72%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e5e5e5', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    height: 3em;
 }
 
 .thumbnail-wrapper div.block-core-ItemLinks {
@@ -895,4 +904,30 @@ div.giAlbumCell table, div.giItemCell table {
 #gallery .link-keyword:hover {
     opacity: 1;
     color: transparent;
+}
+
+.thumbnail-wrapper .gbAdminLink{
+    position: relative;
+    visibility: hidden;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.gbAdminLink.gbLink-geturls_GetUrls::after{
+    content: "\e144";
+    font-size: 1em;
+    visibility: visible;
+}
+
+.thumbnail-wrapper .block-expandable-header {
+    display:none;
+}
+
+.thumbnail-wrapper .action-link a {
+    color: white;
 }
