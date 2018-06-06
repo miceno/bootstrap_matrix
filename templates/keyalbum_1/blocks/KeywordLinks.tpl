@@ -5,19 +5,22 @@
 {if $forItem|default:true} {* Links for keywords of current item *}
 {if empty($item)} {assign var=item value=$theme.item} {/if}
 {assign var=showCloud value=$showCloud|default:false}
+{assign var=showHeader value=$showHeader|default:true}
 
 {if !empty($item.keywords)}
 {g->callback type="keyalbum.SplitKeywords" keywords=$item.keywords}
 <div class="{$class}">
-    <div class="block-expandable-header">
-        <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
-        <span class="hidden-xs hidden-sm">{g->text text="Keywords"}</span>
-    </div>
+    {if isset($showHeader) && $showHeader}
+        <div class="block-expandable-header">
+            <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+            <span class="hidden-xs hidden-sm">{g->text text="Keywords"}</span>
+        </div>
+    {/if}
     <div class="block-expandable-content">
   {foreach from=$block.keyalbum.keywords key=rawKeyword item=keyword name=keywords}
     {strip}
         <a href="{g->url arg1="view=keyalbum.KeywordAlbum" arg2="keyword=$rawKeyword"|ireplace:'/':'_'
-    arg3="highlightId=`$item.id`"}">
+    arg3="highlightId=`$item.id`"}" class="link-keyword">
         <span class="label label-primary">{$keyword}</span>
         </a>
     {/strip}
