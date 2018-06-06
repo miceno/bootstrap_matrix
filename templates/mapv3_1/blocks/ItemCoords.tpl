@@ -11,7 +11,8 @@
 
 {if !empty($block.mapv3.ItemCoords) and !empty($block.mapv3.ItemCoords.lat) and !empty($block.mapv3.ItemCoords.lng)}
 <div class="{$class}">
-{g->text text="%s Coordinates:" arg1=$block.mapv3.ItemCoords.ItemType}
+    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+    <span class="hidden-xs hidden-sm">{g->text text="%s Coordinates:" arg1=$block.mapv3.ItemCoords.ItemType}</span>
 {if $coordStyle eq 1}
 {$block.mapv3.ItemCoords.lat.deg}&deg;, {$block.mapv3.ItemCoords.lng.deg}&deg;
 {elseif $coordStyle eq 2}
