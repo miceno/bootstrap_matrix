@@ -54,6 +54,7 @@
             {*               *}
             {* Image matrix  *}
             {*               *}
+            {assign var="childrenInColumnCount" value=0}
             <div id="gsThumbMatrix" class="row-fluid clearfix">
                 {foreach from=$theme.children item=child name=child}
 
