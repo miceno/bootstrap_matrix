@@ -13,7 +13,7 @@
  * The strip calls in this tpl are to avoid a safari bug where padding-right is lost
  * in floated containers for elements that have whitespace before the closing tag.
  *}
-<nav class="{$class} text-center" aria-label="{g->text text="Pagination"}">
+<nav class="{$class} text-center visible-md-block visible-lg-block hidden-xs hidden-sm" aria-label="{g->text text="Pagination"}">
     <ul class="pagination g-pagination">
         {foreach from=$order|split item="which"}
             {if $which=="next-and-last"}
@@ -100,3 +100,16 @@
         {/foreach}
     </ul>
 </nav>
+
+<div class="jump-pager visible-xs-block visible-sm-block hidden-md hidden-lg" aria-label="{g->text text="Pagination"}">
+    <form name="form" class="form-inline">
+        {assign var="page" value=1}
+        <select class="form-control" name="jumpMenu" onchange="MM_jumpMenu('parent',this,0)">
+            {section name=selectPage loop=$theme.totalPages}
+                <option value="{g->url params=$theme.pageUrl arg1="page=$page"}"
+                        {if $page==$theme.currentPage}selected="selected"{/if}>{$page}</option>
+                {assign var="page" value=$page+1}
+            {/section}
+        </select>
+    </form>
+</div>
