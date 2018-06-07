@@ -654,9 +654,7 @@ p.giDescription + ul {
 
 .gbBlock {
     padding: 0.7em;
-    border-width: 0;
-    border-style: inherit;
-    border-color: inherit;
+    border: 0 inherit;
 }
 
 .gbBlock .action-list {
@@ -922,7 +920,7 @@ div.giAlbumCell table, div.giItemCell table {
     top: 1px;
     font-size: 0.5em;
     display: inline-block;
-    font-family: 'Glyphicons Halflings';
+    font-family: 'Glyphicons Halflings', fantasy;
     font-style: normal;
     font-weight: 400;
     line-height: 1;
