@@ -139,7 +139,7 @@
                                 </div> {* collapse *}
 
                             </div>{* thumbnail-description-wrapper *}
-                            {g->block type="core.ItemLinks" item=$child links=$child.itemLinks}
+                            {g->block type="core.ItemLinks" useDropdown=false item=$child links=$child.itemLinks}
                         </div> {* thumbnail-wrapper *}
                         <!-- Add the extra clearfix for only the required viewport -->
 
