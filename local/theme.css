@@ -927,42 +927,42 @@ div.giAlbumCell table, div.giItemCell table {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.gbAdminLink.gbLink-geturls_GetUrls::after{
+.thumbnail-wrapper .gbAdminLink.gbLink-geturls_GetUrls::after{
     content: "\e144";
     font-size: 3em;
     visibility: visible;
 }
 
-.gbAdminLink.gbLink-core_ItemAdmin-core_ItemPermissions::after{
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemPermissions::after{
     content: "\e033";
     visibility: visible;
     font-size: 3em;
 }
 
-.gbAdminLink.gbLink-core_ItemAdmin-core_ItemMakeHighlight::after{
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemMakeHighlight::after{
     content: "\e124";
     visibility: visible;
     font-size: 3em;
 }
 
 
-.gbAdminLink.gbLink-core_ItemAdmin-core_ItemDelete-album::after,
-.gbAdminLink.gbLink-core_ItemAdmin-core_ItemDelete::after
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemDelete-album::after,
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemDelete::after
 {
     content: "\e020";
     visibility: visible;
     font-size: 3em;
 }
 
-.gbAdminLink.gbLink-core_ItemAdmin-core_ItemMove-album::after,
-.gbAdminLink.gbLink-core_ItemAdmin-core_ItemMove::after
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemMove-album::after,
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemMove::after
 {
     content: "\e068";
     visibility: visible;
     font-size: 3em;
 }
-.gbAdminLink.gbLink-core_ItemAdmin-core_ItemEdit-photo::after,
-.gbAdminLink.gbLink-core_ItemAdmin-core_ItemEdit::after
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemEdit-photo::after,
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemEdit::after
 {
     content: "\e065";
     visibility: visible;
@@ -973,7 +973,7 @@ div.giAlbumCell table, div.giItemCell table {
     display:none;
 }
 
-li.action-link {
+.thumbnail-wrapper li.action-link {
     text-align: right;
 }
 
