@@ -772,7 +772,7 @@ div.giAlbumCell table, div.giItemCell table {
 
 
 .pagination .active .jump-pager {
-    padding: 5px 10px;
+    padding: 4px;
 }
 
 .pagination select.form-control{
@@ -796,14 +796,24 @@ div.giAlbumCell table, div.giItemCell table {
     .pagination>li>a, .pagination>li>span{
         width:100%;
     }
+
 }
 
 @media (max-width: 1200px){
+    .pagination .active .jump-pager {
+        padding: 0;
+    }
     .g-pagination {
         text-align: center;
     }
 }
 
+
+@media (min-width: 1200px){
+    .pagination .active .jump-pager {
+        padding: 0;
+    }
+}
 .vcenter {
     display: flex;
     align-items: center;
@@ -971,4 +981,8 @@ li.action-link {
 
 .thumbnail-wrapper .action-link a {
     color: white;
+}
+
+.g-pagination select.form-control {
+    padding: 4px;
 }
