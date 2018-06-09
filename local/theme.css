@@ -1001,9 +1001,6 @@ div.giAlbumCell table, div.giItemCell table {
     position: relative;
     z-index: 999;
     background-color: #eee;
-    border: solid 1px rgba(132, 132, 132, 0.46);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 
 #SearchScan .action-list,
@@ -1011,6 +1008,9 @@ div.giAlbumCell table, div.giItemCell table {
     transition: height ease 1ms;
     z-index: 1;
     background: inherit;
+    border: solid 1px rgba(132, 132, 132, 0.46);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 #SearchScan .action-list li,
