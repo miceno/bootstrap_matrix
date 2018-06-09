@@ -8,6 +8,7 @@
 
     <div class="gHeader panel-heading clearfix">
         {if !empty($theme.item.title)}
+            <div class="album-header-wrapper">
             {g->block type="core.BreadCrumb"}
             {strip}
             <h2 class="visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline panel-title"
@@ -18,9 +19,10 @@
             {if !empty($theme.params.sidebarBlocks)}
                 {g->theme include="sidebar.tpl"}
             {/if}
+            </div>
         {/if}
 
-        <div id="description-{$theme.item.id}" class="collapse">
+        <div id="description-{$theme.item.id}" class="description-wrapper collapse">
             {if !empty($theme.item.description)}
                 <div class="giDescription">
                     {$theme.item.description|markup}
@@ -139,7 +141,7 @@
                                 </div> {* collapse *}
 
                             </div>{* thumbnail-description-wrapper *}
-                            {g->block type="core.ItemLinks" useDropdown=false item=$child links=$child.itemLinks}
+                            {g->block type="core.ItemLinks" useDropdown=false onlyIcons=true item=$child links=$child.itemLinks}
                         </div> {* thumbnail-wrapper *}
                         <!-- Add the extra clearfix for only the required viewport -->
 

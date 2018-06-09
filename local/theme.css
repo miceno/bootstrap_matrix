@@ -111,8 +111,15 @@ body.gallery {
 }
 
 .giDescription {
-    font-size: 13px;
+    font-size: 1.2em;
     line-height: 1em;
+}
+
+.album-header-wrapper {
+}
+
+.description-wrapper {
+    margin-top: 1em;
 }
 
 .header .giDescription {
@@ -403,13 +410,15 @@ div#gsSidebar div.block-core-PeerList span.current {
 	position: absolute;
 	top: 0;
     right: 0;
-	margin-left: 1em;
+	padding-left: 1em;
+    height: 100%;
 
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e5e5e5+30,000000+100&0+60,0.45+100 */
-    background: -moz-linear-gradient(left, rgba(229,229,229,0) 30%, rgba(131,131,131,0) 60%, rgba(0,0,0,0.45) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba(229,229,229,0) 30%,rgba(131,131,131,0) 60%,rgba(0,0,0,0.45) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba(229,229,229,0) 30%,rgba(131,131,131,0) 60%,rgba(0,0,0,0.45) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e5e5e5', endColorstr='#73000000',GradientType=1 ); /* IE6-9 */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.6+100 */
+    background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=1 ); /* IE6-9 */
+
 }
 
 /* ***************************************************** */
@@ -519,11 +528,15 @@ td.bsw_BlockCommands {
 .block-map-ItemCoords{
 /*    font-size: 1.4em;*/
 }
+.giInfo .block-keyalbum-KeywordLinks{
+    line-height: 1.5em;
+}
+
 .block-share-ShareBlock,
 .block-keyalbum-KeywordLinks,
 .block-tags-ImageTags,
 .block-map-ItemCoords{
-    padding: 5px;
+    margin: 5px;
 }
 
 #gsImageView{
@@ -580,7 +593,7 @@ td.bsw_BlockCommands {
 
 
 .opensans {
-	font: 600 15px "Open Sans","Open Sans","Arial",sans-serif;
+	font: 600 inherit "Open Sans","Open Sans","Arial",sans-serif;
 }
 
 .form-inline {
@@ -631,6 +644,8 @@ p.giDescription + ul {
     box-sizing: border-box;
 
     color: white;
+
+    z-index: 2;
 }
 
 .thumbnail-description-wrapper .giTitle:hover {
@@ -639,7 +654,7 @@ p.giDescription + ul {
 }
 .thumbnail-description-wrapper .giTitle {
     color: white;
-    opacity: 0.85;
+    opacity: 0.80;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
 }
 
@@ -655,6 +670,10 @@ p.giDescription + ul {
 .gbBlock {
     padding: 0.7em;
     border: 0 inherit;
+}
+
+.gbBlock .thumbnail-wrapper .action-list {
+    padding: 4px;
 }
 
 .gbBlock .action-list {
@@ -733,23 +752,10 @@ p.giDescription + ul {
 #gsSidebarCol {
 }
 
-/*
+
 div.giAlbumCell, div.giItemCell {
-	position: relative;
-    font-size: 15px;
-}
-*/
-div.giItemCell {
-    /*background-color: palevioletred;*/
 }
 
-
-div.giAlbumCell:nth-child(even), div.giItemCell:nth-child(even) {
-    /*background-color: dodgerblue;*/
-}
-
-#gallery div.giAlbumCell select, #gallery div.giItemCell select {
-}
 
 /* So imageframed thumbs can be centered */
 div.giAlbumCell table, div.giItemCell table {
@@ -799,7 +805,7 @@ div.giAlbumCell table, div.giItemCell table {
 
 @media (max-width: 1200px){
     .pagination .active .jump-pager {
-        padding: 0;
+        padding: 0px;
     }
     .g-pagination {
         text-align: center;
@@ -809,7 +815,7 @@ div.giAlbumCell table, div.giItemCell table {
 
 @media (min-width: 1200px){
     .pagination .active .jump-pager {
-        padding: 0;
+        padding: 0px;
     }
 }
 .vcenter {
@@ -945,6 +951,12 @@ div.giAlbumCell table, div.giItemCell table {
     font-size: 3em;
 }
 
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemMakeHighlight::after{
+    content: "\e124";
+    visibility: visible;
+    font-size: 3em;
+}
+
 
 .thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemDelete-album::after,
 .thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemDelete::after
@@ -981,6 +993,15 @@ div.giAlbumCell table, div.giItemCell table {
     color: white;
 }
 
+#gallery .thumbnail-wrapper .action-link a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
 .g-pagination select.form-control {
     padding: 4px;
+}
+
+.size.summary {
+    font-size: 0.75em;
 }

@@ -2,6 +2,7 @@
  * $Revision: 16931 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
+{assign var="onlyIcons" value=$onlyIcons|default:false}
 {if !isset($links) && isset($theme.itemLinks)}
   {assign var="links" value=$theme.itemLinks}
 {/if}
@@ -43,7 +44,7 @@
             <ul class="action-list">
                 {foreach from=$links item="link"}
                     <li class="action-link">
-                        {g->itemLink link=$link lowercase=$lowercase}
+                        {g->itemLink link=$link onlyIcon=$onlyIcons lowercase=$lowercase}
                     </li>
                 {/foreach}
             </ul>
