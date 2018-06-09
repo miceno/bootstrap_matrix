@@ -14,24 +14,30 @@
 
         <script type="text/javascript">
             // <![CDATA[
-            function setCheck(val) {ldelim}
-                {foreach from=$SearchScan.modules key=moduleId item=moduleInfo}
-                {foreach from=$moduleInfo.options key=optionId item=optionInfo}
-                document.getElementById('cb_{$moduleId}_{$optionId}').checked = val;
-                {/foreach}
-                {/foreach}
-                {rdelim}
+            var search_options = [
+            {foreach from=$SearchScan.modules key=moduleId item=moduleInfo}
+            {foreach from=$moduleInfo.options key=optionId item=optionInfo}
+            'cb_{$moduleId}_{$optionId}',
+            {/foreach}
+            {/foreach}];
 
-            function invertCheck() {ldelim}
+            {literal}
+            function setCheck(val) {
+                for (var i = 0; i < search_options.length; i++)
+                {
+                    document.getElementById(search_options[i]).checked = val;
+                }
+            }
+
+            function invertCheck() {
                 var o;
-                {foreach from=$SearchScan.modules key=moduleId item=moduleInfo}
-                {foreach from=$moduleInfo.options key=optionId item=optionInfo}
-                o = document.getElementById('cb_{$moduleId}_{$optionId}');
-                o.checked = !o.checked;
-                {/foreach}
-                {/foreach}
-                {rdelim}
 
+                for (var i = 0; i < search_options.length; i++) {
+                    o = document.getElementById(search_options[i]);
+                    o.checked = !o.checked;
+                }
+                }
+            {/literal}
             // ]]>
         </script>
 
