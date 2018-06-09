@@ -104,7 +104,7 @@
                             {/if}
                             <div class="thumbnail-description-wrapper opensans">
                                 {if !empty($child.title)}
-                                    <p class="giTitle" data-toggle="collapse"
+                                    <p class="giTitle collapsed" data-toggle="collapse"
                                        data-target="#description-{$smarty.foreach.child.index}">
                                         {if $child.canContainChildren && (!isset($theme.params.albumFrame)
                                         || $theme.params.albumFrame == $theme.params.itemFrame)}
@@ -113,6 +113,7 @@
                                         {else}
                                             {$child.title|markup}
                                         {/if}
+                                        <i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
                                     </p>
                                 {/if}
 

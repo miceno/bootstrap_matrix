@@ -1005,3 +1005,11 @@ div.giAlbumCell table, div.giItemCell table {
 .size.summary {
     font-size: 0.75em;
 }
+
+.thumbnail-description-wrapper .glyphicon {
+    transition: .3s transform ease-in-out;
+    top: 0.4em;
+}
+.thumbnail-description-wrapper .collapsed .glyphicon {
+    transform: rotate(180deg);
+}
