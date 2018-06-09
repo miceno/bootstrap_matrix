@@ -8,9 +8,6 @@
     .options-wrapper {
         margin: 0.5em 0;
     }
-    .second-element {
-        width: 10%;
-    }
     {/literal}
 </style>
 <form id="SearchScan" action="{g->url}" method="post">
@@ -98,7 +95,7 @@
         {if !empty($SearchScan.searchResults)}
             {foreach from=$SearchScan.searchResults key=moduleId item=results}
                 {assign var="resultCount" value=$resultCount+$results.count}
-                <div class="gbBlock">
+                <div class="gbBlock row">
                     <h4>
                         {$SearchScan.modules.$moduleId.name}
                         {if ($results.count > 0)}
@@ -115,32 +112,32 @@
 
                     {assign var="searchCriteria" value=$form.searchCriteria}
                     {if (sizeof($results.results) > 0)}
-                        <div class="giItemCell">
-                            {foreach from=$results.results item=result}
-                                {assign var=itemId value=$result.itemId}
-                                <div class="thumbnail-wrapper second-element {if
-                                $SearchScan.items.$itemId.canContainChildren}gbItemAlbum{else}gbItemImage{/if}">
-                                    <a href="{g->url arg1="view=core.ShowItem" arg2="itemId=$itemId"}">
-                                        {if isset($SearchScan.thumbnails.$itemId)}
-                                            {g->image item=$SearchScan.items.$itemId image=$SearchScan.thumbnails.$itemId
-                                        class="giThumbnail"}
-                                        {else}
-                                            {g->text text="No thumbnail"}
+                        {foreach from=$results.results item=result}
+                            {assign var=itemId value=$result.itemId}
+                            <div class="giItemCell col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="thumbnail-wrapper {if
+                            $SearchScan.items.$itemId.canContainChildren}gbItemAlbum{else}gbItemImage{/if}">
+                                <a href="{g->url arg1="view=core.ShowItem" arg2="itemId=$itemId"}">
+                                    {if isset($SearchScan.thumbnails.$itemId)}
+                                        {g->image item=$SearchScan.items.$itemId image=$SearchScan.thumbnails.$itemId
+                                    class="giThumbnail"}
+                                    {else}
+                                        {g->text text="No thumbnail"}
+                                    {/if}
+                                </a>
+                                <ul class="giInfo action-list">
+                                    {foreach from=$result.fields item=field}
+                                        {if isset($field.value)}
+                                            <li>
+                                                <span class="label label-default ResultKey">{$field.key}:</span>
+                                                <span class="ResultData">{$field.value|default:"&nbsp;"|markup}</span>
+                                            </li>
                                         {/if}
-                                    </a>
-                                    <ul class="giInfo">
-                                        {foreach from=$result.fields item=field}
-                                            {if isset($field.value)}
-                                                <li>
-                                                    <span class="ResultKey">{$field.key}:</span>
-                                                    <span class="ResultData">{$field.value|default:"&nbsp;"|markup}</span>
-                                                </li>
-                                            {/if}
-                                        {/foreach}
-                                    </ul>
-                                </div>
-                            {/foreach}
-                        </div>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                            </div>
+                        {/foreach}
                         <script type="text/javascript">
                             search_HighlightResults('{$searchCriteria}');
                         </script>
