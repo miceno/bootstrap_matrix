@@ -56,30 +56,30 @@ body.gallery {
     border: 0 solid #888;
 }
 
-#gallery a {
-/*    font-weight: bold;*/
+a {
     text-decoration: none;
-/*    color: #6b8cb7;*/
 }
-#gallery a:hover {
+
+a:hover {
     text-decoration: underline;
     color: #f4560f;
 }
-#gallery a:active {
+
+a:active {
     text-decoration: none;
     color: #f9c190;
 }
 
-#gallery img {
+img {
     border-width: 0;
 }
 
-#gallery input:focus, #gallery textarea:focus {
+input:focus, textarea:focus {
     background-color: transparent;
     color: #000;
 }
 
-#gallery input.inputTypeSubmit, #gallery input.inputTypeButton {  /* No input[type=submit] in IE */
+input.inputTypeSubmit, input.inputTypeButton {  /* No input[type=submit] in IE */
     color: #333;
     background-color: #eee;
     border-width: 2px;
@@ -87,19 +87,25 @@ body.gallery {
     border-color: #e7e7e7 #666 #666 #e7e7e7;
 }
 
-#gallery select {
+select {
     font-size: 1em;
 }
 
-.giTitle,
-/* #gallery h2, */
-#gallery h3,
-#gallery h4 {
-        font-size: 1em;
-        line-height: 1.2em;
+
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
 }
 
-#gallery pre, #gallery tt {
+p {
+    padding: 0;
+}
+
+
+
+pre, tt {
     font-family: Courier New, monospace;
     font-size: 1.2em;
 }
@@ -112,7 +118,7 @@ body.gallery {
 
 .giDescription {
     font-size: 1.2em;
-    line-height: 1em;
+    line-height: 1.2em;
 }
 
 .album-header-wrapper {
@@ -137,10 +143,6 @@ body.gallery {
 }
 
 .giInfo {
-/*
-    font-size: 0.9em;
-    color: #888;
-*/
 }
 
 .giSuccess, .giWarning, .giError  {
@@ -162,39 +164,15 @@ body.gallery {
     font-weight: bold;
 }
 
-/*
-.navbar {
-    margin-bottom: 0;
-}
-*/
-
 .navbar-brand {
     padding-top: 0;
     padding-bottom: 0;
 }
 
-/*
-.navbar-default {
-    background-color: inherit;
-    border-color: none;
-}
-*/
-
 #gsNavBar div.gbBreadCrumb a.BreadCrumb-1 {   /* no :first-child in IE */
     padding-left: 0;
     background-image: none;
     white-space: nowrap;
-}
-
-/*
-#gsThumbMatrix {
-    width: 100%;
-}
-*/
-
-#gallery.IE div.gbBreadCrumb span {
-    display: inline-block;   /* IE loses padding-left on wrapped inline nowrap element */
-    padding-right: 4px;      /* IE has less space at right of each span */
 }
 
 #gsNavBar div.gbBreadCrumb span.BreadCrumb-1 {   /* no :first-child in IE */
@@ -233,20 +211,13 @@ div.gbTabBar span.o {
     padding: 6px 0 5px 8px;
     background: url('images/tab_left.jpg') no-repeat left top;
 }
-#gallery.IE div.gbTabBar span.o {
-    display: inline-block;   /* IE loses padding-left on wrapped inline nowrap element */
-    margin-bottom: 1px;      /* ..and then adds padding differently with inline-block.. */
-}
-/* IE may clip off the right end of a long set of tabs, so allow IE to wrap them */
-#gallery.IE div.gbTabBar { padding-bottom: 0; white-space: normal; }
-#gallery.IE div.gbTabBar span.giSelected { margin-bottom: 0; }
 
-#gallery div.gbTabBar span span {
+div.gbTabBar span span {
     padding: 6px 12px 5px 4px;
     background: url('images/tab_right.jpg') no-repeat right top;
 }
 
-#gallery div.gbTabBar a {
+div.gbTabBar a {
     color: #777;
     text-decoration: none;
 }
@@ -614,15 +585,6 @@ p.giDescription + ul {
     list-style-type: decimal;
 }
 
-#gallery h2, #gallery h3, #gallery h4 {
-    margin: 0;
-    padding: 0;
-}
-
-#gallery p {
-    padding: 0;
-}
-
 .thumbnail-wrapper {
     margin: 0.25em;
     position: relative;
@@ -668,7 +630,6 @@ p.giDescription + ul {
 }
 
 .gbBlock {
-    padding: 0.7em;
     border: 0 inherit;
 }
 
@@ -871,6 +832,7 @@ div.giAlbumCell table, div.giItemCell table {
     height: 75vh;
     overflow: hidden;
     position: relative;
+    border-bottom: solid 1px #eeeff2;
 }
 
 .img-responsive.gcPhotoImage {
@@ -897,6 +859,9 @@ div.giAlbumCell table, div.giItemCell table {
 .sidebar-right {
     height: 100%;
     overflow-y: scroll;
+    border-left: solid 1px #eeeff2;
+    position: relative;
+    top: -1px;
 }
 
 .album-title {
@@ -993,9 +958,10 @@ div.giAlbumCell table, div.giItemCell table {
     color: white;
 }
 
-#gallery .thumbnail-wrapper .action-link a:hover {
+.thumbnail-wrapper .action-link a:hover {
     text-decoration: none;
     opacity: 1;
+    color: #f4560f;
 }
 
 .g-pagination select.form-control {
@@ -1012,4 +978,9 @@ div.giAlbumCell table, div.giItemCell table {
 }
 .thumbnail-description-wrapper .collapsed .glyphicon {
     transform: rotate(180deg);
+}
+
+
+.theme-photo-wrapper .giTitle h2 {
+    margin-bottom: 0.4em;
 }
