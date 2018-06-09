@@ -2,9 +2,21 @@
  * $Revision: 17380 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
+<style>
+    {literal}
+
+    .options-wrapper {
+        margin: 0.5em 0;
+    }
+    .second-element {
+        width: 10%;
+    }
+    {/literal}
+</style>
 <form id="SearchScan" action="{g->url}" method="post">
     <div id="gsContent" class="gcBorder1">
-        <div class="gbBlock gcBackground1">
+        {* header *}
+        <div class="gbBlock gcBackground1 gHeader">
             <h2> {g->text text="Search the Gallery"} </h2>
         </div>
 
@@ -41,22 +53,25 @@
             // ]]>
         </script>
 
+        {* search form*}
         <div class="gbBlock">
-            <input type="text" size="50"
-                   name="{g->formVar var="form[searchCriteria]"}" value="{$form.searchCriteria}"/>
-            <script type="text/javascript">
-                document.getElementById('SearchScan')['{g->formVar var="form[searchCriteria]"}'].focus();
-            </script>
-            <input type="submit" class="inputTypeSubmit"
-                   name="{g->formVar var="form[action][search]"}" value="{g->text text="Search"}"/>
+            <div class="input-wrapper">
+                <input type="text" size="50"
+                       name="{g->formVar var="form[searchCriteria]"}" value="{$form.searchCriteria}"/>
+                <script type="text/javascript">
+                    document.getElementById('SearchScan')['{g->formVar var="form[searchCriteria]"}'].focus();
+                </script>
+                <input type="submit" class="inputTypeSubmit"
+                       name="{g->formVar var="form[action][search]"}" value="{g->text text="Search"}"/>
 
-            {if isset($form.error.searchCriteria.missing)}
-                <div class="giError">
-                    {g->text text="You must enter some text to search for!"}
-                </div>
-            {/if}
+                {if isset($form.error.searchCriteria.missing)}
+                    <div class="giError">
+                        {g->text text="You must enter some text to search for!"}
+                    </div>
+                {/if}
+            </div>
+            <div class="options-wrapper">
 
-            <div style="margin: 0.5em 0">
                 {foreach from=$SearchScan.modules key=moduleId item=moduleInfo}
                     {foreach from=$moduleInfo.options key=optionId item=optionInfo}
                         <input type="checkbox" id="cb_{$moduleId}_{$optionId}"
@@ -67,17 +82,18 @@
                         </label>
                     {/foreach}
                 {/foreach}
+                <div>
+                    <a href="javascript:setCheck(1)">{g->text text="Check All"}</a>
+                    &nbsp;
+                    <a href="javascript:setCheck(0)">{g->text text="Uncheck All"}</a>
+                    &nbsp;
+                    <a href="javascript:invertCheck()">{g->text text="Invert"}</a>
+                </div>
             </div>
 
-            <div>
-                <a href="javascript:setCheck(1)">{g->text text="Check All"}</a>
-                &nbsp;
-                <a href="javascript:setCheck(0)">{g->text text="Uncheck All"}</a>
-                &nbsp;
-                <a href="javascript:invertCheck()">{g->text text="Invert"}</a>
-            </div>
         </div>
 
+        {* Search results *}
         {assign var="resultCount" value="0"}
         {if !empty($SearchScan.searchResults)}
             {foreach from=$SearchScan.searchResults key=moduleId item=results}
@@ -99,35 +115,32 @@
 
                     {assign var="searchCriteria" value=$form.searchCriteria}
                     {if (sizeof($results.results) > 0)}
-                        <table>
-                            <tr>
-                                {foreach from=$results.results item=result}
-                                    {assign var=itemId value=$result.itemId}
-                                    <td class="{if
-                                    $SearchScan.items.$itemId.canContainChildren}gbItemAlbum{else}gbItemImage{/if}"
-                                        style="width: 10%">
-                                        <a href="{g->url arg1="view=core.ShowItem" arg2="itemId=$itemId"}">
-                                            {if isset($SearchScan.thumbnails.$itemId)}
-                                                {g->image item=$SearchScan.items.$itemId image=$SearchScan.thumbnails.$itemId
-                                            class="giThumbnail"}
-                                            {else}
-                                                {g->text text="No thumbnail"}
+                        <div class="giItemCell">
+                            {foreach from=$results.results item=result}
+                                {assign var=itemId value=$result.itemId}
+                                <div class="thumbnail-wrapper second-element {if
+                                $SearchScan.items.$itemId.canContainChildren}gbItemAlbum{else}gbItemImage{/if}">
+                                    <a href="{g->url arg1="view=core.ShowItem" arg2="itemId=$itemId"}">
+                                        {if isset($SearchScan.thumbnails.$itemId)}
+                                            {g->image item=$SearchScan.items.$itemId image=$SearchScan.thumbnails.$itemId
+                                        class="giThumbnail"}
+                                        {else}
+                                            {g->text text="No thumbnail"}
+                                        {/if}
+                                    </a>
+                                    <ul class="giInfo">
+                                        {foreach from=$result.fields item=field}
+                                            {if isset($field.value)}
+                                                <li>
+                                                    <span class="ResultKey">{$field.key}:</span>
+                                                    <span class="ResultData">{$field.value|default:"&nbsp;"|markup}</span>
+                                                </li>
                                             {/if}
-                                        </a>
-                                        <ul class="giInfo">
-                                            {foreach from=$result.fields item=field}
-                                                {if isset($field.value)}
-                                                    <li>
-                                                        <span class="ResultKey">{$field.key}:</span>
-                                                        <span class="ResultData">{$field.value|default:"&nbsp;"|markup}</span>
-                                                    </li>
-                                                {/if}
-                                            {/foreach}
-                                        </ul>
-                                    </td>
-                                {/foreach}
-                            </tr>
-                        </table>
+                                        {/foreach}
+                                    </ul>
+                                </div>
+                            {/foreach}
+                        </div>
                         <script type="text/javascript">
                             search_HighlightResults('{$searchCriteria}');
                         </script>
