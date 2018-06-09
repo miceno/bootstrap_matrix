@@ -3,7 +3,7 @@
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
 
-<div class="theme-body panel panel-default gcBackground1 ">
+<div class="module-body panel panel-default gcBackground1 ">
     <div class="gbBlock panel-body">
 {* {literal}
         {if !empty($theme.params.sidebarBlocks)}
