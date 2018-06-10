@@ -2,7 +2,7 @@
  * $Revision: 16235 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
-<form id="SearchShowAll" action="{g->url}" method="post">
+<form id="SearchShowAll" action="{g->url}" method="get">
     <div id="gsContent" class="gcBorder1">
         {* header *}
         <div class="gbBlock gcBackground1 gHeader">
