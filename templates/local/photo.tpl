@@ -112,6 +112,14 @@
         {* Show any other photo blocks (comments, exif etc) *}
         <div class="col-xs-12 col-sm-4 sidebar-{$boxesLayout}">
             <div class="photo-blocks ">
+                {* Download link for item in original format *}
+                {if !empty($theme.sourceImage) && $theme.sourceImage.mimeType != $theme.item.mimeType}
+                    <div class="gbBlock">
+                        <a href="{g->url arg1="view=core.DownloadItem" arg2="itemId=`$theme.item.id`"}">
+                            {g->text text="Download %s in original format" arg1=$theme.sourceImage.itemTypeName.1}
+                        </a>
+                    </div>
+                {/if}
                 {foreach from=$theme.params.photoBlocks item=block}
                     {g->block class="gbBlock col-xs-12 col-md-12 col-lg-12" type=$block.0 params=$block.1}
                 {/foreach}
@@ -122,15 +130,6 @@
             <div class="gbBlock">
                 <a href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$theme.item.id`"}">
                     {g->text text="View in original album"}
-                </a>
-            </div>
-        {/if}
-
-        {* Download link for item in original format *}
-        {if !empty($theme.sourceImage) && $theme.sourceImage.mimeType != $theme.item.mimeType}
-            <div class="gbBlock">
-                <a href="{g->url arg1="view=core.DownloadItem" arg2="itemId=`$theme.item.id`"}">
-                    {g->text text="Download %s in original format" arg1=$theme.sourceImage.itemTypeName.1}
                 </a>
             </div>
         {/if}
