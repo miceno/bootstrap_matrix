@@ -985,15 +985,28 @@ div.giAlbumCell table, div.giItemCell table {
     margin-bottom: 0.4em;
 }
 
-
-#SearchScan .giItemCell:hover,
-#SearchShowAll .giItemCell:hover {
-    z-index: 999;
-    margin-bottom: -200px;
+.input-wrapper input {
+    width: 100%;
 }
-#SearchScan .giItemCell,
-#SearchShowAll .giItemCell {
+
+#SearchScan .thumbnail-wrapper,
+#SearchShowAll .thumbnail-wrapper {
     z-index: 1;
+}
+
+#SearchScan .thumbnail-wrapper:hover,
+#SearchShowAll .thumbnail-wrapper:hover {
+    z-index: 999;
+}
+
+#SearchScan .action-list,
+#SearchShowAll .action-list {
+    z-index: 1;
+    background: inherit;
+    border: solid 1px rgba(132, 132, 132, 0.46);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: initial;
 }
 
 #SearchScan .action-list:hover,
@@ -1001,16 +1014,7 @@ div.giAlbumCell table, div.giItemCell table {
     position: relative;
     z-index: 999;
     background-color: #eee;
-}
-
-#SearchScan .action-list,
-#SearchShowAll .action-list {
-    transition: height ease 1ms;
-    z-index: 1;
-    background: inherit;
-    border: solid 1px rgba(132, 132, 132, 0.46);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    margin-bottom: -200px;
 }
 
 #SearchScan .action-list li,
@@ -1021,12 +1025,9 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 #SearchScan .action-list li:hover,
-#SearchShowAll .action-list li:hover{
+#SearchShowAll .action-list li:hover {
     overflow: initial;
     text-overflow: initial;
     white-space: initial;
 }
 
-.input-wrapper input {
-    width: 100%;
-}
