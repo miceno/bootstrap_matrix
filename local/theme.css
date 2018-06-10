@@ -997,6 +997,13 @@ div.giAlbumCell table, div.giItemCell table {
     border: solid 1px rgba(132, 132, 132, 0.46);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    overflow: hidden;
+}
+
+#SearchScan .action-list:hover,
+#SearchShowAll .action-list:hover {
+    z-index: 99;
+    overflow-y: auto;
 }
 
 .ResultKey.result-key-commenter,
