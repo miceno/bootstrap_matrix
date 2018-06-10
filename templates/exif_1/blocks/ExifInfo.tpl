@@ -3,13 +3,19 @@
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
 {if empty($item)} {assign var=item value=$theme.item} {/if}
+{assign var=isRegisteredUser value=false}
+{if isset($user.isRegisteredUser)}{assign var=isRegisteredUser value=`$user.isRegisteredUser`}{/if}
+{if isset($theme.isRegisteredUser)}{assign var=isRegisteredUser value=`$theme.isRegisteredUser`}{/if}
 
 {* Load up the EXIF data *}
 {g->callback type="exif.LoadExifInfo" itemId=$item.id}
 
+
 {if !empty($block.exif.LoadExifInfo.exifData)}
     {assign var="exif" value=$block.exif.LoadExifInfo}
     {if empty($ajax)}
+        {if $isRegisteredUser}
+
         {if $exif.blockNum == 1}
         <script type="text/javascript">
             // <![CDATA[
@@ -36,23 +42,27 @@
             // ]]>
         </script>
         {/if} {* $exif.blockNum == 1 *}
+        {/if} {* !isRegisteredUser *}
+
     <div id="ExifInfoBlock{$exif.blockNum}" class="{$class}">
-        {/if}
+    {/if}{* if empty($ajax) *}
         <div class="block-expandable-header">
             <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
             <span class="hidden-xs hidden-sm">{g->text text="EXIF Photo Properties"}</span>
         {if isset($exif.mode)}
             {strip}
-        <button class="btn btn-xs btn-default"
-        {if ($exif.mode == 'summary')}
-               onclick="return exifSwitchDetailMode({$exif.blockNum},{$item.id},'detailed')">
-                {g->text text="details"}
-        {else}
-               onclick="return exifSwitchDetailMode({$exif.blockNum},{$item.id},'summary')">
-                {g->text text="summary"}
-        {/if}
-        </button>
-        <span id="ExifInfoLabel{$exif.blockNum}" aria-hidden="true"></span>
+            {if $isRegisteredUser}
+            <button class="btn btn-xs btn-default"
+            {if ($exif.mode == 'summary')}
+                   onclick="return exifSwitchDetailMode({$exif.blockNum},{$item.id},'detailed')">
+                    {g->text text="details"}
+            {else}
+                   onclick="return exifSwitchDetailMode({$exif.blockNum},{$item.id},'summary')">
+                    {g->text text="summary"}
+            {/if}
+            </button>
+            <span id="ExifInfoLabel{$exif.blockNum}" aria-hidden="true"></span>
+            {/if} {* $isRegisteredUser *}
             {/strip}
         {/if}{* isset($exif.mode) *}
         </div>
