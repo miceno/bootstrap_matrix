@@ -999,25 +999,36 @@ div.giAlbumCell table, div.giItemCell table {
     border-bottom-right-radius: 5px;
 }
 
-#SearchScan .action-list:hover,
-#SearchShowAll .action-list:hover {
-    position: relative;
-    z-index: 999;
-    overflow-y: auto;
-    background-color: #eee;
+.ResultKey.result-key-commenter,
+.ResultKey.result-key-title,
+.ResultKey.result-key-summary,
+.ResultKey.result-key-description,
+.ResultKey.result-key-keywords,
+.ResultKey.result-key-subject,
+.ResultKey.result-key-comment,
+.ResultKey.result-key-owner
+{
+    display: none;
 }
 
-#SearchScan .action-list li,
-#SearchShowAll .action-list li {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.ResultData.result-data-summary,
+.ResultData.result-data-comment
+{
+    display: inline-block;
+    line-height: 1.4em;
 }
 
-#SearchScan .action-list li:hover,
-#SearchShowAll .action-list li:hover {
-    overflow: initial;
-    text-overflow: initial;
-    white-space: initial;
+.ResultData.result-data-title,
+.ResultData.result-data-subject
+{
+    font-weight: bold;
+}
+
+.ResultData.result-data-description,
+.ResultData.result-data-keywords,
+.ResultData.result-data-owner,
+.ResultData.result-data-commenter
+{
+    display: none;
 }
 

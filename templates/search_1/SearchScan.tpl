@@ -129,8 +129,9 @@
                                     {foreach from=$result.fields item=field}
                                         {if isset($field.value)}
                                             <li>
-                                                <span class="label label-default ResultKey">{$field.key}:</span>
-                                                <span class="ResultData">{$field.value|default:"&nbsp;"|markup}</span>
+                                                <span class="ResultKey result-key-{$field.field|lower}">{$field.key}:</span>
+                                                <span class="ResultIcon result-key-{$field.field|lower}"></span>
+                                                <span class="result-data-{$field.field|lower} ResultData">{$field.value|default:"&nbsp;"|markup}</span>
                                             </li>
                                         {/if}
                                     {/foreach}
