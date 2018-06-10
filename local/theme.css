@@ -989,45 +989,53 @@ div.giAlbumCell table, div.giItemCell table {
     width: 100%;
 }
 
-#SearchScan .thumbnail-wrapper,
-#SearchShowAll .thumbnail-wrapper {
-    z-index: 1;
-}
-
-#SearchScan .thumbnail-wrapper:hover,
-#SearchShowAll .thumbnail-wrapper:hover {
-    z-index: 999;
-}
-
 #SearchScan .action-list,
 #SearchShowAll .action-list {
     z-index: 1;
     background: inherit;
+    height: 7em;
     border: solid 1px rgba(132, 132, 132, 0.46);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    margin-bottom: initial;
+    overflow: hidden;
 }
 
 #SearchScan .action-list:hover,
 #SearchShowAll .action-list:hover {
-    position: relative;
-    z-index: 999;
-    background-color: #eee;
-    margin-bottom: -200px;
+    z-index: 99;
+    overflow-y: auto;
 }
 
-#SearchScan .action-list li,
-#SearchShowAll .action-list li {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.ResultKey.result-key-commenter,
+.ResultKey.result-key-title,
+.ResultKey.result-key-summary,
+.ResultKey.result-key-description,
+.ResultKey.result-key-keywords,
+.ResultKey.result-key-subject,
+.ResultKey.result-key-comment,
+.ResultKey.result-key-owner
+{
+    display: none;
 }
 
-#SearchScan .action-list li:hover,
-#SearchShowAll .action-list li:hover {
-    overflow: initial;
-    text-overflow: initial;
-    white-space: initial;
+.ResultData.result-data-summary,
+.ResultData.result-data-comment
+{
+    display: inline-block;
+    line-height: 1.4em;
+}
+
+.ResultData.result-data-title,
+.ResultData.result-data-subject
+{
+    font-weight: bold;
+}
+
+.ResultData.result-data-description,
+.ResultData.result-data-keywords,
+.ResultData.result-data-owner,
+.ResultData.result-data-commenter
+{
+    display: none;
 }
 

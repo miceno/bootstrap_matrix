@@ -2,7 +2,7 @@
  * $Revision: 16235 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
-<form id="SearchShowAll" action="{g->url}" method="post">
+<form id="SearchShowAll" action="{g->url}" method="get">
     <div id="gsContent" class="gcBorder1">
         {* header *}
         <div class="gbBlock gcBackground1 gHeader">
@@ -130,8 +130,9 @@
                                 <ul class="giInfo action-list">
                                     {foreach from=$result.fields item=field}
                                         <li>
-                                            <span class="label label-default ResultKey">{$field.key}:</span>
-                                            <span class="ResultData">{$field.value|default:"&nbsp;"|markup}</span>
+                                            <span class="ResultKey result-key-{$field.field|lower}">{$field.key}:</span>
+                                            <span class="ResultIcon result-key-{$field.field|lower}"></span>
+                                            <span class="result-data-{$field.field|lower} ResultData">{$field.value|default:"&nbsp;"|markup}</span>
                                         </li>
                                     {/foreach}
                                 </ul>
