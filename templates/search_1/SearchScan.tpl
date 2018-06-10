@@ -10,7 +10,7 @@
     }
     {/literal}
 </style>
-<form id="SearchScan" action="{g->url}" method="post">
+<form id="SearchScan" action="{g->url}" method="get">
     <div id="gsContent" class="gcBorder1">
         {* header *}
         <div class="gbBlock gcBackground1 gHeader">
