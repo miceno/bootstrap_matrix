@@ -135,7 +135,7 @@
                                         </li>
                                     {/foreach}
                                 </ul>
-                            </div>
+                                </div>
                             </div>
                             {/foreach}
 
