@@ -1026,3 +1026,7 @@ div.giAlbumCell table, div.giItemCell table {
     text-overflow: initial;
     white-space: initial;
 }
+
+.input-wrapper input {
+    width: 100%;
+}
