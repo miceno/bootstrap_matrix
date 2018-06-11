@@ -157,66 +157,61 @@
     </script>
 
     <div class="table clearfix">
-        <colgroup width="60"/>
-        {foreach from=$ItemMove.peers item=peer}
-            {assign var="peerItemId" value=$peer.id}
-            <div class="table-row col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="table-column" align="center">
-                    {if isset($peer.thumbnail)}
-                        <a id="thumb_{$peerItemId}"
-                           href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$peerItemId`"}">
-                            {g->image item=$peer image=$peer.thumbnail maxSize=50 class="giThumbnail"}
-                        </a>
-                    {else}
-                        &nbsp;
-                    {/if}
-                </div>
-                <div class="table-column">
-                    <input type="checkbox" id="cb_{$peerItemId}" {if $peer.selected}checked="checked" {/if}
-                           name="{g->formVar var="form[selectedIds][$peerItemId]"}"/>
-                </div>
-                <div class="table-column">
-                    <label for="cb_{$peerItemId}">
-                        {$peer.title|markup:strip|default:$peer.pathComponent}
-                    </label>
-                    <i>
-                        {if isset($ItemMove.peerTypes.data.$peerItemId)}
-                            {g->text text="(data)"}
-                        {/if}
-                        {if isset($ItemMove.peerTypes.album.$peerItemId)}
-                            {if isset($ItemMove.peerDescendentCounts.$peerItemId)}
-                                {g->text one="(album containing %d item)" many="(album containing %d items)"
-                            count=$ItemMove.peerDescendentCounts.$peerItemId
-                            arg1=$ItemMove.peerDescendentCounts.$peerItemId}
-                            {else}
-                                {g->text text="(empty album)"}
-                            {/if}
-                        {/if}
-                    </i>
-
-                    {if !empty($form.error.source.$peerItemId.permission.delete)}
-                        <div class="giError">
-                            {g->text text="You are not allowed to move this item away from here."}<br/>
-                        </div>
-                    {/if}
-                    {if !empty($form.error.source.$peerItemId.permission.addAlbumItem)}
-                        <div class="giError">
-                            {g->text text="You are not allowed to move an album to the chosen destination."}<br/>
-                        </div>
-                    {/if}
-                    {if !empty($form.error.source.$peerItemId.permission.addDataItem)}
-                        <div class="giError">
-                            {g->text text="You are not allowed to move an item to the chosen destination."}<br/>
-                        </div>
-                    {/if}
-                    {if !empty($form.error.source.$peerItemId.selfMove)}
-                        <div class="giError">
-                            {g->text text="You cannot move an album into its own subtree."}<br/>
-                        </div>
-                    {/if}
-                </div>
+    {foreach from=$ItemMove.peers item=peer}
+        {assign var="peerItemId" value=$peer.id}
+        <div class="table-row col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="table-column" align="center">
+                {if isset($peer.thumbnail)}
+                    <a id="thumb_{$peerItemId}"
+                       href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$peerItemId`"}">
+                        {g->image item=$peer image=$peer.thumbnail maxSize=50 class="giThumbnail"}
+                    </a>
+                {else}
+                    &nbsp;
+                {/if}
+                <input class="checkbox" type="checkbox" id="cb_{$peerItemId}" {if $peer.selected}checked="checked" {/if}
+                       name="{g->formVar var="form[selectedIds][$peerItemId]"}"/>
             </div>
-        {/foreach}
+            <div class="table-column thumbnail-description-wrapper">
+                <label for="cb_{$peerItemId}" class="giTitle">
+                    {$peer.title|markup:strip|default:$peer.pathComponent}
+                </label>
+                <i>
+                    {if isset($ItemMove.peerTypes.album.$peerItemId)}
+                        {if isset($ItemMove.peerDescendentCounts.$peerItemId)}
+                            {g->text one="(album containing %d item)" many="(album containing %d items)"
+                        count=$ItemMove.peerDescendentCounts.$peerItemId
+                        arg1=$ItemMove.peerDescendentCounts.$peerItemId}
+                        {else}
+                            {g->text text="(empty album)"}
+                        {/if}
+                    {/if}
+                </i>
+            </div>
+
+            {if !empty($form.error.source.$peerItemId.permission.delete)}
+                <div class="giError">
+                    {g->text text="You are not allowed to move this item away from here."}<br/>
+                </div>
+            {/if}
+            {if !empty($form.error.source.$peerItemId.permission.addAlbumItem)}
+                <div class="giError">
+                    {g->text text="You are not allowed to move an album to the chosen destination."}<br/>
+                </div>
+            {/if}
+            {if !empty($form.error.source.$peerItemId.permission.addDataItem)}
+                <div class="giError">
+                    {g->text text="You are not allowed to move an item to the chosen destination."}<br/>
+                </div>
+            {/if}
+            {if !empty($form.error.source.$peerItemId.selfMove)}
+                <div class="giError">
+                    {g->text text="You cannot move an album into its own subtree."}<br/>
+                </div>
+            {/if}
+
+        </div>
+    {/foreach}
     </div>
     <input type="hidden" name="{g->formVar var="page"}" value="{$ItemMove.page}"/>
     <input type="hidden" name="{g->formVar var="form[numPerPage]"}" value="{$ItemMove.numPerPage}"/>

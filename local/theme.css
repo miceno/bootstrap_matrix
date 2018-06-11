@@ -1039,3 +1039,12 @@ div.giAlbumCell table, div.giItemCell table {
     display: none;
 }
 
+.table-column {
+    position: relative;
+}
+
+.table-column .checkbox{
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
