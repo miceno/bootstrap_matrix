@@ -2,7 +2,7 @@
  * $Revision: 17075 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
-<div id="gsSidebar" class="btn-group">
+<div id="gsSidebar" class="btn-group pull-right">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle navigation</span>
