@@ -564,7 +564,9 @@ td.bsw_BlockCommands {
 
 
 .opensans {
-	font: 600 inherit "Open Sans","Open Sans","Arial",sans-serif;
+	font-weight: 600;
+    font-size: inherit;
+    font-family: "Open Sans","Open Sans","Arial",sans-serif;
 }
 
 .form-inline {
@@ -768,7 +770,7 @@ div.giAlbumCell table, div.giItemCell table {
 
 @media (max-width: 1200px){
     .pagination .active .jump-pager {
-        padding: 0px;
+        padding: 0;
     }
     .g-pagination {
         text-align: center;
@@ -778,7 +780,7 @@ div.giAlbumCell table, div.giItemCell table {
 
 @media (min-width: 1200px){
     .pagination .active .jump-pager {
-        padding: 0px;
+        padding: 0;
     }
 }
 .vcenter {
@@ -949,7 +951,7 @@ div.giAlbumCell table, div.giItemCell table {
 }
 .thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemReorder::after
 {
-    content: "\e068";
+    content: "\e155";
     visibility: visible;
     font-size: 3em;
 }
