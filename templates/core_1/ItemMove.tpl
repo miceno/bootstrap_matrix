@@ -156,11 +156,11 @@
         //]]>
     </script>
 
-    <div class="table clearfix">
+    <div class="item-move-matrix table clearfix">
     {foreach from=$ItemMove.peers item=peer}
         {assign var="peerItemId" value=$peer.id}
         <div class="table-row col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="table-column" align="center">
+            <div class="table-column thumbnail-wrapper" align="center">
                 {if isset($peer.thumbnail)}
                     <a id="thumb_{$peerItemId}"
                        href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$peerItemId`"}">
@@ -171,22 +171,22 @@
                 {/if}
                 <input class="checkbox" type="checkbox" id="cb_{$peerItemId}" {if $peer.selected}checked="checked" {/if}
                        name="{g->formVar var="form[selectedIds][$peerItemId]"}"/>
-            </div>
-            <div class="table-column thumbnail-description-wrapper">
-                <label for="cb_{$peerItemId}" class="giTitle">
-                    {$peer.title|markup:strip|default:$peer.pathComponent}
-                </label>
-                <i>
-                    {if isset($ItemMove.peerTypes.album.$peerItemId)}
-                        {if isset($ItemMove.peerDescendentCounts.$peerItemId)}
-                            {g->text one="(album containing %d item)" many="(album containing %d items)"
-                        count=$ItemMove.peerDescendentCounts.$peerItemId
-                        arg1=$ItemMove.peerDescendentCounts.$peerItemId}
-                        {else}
-                            {g->text text="(empty album)"}
+                <div class="thumbnail-description-wrapper">
+                    <label for="cb_{$peerItemId}" class="giTitle">
+                        {$peer.title|markup:strip|default:$peer.pathComponent}
+                    </label>
+                    <i>
+                        {if isset($ItemMove.peerTypes.album.$peerItemId)}
+                            {if isset($ItemMove.peerDescendentCounts.$peerItemId)}
+                                {g->text one="(album containing %d item)" many="(album containing %d items)"
+                            count=$ItemMove.peerDescendentCounts.$peerItemId
+                            arg1=$ItemMove.peerDescendentCounts.$peerItemId}
+                            {else}
+                                {g->text text="(empty album)"}
+                            {/if}
                         {/if}
-                    {/if}
-                </i>
+                    </i>
+                </div>
             </div>
 
             {if !empty($form.error.source.$peerItemId.permission.delete)}
