@@ -617,6 +617,7 @@ p.giDescription + ul {
 .thumbnail-description-wrapper .giTitle {
     color: white;
     opacity: 0.80;
+    font-weight: bold;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
     line-height: 1.2em;
 }
@@ -943,6 +944,12 @@ div.giAlbumCell table, div.giItemCell table {
 .thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemEdit::after
 {
     content: "\e065";
+    visibility: visible;
+    font-size: 3em;
+}
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemReorder::after
+{
+    content: "\e068";
     visibility: visible;
     font-size: 3em;
 }
