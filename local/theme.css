@@ -947,6 +947,12 @@ div.giAlbumCell table, div.giItemCell table {
     visibility: visible;
     font-size: 3em;
 }
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemReorder::after
+{
+    content: "\e068";
+    visibility: visible;
+    font-size: 3em;
+}
 
 .thumbnail-wrapper .block-expandable-header {
     display:none;
