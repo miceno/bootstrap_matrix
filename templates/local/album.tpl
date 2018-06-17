@@ -96,7 +96,7 @@
                                 </a>
                             {/g->container}
                             {elseif isset($child.thumbnail)}
-                                <a href="{$linkUrl}">
+                                <a href="{$linkUrl}" class="link-{$child.entityType}">
                                     {g->image item=$child image=$child.thumbnail class="giThumbnail"}
                                 </a>
                             {else}

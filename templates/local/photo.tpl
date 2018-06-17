@@ -25,7 +25,7 @@
                 {/if}
             {/strip}
             <div class="item-position">
-                {$theme.itemPosition} {g->text text="of"} {$theme.totalItems}
+                {$theme.itemPosition+1} {g->text text="of"} {$theme.totalItems}
             </div>
             <div class="gbNavigator nav-arrow previous">
                 {strip}
@@ -48,8 +48,10 @@
             {if !empty($theme.imageViews)}
                 {capture name="fallback"}
                     <a href="{g->url arg1="view=core.DownloadItem" arg2="itemId=`$theme.item.id`"
-                    forceFullUrl=true forceSessionId=true}">
+                    forceFullUrl=true forceSessionId=true}" class="text-center link-{$theme.sourceImage.entityType}">
+                        <span class="center-block">
                         {g->text text="Download %s" arg1=$theme.sourceImage.itemTypeName.1}
+                        </span>
                     </a>
                 {/capture}
 
