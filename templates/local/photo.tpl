@@ -25,7 +25,7 @@
                 {/if}
             {/strip}
             <div class="item-position">
-                {$theme.itemPosition} {g->text text="of"} {$theme.totalItems}
+                {$theme.itemPosition+1} {g->text text="of"} {$theme.totalItems}
             </div>
             <div class="gbNavigator nav-arrow previous">
                 {strip}
