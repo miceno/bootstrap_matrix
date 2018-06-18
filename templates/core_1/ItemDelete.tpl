@@ -20,6 +20,34 @@
     </div>
 {/if}
 
+{capture assign="form_buttons"}
+    <div class="gbBlock form-buttons">
+        <input type="button" class="btn btn-default" onclick="setCheck(1)"
+               name="{g->formVar var="form[action][checkall]"}" value="{g->text text="Check All"}"/>
+        <input type="button" class="btn btn-default" onclick="setCheck(0)"
+               name="{g->formVar var="form[action][checknone]"}" value="{g->text text="Check None"}"/>
+        <input type="button" class="btn btn-default" onclick="invertCheck()"
+               name="{g->formVar var="form[action][invert]"}" value="{g->text text="Invert"}"/>
+
+        {if ($ItemDelete.page > 1)}
+            <input type="submit" class="btn btn-default"
+                   name="{g->formVar var="form[action][previous]"}" value="{g->text text="Previous Page"}"/>
+        {/if}
+        {if ($ItemDelete.page < $ItemDelete.numPages)}
+            <input type="submit" class="btn btn-default"
+                   name="{g->formVar var="form[action][next]"}" value="{g->text text="Next Page"}"/>
+        {/if}
+    </div>
+    <div class="gbBlock gcBackground1">
+        <input type="submit" class="btn btn-danger"
+               name="{g->formVar var="form[action][delete]"}" value="{g->text text="Delete"}"/>
+        {if $ItemDelete.canCancel}
+        <input type="submit" class="btn btn-default"
+               name="{g->formVar var="form[action][cancel]"}" value="{g->text text="Cancel"}"/>
+        {/if}
+    </div>
+{/capture}
+
 <div class="gbBlock">
     {if empty($ItemDelete.peers)}
     <p class="giDescription">
@@ -62,6 +90,8 @@
 
         // ]]>
     </script>
+
+    {$form_buttons}
 
     <div class="item-action-matrix table clearfix">
     {foreach from=$ItemDelete.peers item=peer}
@@ -107,31 +137,8 @@
     {/foreach}
     <input type="hidden" name="{g->formVar var="form[numPerPage]"}" value="{$ItemDelete.numPerPage}"/>
 
-    <br/>
+    {$form_buttons}
 
-    <input type="button" class="inputTypeButton" onclick="setCheck(1)"
-           name="{g->formVar var="form[action][checkall]"}" value="{g->text text="Check All"}"/>
-    <input type="button" class="inputTypeButton" onclick="setCheck(0)"
-           name="{g->formVar var="form[action][checknone]"}" value="{g->text text="Check None"}"/>
-    <input type="button" class="inputTypeButton" onclick="invertCheck()"
-           name="{g->formVar var="form[action][invert]"}" value="{g->text text="Invert"}"/>
-
-    {if ($ItemDelete.page > 1)}
-        <input type="submit" class="inputTypeSubmit"
-               name="{g->formVar var="form[action][previous]"}" value="{g->text text="Previous Page"}"/>
-    {/if}
-    {if ($ItemDelete.page < $ItemDelete.numPages)}
-        <input type="submit" class="inputTypeSubmit"
-               name="{g->formVar var="form[action][next]"}" value="{g->text text="Next Page"}"/>
-    {/if}
 </div>
+{/if}
 
-<div class="gbBlock gcBackground1">
-    <input type="submit" class="inputTypeSubmit"
-           name="{g->formVar var="form[action][delete]"}" value="{g->text text="Delete"}"/>
-    {if $ItemDelete.canCancel}
-        <input type="submit" class="inputTypeSubmit"
-               name="{g->formVar var="form[action][cancel]"}" value="{g->text text="Cancel"}"/>
-    {/if}
-    {/if}
-</div>
