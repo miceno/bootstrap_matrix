@@ -3,7 +3,7 @@
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
 
-<form action="{g->url}" method="get" enctype="{$ItemAdmin.enctype}" id="itemAdminForm">
+<form action="{g->url}" method="post" enctype="{$ItemAdmin.enctype}" id="itemAdminForm">
   <div>
     {g->hiddenFormVars}
     {if !empty($controller)}
@@ -20,7 +20,7 @@
     <div id="gsSidebarCol" class="col-xs-12 col-md-3">
         <div id="gsSidebar" class="gcBorder1">
       {if $ItemAdmin.item.parentId or !empty($ItemAdmin.thumbnail)}
-      <div class="gbBlock">
+      <div class="gbBlock col-xs-6 col-sm-12">
 	{if empty($ItemAdmin.thumbnail)}
 	  {g->text text="No Thumbnail"}
 	{else}
@@ -33,7 +33,7 @@
       </div>
       {/if}
 
-      <div class="gbBlock">
+      <div class="gbBlock col-xs-6 col-sm-12">
 	<h2> {g->text text="Options"} </h2>
 	<ul>
 	  {foreach from=$ItemAdmin.subViewChoices key=choiceName item=choiceParams}
