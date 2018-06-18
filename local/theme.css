@@ -1093,3 +1093,8 @@ div.giAlbumCell table, div.giItemCell table {
 .edit-form .giThumbnail {
     border-radius: 1em;
 }
+
+.form-buttons {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}

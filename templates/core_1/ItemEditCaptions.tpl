@@ -2,6 +2,36 @@
  * $Revision: 17662 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
+
+{capture assign="form_buttons"}
+	<div class="gbBlock form-buttons">
+		{if $ItemEditCaptions.canCancel}
+			<input type="submit" class="btn btn-primary"
+				   name="{g->formVar var="form[action][save][done]"}" value="{g->text text="Save and Done"}"/>
+		{else}
+			<input type="submit" class=" btn btn-primary"
+				   name="{g->formVar var="form[action][save][stay]"}" value="{g->text text="Save"}"/>
+		{/if}
+
+		{if ($ItemEditCaptions.page > 1)}
+			<input type="submit" class=" btn btn-default"
+				   name="{g->formVar var="form[action][save][previous]"}"
+				   value="&laquo; {g->text text="Save and Edit Previous %s" arg1=$form.numPerPage}"/>
+		{/if}
+
+		{if ($ItemEditCaptions.page < $ItemEditCaptions.numPages)}
+			<input type="submit" class=" btn btn-default"
+				   name="{g->formVar var="form[action][save][next]"}"
+				   value="{g->text text="Save and Edit Next %s" arg1=$form.numPerPage} &raquo;"/>
+		{/if}
+
+		{if $ItemEditCaptions.canCancel}
+			<input type="submit" class=" btn btn-danger"
+				   name="{g->formVar var="form[action][cancel]"}" value="{g->text text="Cancel"}"/>
+		{/if}
+	</div>
+{/capture}
+
 <div class="gbBlock gcBackground1">
   <h2>
 	{g->text text="Edit Captions"}
@@ -40,6 +70,8 @@
 <input type="hidden" name="{g->formVar var="page"}" value="{$ItemEditCaptions.page}"/>
 <input type="hidden" name="{g->formVar var="form[formname]"}" value="EditCaption"/>
 <input type="hidden" name="{g->formVar var="form[numPerPage]"}" value="{$form.numPerPage}"/>
+
+{$form_buttons}
 
 {foreach name=itemLoop from=$form.items item=item}
 <div class="gbBlock edit-form row form-horizontal">
@@ -106,30 +138,6 @@
 </div>
 {/foreach}
 
-<div class="gbBlock gcBackground1">
-  {if $ItemEditCaptions.canCancel}
-	<input type="submit" class="inputTypeSubmit"
-	 name="{g->formVar var="form[action][save][done]"}" value="{g->text text="Save and Done"}"/>
-  {else}
-	<input type="submit" class="inputTypeSubmit"
-	 name="{g->formVar var="form[action][save][stay]"}" value="{g->text text="Save"}"/>
-  {/if}
+{$form_buttons}
 
-  {if ($ItemEditCaptions.page > 1)}
-	<input type="submit" class="inputTypeSubmit"
-	 name="{g->formVar var="form[action][save][previous]"}"
-	 value="&laquo; {g->text text="Save and Edit Previous %s" arg1=$form.numPerPage}"/>
-  {/if}
-
-  {if ($ItemEditCaptions.page < $ItemEditCaptions.numPages)}
-	<input type="submit" class="inputTypeSubmit"
-	 name="{g->formVar var="form[action][save][next]"}"
-	 value="{g->text text="Save and Edit Next %s" arg1=$form.numPerPage} &raquo;"/>
-  {/if}
-
-  {if $ItemEditCaptions.canCancel}
-	  <input type="submit" class="inputTypeSubmit"
-	 name="{g->formVar var="form[action][cancel]"}" value="{g->text text="Cancel"}"/>
-  {/if}
-</div>
 {/if}
