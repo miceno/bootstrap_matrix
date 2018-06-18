@@ -156,7 +156,7 @@
         //]]>
     </script>
 
-    <div class="item-move-matrix table clearfix">
+    <div class="item-action-matrix table clearfix">
     {foreach from=$ItemMove.peers item=peer}
         {assign var="peerItemId" value=$peer.id}
         <div class="table-row col-xs-12 col-sm-6 col-md-4 col-lg-3">
