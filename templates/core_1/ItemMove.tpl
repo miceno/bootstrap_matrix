@@ -161,20 +161,18 @@
         {assign var="peerItemId" value=$peer.id}
         <div class="table-row col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <div class="table-column thumbnail-wrapper" align="center">
+                <label for="cb_{$peerItemId}" class="giTitle">
                 {if isset($peer.thumbnail)}
-                    <a id="thumb_{$peerItemId}"
-                       href="{g->url arg1="view=core.ShowItem" arg2="itemId=`$peerItemId`"}">
-                        {g->image item=$peer image=$peer.thumbnail maxSize=50 class="giThumbnail"}
-                    </a>
+                    {g->image item=$peer image=$peer.thumbnail maxSize=50 class="giThumbnail"}
                 {else}
                     &nbsp;
                 {/if}
                 <input class="checkbox" type="checkbox" id="cb_{$peerItemId}" {if $peer.selected}checked="checked" {/if}
                        name="{g->formVar var="form[selectedIds][$peerItemId]"}"/>
                 <div class="thumbnail-description-wrapper">
-                    <label for="cb_{$peerItemId}" class="giTitle">
+                    <p class="giTitle">
                         {$peer.title|markup:strip|default:$peer.pathComponent}
-                    </label>
+                    </p>
                     <i>
                         {if isset($ItemMove.peerTypes.album.$peerItemId)}
                             {if isset($ItemMove.peerDescendentCounts.$peerItemId)}
@@ -187,6 +185,8 @@
                         {/if}
                     </i>
                 </div>
+                </label>
+
             </div>
 
             {if !empty($form.error.source.$peerItemId.permission.delete)}

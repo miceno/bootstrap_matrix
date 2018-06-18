@@ -1069,3 +1069,7 @@ div.giAlbumCell table, div.giItemCell table {
 .table-row {
 
 }
+
+.thumbnail-wrapper label {
+    margin-bottom: 0;
+}
