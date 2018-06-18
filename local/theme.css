@@ -1074,7 +1074,7 @@ div.giAlbumCell table, div.giItemCell table {
     left: 0;
 }
 
-.item-move-matrix .thumbnail-description-wrapper{
+.item-action-matrix .thumbnail-description-wrapper{
     position: absolute;
     bottom: 0;
 }
