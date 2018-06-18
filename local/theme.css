@@ -1055,19 +1055,17 @@ div.giAlbumCell table, div.giItemCell table {
     position: relative;
 }
 
-.table-column .checkbox{
+.thumbnail-wrapper .checkbox {
     position: absolute;
-    top: 1em;
-    left: 1em;
+    top: 0;
+    left: 0;
+    zoom: 4;
+    margin: 0.2em 0 0 0.2em;
 }
 
 .item-move-matrix .thumbnail-description-wrapper{
     position: absolute;
     bottom: 0;
-}
-
-.table-row {
-
 }
 
 .thumbnail-wrapper label {
