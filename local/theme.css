@@ -1055,12 +1055,23 @@ div.giAlbumCell table, div.giItemCell table {
     position: relative;
 }
 
+@supports (zoom:2) {
+    .thumbnail-wrapper .checkbox {
+        zoom: 2;
+        margin: 0.2em 0 0 0.2em;
+    }
+}
+@supports not (zoom:2) {
+    .thumbnail-wrapper .checkbox{
+        transform: scale(2);
+        margin: 1em 0 0 1em;
+    }
+}
+
 .thumbnail-wrapper .checkbox {
     position: absolute;
     top: 0;
     left: 0;
-    zoom: 3;
-    margin: 0.2em 0 0 0.2em;
 }
 
 .item-move-matrix .thumbnail-description-wrapper{
