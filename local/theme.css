@@ -1072,4 +1072,5 @@ div.giAlbumCell table, div.giItemCell table {
 
 .thumbnail-wrapper label {
     margin-bottom: 0;
+    display: block;
 }
