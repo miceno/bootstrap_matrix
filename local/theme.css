@@ -1083,3 +1083,13 @@ div.giAlbumCell table, div.giItemCell table {
     margin-bottom: 0;
     display: block;
 }
+
+.edit-form {
+    border-bottom: 1px solid lightgray;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.edit-form .giThumbnail {
+    border-radius: 1em;
+}
