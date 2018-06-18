@@ -3,7 +3,7 @@
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
 
-<form action="{g->url}" method="post" enctype="{$ItemAdmin.enctype}" id="itemAdminForm">
+<form action="{g->url}" method="get" enctype="{$ItemAdmin.enctype}" id="itemAdminForm">
   <div>
     {g->hiddenFormVars}
     {if !empty($controller)}
