@@ -1098,3 +1098,7 @@ div.giAlbumCell table, div.giItemCell table {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
+
+.item-action-matrix .giTitle p {
+    margin: 0;
+}
