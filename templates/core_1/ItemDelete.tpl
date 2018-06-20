@@ -38,7 +38,7 @@
                    name="{g->formVar var="form[action][next]"}" value="{g->text text="Next Page"}"/>
         {/if}
     </div>
-    <div class="gbBlock gcBackground1">
+    <div class="gbBlock">
         <input type="submit" class="btn btn-danger"
                name="{g->formVar var="form[action][delete]"}" value="{g->text text="Delete"}"/>
         {if $ItemDelete.canCancel}
