@@ -103,6 +103,24 @@
 {* Put any debugging output here, if debugging is enabled *}
 {g->debug}
 
+<!-- Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="modalDialogTitle">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalDialogTitle"></h4>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button id="btnClose" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="btnSubmit" type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 {* jQuery (necessary for Bootstrap's JavaScript plugins) *}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
