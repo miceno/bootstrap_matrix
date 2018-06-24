@@ -23,7 +23,7 @@
 
     font-size: 100%;
     color: #757575;
-    line-height: 26px;
+    line-height: 1.5em;
     letter-spacing: 0;
     text-transform: none;
     -webkit-font-smoothing: antialiased; 
@@ -82,9 +82,8 @@ input:focus, textarea:focus {
 input.inputTypeSubmit, input.inputTypeButton {  /* No input[type=submit] in IE */
     color: #333;
     background-color: #eee;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #e7e7e7 #666 #666 #e7e7e7;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 select {
@@ -202,7 +201,7 @@ div.gbTabBar {
     font-size: 0.9em;
     font-weight: bold;
     margin: 0.8em 0 0;
-    padding: 6px;
+    padding: 6px 6px 7px;
     background: url('images/tab_bg.gif') repeat-x bottom;
     white-space: nowrap;
 }
@@ -251,7 +250,10 @@ div.gbTabBar a {
 }
 
 #gallery .gbMarkupBar input {
-    font-size: 1.1em;
+    font-size: 0.9em;
+    line-height: 1em;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .giSearchHighlight {
@@ -686,9 +688,12 @@ p.giDescription + ul {
     margin: 4px 0;
 }
 
-#gallery .gbMarkupBar input {
-    margin: 0;
-    padding: 0;
+.markup-italic {
+    font-style: italic;
+}
+
+.markup-bold {
+    font-weight: bold;
 }
 
 
@@ -1102,3 +1107,13 @@ div.giAlbumCell table, div.giItemCell table {
 .item-action-matrix .giTitle p {
     margin: 0;
 }
+
+#gallery .autoCompleteContainer .yui-ac-content ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-height: 11em;
+    overflow-y: scroll;
+}
+
+
