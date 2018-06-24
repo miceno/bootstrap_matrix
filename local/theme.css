@@ -1102,3 +1102,11 @@ div.giAlbumCell table, div.giItemCell table {
 .item-action-matrix .giTitle p {
     margin: 0;
 }
+
+#gallery .autoCompleteContainer .yui-ac-content ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-height: 11em;
+    overflow-y: scroll;
+}
