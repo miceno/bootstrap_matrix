@@ -32,20 +32,21 @@
                 <p class="help-block">
                     {g->text text="The name of this item on your hard disk.  It must be unique in this album.  Only use alphanumeric characters, underscores or dashes."}
                     {if isset($form.error.pathComponent.invalid)}
-                <div class="giError">
-                    {g->text text="Your name contains invalid characters.  Please choose another."}
-                </div>
-                {/if}
-                {if isset($form.error.pathComponent.missing)}
                     <div class="giError">
-                        {g->text text="You must enter a name for this item."}
+                        {g->text text="Your name contains invalid characters.  Please choose another."}
                     </div>
-                {/if}
-                {if isset($form.error.pathComponent.collision)}
-                    <div class="giError">
-                        {g->text text="The name you entered is already in use.  Please choose another."}
-                    </div>
-                {/if}    </p>
+                    {/if}
+                    {if isset($form.error.pathComponent.missing)}
+                        <div class="giError">
+                            {g->text text="You must enter a name for this item."}
+                        </div>
+                    {/if}
+                    {if isset($form.error.pathComponent.collision)}
+                        <div class="giError">
+                            {g->text text="The name you entered is already in use.  Please choose another."}
+                        </div>
+                    {/if}
+                </p>
             </div>
 
         </div>
