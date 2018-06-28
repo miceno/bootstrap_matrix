@@ -66,7 +66,7 @@
                     {assign var=childrenInColumnCount value="`$childrenInColumnCount+1`"}
                     <div class="{strip}
                     {if $child.canContainChildren}
-                        giAlbumCell gcBackground2 {* empty *}
+                        giAlbumCell {* empty *}
                     {else}
                         giItemCell {* empty *}
                     {/if}
@@ -100,7 +100,9 @@
                                     {g->image item=$child image=$child.thumbnail class="giThumbnail"}
                                 </a>
                             {else}
-                                <a href="{$linkUrl}" class="giMissingThumbnail">{g->text text="no thumbnail"}</a>
+                                <a href="{$linkUrl}" class="giMissingThumbnail">
+                                    <img src="/install/images/background.png" class="giThumbnail gcPhotoImage"/>
+                                </a>
                             {/if}
                             <div class="thumbnail-description-wrapper opensans">
                                 {if !empty($child.title)}
