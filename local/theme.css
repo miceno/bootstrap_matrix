@@ -1117,7 +1117,7 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .gbItemAlbum a {
-    background-image: url(/images/folder-icon.min.svg);
+    background-image: url(images/folder-icon.min.svg);
     padding: 15%;
     display: block;
 }
