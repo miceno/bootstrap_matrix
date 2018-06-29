@@ -101,7 +101,8 @@
                                 </a>
                             {else}
                                 <a href="{$linkUrl}" class="giMissingThumbnail">
-                                    <img src="/install/images/background.png" class="giThumbnail gcPhotoImage"/>
+                                    <img src="/install/images/background.png" class="giThumbnail gcPhotoImage"
+                                         title="{g->text text="No Thumbnail"}" alt='{g->text text="No Thumbnail"}'/>
                                 </a>
                             {/if}
                             <div class="thumbnail-description-wrapper opensans">

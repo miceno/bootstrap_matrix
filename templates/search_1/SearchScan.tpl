@@ -122,7 +122,8 @@
                                         {g->image item=$SearchScan.items.$itemId image=$SearchScan.thumbnails.$itemId
                                     class="giThumbnail"}
                                     {else}
-                                        {g->text text="No thumbnail"}
+                                        <img src="/install/images/background.png" class="giThumbnail gcPhotoImage"
+                                             title="{g->text text="No Thumbnail"}" alt='{g->text text="No Thumbnail"}'/>
                                     {/if}
                                 </a>
                                 <ul class="giInfo action-list">
