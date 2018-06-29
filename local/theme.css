@@ -1116,4 +1116,8 @@ div.giAlbumCell table, div.giItemCell table {
     overflow-y: scroll;
 }
 
-
+.gbItemAlbum a {
+    background-image: url(/images/folder-icon.min.svg);
+    padding: 15%;
+    display: block;
+}
