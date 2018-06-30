@@ -514,7 +514,7 @@ td.bsw_BlockCommands {
 
 #gsImageView{
     font-size: 3em;
-    height: 100%;
+    height: auto;
 }
 
 .giDescription br{
@@ -804,18 +804,17 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .photo-container {
-    height: 75vh;
     overflow: hidden;
     position: relative;
     border-bottom: solid 1px #eeeff2;
+    text-align: center;
+    min-height: 100px;
+    height: 100%;
 }
 
-.img-responsive.gcPhotoImage {
+.photo.giPortrait {
     height: 100%;
     width: auto;
-}
-
-.img-responsive.gcPhotoImage.giPortrait {
 }
 
 .photo-overlay {
@@ -828,6 +827,7 @@ div.giAlbumCell table, div.giItemCell table {
 .photo-overlay .block-core-BreadCrumb {
     position: absolute;
     top: 5px;
+    left: 5px;
     z-index: 20;
 }
 
@@ -837,6 +837,7 @@ div.giAlbumCell table, div.giItemCell table {
     border-left: solid 1px #eeeff2;
     position: relative;
     top: -1px;
+    height: 75vh;
 }
 
 .album-title {
@@ -960,6 +961,10 @@ div.giAlbumCell table, div.giItemCell table {
     transform: rotate(180deg);
 }
 
+.theme-photo-wrapper {
+    display: flex;
+    overflow: hidden;
+}
 
 .theme-photo-wrapper .giTitle h2 {
     margin-bottom: 0.4em;
@@ -1084,6 +1089,15 @@ div.giAlbumCell table, div.giItemCell table {
     padding: 15%;
     display: block;
 }
+
+.photo {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+
 /*==========  Non-Mobile First Method  ==========*/
 
 /* Large Devices, Wide Screens */
