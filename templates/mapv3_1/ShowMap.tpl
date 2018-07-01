@@ -19,7 +19,7 @@
     {else} {* mode eq "Pick" *}
     <h2>{g->text text="Grab coordinates from Map"}</h2>
     <div class="map-grab-wrapper">
-    <div class="col-xs-12 col-sm-12 col-md-8">
+    <div class="col-xs-12 col-sm-12 col-md-9">
     {/if}
     {if isset($mapv3.filterhackingerror)}
         <div class="gbBlock">
@@ -173,15 +173,15 @@
                     <!--
                       Display some very basic help
                       -->
-                    <h2 class="giSuccess">{g->text text="Tips" hint="Hints or suggestions"}</h2>
+                    <h2 class="giSuccess hidden">{g->text text="Tips" hint="Hints or suggestions"}</h2>
                     <ul>
                         <li/>{g->text text="Click on the map to choose the point."}
                         <li/>{g->text text="Each click will create a marker to ease aiming."}
                         <li/>{g->text text="When you are satisfied with the coordinates, click <B>Save</B> above and the center of the map and the zoom level will be copied in the GPS and ZoomLevel fields of the item."}
                     </ul>
-                    </div>{* col-xs-12 col-md-8 *}
-                    <div class="col-xs-12 col-sm-12 col-md-4">
-                        <h2 class="giSuccess">{g->text text="MENU"}</h2>
+                    </div>{* col-xs-12 col-md-9 *}
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <h2 class="giSuccess hidden">{g->text text="MENU"}</h2>
                         <!--
                           This creates the URL to save the parameters and return to the right place
                         -->
@@ -220,7 +220,7 @@
                         <p>{$theme.item.keywords|markup}</p>
 
 
-                    </div>{* col-xs-12 col-sm-12 col-md-4 *}
+                    </div>{* col-xs-12 col-sm-12 col-md-3 *}
                 </div>
                 {/if}{* $mapv3.mode eq "Pick" number 3 *}
             {/if} {* $mapv3.mode eq "Pick" number 2 *}
