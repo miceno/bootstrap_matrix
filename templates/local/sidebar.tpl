@@ -6,7 +6,7 @@
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
     <span class="sr-only">Toggle navigation</span>
-    <span class="">{g->text text="More"}</span>
+    <span class="">{g->text text="Actions"}</span>
   </button>
 
   <ul class="dropdown-menu dropdown-actions">
