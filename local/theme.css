@@ -203,7 +203,6 @@ div.gbTabBar {
     margin: 0.8em 0 0;
     padding: 6px 6px 4px;
     background: url('images/tab_bg.gif') repeat-x bottom;
-    white-space: nowrap;
 }
 
 div.gbTabBar span.o {
