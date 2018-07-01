@@ -65,9 +65,9 @@
         {if isset($mapv3.noiteminalbum) and $mapv3.noiteminalbum}
             <!-- No item in the selected album, hacking attempt ? -->
             <div class="gbBlock">
-                <center><h2 class="Warning">
+                <h2 class="Warning">
                         {g->text text="There were no items found in the selected %s, what would you like to do?"
-                        arg1=$mapv3.Filter}</h2><br/></center>
+                        arg1=$mapv3.Filter}</h2><br/>
                 <h2 style="position:relative;left:100px;">1
                     - {g->text text="%sGo Back%s to the Album and add coordinates to items"
                     arg1="<a href='Javascript:history.go(-1);'>" arg2="</a>"}
@@ -84,14 +84,14 @@
     {if !isset($mapv3.googleMapKey) or $mapv3.googleMapKey eq ''}
     <!-- No Google Map Keys were found to suit this install -->
         <div class="gbBlock">
-        <center><h2 class="giError">
+        <h2 class="giError">
                 {capture name="mapAdminUrl"}
                     {g->url arg1="view=core.SiteAdmin" arg2="subView=mapv3.MapSiteAdmin"}
                 {/capture}
                 {g->text text="You do not have a profile setup for this website to use the Google Map. Review your settings in the %sAdmin Panel%s or %scheck the Wiki%s."
                 arg1="<a href=\"`$smarty.capture.mapAdminUrl`\">" arg2="</a>"
                 arg3="<a href=\"http://codex.gallery2.org/Gallery2:Modules:Map:UserGuide\">" arg4="</a>"}
-            </h2></center>
+            </h2>
         <br/><br/>
     </div>
     {else}
@@ -153,7 +153,7 @@
                 <div class="map-wrapper">
                     <div id="map" class="themap{if $mapv3.fullScreen eq 3} map-fullscreen{else} map-fluid{/if}">
                         {if $mapv3.mode eq "Normal"}
-                            <center><h3 id="loading">{g->text text="Loading, please wait..."}</h3></center>
+                            <h3 id="loading">{g->text text="Loading, please wait..."}</h3>
                         {/if}
                     </div> {* End of the map div *}
                 </div>
