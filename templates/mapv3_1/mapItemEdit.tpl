@@ -111,11 +111,13 @@
             }
 
             {/literal}
-            .helpbutton {ldelim} cursor: pointer;
-            width: 18px;
-            height: 18px;
+            .helpbutton {
+            ldelim} cursor: pointer;
+                width: 18px;
+                height: 18px;
             {if !$form.IE} filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="{$form.picbase}help.png");
-            {/if}{rdelim}
+            {/if}{rdelim
+            }
         </style>
         <!-- Help Div -->
         <div id="helpdiv" class="helpdiv">
@@ -135,43 +137,41 @@
             <div id="helptext" class="helptext"></div>
         </div>
         <!-- End of Help Div -->
-        <table class="gbDataTable">
-            {foreach from=$form.fields key=field item=value}
-                <tr>
-                <div class="form-group">
-                    <div class="col-xs-2">
-                        <label>{$field}
-                            {if isset($form.UserHelp) and $form.UserHelp eq 1}
-                                <img onclick="javascript:showhelp(_HP_U_{$field},180)" alt="help"
-                                     class="helpbutton"
-                                        {if !$form.IE}
-                                    src="{$form.picbase}help.png"
-                                        {else}
-                                    src='{$form.picbase}blank.gif'
-                                        {/if}/>
-                            {/if}
-                        </label></div>
 
-                    <div class="col-xs-10">
-                        {if isset($form.choices[$field])}
-                            <select name="{g->formVar var="form[fields][$field]"}">
-                                <option value="">&laquo; {g->text text="No Value"} &raquo;</option>
-                                {foreach from=$form.choices[$field] item=choice}
-                                    <option{if $choice==$value} selected="selected"{/if}>{$choice}</option>{/foreach}
-                            </select>
-                        {else}
-                        {if ($field eq 'GPS')}
-                            <div class="input-group">
-                                <div class="input-group-addon">Coordinates</div>
-                        {/if}
-                            <input type="text" class="form-control" size="40"
-                                   name="{g->formVar var="form[fields][$field]"}" value="{$value}"/>
+    {foreach from=$form.fields key=field item=value}
+        <div class="gbBlock form-group">
+            <div class="col-xs-2">
+                <label>{$field}
+                    {if isset($form.UserHelp) and $form.UserHelp eq 1}
+                        <img onclick="javascript:showhelp(_HP_U_{$field},180)" alt="help"
+                             class="helpbutton"
+                                {if !$form.IE}
+                            src="{$form.picbase}help.png"
+                                {else}
+                            src='{$form.picbase}blank.gif'
+                                {/if}/>
+                    {/if}
+                </label></div>
 
-                        {if ($field eq 'GPS')}
-                            <span class="input-group-btn">
-                                <a role="button" class="btn btn-info"
-                                href="{g->url arg1="view=mapv3.ShowMap" arg2="itemId=`$form.itemId`" arg3="plugin=ItemEdit" arg4="Mode=Pick"}"
-                                >{g->text text="Get via a Map"}
+            <div class="col-xs-10">
+                {if isset($form.choices[$field])}
+                    <select name="{g->formVar var="form[fields][$field]"}">
+                        <option value="">&laquo; {g->text text="No Value"} &raquo;</option>
+                        {foreach from=$form.choices[$field] item=choice}
+                            <option{if $choice==$value} selected="selected"{/if}>{$choice}</option>{/foreach}
+                    </select>
+                {else}
+                    {if ($field eq 'GPS')}
+                        <div class="input-group">
+                        <div class="input-group-addon">Coordinates</div>
+                    {/if}
+                    <input type="text" class="form-control" size="40"
+                           name="{g->formVar var="form[fields][$field]"}" value="{$value}"/>
+                    {if ($field eq 'GPS')}
+                        <span class="input-group-btn">
+                            <a role="button" class="btn btn-info"
+                               href="{g->url arg1="view=mapv3.ShowMap" arg2="itemId=`$form.itemId`" arg3="plugin=ItemEdit" arg4="Mode=Pick"}"
+                            >{g->text text="Get via a Map"}
                                 {if isset($form.UserHelp) and $form.UserHelp eq 1}
                                     <img onclick="javascript:showhelp(_HP_U_GetViaMap,180)" alt="help"
                                          class="helpbutton"
@@ -181,21 +181,65 @@
                                         src='{$form.picbase}blank.gif'
                                             {/if}/>
                                 {/if}</a>
-                                </span>
-                            </div>
+                            </span>
+                        </div>
+                    {/if}
+                    {if ($field eq 'GPS')}
+                        {if !isset($form.noexif) or (isset($form.noexif) and $form.noexif neq 1)}
+                            {if isset($form.exif)}
+                                {if isset($form.UserHelp) and $form.UserHelp eq 1}
+                                    <img onclick="javascript:showhelp(_HP_U_GetViaExif,180)" alt="help"
+                                         class="helpbutton"
+                                            {if !$form.IE}
+                                        src="{$form.picbase}help.png"
+                                            {else}
+                                        src='{$form.picbase}blank.gif'
+                                            {/if}/>
+                                {/if}
+                                <input type="submit" class="btn btn-info"
+                                       name="{g->formVar var="form[action][getexif]"}"
+                                       value="{g->text text="Get via EXIF headers"}"/>
+                                <input type="hidden" name="{g->formVar var="form[exif]"}" value="{$form.exif}"/>
+                            {/if}
                         {/if}
-                            {if ($field eq 'GPS')}
-
-
-{*
-                                <a accesskey="g" class="btn btn-info"
-                                   href="{g->url arg1="view=mapv3.ShowMap" arg2="itemId=`$form.itemId`"
-                                   arg3="plugin=ItemEdit" arg4="Mode=Pick"}">{g->text text="<u>G</u>et via a Map"}</a>
-*}
-                                {if !isset($form.noexif) or (isset($form.noexif) and $form.noexif neq 1)}
-                                    {if isset($form.exif)}
+                        {if $ItemAdmin.item.entityType eq "GalleryPhotoItem"}
+                            {if isset($form.UserHelp) and $form.UserHelp eq 1}
+                                <img onclick="javascript:showhelp(_HP_U_WriteToExif,180)" alt="help"
+                                     class="helpbutton"
+                                        {if !$form.IE}
+                                    src="{$form.picbase}help.png"
+                                        {else}
+                                    src='{$form.picbase}blank.gif'
+                                        {/if}/>
+                            {/if}
+                            <input type="submit" class="btn btn-info"
+                                   name="{g->formVar var="form[action][setexif]"}"
+                                   value="{g->text text="Write GPS to EXIF header"}"/>
+                            {if isset($form.error.gps.missingGPSCoordinates)}
+                                <div class="giError">
+                                    {g->text text="No GPS coordinates to write."}
+                                </div>
+                            {/if}
+                            {if isset($form.error.gps.coordinatesAlreadyInHeader)}
+                                <div class="giError">
+                                    {g->text text="This picture already has GPS coordinates in the header"}
+                                </div>
+                            {/if}
+                        {/if}
+                        {if !empty($form.apiKey)}
+                            <div class="input-group">
+                                <div class="input-group-addon">Address</div>
+                                <input accesskey="e" class="form-control" type="text"
+                                       name="{g->formVar var="form[address]"}"
+                                       id="map.addr" size=40/>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-info"
+                                            onclick="getAddress(document.getElementById('map.addr').value)"
+                                            value="{g->text text="Get via address"}">{g->text text="Get via address"}
+                                        <span id="geocode_loading"></span>
                                         {if isset($form.UserHelp) and $form.UserHelp eq 1}
-                                            <img onclick="javascript:showhelp(_HP_U_GetViaExif,180)" alt="help"
+                                            <img onclick="javascript:showhelp(_HP_U_GetViaAddress,180)"
+                                                 alt="help"
                                                  class="helpbutton"
                                                     {if !$form.IE}
                                                 src="{$form.picbase}help.png"
@@ -203,65 +247,20 @@
                                                 src='{$form.picbase}blank.gif'
                                                     {/if}/>
                                         {/if}
-                                        <input type="submit" class="btn btn-info"
-                                               name="{g->formVar var="form[action][getexif]"}"
-                                               value="{g->text text="Get via EXIF headers"}"/>
-                                        <input type="hidden" name="{g->formVar var="form[exif]"}" value="{$form.exif}"/>
-                                    {/if}
-                                {/if}
-                                {if $ItemAdmin.item.entityType eq "GalleryPhotoItem"}
-                                    {if isset($form.UserHelp) and $form.UserHelp eq 1}
-                                        <img onclick="javascript:showhelp(_HP_U_WriteToExif,180)" alt="help"
-                                             class="helpbutton"
-                                                {if !$form.IE}
-                                            src="{$form.picbase}help.png"
-                                                {else}
-                                            src='{$form.picbase}blank.gif'
-                                                {/if}/>
-                                    {/if}
-                                    <input type="submit" class="btn btn-info"
-                                           name="{g->formVar var="form[action][setexif]"}"
-                                           value="{g->text text="Write GPS to EXIF header"}"/>
-                                    {if isset($form.error.gps.missingGPSCoordinates)}
-                                        <div class="giError">
-                                            {g->text text="No GPS coordinates to write."}
-                                        </div>
-                                    {/if}
-                                    {if isset($form.error.gps.coordinatesAlreadyInHeader)}
-                                        <div class="giError">
-                                            {g->text text="This picture already has GPS coordinates in the header"}
-                                        </div>
-                                    {/if}
-                                {/if}
-                                {if !empty($form.apiKey)}
-                                    <div class="input-group">
-                                        <div class="input-group-addon">Address</div>
-                                    <input accesskey="e" class="form-control" type="text" name="{g->formVar var="form[address]"}"
-                                           id="map.addr" size=40/>
-                                        <input type="button" class="btn btn-info"
-                                               onclick="getAddress(document.getElementById('map.addr').value)"
-                                               value="{g->text text="Get via address"}"/>
-                                        <span id="geocode_loading"></span>
 
-                                    </div>
-
-                                    {if isset($form.UserHelp) and $form.UserHelp eq 1}
-                                        <img onclick="javascript:showhelp(_HP_U_GetViaAddress,180)" alt="help"
-                                             class="helpbutton"
-                                                {if !$form.IE}
-                                            src="{$form.picbase}help.png"
-                                                {else}
-                                            src='{$form.picbase}blank.gif'
-                                                {/if}/>
-                                    {/if}
-                                {/if}
-                            {/if}
+                                    </button>
+                                </div>
+                            </div>
                         {/if}
-                    </div></div>
-                </tr>
-            {/foreach}
-        </table>
+                    {/if}
+                {/if}
+                <div class="help-block"></div>
+            </div>
+        </div>
+    {/foreach}
+
     {/if}
+
 </div>
 
 {if !empty($form.fields)}
