@@ -11,9 +11,10 @@
             <div class="album-header-wrapper">
             {g->block type="core.BreadCrumb"}
             {strip}
-            <h2 class="visible-xs-inline visible-sm-inline visible-md-inline visible-lg-inline panel-title"
+            <h2 class="visible-xs-inline collapsed visible-sm-inline visible-md-inline visible-lg-inline panel-title"
                 data-toggle="collapse" data-target="#description-{$theme.item.id}">
                 <span class="album-title">{$theme.item.title|markup}</span>
+                <i class="indicator glyphicon glyphicon-chevron-up"></i>
             </h2>
             {/strip}
             {if !empty($theme.params.sidebarBlocks)}

@@ -960,6 +960,17 @@ div.giAlbumCell table, div.giItemCell table {
     transform: rotate(180deg);
 }
 
+.album-header-wrapper .glyphicon {
+    transition: .3s transform ease-in-out;
+}
+.album-header-wrapper .collapsed .glyphicon {
+    transform: rotate(180deg);
+}
+
+.album-header-wrapper .indicator {
+    margin: 0 1em;
+}
+
 .theme-photo-wrapper {
     display: flex;
     overflow: hidden;
