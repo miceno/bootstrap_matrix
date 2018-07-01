@@ -111,13 +111,13 @@
             }
 
             {/literal}
-            .helpbutton {
-            ldelim} cursor: pointer;
+            .helpbutton {ldelim}
+                cursor: pointer;
                 width: 18px;
                 height: 18px;
-            {if !$form.IE} filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="{$form.picbase}help.png");
-            {/if}{rdelim
-            }
+            {if !$form.IE}
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="{$form.picbase}help.png");
+            {/if}{rdelim}
         </style>
         <!-- Help Div -->
         <div id="helpdiv" class="helpdiv">
@@ -162,8 +162,8 @@
                     </select>
                 {else}
                     {if ($field eq 'GPS')}
-                    <div class="input-group">
-                    <div class="input-group-addon">Coordinates</div>
+                        <div class="input-group form-group">
+                        <div class="input-group-addon">Coordinates</div>
                     {/if}
                     <input type="text" class="form-control" size="40"
                            name="{g->formVar var="form[fields][$field]"}" value="{$value}"/>
@@ -174,55 +174,30 @@
                                title="{g->text text="Get via a Map"}"
                                alt="{g->text text="Get via a Map"}">
                             <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-                                {if isset($form.UserHelp) and $form.UserHelp eq 1}
-                                    <img onclick="javascript:showhelp(_HP_U_GetViaMap,180)" alt="help"
-                                         class="helpbutton"
-                                            {if !$form.IE}
-                                        src="{$form.picbase}help.png"
-                                            {else}
-                                        src='{$form.picbase}blank.gif'
-                                            {/if}/>
-                                {/if}</a>
-                        {if !isset($form.noexif) or (isset($form.noexif) and $form.noexif neq 1)}
-                        {if isset($form.exif)}
-                                <button type="submit" class="btn btn-info"
-                                        name="{g->formVar var="form[action][getexif]"}"
-                                        value="{g->text text="Get via EXIF headers"}"
-                                title="{g->text text="Get via EXIF headers"}"
-                                alt="{g->text text="Get via EXIF headers"}">
+                            </a>
+                            {if !isset($form.noexif) or (isset($form.noexif) and $form.noexif neq 1)}
+                                {if isset($form.exif)}
+                                    <button type="submit" class="btn btn-info"
+                                            name="{g->formVar var="form[action][getexif]"}"
+                                            value="{g->text text="Get via EXIF headers"}"
+                                            title="{g->text text="Get via EXIF headers"}"
+                                            alt="{g->text text="Get via EXIF headers"}">
                                 <span class="glyphicon glyphicon-floppy-open" aria-hidden="true"></span>
-                                    {if isset($form.UserHelp) and $form.UserHelp eq 1}
-                                        <img onclick="javascript:showhelp(_HP_U_GetViaExif,180)" alt="help"
-                                             class="helpbutton"
-                                                {if !$form.IE}
-                                            src="{$form.picbase}help.png"
-                                                {else}
-                                            src='{$form.picbase}blank.gif'
-                                                {/if}/>
-                                    {/if}
-                                    <input type="hidden" name="{g->formVar var="form[exif]"}" value="{$form.exif}"/>
+                                <input type="hidden" name="{g->formVar var="form[exif]"}" value="{$form.exif}"/>
                                 </button>
-                        {/if}
-                        {/if}
-
-                        {if $ItemAdmin.item.entityType eq "GalleryPhotoItem"}
-                            <button type="submit" class="btn btn-info"
-                                   name="{g->formVar var="form[action][setexif]"}"
-                                   value="{g->text text="Write GPS to EXIF header"}"
-                            title="{g->text text="Write GPS to EXIF header"}"
-                            alt="{g->text text="Write GPS to EXIF header"}">
-                                <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>
-                                {if isset($form.UserHelp) and $form.UserHelp eq 1}
-                                    <img onclick="javascript:showhelp(_HP_U_WriteToExif,180)" alt="help"
-                                         class="helpbutton"
-                                            {if !$form.IE}
-                                        src="{$form.picbase}help.png"
-                                            {else}
-                                        src='{$form.picbase}blank.gif'
-                                            {/if}/>
                                 {/if}
+                            {/if}
+
+                            {if $ItemAdmin.item.entityType eq "GalleryPhotoItem"}
+                                <button type="submit" class="btn btn-info"
+                                        name="{g->formVar var="form[action][setexif]"}"
+                                        value="{g->text text="Write GPS to EXIF header"}"
+                                        title="{g->text text="Write GPS to EXIF header"}"
+                                        alt="{g->text text="Write GPS to EXIF header"}">
+                                <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>
                             </button>
-                            {if isset($form.error.gps.missingGPSCoordinates)}
+
+{if isset($form.error.gps.missingGPSCoordinates)}
                                 <div class="giError">
                                     {g->text text="No GPS coordinates to write."}
                                 </div>
@@ -232,12 +207,12 @@
                                     {g->text text="This picture already has GPS coordinates in the header"}
                                 </div>
                             {/if}
-                        {/if}
+                            {/if}
                         </span>
                         </div>
 
                         {if !empty($form.apiKey)}
-                            <div class="input-group">
+                            <div class="input-group form-group">
                                 <div class="input-group-addon">Address</div>
                                 <input accesskey="e" class="form-control" type="text"
                                        name="{g->formVar var="form[address]"}"
@@ -245,19 +220,11 @@
                                 <div class="input-group-btn">
                                     <button type="button" class="btn btn-info"
                                             onclick="getAddress(document.getElementById('map.addr').value)"
-                                            value="{g->text text="Get via address"}">{g->text text="Get via address"}
+                                            value="{g->text text="Get via address"}"
+                                            title="{g->text text="Get via address"}"
+                                            alt="{g->text text="Get via address"}">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                         <span id="geocode_loading"></span>
-                                        {if isset($form.UserHelp) and $form.UserHelp eq 1}
-                                            <img onclick="javascript:showhelp(_HP_U_GetViaAddress,180)"
-                                                 alt="help"
-                                                 class="helpbutton"
-                                                    {if !$form.IE}
-                                                src="{$form.picbase}help.png"
-                                                    {else}
-                                                src='{$form.picbase}blank.gif'
-                                                    {/if}/>
-                                        {/if}
-
                                     </button>
                                 </div>
                             </div>
