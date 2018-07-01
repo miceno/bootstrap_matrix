@@ -19,7 +19,7 @@
       <input type="hidden" name="{g->formVar var="view"}" value="search.SearchScan"/>
       <input type="hidden" name="{g->formVar var="form[formName]"}" value="search_SearchBlock"/>
       <div class="search-form-group has-feedback form-group">
-            <label for="search" class="sr-only">{g->text text="Search"}</label>            
+            <label for="searchCriteria" class="sr-only">{g->text text="Search"}</label>
             <input type="text" id="searchCriteria" size="{$inputWidth}"
       	     name="{g->formVar var="form[searchCriteria]"}"
       	     value="{g->text text="Search your Gallery"}"
