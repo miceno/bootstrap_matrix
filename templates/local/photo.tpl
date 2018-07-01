@@ -67,11 +67,18 @@
         </div>
         {if !empty($theme.imageViews)}
             {capture name="fallback"}
+                <span class="h1 center-block">
+                    {g->text text="Download %s" arg1=$theme.sourceImage.itemTypeName.1}
+                </span>
                 <a href="{g->url arg1="view=core.DownloadItem" arg2="itemId=`$theme.item.id`"
                 forceFullUrl=true forceSessionId=true}" class="text-center link-{$theme.sourceImage.entityType}">
-                    <span class="center-block">
-                    {g->text text="Download %s" arg1=$theme.sourceImage.itemTypeName.1}
-                    </span>
+                    <h2>
+                    {if !empty($theme.item.title)}
+                        {$theme.item.title|markup}
+                    {else}
+                        {g->text text="Download %s" arg1=$theme.sourceImage.itemTypeName.1}
+                    {/if}
+                    </h2>
                 </a>
             {/capture}
 
