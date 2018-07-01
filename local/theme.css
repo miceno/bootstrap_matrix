@@ -807,7 +807,7 @@ div.giAlbumCell table, div.giItemCell table {
     position: relative;
     border-bottom: solid 1px #eeeff2;
     text-align: center;
-    min-height: 100px;
+    min-height: 40em;
     height: 100%;
 }
 
@@ -836,7 +836,6 @@ div.giAlbumCell table, div.giItemCell table {
     border-left: solid 1px #eeeff2;
     position: relative;
     top: -1px;
-    height: 75vh;
 }
 
 .album-title {
@@ -1137,6 +1136,27 @@ div.giAlbumCell table, div.giItemCell table {
     .photo.giPortrait {
         height: auto;
         width: auto;
+    }
+    .theme-photo-wrapper {
+        display: initial;
+    }
+    .photo-container {
+        min-height: initial;
+    }
+    .sidebar-right {
+        height: initial;
+    }
+}
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 768px) {
+    .theme-photo-wrapper {
+        display: flex;
+    }
+    .photo-container {
+        min-height: 40em;
+    }
+    .sidebar-right {
+        height: 75vh;
     }
 }
 
