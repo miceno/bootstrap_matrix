@@ -171,7 +171,9 @@
                         <span class="input-group-btn">
                             <a role="button" class="btn btn-info"
                                href="{g->url arg1="view=mapv3.ShowMap" arg2="itemId=`$form.itemId`" arg3="plugin=ItemEdit" arg4="Mode=Pick"}"
-                            >{g->text text="Get via a Map"}
+                               title="{g->text text="Get via a Map"}"
+                               alt="{g->text text="Get via a Map"}">
+                            <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
                                 {if isset($form.UserHelp) and $form.UserHelp eq 1}
                                     <img onclick="javascript:showhelp(_HP_U_GetViaMap,180)" alt="help"
                                          class="helpbutton"
@@ -185,8 +187,10 @@
                         {if isset($form.exif)}
                                 <button type="submit" class="btn btn-info"
                                         name="{g->formVar var="form[action][getexif]"}"
-                                        value="{g->text text="Get via EXIF headers"}">
-                                    {g->text text="Get via EXIF headers"}
+                                        value="{g->text text="Get via EXIF headers"}"
+                                title="{g->text text="Get via EXIF headers"}"
+                                alt="{g->text text="Get via EXIF headers"}">
+                                <span class="glyphicon glyphicon-floppy-open" aria-hidden="true"></span>
                                     {if isset($form.UserHelp) and $form.UserHelp eq 1}
                                         <img onclick="javascript:showhelp(_HP_U_GetViaExif,180)" alt="help"
                                              class="helpbutton"
@@ -204,8 +208,10 @@
                         {if $ItemAdmin.item.entityType eq "GalleryPhotoItem"}
                             <button type="submit" class="btn btn-info"
                                    name="{g->formVar var="form[action][setexif]"}"
-                                   value="{g->text text="Write GPS to EXIF header"}">
-                                {g->text text="Write GPS to EXIF header"}
+                                   value="{g->text text="Write GPS to EXIF header"}"
+                            title="{g->text text="Write GPS to EXIF header"}"
+                            alt="{g->text text="Write GPS to EXIF header"}">
+                                <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>
                                 {if isset($form.UserHelp) and $form.UserHelp eq 1}
                                     <img onclick="javascript:showhelp(_HP_U_WriteToExif,180)" alt="help"
                                          class="helpbutton"
