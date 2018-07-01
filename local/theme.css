@@ -706,50 +706,6 @@ div.giAlbumCell table, div.giItemCell table {
     font-size: 1em;
 }
 
-
-.pagination .active .jump-pager {
-    padding: 4px;
-}
-
-.pagination select.form-control{
-    height: inherit;
-}
-
-/* Small devices (tablets, 768px and up) */
-@media (max-width: 768px) {
-}
-
-/* Medium devices (desktops, 992px and up) */
-@media (max-width: 992px) {
-    .g-pagination {
-        display: table;
-        width: 100%;
-    }
-    .pagination>li{
-        display: table-cell;
-        text-align: center;
-    }
-    .pagination>li>a, .pagination>li>span{
-        width:100%;
-    }
-
-}
-
-@media (max-width: 1200px){
-    .pagination .active .jump-pager {
-        padding: 0;
-    }
-    .g-pagination {
-        text-align: center;
-    }
-}
-
-
-@media (min-width: 1200px){
-    .pagination .active .jump-pager {
-        padding: 0;
-    }
-}
 .vcenter {
     display: flex;
     align-items: center;
@@ -1109,20 +1065,32 @@ div.giAlbumCell table, div.giItemCell table {
 
 /*==========  Non-Mobile First Method  ==========*/
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
-
+.pagination .active .jump-pager {
+    padding: 0;
+    padding: 4px;
+}
+.g-pagination {
+    text-align: center;
+    display: table;
+    width: 100%;
+}
+.pagination>li{
+    display: table-cell;
+    text-align: center;
+}
+.pagination>li>a, .pagination>li>span{
+    width:100%;
 }
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-
+.pagination {
+    margin: 0;
 }
 
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-
+.pagination select.form-control{
+    height: inherit;
+    padding: 0;
 }
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
@@ -1147,18 +1115,6 @@ div.giAlbumCell table, div.giItemCell table {
         height: initial;
     }
 }
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 768px) {
-    .theme-photo-wrapper {
-        display: flex;
-    }
-    .photo-container {
-        min-height: 40em;
-    }
-    .sidebar-right {
-        height: 75vh;
-    }
-}
 
 @media only screen and (max-width : 320px) {
     .theme-content{
@@ -1170,3 +1126,21 @@ div.giAlbumCell table, div.giItemCell table {
         width: 100%;
     }
 }
+
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 768px) {
+    .theme-photo-wrapper {
+        display: flex;
+    }
+    .photo-container {
+        min-height: 40em;
+    }
+    .sidebar-right {
+        height: 75vh;
+    }
+
+
+}
+
+
