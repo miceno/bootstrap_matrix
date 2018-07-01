@@ -162,8 +162,8 @@
                     </select>
                 {else}
                     {if ($field eq 'GPS')}
-                        <div class="input-group">
-                        <div class="input-group-addon">Coordinates</div>
+                    <div class="input-group">
+                    <div class="input-group-addon">Coordinates</div>
                     {/if}
                     <input type="text" class="form-control" size="40"
                            name="{g->formVar var="form[fields][$field]"}" value="{$value}"/>
@@ -181,14 +181,33 @@
                                         src='{$form.picbase}blank.gif'
                                             {/if}/>
                                 {/if}</a>
-                            </span>
-                        </div>
-                    {/if}
-                    {if ($field eq 'GPS')}
                         {if !isset($form.noexif) or (isset($form.noexif) and $form.noexif neq 1)}
-                            {if isset($form.exif)}
+                        {if isset($form.exif)}
+                                <button type="submit" class="btn btn-info"
+                                        name="{g->formVar var="form[action][getexif]"}"
+                                        value="{g->text text="Get via EXIF headers"}">
+                                    {g->text text="Get via EXIF headers"}
+                                    {if isset($form.UserHelp) and $form.UserHelp eq 1}
+                                        <img onclick="javascript:showhelp(_HP_U_GetViaExif,180)" alt="help"
+                                             class="helpbutton"
+                                                {if !$form.IE}
+                                            src="{$form.picbase}help.png"
+                                                {else}
+                                            src='{$form.picbase}blank.gif'
+                                                {/if}/>
+                                    {/if}
+                                    <input type="hidden" name="{g->formVar var="form[exif]"}" value="{$form.exif}"/>
+                                </button>
+                        {/if}
+                        {/if}
+
+                        {if $ItemAdmin.item.entityType eq "GalleryPhotoItem"}
+                            <button type="submit" class="btn btn-info"
+                                   name="{g->formVar var="form[action][setexif]"}"
+                                   value="{g->text text="Write GPS to EXIF header"}">
+                                {g->text text="Write GPS to EXIF header"}
                                 {if isset($form.UserHelp) and $form.UserHelp eq 1}
-                                    <img onclick="javascript:showhelp(_HP_U_GetViaExif,180)" alt="help"
+                                    <img onclick="javascript:showhelp(_HP_U_WriteToExif,180)" alt="help"
                                          class="helpbutton"
                                             {if !$form.IE}
                                         src="{$form.picbase}help.png"
@@ -196,25 +215,7 @@
                                         src='{$form.picbase}blank.gif'
                                             {/if}/>
                                 {/if}
-                                <input type="submit" class="btn btn-info"
-                                       name="{g->formVar var="form[action][getexif]"}"
-                                       value="{g->text text="Get via EXIF headers"}"/>
-                                <input type="hidden" name="{g->formVar var="form[exif]"}" value="{$form.exif}"/>
-                            {/if}
-                        {/if}
-                        {if $ItemAdmin.item.entityType eq "GalleryPhotoItem"}
-                            {if isset($form.UserHelp) and $form.UserHelp eq 1}
-                                <img onclick="javascript:showhelp(_HP_U_WriteToExif,180)" alt="help"
-                                     class="helpbutton"
-                                        {if !$form.IE}
-                                    src="{$form.picbase}help.png"
-                                        {else}
-                                    src='{$form.picbase}blank.gif'
-                                        {/if}/>
-                            {/if}
-                            <input type="submit" class="btn btn-info"
-                                   name="{g->formVar var="form[action][setexif]"}"
-                                   value="{g->text text="Write GPS to EXIF header"}"/>
+                            </button>
                             {if isset($form.error.gps.missingGPSCoordinates)}
                                 <div class="giError">
                                     {g->text text="No GPS coordinates to write."}
@@ -226,6 +227,9 @@
                                 </div>
                             {/if}
                         {/if}
+                        </span>
+                        </div>
+
                         {if !empty($form.apiKey)}
                             <div class="input-group">
                                 <div class="input-group-addon">Address</div>
@@ -252,7 +256,7 @@
                                 </div>
                             </div>
                         {/if}
-                    {/if}
+                    {/if} {* gps *}
                 {/if}
                 <div class="help-block"></div>
             </div>
