@@ -9,9 +9,9 @@
 
 {g->callback type="mapv3.ItemCoords" itemId=$item.id coordStyle=$coordStyle}
 
-{if !empty($block.mapv3.ItemCoords) and !empty($block.mapv3.ItemCoords.lat) and !empty($block.mapv3.ItemCoords.lng)}
 <div class="{$class}">
     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+{if !empty($block.mapv3.ItemCoords) and !empty($block.mapv3.ItemCoords.lat) and !empty($block.mapv3.ItemCoords.lng)}
     <span class="hidden-xs hidden-sm">{g->text text="%s Coordinates:" arg1=$block.mapv3.ItemCoords.ItemType}</span>
 {if $coordStyle eq 1}
 {$block.mapv3.ItemCoords.lat.deg}&deg;, {$block.mapv3.ItemCoords.lng.deg}&deg;
@@ -23,7 +23,7 @@
 {$block.mapv3.ItemCoords.lat.deg}&deg;{$block.mapv3.ItemCoords.lat.min}&#39;{$block.mapv3.ItemCoords.lat.sec}&quot;&nbsp;{$block.mapv3.ItemCoords.lat.dir},
 {$block.mapv3.ItemCoords.lng.deg}&deg;{$block.mapv3.ItemCoords.lng.min}&#39;{$block.mapv3.ItemCoords.lng.sec}&quot;&nbsp;{$block.mapv3.ItemCoords.lng.dir}
 {/if}
-</div>
     {else}
-    <div>No coordinates</div>
+        {g->text text="No coordinates defined"}
 {/if}
+</div>
