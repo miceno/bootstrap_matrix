@@ -53,12 +53,12 @@
         {* search form*}
         <div class="gbBlock">
             <div class="input-wrapper">
-                <input type="text" size="50"
+                <input type="text" size="50" class="form-control"
                        name="{g->formVar var="form[searchCriteria]"}" value="{$form.searchCriteria}"/>
                 <script type="text/javascript">
                     document.getElementById('SearchScan')['{g->formVar var="form[searchCriteria]"}'].focus();
                 </script>
-                <input type="submit" class="inputTypeSubmit"
+                <input type="submit" class="btn btn-primary"
                        name="{g->formVar var="form[action][search]"}" value="{g->text text="Search"}"/>
 
                 {if isset($form.error.searchCriteria.missing)}
@@ -68,7 +68,6 @@
                 {/if}
             </div>
             <div class="options-wrapper">
-
                 {foreach from=$SearchScan.modules key=moduleId item=moduleInfo}
                     {foreach from=$moduleInfo.options key=optionId item=optionInfo}
                         <input type="checkbox" id="cb_{$moduleId}_{$optionId}"
@@ -104,7 +103,7 @@
                         {if ($results.count > $results.end)}
                             {assign var="moduleId" value=$moduleId}
                             &nbsp;
-                            <input type="submit" class="inputTypeSubmit"
+                            <input type="submit" class="btn btn-info"
                                    name="{g->formVar var="form[action][showAll][$moduleId]"}"
                                    value="{g->text text="Show all %d" arg1=$results.count}"/>
                         {/if}
@@ -154,7 +153,7 @@
 
         {if $resultCount>0 && $SearchScan.slideshowAvailable}
             <div class="gbBlock gcBackground1">
-                <input type="submit" class="inputTypeSubmit"
+                <input type="submit" class="btn btn-default"
                        name="{g->formVar var="form[action][slideshow]"}"
                        value="{g->text text="View these results in a slideshow"}"/>
             </div>

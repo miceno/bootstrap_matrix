@@ -49,14 +49,14 @@
 
         <div class="gbBlock">
             <div class="input-wrapper">
-                <input type="text" size="50"
+                <input type="text" size="50" class="form-control"
                        name="{g->formVar var="form[searchCriteria]"}" value="{$form.searchCriteria}"/>
                 <script type="text/javascript">
                     document.getElementById('SearchShowAll')['{g->formVar var="form[searchCriteria]"}'].focus();
                 </script>
                 <input type="hidden"
                        name="{g->formVar var="form[lastSearchCriteria]"}" value="{$form.searchCriteria}"/>
-                <input type="submit" class="inputTypeSubmit"
+                <input type="submit" class="btn btn-primary"
                        name="{g->formVar var="form[action][search]"}" value="{g->text text="Search"}"/>
 
                 {if isset($form.error.searchCriteria.missing)}
@@ -89,7 +89,7 @@
         {if !empty($SearchShowAll.results)}
             <div class="gbBlock">
                 <div>
-                    <input type="submit" class="inputTypeSubmit"
+                    <input type="submit" class="btn btn-info"
                            name="{g->formVar var="form[action][scan]"}"
                            value="{g->text text="Search All Modules"}"/>
                 </div>
@@ -101,12 +101,12 @@
                     arg3=$SearchShowAll.results.count arg4=$form.page arg5=$SearchShowAll.maxPages}
                     {/if}
                     {if ($form.page > 1)}
-                        <input type="submit" class="inputTypeSubmit"
+                        <input type="submit" class="btn btn-primary"
                                name="{g->formVar var="form[action][previousPage]"}"
                                value="{g->text text="&laquo; Back"}"/>
                     {/if}
                     {if ($form.page < $SearchShowAll.maxPages)}
-                        <input type="submit" class="inputTypeSubmit"
+                        <input type="submit" class="btn btn-primary"
                                name="{g->formVar var="form[action][nextPage]"}"
                                value="{g->text text="Next &raquo;"}"/>
                     {/if}
@@ -145,6 +145,25 @@
                     <script type="text/javascript">
                         search_HighlightResults('{$form.searchCriteria}');
                     </script>
+                    <h4>
+                        {$SearchShowAll.moduleInfo.name}
+                        {if ($SearchShowAll.results.count > 0)}
+                            {g->text text="Results %d - %d of %d, Page %d of %d"
+                        arg1=$SearchShowAll.results.start arg2=$SearchShowAll.results.end
+                        arg3=$SearchShowAll.results.count arg4=$form.page arg5=$SearchShowAll.maxPages}
+                        {/if}
+                        {if ($form.page > 1)}
+                            <input type="submit" class="btn btn-primary"
+                                   name="{g->formVar var="form[action][previousPage]"}"
+                                   value="{g->text text="&laquo; Back"}"/>
+                        {/if}
+                        {if ($form.page < $SearchShowAll.maxPages)}
+                            <input type="submit" class="btn btn-primary"
+                                   name="{g->formVar var="form[action][nextPage]"}"
+                                   value="{g->text text="Next &raquo;"}"/>
+                        {/if}
+                    </h4>
+
                 {else}
                     <p class="giDescription">
                         {g->text text="No results found for"} '{$form.searchCriteria}'
