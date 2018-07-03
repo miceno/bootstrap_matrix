@@ -1,3 +1,4 @@
+{strip}
 {*
  * $Revision: 16727 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
@@ -21,7 +22,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     {* Include this theme's style sheet *}
-    <link rel="stylesheet" type="text/css" href="{g->theme url="theme.css"}"/>
+    <link rel="stylesheet" type="text/css" href="{g->theme url="theme.min.css"}"/>
 
     {php}
         $includefilepath = GALLERY_CONFIG_DIR . '/ga.js';
@@ -29,6 +30,15 @@
         include($includefilepath);
         }
     {/php}
+    {* jQuery (necessary for Bootstrap's JavaScript plugins) *}
+    <script type="application/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    {* Bootstrap JS *}
+    <script type="application/javascript"
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"
+            async></script>
     {* OpenSans font *}
     <link rel="stylesheet" id="google-fonts-css"
           href="https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%7CMontserrat%3A400%7CRaleway%3A400%7CCrimson+Text%3A400Italic&amp;subset=latin&amp;ver=1472669696"
@@ -122,13 +132,8 @@
 </div>
 
 </body>
-{* jQuery (necessary for Bootstrap's JavaScript plugins) *}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.4/lazysizes.min.js"
+        integrity="sha256-FRkZgEAdWoQnIbMoXkMPk7Fv3+jDX1SUUHJOBG4U/1M=" crossorigin="anonymous" async></script>
 
-{* Bootstrap JS *}
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.4/lazysizes.min.js"
-        integrity="sha256-FRkZgEAdWoQnIbMoXkMPk7Fv3+jDX1SUUHJOBG4U/1M=" crossorigin="anonymous"></script>
 </html>
+{/strip}
