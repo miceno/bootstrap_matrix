@@ -23,7 +23,7 @@
   {/if}
   <label for="giFormUsername"> {g->text text="Username"} </label>
 
-  <input class="form-control" type="text" id="giFormUsername" size="16"
+  <input class="form-control" type="text" id="giFormUsername" size="16" autocomplete="username"
    name="{g->formVar var="form[username]"}" value="{$form.username}"/>
 
   <script type="text/javascript">
@@ -44,7 +44,7 @@
 
   <label for="giFormPassword"> {g->text text="Password"} </label>
 
-  <input class="form-control" type="password" id="giFormPassword" size="16" name="{g->formVar var="form[password]"}"/>
+  <input class="form-control" type="password" id="giFormPassword" size="16" autocomplete="current-password" name="{g->formVar var="form[password]"}"/>
 
   {if isset($form.error.password.missing)}
   <div class="giError">
