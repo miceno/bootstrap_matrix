@@ -10,6 +10,24 @@
             .map-grab-wrapper {
                 height: 75vh;
             }
+
+            .map-fullscreen {
+                width: 100%;
+                height: 100%;
+            }
+
+            .map-fluid {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                color: black;
+                background-color: lightgrey;
+                border: 1px solid black;
+            }
+
+            .map-wrapper {
+                height: 65vh;
+            }
         </style>
     {/literal}
     {if $mapv3.fullScreen neq 2 and $mapv3.fullScreen neq 3}
@@ -80,7 +98,7 @@
                 </h2>
             </div>
         {/if}
-    {/if}
+    {/if}{* $mapv3.mode eq "Normal" *}
     {if !isset($mapv3.googleMapKey) or $mapv3.googleMapKey eq ''}
     <!-- No Google Map Keys were found to suit this install -->
         <div class="gbBlock">
@@ -98,58 +116,27 @@
         <!-- Create the Div where the map will be displayed  -->
         {if $mapv3.mode eq "Pick" or ($mapv3.mode eq "Normal" and (!isset($mapv3.noiteminalbum) or !$mapv3.noiteminalbum) and (!isset($mapv3.nogpscoords) or !$mapv3.nogpscoords) and (!isset($mapv3.noitemperms) or !$mapv3.noitemperms) and isset($mapv3.googleMapKey) and $mapv3.googleMapKey neq '')} {* number 1 *}
             {if $mapv3.mode eq "Pick" or $mapv3.useMarkerSet <> "none"} {* number 2 *}
-                {if $mapv3.mode neq "Pick" and isset($mapv3.ShowFilters) and $mapv3.ShowFilters eq "3" and !$mapv3.fullScreen}
+                {if $mapv3.mode eq "Normal" and isset($mapv3.ShowFilters) and $mapv3.ShowFilters eq "top" and !$mapv3.fullScreen}
                     {g->block type="mapv3.mapFilter"}
                 {/if}
-                {if $mapv3.mode neq "Pick" and (!isset($mapv3.LegendPos) or (isset($mapv3.LegendPos) and $mapv3.LegendPos eq '2')) and $mapv3.fullScreen neq 3}
-                    {if $mapv3.mode neq "Pick" and ((isset($mapv3.AlbumLegend)) and ($mapv3.AlbumLegend eq "1")) or ((isset($mapv3.PhotoLegend)) and ($mapv3.PhotoLegend eq "1")) or ((isset($mapv3.regroupItems)) and ($mapv3.regroupItems eq "1")) and $mapv3.fullScreen neq 3}
+                {if $mapv3.mode eq "Normal" and (!isset($mapv3.LegendPos) or (isset($mapv3.LegendPos) and $mapv3.LegendPos eq '2')) and $mapv3.fullScreen neq 3}
+                    {if $mapv3.mode eq "Normal" and ((isset($mapv3.AlbumLegend)) and ($mapv3.AlbumLegend eq "1")) or ((isset($mapv3.PhotoLegend)) and ($mapv3.PhotoLegend eq "1")) or ((isset($mapv3.regroupItems)) and ($mapv3.regroupItems eq "1")) and $mapv3.fullScreen neq 3}
                         {g->block type="mapv3.Legend"}
                     {/if}
                 {/if }
-                {if $mapv3.mode neq "Pick" and $mapv3.fullScreen neq 3}
+                {if $mapv3.mode eq "Normal" and $mapv3.fullScreen neq 3}
                     {if $mapv3.ThumbBarPos eq "1" or $mapv3.ThumbBarPos eq "3" or $mapv3.ThumbBarPos eq "4"}
                         {g->block type="mapv3.Thumb"}
                     {/if}
-                    <table align=right style="border-collapse:collapse;">
-                        {if isset($mapv3.ShowFilters) and $mapv3.ShowFilters eq "2" and !$mapv3.fullScreen}
-                            <tr>
-                                <td>
-                                    {g->block type="mapv3.mapFilter"}
-                                    <br/>
-                                </td>
-                            </tr>
+                    <div class="map-filter">
+                        {if isset($mapv3.ShowFilters) and $mapv3.ShowFilters eq "right" and !$mapv3.fullScreen}
+                            {g->block type="mapv3.mapFilter"}
                         {/if}
-                        {if $mapv3.mode neq "Pick" and isset($mapv3.LegendPos) and $mapv3.LegendPos eq '0'}
-                            <tr>
-                                <td>
-                                    {g->block type="mapv3.Legend"}
-                                </td>
-                            </tr>
+                        {if $mapv3.mode eq "Normal" and isset($mapv3.LegendPos) and $mapv3.LegendPos eq '0'}
+                            {g->block type="mapv3.Legend"}
                         {/if}
-                    </table>
-                {/if} {* end if $mapv3.mode neq "Pick" and $mapv3.fullScreen neq 3 *}
-                <style>
-                    {literal}
-                    .map-fullscreen {
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                    .map-fluid {
-                        overflow: hidden;
-                        width: 100%;
-                        height: 100%;
-                        color: black;
-                        background-color: lightgrey;
-                        border: 1px solid black;
-                    }
-
-                    .map-wrapper {
-                        height: 65vh;
-                    }
-
-                    {/literal}
-                </style>
+                    </div>
+                {/if} {* end if $mapv3.mode eq "Normal" and $mapv3.fullScreen neq 3 *}
                 <div class="map-wrapper">
                     <div id="map" class="themap{if $mapv3.fullScreen eq 3} map-fullscreen{else} map-fluid{/if}">
                         {if $mapv3.mode eq "Normal"}
@@ -159,14 +146,14 @@
                 </div>
                 {if $mapv3.mode eq "Normal" and $mapv3.fullScreen neq 3}
                     {if $mapv3.ThumbBarPos eq "2"}{g->block type="mapv3.Thumb"}{/if}
-                    {if isset($mapv3.ShowFilters) and $mapv3.ShowFilters eq "4" and !$mapv3.fullScreen}
+                    {if isset($mapv3.ShowFilters) and $mapv3.ShowFilters eq "bottom" and !$mapv3.fullScreen}
                         {g->block type="mapv3.mapFilter"}
                     {/if}
-                    {if $mapv3.mode neq "Pick" and (isset($mapv3.LegendPos) and ($mapv3.LegendPos eq '3'))}
+                    {if $mapv3.mode eq "Normal" and (isset($mapv3.LegendPos) and ($mapv3.LegendPos eq '3'))}
                         {if ((isset($mapv3.AlbumLegend)) and ($mapv3.AlbumLegend eq "1")) or ((isset($mapv3.PhotoLegend)) and ($mapv3.PhotoLegend eq "1")) or ((isset($mapv3.regroupItems)) and ($mapv3.regroupItems eq "1"))}
                             {g->block type="mapv3.Legend"}
                         {/if}
-                    {/if} {* $mapv3.mode neq "Pick" *}
+                    {/if} {* $mapv3.mode eq "Normal" *}
                 {/if} {* $mapv3.mode eq "Normal" *}
                 {if $mapv3.mode eq "Pick"} {* number 3 *}
 
@@ -175,9 +162,9 @@
                       -->
                     <h2 class="giSuccess hidden">{g->text text="Tips" hint="Hints or suggestions"}</h2>
                     <ul>
-                        <li/>{g->text text="Click on the map to choose the point."}
-                        <li/>{g->text text="Each click will create a marker to ease aiming."}
-                        <li/>{g->text text="When you are satisfied with the coordinates, click <B>Save</B> above and the center of the map and the zoom level will be copied in the GPS and ZoomLevel fields of the item."}
+                        <li>{g->text text="Click on the map to choose the point."}</li>
+                        <li>{g->text text="Each click will create a marker to ease aiming."}</li>
+                        <li>{g->text text="When you are satisfied with the coordinates, click <B>Save</B> above and the center of the map and the zoom level will be copied in the GPS and ZoomLevel fields of the item."}</li>
                     </ul>
                     </div>{* col-xs-12 col-md-9 *}
                     <div class="col-xs-12 col-sm-12 col-md-3">
