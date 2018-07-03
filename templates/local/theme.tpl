@@ -129,4 +129,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.4/lazysizes.min.js"
+        integrity="sha256-FRkZgEAdWoQnIbMoXkMPk7Fv3+jDX1SUUHJOBG4U/1M=" crossorigin="anonymous"></script>
 </html>

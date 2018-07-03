@@ -97,11 +97,11 @@
                                 </a>
                             {/g->container}
                             {elseif isset($child.thumbnail)}
-                                <a href="{$linkUrl}" class="link-{$child.entityType}">
-                                    {g->image item=$child image=$child.thumbnail class="giThumbnail"}
+                                <a href="{$linkUrl}" class="thumbnail link-{$child.entityType}">
+                                    {g->image item=$child image=$child.thumbnail class="giThumbnail" lazyload=true}
                                 </a>
                             {else}
-                                <a href="{$linkUrl}" class="giMissingThumbnail">
+                                <a href="{$linkUrl}" class="thumbnail giMissingThumbnail">
                                     <img src="/install/images/background.png" class="giThumbnail gcPhotoImage"
                                          title="{g->text text="No Thumbnail"}" alt='{g->text text="No Thumbnail"}'/>
                                 </a>
