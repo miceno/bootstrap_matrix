@@ -1107,6 +1107,10 @@ a.thumbnail
     background: #f7f7f7 url('images/waiting.gif') no-repeat center;
 }
 
+.indicator.glyphicon {
+    cursor: pointer;
+}
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
     .theme-thumb{
