@@ -37,21 +37,23 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 	$this->setRequiredCoreApi(array(7, 20));
 	$this->setRequiredThemeApi(array(2, 4));
 	$this->setStandardSettings(
-	    array('rows' => 6, 'columns' => 4,
-		  'boxesLayout' => 'left',
-		  'showImageOwner' => 0, 'showAlbumOwner' => 1,
-		  'albumFrame' => '', 'itemFrame' => '', 'photoFrame' => '',
-		  'colorpack' => '', 'showMicroThumbs' => 0, 'dynamicLinks' => 'browse',
-		  'sidebarBlocks' => serialize(array(
-			array('search.SearchBlock', array('showAdvancedLink' => true)),
-			array('core.ItemLinks', array('useDropdown' => false)),
-			array('core.PeerList', array()),
-			array('imageblock.ImageBlock', array()))),
-		  'albumBlocks' => serialize(array(
-			array('comment.ViewComments', array()))),
-		  'photoBlocks' => serialize(array(
-			array('exif.ExifInfo', array()),
-			array('comment.ViewComments', array())))));
+	    array('rows' => 6,
+		'columns' => 4,
+		'aboveFoldImages' => 8,
+		'boxesLayout' => 'left',
+		'showImageOwner' => 0, 'showAlbumOwner' => 1,
+		'albumFrame' => '', 'itemFrame' => '', 'photoFrame' => '',
+		'colorpack' => '', 'showMicroThumbs' => 0, 'dynamicLinks' => 'browse',
+		'sidebarBlocks' => serialize(array(
+		    array('search.SearchBlock', array('showAdvancedLink' => true)),
+		    array('core.ItemLinks', array('useDropdown' => false)),
+		    array('core.PeerList', array()),
+		    array('imageblock.ImageBlock', array()))),
+		'albumBlocks' => serialize(array(
+		    array('comment.ViewComments', array()))),
+		'photoBlocks' => serialize(array(
+		    array('exif.ExifInfo', array()),
+		    array('comment.ViewComments', array())))));
     }
 
     /**
@@ -187,6 +189,16 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 		'right' => $this->translate('To the right'),
 		'disable' => $this->translate('Disable')),
 	    'value' => $params['boxesLayout']);
+    
+	/* Add in our custom settings */
+	$settings[] = array(
+	    'key' => 'aboveFoldImages',
+	    'name' => $this->translate('Number of above-the-fold images.
+	    Above-the-fold images will load immediately, while below-the-fold images will be lazy
+	    loaded.'),
+	    'type' => 'text-field',
+	    'typeParams' => array('size' => 2),
+	    'value' => $params['aboveFoldImages']);
     
 	return array(null, $settings, $params);
     }

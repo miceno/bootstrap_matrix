@@ -2,6 +2,12 @@
  * $Revision: 16349 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
+{if isset($theme.params.aboveFoldImages)}
+    {assign var="aboveFoldImages" value=$theme.params.aboveFoldImages}
+{else}
+    {assign var="aboveFoldImages" value=8}
+{/if}
+
 <div class="theme-body panel panel-default gcBackground1 ">
     {* <div class="theme-content"> *}
     {*  <div id="gsContent" class="container-fluid"> *}
@@ -60,7 +66,6 @@
             {*               *}
             {* Image matrix  *}
             {*               *}
-            {assign var="aboveFoldImages" value=8}
             <div id="gsThumbMatrix" class="row-fluid clearfix">
                 {foreach from=$theme.children item=child name=child}
 
