@@ -60,11 +60,10 @@
             {*               *}
             {* Image matrix  *}
             {*               *}
-            {assign var="childrenInColumnCount" value=0}
+            {assign var="aboveFoldImages" value=8}
             <div id="gsThumbMatrix" class="row-fluid clearfix">
                 {foreach from=$theme.children item=child name=child}
 
-                    {assign var=childrenInColumnCount value="`$childrenInColumnCount+1`"}
                     <div class="{strip}
                     {if $child.canContainChildren}
                         giAlbumCell {* empty *}
@@ -97,8 +96,12 @@
                                 </a>
                             {/g->container}
                             {elseif isset($child.thumbnail)}
+                                {assign var="lazyLoad" value=false}
+                                {if $smarty.foreach.child.index+1 > $aboveFoldImages}
+                                    {assign var="lazyLoad" value="true"}
+                                {/if}
                                 <a href="{$linkUrl}" class="thumbnail link-{$child.entityType}">
-                                    {g->image item=$child image=$child.thumbnail class="giThumbnail" lazyload=true}
+                                    {g->image item=$child image=$child.thumbnail class="giThumbnail" lazyload=$lazyLoad}
                                 </a>
                             {else}
                                 <a href="{$linkUrl}" class="thumbnail giMissingThumbnail">
