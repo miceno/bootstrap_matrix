@@ -12,11 +12,6 @@
 </style>
 <form id="SearchScan" action="{g->url}" method="get">
     <div id="gsContent" class="gcBorder1">
-        {* header *}
-        <div class="gbBlock gcBackground1 gHeader">
-            <h2> {g->text text="Search the Gallery"} </h2>
-        </div>
-
         {g->hiddenFormVars}
         <input type="hidden" name="{g->formVar var="controller"}" value="{$SearchScan.controller}"/>
         <input type="hidden" name="{g->formVar var="form[formName]"}" value="SearchScan"/>
@@ -36,6 +31,7 @@
                 {
                     document.getElementById(search_options[i]).checked = val;
                 }
+                return false;
             }
 
             function invertCheck() {
@@ -45,50 +41,60 @@
                     o = document.getElementById(search_options[i]);
                     o.checked = !o.checked;
                 }
+                return false;
                 }
             {/literal}
             // ]]>
         </script>
 
         {* search form*}
-        <div class="gbBlock">
-            <div class="input-wrapper">
-                <input type="text" size="50" class="form-control"
-                       name="{g->formVar var="form[searchCriteria]"}" value="{$form.searchCriteria}"/>
-                <script type="text/javascript">
-                    document.getElementById('SearchScan')['{g->formVar var="form[searchCriteria]"}'].focus();
-                </script>
-                <input type="submit" class="btn btn-primary"
-                       name="{g->formVar var="form[action][search]"}" value="{g->text text="Search"}"/>
-
-                {if isset($form.error.searchCriteria.missing)}
-                    <div class="giError">
-                        {g->text text="You must enter some text to search for!"}
-                    </div>
-                {/if}
-            </div>
-            <div class="options-wrapper">
-                {foreach from=$SearchScan.modules key=moduleId item=moduleInfo}
-                    {foreach from=$moduleInfo.options key=optionId item=optionInfo}
-                        <input type="checkbox" id="cb_{$moduleId}_{$optionId}"
-                               name="{g->formVar var="form[options][$moduleId][$optionId]"}"
-                                {if isset($form.options.$moduleId.$optionId)} checked="checked"{/if}/>
-                        <label for="cb_{$moduleId}_{$optionId}">
-                            {$optionInfo.description}
-                        </label>
-                    {/foreach}
-                {/foreach}
-                <div>
-                    <a href="javascript:setCheck(1)">{g->text text="Check All"}</a>
-                    &nbsp;
-                    <a href="javascript:setCheck(0)">{g->text text="Uncheck All"}</a>
-                    &nbsp;
-                    <a href="javascript:invertCheck()">{g->text text="Invert"}</a>
+        <div class="gbBlock form-group">
+            <div class="input-wrapper input-group col-xs-12 col-md-6">
+                <input type="text"
+                       size="50"
+                       class="form-control"
+                       title="{$form.searchCriteria}"
+                       aria-label="{$form.searchCriteria}"
+                       name="{g->formVar var="form[searchCriteria]"}"
+                       value="{$form.searchCriteria}"/>
+                <div class="input-group-btn">
+                    <input type="submit" class="btn btn-primary"
+                           name="{g->formVar var="form[action][search]"}" value="{g->text text="Search"}"/>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-wrench"></span></button>
+                    <ul class="dropdown-menu">
+                        {foreach from=$SearchScan.modules key=moduleId item=moduleInfo}
+                            {foreach from=$moduleInfo.options key=optionId item=optionInfo}
+                                <li>
+                                <a href="#">
+                                    <label for="cb_{$moduleId}_{$optionId}">
+                                <input type="checkbox" id="cb_{$moduleId}_{$optionId}"
+                                       name="{g->formVar var="form[options][$moduleId][$optionId]"}"
+                                        {if isset($form.options.$moduleId.$optionId)} checked="checked"{/if}/>
+                                    {$optionInfo.description}
+                                </label></a>
+                            </li>{/foreach}
+                        {/foreach}
+                        <li><a href="#" onclick="javascript:event.stopPropagation();setCheck(1); return false;">{g->text text="Check All"}</a></li>
+                        <li><a href="#" onclick="javascript:event.stopPropagation();setCheck(0); return false;">{g->text text="Uncheck All"}</a></li>
+                        <li><a href="#" onclick="javascript:event.stopPropagation();invertCheck()">{g->text text="Invert"}</a></li>
+                    </ul>
                 </div>
+            </div>
+            {if isset($form.error.searchCriteria.missing)}
+                <div class="giError">
+                    {g->text text="You must enter some text to search for!"}
+                </div>
+            {/if}
+            <div class="options-wrapper">
+
             </div>
 
         </div>
-
+        <script type="text/javascript">
+            document.getElementById('SearchScan')['{g->formVar var="form[searchCriteria]"}'].focus();
+        </script>
         {* Search results *}
         {assign var="resultCount" value="0"}
         {if !empty($SearchScan.searchResults)}
@@ -111,6 +117,7 @@
 
                     {assign var="searchCriteria" value=$form.searchCriteria}
                     {if (sizeof($results.results) > 0)}
+                    <div id="gsThumbMatrix" class="col-xs-12">
                         {foreach from=$results.results item=result}
                             {assign var=itemId value=$result.itemId}
                             <div class="giItemCell col-xs-12 col-sm-6 col-md-4 col-lg-3">
@@ -139,6 +146,7 @@
                             </div>
                             </div>
                         {/foreach}
+                    </div>
                         <script type="text/javascript">
                             search_HighlightResults('{$searchCriteria}');
                         </script>
