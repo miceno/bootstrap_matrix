@@ -48,17 +48,20 @@
         </script>
 
         <div class="gbBlock">
-            <div class="input-wrapper">
-                <input type="text" size="50" class="form-control"
+            <div class="input-wrapper input-group">
+                <input type="text" size="50" class="form-group form-control"
                        name="{g->formVar var="form[searchCriteria]"}" value="{$form.searchCriteria}"/>
                 <script type="text/javascript">
                     document.getElementById('SearchShowAll')['{g->formVar var="form[searchCriteria]"}'].focus();
                 </script>
                 <input type="hidden"
                        name="{g->formVar var="form[lastSearchCriteria]"}" value="{$form.searchCriteria}"/>
-                <input type="submit" class="btn btn-primary"
-                       name="{g->formVar var="form[action][search]"}" value="{g->text text="Search"}"/>
 
+                <span class="input-group-btn">
+                    <input type="submit" class="btn btn-primary"
+                           name="{g->formVar var="form[action][search]"}" value="{g->text text="Search"}"/>
+                </span>
+                
                 {if isset($form.error.searchCriteria.missing)}
                     <div class="giError">
                         {g->text text="You must enter some text to search for!"}
