@@ -47,8 +47,8 @@
             // ]]>
         </script>
 
-        <div class="gbBlock">
-            <div class="input-wrapper input-group">
+        <div class="gbBlock ">
+            <div class="input-wrapper input-group col-xs-12 col-md-6">
                 <input type="text" size="50" class="form-group form-control"
                        name="{g->formVar var="form[searchCriteria]"}" value="{$form.searchCriteria}"/>
                 <script type="text/javascript">
