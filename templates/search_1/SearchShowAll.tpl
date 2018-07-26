@@ -5,7 +5,7 @@
 <form id="SearchShowAll" action="{g->url}" method="get">
     <div id="gsContent" class="gcBorder1">
         {* header *}
-        <div class="gbBlock gcBackground1 gHeader">
+        <div class="gbBlock gcBackground1 gHeader hidden">
             <h2>
                 {g->text text="%s Search Results for " arg1=$SearchShowAll.moduleInfo.name}
                 '{$form.searchCriteria}'
