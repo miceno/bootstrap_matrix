@@ -113,39 +113,36 @@
                 </h4>
 
                 {if (sizeof($SearchShowAll.results.results) > 0)}
-                    <table>
-                            {foreach from=$SearchShowAll.results.results item=result}
-                            {assign var=itemId value=$result.itemId}
-                            <div class="giItemCell col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                <div class="thumbnail-wrapper {if
-                            $SearchShowAll.items.$itemId.canContainChildren}gbItemAlbum{else}gbItemImage{/if}">
-                                <a href="{g->url arg1="view=core.ShowItem" arg2="itemId=$itemId"}">
-                                    {if isset($SearchShowAll.thumbnails.$itemId)}
-                                        {g->image item=$SearchShowAll.items.$itemId
-                                    image=$SearchShowAll.thumbnails.$itemId class="giThumbnail"}
-                                    {else}
-                                        <img src="/install/images/background.png" class="giThumbnail gcPhotoImage"
-                                             title="{g->text text="No Thumbnail"}" alt='{g->text text="No Thumbnail"}'/>
-                                    {/if}
-                                </a>
-                                <ul class="giInfo action-list">
-                                    {foreach from=$result.fields item=field}
-                                        <li>
-                                            <span class="ResultKey result-key-{$field.field|lower}">{$field.key}:</span>
-                                            <span class="ResultIcon result-key-{$field.field|lower}"></span>
-                                            <span class="result-data-{$field.field|lower} ResultData">{$field.value|default:"&nbsp;"|markup}</span>
-                                        </li>
-                                    {/foreach}
-                                </ul>
-                                </div>
-                            </div>
+                    {foreach from=$SearchShowAll.results.results item=result}
+                    {assign var=itemId value=$result.itemId}
+                    <div class="giItemCell col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail-wrapper {if
+                    $SearchShowAll.items.$itemId.canContainChildren}gbItemAlbum{else}gbItemImage{/if}">
+                        <a href="{g->url arg1="view=core.ShowItem" arg2="itemId=$itemId"}">
+                            {if isset($SearchShowAll.thumbnails.$itemId)}
+                                {g->image item=$SearchShowAll.items.$itemId
+                            image=$SearchShowAll.thumbnails.$itemId class="giThumbnail"}
+                            {else}
+                                <img src="/install/images/background.png" class="giThumbnail gcPhotoImage"
+                                     title="{g->text text="No Thumbnail"}" alt='{g->text text="No Thumbnail"}'/>
+                            {/if}
+                        </a>
+                        <ul class="giInfo action-list">
+                            {foreach from=$result.fields item=field}
+                                <li>
+                                    <span class="ResultKey result-key-{$field.field|lower}">{$field.key}:</span>
+                                    <span class="ResultIcon result-key-{$field.field|lower}"></span>
+                                    <span class="result-data-{$field.field|lower} ResultData">{$field.value|default:"&nbsp;"|markup}</span>
+                                </li>
                             {/foreach}
-
-                    </table>
+                        </ul>
+                        </div>
+                    </div>
+                    {/foreach}
                     <script type="text/javascript">
                         search_HighlightResults('{$form.searchCriteria}');
                     </script>
-                    <h4>
+                    <h4 class="col-xs-12">
                         {$SearchShowAll.moduleInfo.name}
                         {if ($SearchShowAll.results.count > 0)}
                             {g->text text="Results %d - %d of %d, Page %d of %d"
