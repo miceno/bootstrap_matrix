@@ -24,7 +24,7 @@
                     {g->block type="core.BreadCrumb"}
                 {/if}
             {/strip}
-            <div class="item-position">
+            <div class="item-position hidden-xs hidden-sm">
                 {$theme.itemPosition+1} {g->text text="of"} {$theme.totalItems}
             </div>
             <div class="gbNavigator nav-arrow previous">
