@@ -19,7 +19,12 @@
     {/foreach}
 {/capture}
 
+
 <ul class="nav navbar-nav navbar-right">
+    {if $user.isRegisteredUser }
+        <li class="navbar-text"><span class="glyphicon glyphicon-user"></span>{$user.userName}</li>
+    {/if}
+
     <li>
     {g->block type=search.SearchBlock showAdvancedLink=false inputWidth=18}
     </li>
