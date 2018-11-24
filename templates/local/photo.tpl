@@ -16,7 +16,7 @@
 </div>
 <div class="theme-photo-wrapper">
 
-    <div class="photo-container {if $boxesLayout == "right" }col-xs-12 col-sm-8{/if}">
+    <div class="photo-container {if $boxesLayout == "right" }col-xs-12 col-sm-8{else}photo-container-expand{/if}">
 
         <div id="gsImageView" class="photo-overlay">
             {strip}
