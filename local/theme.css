@@ -316,7 +316,7 @@ div.gbTabBar a {
 
 #searchCriteria {
     padding-bottom: 8px;
-    height: 32px
+    height: 32px;
 }
 
 .dropdown-menu .search-form {
@@ -1175,6 +1175,13 @@ a.thumbnail
     .theme-thumb{
         width: 100%;
     }
+    .photo-element.block-breadcrumb {
+        left: 1em;
+    }
+    .photo-element.block-imageviews {
+        padding: 0;
+        right: 1em;
+    }
 }
 
 /* Custom, iPhone Retina */
@@ -1218,5 +1225,25 @@ a.thumbnail
 @media (min-width: 1024px) {
     div#gallery {
         font-family: "Open Sans","Open Sans","Arial",sans-serif;
+    }
+}
+
+@media (orientation: portrait) {
+    .photo-container {
+        padding: 1em 0.5em;
+    }
+    .photo {
+        width: 100%;
+        height: auto;
+    }
+    .glyph-arrow {
+        left: auto;
+        top: 0;
+    }
+    .previous .arrow {
+        left: 0;
+    }
+    .next .arrow {
+        right: 0;
     }
 }
