@@ -736,7 +736,7 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .white span.glyphicon {
-    color: rgb(238, 239, 242);
+    color: rgb(60, 63, 65);
 }
 .item-position {
     right: 10px;
@@ -779,6 +779,7 @@ div.giAlbumCell table, div.giItemCell table {
 
 .nav-arrow:hover .arrow{
     background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(55, 55, 55, 0.35);
 }
 
 .next .arrow{
@@ -799,7 +800,7 @@ div.giAlbumCell table, div.giItemCell table {
 .photo-container {
     position: relative;
     height: 75vh;
-    padding: 48px 64px;
+    padding: 2.5em 4.5em 1em;
 
     display: flex;
     flex-direction: column;
@@ -807,7 +808,8 @@ div.giAlbumCell table, div.giItemCell table {
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
-    background-color: rgb(34, 34, 34);
+    background-color: #555;
+    background-color: white;
     flex: 1 1 0;
     transition: height 0.15s linear 0s;
 }
@@ -1115,10 +1117,10 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .photo {
-    max-height: 100%;
-    max-width: 100%;
     width: auto;
     height: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 a.thumbnail
@@ -1225,6 +1227,14 @@ a.thumbnail
 @media (min-width: 1024px) {
     div#gallery {
         font-family: "Open Sans","Open Sans","Arial",sans-serif;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .photo {
+        width: 100%;
+        height: auto;
     }
 }
 

@@ -14,9 +14,9 @@
     {assign var="boxesLayout" value=$theme.params.boxesLayout}
 {/if}
 </div>
-<div class="theme-photo-wrapper">
+<div class="theme-photo-wrapper layout-{$boxesLayout}">
 
-    <div class="photo-container">
+    <div class="photo-container {if $boxesLayout == "right" }col-xs-12 col-sm-8{/if}">
 
         <div class="photo-element item-position hidden-xs hidden-sm">
             {$theme.itemPosition+1} {g->text text="of"} {$theme.totalItems}
