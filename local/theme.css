@@ -794,8 +794,7 @@ div.giAlbumCell table, div.giItemCell table {
 
 .photo-container {
     position: relative;
-    height: calc(100vh - 128px);
-    min-height: 75vh;
+    height: 75vh;
     padding: 48px 64px;
 
     display: flex;
