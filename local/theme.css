@@ -718,7 +718,6 @@ div.giAlbumCell table, div.giItemCell table {
     -webkit-box-align: center;
     align-items: center;
     position: absolute;
-    cursor: pointer;
     z-index: 2;
     -webkit-box-pack: end;
     justify-content: flex-end;
@@ -730,23 +729,28 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .nav-arrow {
-    height: calc(100% - 128px);
+    height: calc(100% - 96px);
     width: 33%;
+    top: 0;
     z-index: 2;
 }
 
-/*
-.nav-arrow:hover{
-    background-color: red;
+.white span.glyphicon {
+    color: rgb(238, 239, 242);
 }
-*/
-
 .item-position {
     right: 10px;
     top: 10px;
     background-color: rgba(255,255,255,0.8);
     padding: 0.3em;
     border-radius: 15px;
+}
+
+.glyph-arrow {
+    font-size: 2em;
+    position: absolute;
+    top: calc(50% - 13px);
+    left: calc(50% - 15px);
 }
 
 .nav-arrow.previous {
@@ -765,8 +769,8 @@ div.giAlbumCell table, div.giItemCell table {
     position: absolute;
     padding: 1em;
 
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     margin-top: -8px;
     margin-left: -8px;
     border-radius: 50%;
@@ -774,7 +778,7 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .nav-arrow:hover .arrow{
-    background-color: rgb(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.35);
 }
 
 .next .arrow{
@@ -804,7 +808,7 @@ div.giAlbumCell table, div.giItemCell table {
     -webkit-box-pack: center;
     justify-content: center;
     background-color: rgb(34, 34, 34);
-    flex: 1 1 0%;
+    flex: 1 1 0;
     transition: height 0.15s linear 0s;
 }
 
@@ -821,7 +825,7 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .block-imageviews:hover {
-    background-color: rgb(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.35);
 }
 
 .block-imageviews {
@@ -1128,7 +1132,6 @@ a.thumbnail
 /*==========  Non-Mobile First Method  ==========*/
 
 .pagination .active .jump-pager {
-    padding: 0;
     padding: 4px;
 }
 .g-pagination {
