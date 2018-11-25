@@ -16,54 +16,54 @@
 </div>
 <div class="theme-photo-wrapper">
 
-    <div class="photo-container {if $boxesLayout == "right" }col-xs-12 col-sm-8{else}photo-container-expand{/if}">
+    <div class="photo-container">
 
-        <div id="gsImageView" class="photo-overlay">
+        <div class="photo-element item-position hidden-xs hidden-sm">
+            {$theme.itemPosition+1} {g->text text="of"} {$theme.totalItems}
+        </div>
+        <div class="photo-element nav-arrow previous">
+            {strip}
+                <div class="arrow">
+                    {if isset($navigator.back)}
+                    <a href="{g->url params=$navigator.back.urlParams}" aria-label="{g->text text="previous"}"
+                       class="previous">
+                        {else}
+                        <span>
+                    {/if}
+                            <span class="sr-only">{g->text text="previous"}{$suffix}</span>
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        {if isset($navigator.back)}</a>
+                    {else}
+                    </span>
+                    {/if}
+                </div>
+            {/strip}
+        </div>
+
+        <div class="photo-element nav-arrow next">
+            {strip}
+                <div class="arrow">
+                    {if isset($navigator.next)}
+                    <a href="{g->url params=$navigator.next.urlParams}" aria-label="{g->text text="next"}"
+                       class="next">
+                        {else}
+                        <span>
+                    {/if}
+                            <span class="sr-only">{g->text text="next"}{$suffix}</span>
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        {if isset($navigator.next)}</a>
+                    {else}
+                    </span>
+                    {/if}
+                </div>
+            {/strip}
+        </div>
+        <div class="photo-element block-breadcrumb">
             {strip}
                 {if !empty($theme.item.title)}
                     {g->block type="core.BreadCrumb"}
                 {/if}
             {/strip}
-            <div class="item-position hidden-xs hidden-sm">
-                {$theme.itemPosition+1} {g->text text="of"} {$theme.totalItems}
-            </div>
-            <div class="gbNavigator nav-arrow previous">
-                {strip}
-                <div class="arrow">
-                    {if isset($navigator.back)}
-                        <a href="{g->url params=$navigator.back.urlParams}" aria-label="{g->text text="previous"}"
-                        class="previous">
-                    {else}
-                        <span>
-                    {/if}
-                    <span class="sr-only">{g->text text="previous"}{$suffix}</span>
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    {if isset($navigator.back)}</a>
-                    {else}
-                        </span>
-                    {/if}
-                </div>
-                {/strip}
-            </div>
-
-            <div class="gbNavigator nav-arrow next">
-                {strip}
-                <div class="arrow">
-                    {if isset($navigator.next)}
-                        <a href="{g->url params=$navigator.next.urlParams}" aria-label="{g->text text="next"}"
-                        class="next">
-                    {else}
-                        <span>
-                    {/if}
-                    <span class="sr-only">{g->text text="next"}{$suffix}</span>
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    {if isset($navigator.next)}</a>
-                    {else}
-                        </span>
-                    {/if}
-                </div>
-                {/strip}
-            </div>
         </div>
         {if !empty($theme.imageViews)}
             {capture name="fallback"}
@@ -106,9 +106,12 @@
                     {if isset($imageViewLink)}</a>{/if}
                 {/g->container}
                 {else}
-                    {if isset($imageViewLink)}{$imageViewLink}{/if}
+                    <div class="photo-element block-imageviews">
+                    {if isset($imageViewLink)}{$imageViewLink}
+                        <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+                            </a>{/if}
+                    </div>
                     {g->image class="photo" item=$theme.item image=$image fallback=$smarty.capture.fallback}
-                    {if isset($imageViewLink)}</a>{/if}
                 {/if}
             {else}
                 {$smarty.capture.fallback}
