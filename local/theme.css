@@ -729,7 +729,7 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .nav-arrow {
-    height: calc(100% - 96px);
+    height: 100%;
     width: 33%;
     top: 0;
     z-index: 2;
@@ -756,13 +756,11 @@ div.giAlbumCell table, div.giItemCell table {
 .nav-arrow.previous {
     left: 0;
     padding-left: 32px;
-    margin: 64px 0;
 }
 
 .nav-arrow.next {
     right: 0;
     padding-right: 32px;
-    margin: 64px 0;
 }
 
 .nav-arrow .arrow {
@@ -778,8 +776,8 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .nav-arrow:hover .arrow{
-    background-color: rgba(255, 255, 255, 0.35);
     background-color: rgba(55, 55, 55, 0.35);
+    background-color: rgba(255, 255, 255, 0.35);
 }
 
 .next .arrow{
@@ -800,7 +798,7 @@ div.giAlbumCell table, div.giItemCell table {
 .photo-container {
     position: relative;
     height: 75vh;
-    padding: 2.5em 4.5em 1em;
+    /*padding: 2.5em 4.5em 1em;*/
 
     display: flex;
     flex-direction: column;
@@ -812,11 +810,6 @@ div.giAlbumCell table, div.giItemCell table {
     background-color: white;
     flex: 1 1 0;
     transition: height 0.15s linear 0s;
-}
-
-.photo.giPortrait {
-    height: 100%;
-    width: auto;
 }
 
 .photo-overlay {
@@ -1119,8 +1112,16 @@ div.giAlbumCell table, div.giItemCell table {
 .photo {
     width: auto;
     height: 100%;
+    overflow: hidden;
+    /*
     max-height: 100%;
     max-width: 100%;
+    */
+}
+
+.photo.giPortrait {
+    width: auto;
+    height: 100%;
 }
 
 a.thumbnail
@@ -1188,10 +1189,6 @@ a.thumbnail
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
-    .photo.giPortrait {
-        height: auto;
-        width: auto;
-    }
     .theme-photo-wrapper {
     }
     .photo-container {
@@ -1232,19 +1229,15 @@ a.thumbnail
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-    .photo {
-        width: 100%;
-        height: auto;
-    }
 }
 
 @media (orientation: portrait) {
-    .photo-container {
-        padding: 1em 0.5em;
-    }
     .photo {
         width: 100%;
         height: auto;
+    }
+    .photo-container {
+        padding: 1em 0.5em;
     }
     .glyph-arrow {
         left: auto;
