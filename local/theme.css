@@ -797,8 +797,7 @@ div.giAlbumCell table, div.giItemCell table {
 
 .photo-container {
     position: relative;
-    height: 75vh;
-    /*padding: 2.5em 4.5em 1em;*/
+    height: 85vh;
 
     display: flex;
     flex-direction: column;
