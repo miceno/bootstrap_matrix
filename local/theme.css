@@ -1058,10 +1058,8 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .photo {
-    max-height: 100%;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
 a.thumbnail
@@ -1124,8 +1122,6 @@ a.thumbnail
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
     .photo.giPortrait {
-        height: auto;
-        width: auto;
     }
     .theme-photo-wrapper {
         display: initial;
