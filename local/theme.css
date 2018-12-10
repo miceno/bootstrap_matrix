@@ -713,14 +713,17 @@ div.giAlbumCell table, div.giItemCell table {
     align-items: center;
 }
 
-.photo-element {
+.photo-info {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
     position: absolute;
     z-index: 2;
     -webkit-box-pack: end;
-    justify-content: flex-end;
+    justify-content: center;
+}
+.photo-info.photo-image {
+    z-index: 0;
 }
 
 .block-breadcrumb {
@@ -795,11 +798,10 @@ div.giAlbumCell table, div.giItemCell table {
 .photo-container-expand {
 }
 
-.photo-container {
+.container-photo {
     position: relative;
     height: 85vh;
 
-    display: flex;
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
@@ -809,13 +811,6 @@ div.giAlbumCell table, div.giItemCell table {
     background-color: white;
     flex: 1 1 0;
     transition: height 0.15s linear 0s;
-}
-
-.photo-overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    bottom: 0;
 }
 
 .block-imageviews:hover {
@@ -1109,18 +1104,9 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .photo {
-    width: auto;
-    height: 100%;
-    overflow: hidden;
-    /*
-    max-height: 100%;
-    max-width: 100%;
-    */
 }
 
 .photo.giPortrait {
-    width: auto;
-    height: 100%;
 }
 
 a.thumbnail
@@ -1177,10 +1163,10 @@ a.thumbnail
     .theme-thumb{
         width: 100%;
     }
-    .photo-element.block-breadcrumb {
+    .photo-info.block-breadcrumb {
         left: 1em;
     }
-    .photo-element.block-imageviews {
+    .photo-info.block-imageviews {
         padding: 0;
         right: 1em;
     }
@@ -1190,7 +1176,7 @@ a.thumbnail
 @media only screen and (min-width : 320px) {
     .theme-photo-wrapper {
     }
-    .photo-container {
+    .container-photo {
     }
     .sidebar-right {
         height: initial;
@@ -1213,10 +1199,10 @@ a.thumbnail
 @media only screen and (min-width : 768px) {
     .theme-photo-wrapper {
     }
-    .photo-container {
+    .container-photo {
     }
     .sidebar-right {
-        height: 75vh;
+        height: 85vh;
     }
 }
 
@@ -1235,7 +1221,7 @@ a.thumbnail
         width: 100%;
         height: auto;
     }
-    .photo-container {
+    .container-photo {
         padding: 1em 0.5em;
     }
     .glyph-arrow {

@@ -16,15 +16,15 @@
 </div>
 <div class="theme-photo-wrapper layout-{$boxesLayout}">
 
-    <div class="photo-container {if $boxesLayout == "right" }col-xs-12 col-sm-8{/if}">
+    <div class="container-photo {if $boxesLayout == "right" }col-xs-12 col-sm-8{/if}">
 
-        <div class="photo-element item-position hidden-xs hidden-sm">
+        <div class="photo-info item-position hidden-xs hidden-sm">
             {$theme.itemPosition+1} {g->text text="of"} {$theme.totalItems}
         </div>
 
         {if isset($navigator.back)}
         <a href="{g->url params=$navigator.back.urlParams}" aria-label="{g->text text="previous"}"
-           class="photo-element nav-arrow previous white">
+           class="photo-info nav-arrow previous white">
             {strip}
                 <div class="arrow">
                     {*<span class="sr-only">{g->text text="previous"}{$suffix}</span>*}
@@ -36,7 +36,7 @@
 
         {if isset($navigator.next)}
         <a href="{g->url params=$navigator.next.urlParams}" aria-label="{g->text text="next"}"
-           class="photo-element nav-arrow next white">
+           class="photo-info nav-arrow next white">
             {strip}
                 <div class="arrow">
                     {*<span class="sr-only">{g->text text="next"}{$suffix}</span>*}
@@ -45,7 +45,7 @@
             {/strip}
         </a>
         {/if}
-        <div class="photo-element block-breadcrumb">
+        <div class="photo-info block-breadcrumb">
             {strip}
                 {if !empty($theme.item.title)}
                     {g->block type="core.BreadCrumb"}
@@ -93,12 +93,14 @@
                     {if isset($imageViewLink)}</a>{/if}
                 {/g->container}
                 {else}
-                    <div class="photo-element block-imageviews white">
+                    <div class="photo-info block-imageviews white">
                     {if isset($imageViewLink)}{$imageViewLink}
                         <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
                             </a>{/if}
                     </div>
+                    <div class="photo-info photo-image">
                     {g->image class="photo" item=$theme.item image=$image fallback=$smarty.capture.fallback}
+                    </div>
                 {/if}
             {else}
                 {$smarty.capture.fallback}
@@ -159,40 +161,39 @@
 
 </div>
 {* Footer *}
+{if $boxesLayout == "bottom" }
 <div class="container-fluid">
-    {if $boxesLayout == "bottom" }
-        {* Show any other photo blocks (comments, exif etc) *}
-        <div class="row-fluid sidebar-bottom">
-            <div class="photo-blocks sidebar-{$boxesLayout}">
-                <div class="giTitle-wrapper row-fluid clearfix">
-                    <div class="giTitle col-xs-12 col-sm-8">
-                        {if !empty($theme.item.title)}
-                            <h2> {$theme.item.title|markup} </h2>
-                        {/if}
-                        {if !empty($theme.item.description)}
-                            <p class="giDescription">
-                                {$theme.item.description|markup}
-                            </p>
-                        {/if}
-                    </div>
-                    <div class="giInfo-wrapper hidden-xs pull-right">
-                        {g->block type="core.ItemInfo"
-                        item=$theme.item
-                        showDate=true
-                        showOwner=$theme.params.showImageOwner
-                        class="giInfo"}
-                        {g->block type="core.PhotoSizes" class="giInfo"}
-                    </div>
-
+    {* Show any other photo blocks (comments, exif etc) *}
+    <div class="row-fluid sidebar-bottom">
+        <div class="photo-blocks sidebar-{$boxesLayout}">
+            <div class="giTitle-wrapper row-fluid clearfix">
+                <div class="giTitle col-xs-12 col-sm-8">
+                    {if !empty($theme.item.title)}
+                        <h2> {$theme.item.title|markup} </h2>
+                    {/if}
+                    {if !empty($theme.item.description)}
+                        <p class="giDescription">
+                            {$theme.item.description|markup}
+                        </p>
+                    {/if}
                 </div>
-                {foreach from=$theme.params.photoBlocks item=block}
-                    {g->block class="gbBlock col-xs-12 col-md-6 col-lg-3" type=$block.0 params=$block.1}
-                {/foreach}
-            </div>
-        </div>
-    {/if}
+                <div class="giInfo-wrapper hidden-xs pull-right">
+                    {g->block type="core.ItemInfo"
+                    item=$theme.item
+                    showDate=true
+                    showOwner=$theme.params.showImageOwner
+                    class="giInfo"}
+                    {g->block type="core.PhotoSizes" class="giInfo"}
+                </div>
 
+            </div>
+            {foreach from=$theme.params.photoBlocks item=block}
+                {g->block class="gbBlock col-xs-12 col-md-6 col-lg-3" type=$block.0 params=$block.1}
+            {/foreach}
+        </div>
+    </div>
 </div>
+{/if}
 <div class="row-fluid">
     {g->block type="core.GuestPreview" class="gbBlock col-xs-12"}
 </div>
