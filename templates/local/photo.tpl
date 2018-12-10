@@ -130,6 +130,27 @@
                     </a>
                 </div>
             {/if}
+            <div class="gbBlock">
+                <div class="giTitle col-xs-12">
+                    {if !empty($theme.item.title)}
+                        <h2> {$theme.item.title|markup} </h2>
+                    {/if}
+                    {if !empty($theme.item.description)}
+                        <p class="giDescription">
+                            {$theme.item.description|markup}
+                        </p>
+                    {/if}
+                </div>
+                <div class="giInfo-wrapper hidden-xs pull-right">
+                    {g->block type="core.ItemInfo"
+                    item=$theme.item
+                    showDate=true
+                    showOwner=$theme.params.showImageOwner
+                    class="giInfo"}
+                    {g->block type="core.PhotoSizes" class="giInfo"}
+                </div>
+            </div>
+
             {foreach from=$theme.params.photoBlocks item=block}
                 {g->block class="gbBlock col-xs-12 col-md-12 col-lg-12" type=$block.0 params=$block.1}
             {/foreach}
@@ -148,28 +169,28 @@
 </div>
 {* Footer *}
 <div class="container-fluid">
-    <div class="giTitle-wrapper row-fluid clearfix">
-        <div class="giTitle col-xs-12 col-sm-8">
-            {if !empty($theme.item.title)}
-                <h2> {$theme.item.title|markup} </h2>
-            {/if}
-            {if !empty($theme.item.description)}
-                <p class="giDescription">
-                    {$theme.item.description|markup}
-                </p>
-            {/if}
-        </div>
-        <div class="giInfo-wrapper hidden-xs pull-right">
-            {g->block type="core.ItemInfo"
-            item=$theme.item
-            showDate=true
-            showOwner=$theme.params.showImageOwner
-            class="giInfo"}
-            {g->block type="core.PhotoSizes" class="giInfo"}
-        </div>
-
-    </div>
     {if $boxesLayout == "bottom" }
+        <div class="giTitle-wrapper row-fluid clearfix">
+            <div class="giTitle col-xs-12 col-sm-8">
+                {if !empty($theme.item.title)}
+                    <h2> {$theme.item.title|markup} </h2>
+                {/if}
+                {if !empty($theme.item.description)}
+                    <p class="giDescription">
+                        {$theme.item.description|markup}
+                    </p>
+                {/if}
+            </div>
+            <div class="giInfo-wrapper hidden-xs pull-right">
+                {g->block type="core.ItemInfo"
+                item=$theme.item
+                showDate=true
+                showOwner=$theme.params.showImageOwner
+                class="giInfo"}
+                {g->block type="core.PhotoSizes" class="giInfo"}
+            </div>
+
+        </div>
         {* Show any other photo blocks (comments, exif etc) *}
         <div class="row-fluid sidebar-bottom">
             <div class="photo-blocks sidebar-{$boxesLayout}">
