@@ -144,6 +144,10 @@ pre, tt {
 .giInfo {
 }
 
+.giInfo .giWarning {
+    display: inline-block;
+}
+
 .giSuccess, .giWarning, .giError  {
     font-weight: bold;
 }
