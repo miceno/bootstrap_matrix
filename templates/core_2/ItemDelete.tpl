@@ -102,7 +102,7 @@
                 {if isset($peer.thumbnail)}
                     {g->image item=$peer image=$peer.thumbnail maxSize=50 class="giThumbnail"}
                 {else}
-                    &nbsp;
+                    <img width="100%" height="100%" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
                 {/if}
                 <input class="checkbox" type="checkbox" id="cb_{$peerItemId}"
                        {if $peer.selected}checked="checked" {/if}
