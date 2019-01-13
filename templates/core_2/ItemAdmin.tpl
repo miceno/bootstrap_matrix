@@ -36,6 +36,20 @@
                         </div>
                     {/if}
 
+                    <div class="gbBlock col-xs-6 col-sm-12 parents">
+                        <h2> {g->text text="Folders"} </h2>
+                        <ul class="">
+                            {strip}
+                                {foreach name=parent from=$theme.parents item=parent}
+                                    <li>
+                                        <a href="{g->url params=$parent.urlParams}" class="parents-{counter name="BreadCrumb"}">{$parent.title|markup:strip|default:$parent.pathComponent}</a>
+                                    </li>
+                                    {if isset($separator)} {$separator} {/if}
+                                {/foreach}
+
+                            {/strip}
+                        </ul>
+                    </div>
                     <div class="gbBlock col-xs-6 col-sm-12">
                         <h2> {g->text text="Options"} </h2>
                         <ul>
