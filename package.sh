@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
 DIST_DIR="dist"
+THEME_NAME="bootstrap_matrix"
 
-mkdir -p $DIST_DIR
+SHORT_HEAD=$(git rev-parse --short HEAD)
 
-tar -cvf - -T MANIFEST.txt | tar -C $DIST_DIR -xvf -
+TARGET_DIR=$DIST_DIR/$THEME_NAME-$SHORT_HEAD
+mkdir -p $TARGET_DIR
+
+tar -cvf - -T MANIFEST.txt | tar -C $TARGET_DIR -xvf -
