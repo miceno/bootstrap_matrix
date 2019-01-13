@@ -23,185 +23,199 @@
  * @package Themes
  * @subpackage Bootstrap_Matrix
  * @author Orestes Sanchez <orestes@estotienearreglo.es>
- * @version 
+ * @version
  */
 class Bootstrap_MatrixTheme extends GalleryTheme {
 
-    function Bootstrap_MatrixTheme() {
-	global $gallery;
+	function Bootstrap_MatrixTheme() {
+		global $gallery;
 
-	$this->setId('bootstrap_matrix');
-	$this->setName($gallery->i18n('BootstrapMatrix'));
-	$this->setDescription($gallery->i18n('Bootstrap Gallery2 look and feel'));
-	$this->setVersion('1.1.2');
-	$this->setRequiredCoreApi(array(7, 20));
-	$this->setRequiredThemeApi(array(2, 4));
-	$this->setStandardSettings(
-	    array('rows' => 6,
-		'columns' => 4,
-		'aboveFoldImages' => 8,
-		'boxesLayout' => 'left',
-		'showImageOwner' => 0, 'showAlbumOwner' => 1,
-		'albumFrame' => '', 'itemFrame' => '', 'photoFrame' => '',
-		'colorpack' => '', 'showMicroThumbs' => 0, 'dynamicLinks' => 'browse',
-		'sidebarBlocks' => serialize(array(
-		    array('search.SearchBlock', array('showAdvancedLink' => true)),
-		    array('core.ItemLinks', array('useDropdown' => false)),
-		    array('core.PeerList', array()),
-		    array('imageblock.ImageBlock', array()))),
-		'albumBlocks' => serialize(array(
-		    array('comment.ViewComments', array()))),
-		'photoBlocks' => serialize(array(
-		    array('exif.ExifInfo', array()),
-		    array('comment.ViewComments', array())))));
-    }
-
-    /**
-     * @see GalleryTheme::showAlbumPage
-     */
-    function showAlbumPage(&$template, $item, $params, $childIds) {
-	global $gallery;
- 
-	$ret = $this->loadCommonTemplateData(
-	    $template, $item, $params,
-	    array('owner', 'viewCount', 'childCount', 'descendentCount', 'parents',
-		  'systemLinks', 'itemLinks', 'itemSummaries', 'permissions',
-		  'thumbnails', 'pageNavigator', 'jumpRange'),
-	     $childIds);
-	if ($ret) {
-	    return array($ret, null);
+		$this->setId('bootstrap_matrix');
+		$this->setName($gallery->i18n('BootstrapMatrix'));
+		$this->setDescription($gallery->i18n('Bootstrap Gallery2 look and feel'));
+		$this->setVersion('1.2.1');
+		$this->setRequiredCoreApi(array(7, 20));
+		$this->setRequiredThemeApi(array(2, 4));
+		$this->setStandardSettings(
+			array(
+				'rows'            => 6,
+				'columns'         => 4,
+				'aboveFoldImages' => 8,
+				'boxesLayout'     => 'left',
+				'showImageOwner'  => 0, 'showAlbumOwner' => 1,
+				'albumFrame'      => '', 'itemFrame' => '', 'photoFrame' => '',
+				'colorpack'       => '', 'showMicroThumbs' => 0, 'dynamicLinks' => 'browse',
+				'sidebarBlocks'   => serialize(array(
+												   array('search.SearchBlock', array('showAdvancedLink' => true)),
+												   array('core.ItemLinks', array('useDropdown' => false)),
+												   array('core.PeerList', array()),
+												   array('imageblock.ImageBlock', array()),
+											   )),
+				'albumBlocks'     => serialize(array(
+												   array('comment.ViewComments', array()),
+											   )),
+				'photoBlocks'     => serialize(array(
+												   array('exif.ExifInfo', array()),
+												   array('comment.ViewComments', array()),
+											   )),
+			));
 	}
 
-	/* Add in our extra stuff */
-	$theme =& $template->getVariableByReference('theme');
-	$theme['debug'] = $gallery->getDebug();
+	/**
+	 * @see GalleryTheme::showAlbumPage
+	 */
+	function showAlbumPage(&$template, $item, $params, $childIds) {
+		global $gallery;
 
-	/* Add our header and styles */
-	return array(null, 'theme.tpl');
-    }
+		$ret = $this->loadCommonTemplateData(
+			$template, $item, $params,
+			array(
+				'owner', 'viewCount', 'childCount', 'descendentCount', 'parents',
+				'systemLinks', 'itemLinks', 'itemSummaries', 'permissions',
+				'thumbnails', 'pageNavigator', 'jumpRange',
+			),
+			$childIds);
+		if ($ret) {
+			return array($ret, null);
+		}
 
-    /**
-     * @see GalleryTheme::showPhotoPage
-     */
-    function showPhotoPage(&$template, $item, $params) {
-	global $gallery;
- 
-	$dataTypes = array('owner', 'parents', 'systemLinks', 'itemLinks', 'permissions',
-			   'itemLinksDetailed', 'itemNavigator', 'imageViews');
-	if (!empty($params['showMicroThumbs'])) {
-	    $dataTypes[] = 'navThumbnails';
-	}
-	$ret = $this->loadCommonTemplateData($template, $item, $params, $dataTypes);
-	if ($ret) {
-	    return array($ret, null);
-	}
- 
-	/* Add in our extra stuff */
-	$theme =& $template->getVariableByReference('theme');
-	$theme['debug'] = $gallery->getDebug();
- 
-	return array(null, 'theme.tpl');
-    }
+		/* Add in our extra stuff */
+		$theme          =& $template->getVariableByReference('theme');
+		$theme['debug'] = $gallery->getDebug();
 
-    /**
-     * @see GalleryTheme::showModulePage
-     */
-    function showModulePage(&$template, $item, $params, $templateFile) {
-	global $gallery;
-	$ret = $this->loadCommonTemplateData(
-	    $template, $item, $params, array('parents', 'systemLinks'));
-	if ($ret) {
-	    return array($ret, null);
-	}
-	/* Add in our extra stuff */
-	$theme =& $template->getVariableByReference('theme');
-	$theme['debug'] = $gallery->getDebug();
+		/* Add our header and styles */
 
-	return array(null, 'theme.tpl');
-    }
-
-    /**
-     * @see GalleryTheme::showAdminPage
-     */
-    function showAdminPage(&$template, $item, $params, $templateFile) {
-	global $gallery;
-	$ret = $this->loadCommonTemplateData(
-	    $template, $item, $params, array('parents', 'systemLinks'));
-	if ($ret) {
-	    return array($ret, null);
-	}
-	/* Add in our extra stuff */
-	$theme =& $template->getVariableByReference('theme');
-	$theme['debug'] = $gallery->getDebug();
-	
-	return array(null, 'theme.tpl');
-    }
-
-    /**
-     * @see GalleryTheme::showErrorPage
-     */
-    function showErrorPage(&$template) {
-	global $gallery;
-	
-	/* Add in our extra stuff */
-	$theme =& $template->getVariableByReference('theme');
-	$theme['debug'] = $gallery->getDebug();
-	
-	return array(null, 'error.tpl');
-    }
-
-    /**
-     * @see GalleryTheme::showProgressBarPage
-     */
-    function showProgressBarPage(&$template, $item, $params) {
-	global $gallery;
- 
-	/* Add in our extra stuff */
-	$theme =& $template->getVariableByReference('theme');
-	$theme['debug'] = $gallery->getDebug();
-	
-        $ret = $this->loadCommonTemplateData(
-	    $template, $item, $params, array('parents', 'systemLinks'));
-	if ($ret) {
-	    return array($ret, null);
+		return array(null, 'theme.tpl');
 	}
 
-	return array(null, 'theme.tpl');
-    }
-    
-    /**
-     * @see GalleryTheme::getSettings
-     */
-    function getSettings($itemId=null) {
-	list ($ret, $settings, $params) = parent::getSettings($itemId);
-	if ($ret) {
-	    return array($ret, null, null);
+	/**
+	 * @see GalleryTheme::showPhotoPage
+	 */
+	function showPhotoPage(&$template, $item, $params) {
+		global $gallery;
+
+		$dataTypes = array(
+			'owner', 'parents', 'systemLinks', 'itemLinks', 'permissions',
+			'itemLinksDetailed', 'itemNavigator', 'imageViews',
+		);
+		if (! empty($params['showMicroThumbs'])) {
+			$dataTypes[] = 'navThumbnails';
+		}
+		$ret = $this->loadCommonTemplateData($template, $item, $params, $dataTypes);
+		if ($ret) {
+			return array($ret, null);
+		}
+
+		/* Add in our extra stuff */
+		$theme          =& $template->getVariableByReference('theme');
+		$theme['debug'] = $gallery->getDebug();
+
+		return array(null, 'theme.tpl');
 	}
-	
-	/* Add in our custom settings */
-	$settings[] = array(
-	    'key' => 'boxesLayout',
-	    'name' => $this->translate('Block layout'),
-	    'type' => 'single-select',
-	    'choices' => array(
-		'left' => $this->translate('To the left'),
-		'bottom' => $this->translate('To the bottom'),
-		'right' => $this->translate('To the right'),
-		'disable' => $this->translate('Disable')),
-	    'value' => $params['boxesLayout']);
-    
-	/* Add in our custom settings */
-	$settings[] = array(
-	    'key' => 'aboveFoldImages',
-	    'name' => $this->translate('Number of above-the-fold images.
+
+	/**
+	 * @see GalleryTheme::showModulePage
+	 */
+	function showModulePage(&$template, $item, $params, $templateFile) {
+		global $gallery;
+		$ret = $this->loadCommonTemplateData(
+			$template, $item, $params, array('parents', 'systemLinks'));
+		if ($ret) {
+			return array($ret, null);
+		}
+		/* Add in our extra stuff */
+		$theme          =& $template->getVariableByReference('theme');
+		$theme['debug'] = $gallery->getDebug();
+
+		return array(null, 'theme.tpl');
+	}
+
+	/**
+	 * @see GalleryTheme::showAdminPage
+	 */
+	function showAdminPage(&$template, $item, $params, $templateFile) {
+		global $gallery;
+		$ret = $this->loadCommonTemplateData(
+			$template, $item, $params, array('parents', 'systemLinks'));
+		if ($ret) {
+			return array($ret, null);
+		}
+		/* Add in our extra stuff */
+		$theme          =& $template->getVariableByReference('theme');
+		$theme['debug'] = $gallery->getDebug();
+
+		return array(null, 'theme.tpl');
+	}
+
+	/**
+	 * @see GalleryTheme::showErrorPage
+	 */
+	function showErrorPage(&$template) {
+		global $gallery;
+
+		/* Add in our extra stuff */
+		$theme          =& $template->getVariableByReference('theme');
+		$theme['debug'] = $gallery->getDebug();
+
+		return array(null, 'error.tpl');
+	}
+
+	/**
+	 * @see GalleryTheme::showProgressBarPage
+	 */
+	function showProgressBarPage(&$template, $item, $params) {
+		global $gallery;
+
+		/* Add in our extra stuff */
+		$theme          =& $template->getVariableByReference('theme');
+		$theme['debug'] = $gallery->getDebug();
+
+		$ret = $this->loadCommonTemplateData(
+			$template, $item, $params, array('parents', 'systemLinks'));
+		if ($ret) {
+			return array($ret, null);
+		}
+
+		return array(null, 'theme.tpl');
+	}
+
+	/**
+	 * @see GalleryTheme::getSettings
+	 */
+	function getSettings($itemId = null) {
+		list ($ret, $settings, $params) = parent::getSettings($itemId);
+		if ($ret) {
+			return array($ret, null, null);
+		}
+
+		/* Add in our custom settings */
+		$settings[] = array(
+			'key'     => 'boxesLayout',
+			'name'    => $this->translate('Block layout'),
+			'type'    => 'single-select',
+			'choices' => array(
+				'left'    => $this->translate('To the left'),
+				'bottom'  => $this->translate('To the bottom'),
+				'right'   => $this->translate('To the right'),
+				'disable' => $this->translate('Disable'),
+			),
+			'value'   => $params['boxesLayout'],
+		);
+
+		/* Add in our custom settings */
+		$settings[] = array(
+			'key'        => 'aboveFoldImages',
+			'name'       => $this->translate('Number of above-the-fold images.
 	    Above-the-fold images will load immediately, while below-the-fold images will be lazy
 	    loaded.'),
-	    'type' => 'text-field',
-	    'typeParams' => array('size' => 2),
-	    'value' => $params['aboveFoldImages']);
-    
-	return array(null, $settings, $params);
-    }
-    
+			'type'       => 'text-field',
+			'typeParams' => array('size' => 2),
+			'value'      => $params['aboveFoldImages'],
+		);
+
+		return array(null, $settings, $params);
+	}
+
 }
+
 ?>
