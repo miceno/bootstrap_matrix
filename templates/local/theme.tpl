@@ -73,7 +73,7 @@
         {include file="gallery:`$theme.moduleTemplate`" l10Domain=$theme.moduleL10Domain}
     {elseif $theme.pageType == 'progressbar'}
         <div id="gsHeader" class="row-fluid">
-            <img src="{g->url href="images/galleryLogo_sm.gif"}" width="107" height="48" alt=""/>
+            <a href="main.php"><img src="themes/bootstrap_matrix/images/gallery_logo.png" alt="Logo de l'Arxiu Històric del Poblenou"></a>
         </div>
         {g->theme include="progressbar.tpl"}
     {else}

@@ -18,6 +18,19 @@
  * Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+class LazyImageTemplateAdapter extends GalleryTemplateAdapter {
+
+	public function image($params, &$smarty) {
+		list($ret, $html) = parent::_image($params, $smarty);
+
+		if ($ret) {
+			return '[Render error]';
+		}
+
+		return $html ." <pre>lazy image adapter</pre>";
+	}
+};
+
 /**
  * Standard gallery theme
  * @package Themes
@@ -29,7 +42,21 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 
 	function Bootstrap_MatrixTheme() {
 		global $gallery;
+		$gallery->debug("Init bootstrap_matrix theme");
+		$gallery->debug_r($gallery->_templateAdapter);
+		/*
+		$templateAdapter = $gallery->_templateAdapter;
 
+		// TODO: Copy all the fields in $gallery->_templateAdapter to $lazyLoadAdapter
+		$lazyTA = new LazyImageTemplateAdapter();
+		$lazyTA->_callCount        = $templateAdapter->_callCount;
+		$lazyTA->_theme            = $templateAdapter->_theme;
+		$lazyTA->_trailer          = $templateAdapter->_trailer;
+		$lazyTA->_progressBarStats = $templateAdapter->_progressBarStats;
+		$lazyTA->_trailerCallbacks= $templateAdapter->_trailerCallbacks;
+
+		$gallery->_templateAdapter =& $lazyTA;
+		*/
 		$this->setId('bootstrap_matrix');
 		$this->setName($gallery->i18n('BootstrapMatrix'));
 		$this->setDescription($gallery->i18n('Bootstrap Gallery2 look and feel'));
@@ -66,6 +93,22 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 	 */
 	function showAlbumPage(&$template, $item, $params, $childIds) {
 		global $gallery;
+
+		$templateAdapter = $gallery->_templateAdapter;
+
+		$gallery->debug("Show album page");
+		$gallery->debug_r($gallery->_templateAdapter);
+
+		// TODO: Copy all the fields in $gallery->_templateAdapter to $lazyLoadAdapter
+		$lazyTA = new LazyImageTemplateAdapter();
+		$lazyTA->_callCount        = $templateAdapter->_callCount;
+		$lazyTA->_theme            = $templateAdapter->_theme;
+		$lazyTA->_trailer          = $templateAdapter->_trailer;
+		$lazyTA->_progressBarStats = $templateAdapter->_progressBarStats;
+		$lazyTA->_trailerCallbacks= $templateAdapter->_trailerCallbacks;
+
+		$gallery->_templateAdapter =& $lazyTA;
+
 
 		$ret = $this->loadCommonTemplateData(
 			$template, $item, $params,

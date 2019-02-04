@@ -97,16 +97,24 @@
                             width=$child.thumbnail.width height=$child.thumbnail.height}
                                 <a href="{$linkUrl}">
                                     {g->image id="%ID%" item=$child image=$child.thumbnail
-                                    class="%CLASS% giThumbnail"}
+                                    class="%CLASS% giThumbnail gcPhotoImage"}
                                 </a>
                             {/g->container}
                             {elseif isset($child.thumbnail)}
+                                <a href="{$linkUrl}" class="thumbnail link-{$child.entityType}">
                                 {assign var="lazyLoad" value=false}
                                 {if $smarty.foreach.child.index+1 > $aboveFoldImages}
-                                    {assign var="lazyLoad" value="true"}
+                                    {assign var="lazyLoad" value=true}
                                 {/if}
-                                <a href="{$linkUrl}" class="thumbnail link-{$child.entityType}">
-                                    {g->image item=$child image=$child.thumbnail class="giThumbnail" lazyload=$lazyLoad}
+                                    {if $lazyLoad }
+                                        {g->image item=$child image=$child.thumbnail
+                                        class="giThumbnail gcPhotoImage conlazyload lazyload"
+                                        src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+                                        data_src='%ID%'
+                                        }
+                                    {else}
+                                        {g->image item=$child image=$child.thumbnail class="giThumbnail gcPhotoImage sinlazyload"}
+                                    {/if}
                                 </a>
                             {else}
                                 <a href="{$linkUrl}" class="thumbnail giMissingThumbnail">

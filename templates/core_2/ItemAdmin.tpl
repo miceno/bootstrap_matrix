@@ -24,7 +24,7 @@
                             {capture assign=linkUrl}{g->url arg1="view=core.ShowItem" arg2="itemId=`$ItemAdmin.item.id`"}{/capture}
                             {if empty($ItemAdmin.thumbnail)}
                                 <a href="{$linkUrl}">
-                                    <img src="/install/images/background.png" class="giThumbnail gcPhotoImage"
+                                    <img src="/install/images/background.png" class="giThumbnail"
                                          title="{g->text text="No Thumbnail"}" alt='{g->text text="No Thumbnail"}'/>
                                 </a>
                             {else}
