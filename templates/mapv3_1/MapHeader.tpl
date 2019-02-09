@@ -23,7 +23,7 @@ a:hover {ldelim} outline: none; {rdelim}
 <script type="text/javascript">
     //<![CDATA[
 
-    var DEBUGINFO = 1; //set to 1 to view the Glog, 0 otherwise
+    var DEBUGINFO = 0; //set to 1 to view the Glog, 0 otherwise
     var allInfoWindows = [];
 
     var lat, lon, itemLink, title, thumbLink, thw, thh, created, summary, zoomlevel;
