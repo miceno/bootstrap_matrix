@@ -759,7 +759,7 @@ a:hover {ldelim} outline: none; {rdelim}
         }
         for (var i = 0; i < markers.length; i++) {
 	    var checktype = (markers[i]["type"] == "GalleryAlbumItem") ? "GalleryAlbumItem" : "GalleryPhotoItem";
-	    markercolor = strRight(strLeft(markers[i].getIcon().image, ".png"), "marker_");
+	    markercolor = strRight(strLeft(markers[i].getIcon(), ".png"), "marker_");
 	    if (DEBUGINFO) console.debug('Marker: ' + markers[i]["type"] + ' ' + markercolor + ' ' + markers[i].showLow + ' ' + markers[i].showHigh);
 	    if (markercolor == clickedcolor && (checktype == thetype || markers[i]['type'] == "Regroup")) {
 	        if (thecheckbox.item(0).checked && zoom <= markers[i].showLow && zoom >= markers[i].showHigh) markerDisplay(i, 1, 'normal'); //markers[i].display(true);
