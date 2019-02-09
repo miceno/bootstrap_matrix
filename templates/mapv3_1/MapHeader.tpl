@@ -504,7 +504,7 @@ a:hover {ldelim} outline: none; {rdelim}
                       '<img style="\
                         {strip}{if $barPosition eq "right" or $barPosition eq "left"}width{else}height
                         {/if}:{$mapv3.ThumbHeight}px;"{/strip}' +
-        'src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazyload" data-src="{$point.thumbLink}"/>{if $barPosition eq "3" or $barPosition eq "4"}<br/>{/if}<\/a>';
+        'src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="lazyload" data-src="{$point.thumbLink}"/>{if $barPosition eq "right" or $barPosition eq "left"}<br/>{/if}<\/a>';
                   sidebarsize +={if $barPosition eq "right" or $barPosition eq "left"}{$point.thumbbarHeight}{else}{$point.thumbbarWidth}{/if}+2;
                   {/if}
 
