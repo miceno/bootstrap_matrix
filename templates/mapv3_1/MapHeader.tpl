@@ -105,13 +105,21 @@ a:hover {ldelim} outline: none; {rdelim}
         'mapType': '{$mapv3.mapType}',
 
         /* TODO: keep it for a lazy evaluation */
-        'htmls' : [{foreach from=$mapv3.infowindows item=infowindow key=num}{if $num >0},{/if}{$infowindow}{/foreach}],
+        'htmls' : {strip}{if isset($mapv3.infowindows)}
+            [{foreach from=$mapv3.infowindows item=infowindow key=num}{if $num >0},{/if}{$infowindow}{/foreach}]
+                {else}
+            []
+            {/if}{/strip},
 
         /* TODO: keep it for a lazy evaluation */
-        'labels' : [{foreach from=$mapv3.Labels item=Labels key=num}{if $num >0}, {/if}"{$Labels}"{/foreach}],
+        'labels' : {strip}{if isset($mapv3.Labels)}
+            [{foreach from=$mapv3.Labels item=Labels key=num}{if $num >0}, {/if}"{$Labels}"{/foreach}]
+                {else}
+            []
+            {/if}{/strip},
 
-        'markerSizeX': {$mapv3.MarkerSizeX},
-        'markerSizeY': {$mapv3.MarkerSizeY},
+        'markerSizeX': {if isset($mapv3.MarkerSizeX)}{$mapv3.MarkerSizeX}{else}0{/if},
+        'markerSizeY': {if isset($mapv3.MarkerSizeY)}{$mapv3.MarkerSizeY}{else}0{/if},
         'IMAGE_UP': '{g->url href="modules/mapv3/images/up.png"}',
         'IMAGE_DOWN': '{g->url href="modules/mapv3/images/down.png"}',
 
