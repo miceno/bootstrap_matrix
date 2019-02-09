@@ -57,7 +57,7 @@ a:hover {ldelim} outline: none; {rdelim}
                 {assign var='minusW' value='20'}
             {/if}
             {if ($mapv3.LegendPos eq 'right' and $mapv3.LegendFeature neq '0' and ($mapv3.AlbumLegend or $mapv3.PhotoLegend or (isset($mapv3.regroupItems) and $mapv3.regroupItems))) or ($mapv3.FilterFeature neq '0' and isset($mapv3.ShowFilters) and $mapv3.ShowFilters eq "right")}
-                {assign var='minusW' value="`$minusW+155`"}
+                {assign var='minusW' value="$minusW + 155"}
             {/if}
 
         {elseif $mapv3.mode eq "Pick"}
@@ -65,10 +65,10 @@ a:hover {ldelim} outline: none; {rdelim}
         {/if}
 
         {if $barPosition eq "right" or $barPosition eq "left"}
-            {assign var='minusW' value="`$minusW + $mapv3.ThumbHeight + 30`"}
+            {assign var='minusW' value="$minusW + `$mapv3.ThumbHeight` + 30"}
         {/if}
 
-
+	'minusW': '{$minusW}',
         {* Calculate the width and weight of the map div, it permits the use of percentages or fixed pixel size *}
         {if $mapv3.WidthFormat eq "%"}
         'myWidth' : getmapwidth({$mapv3.mapWidth},{$minusW});
@@ -83,14 +83,15 @@ a:hover {ldelim} outline: none; {rdelim}
         {*                     *}
         {if $mapv3.mode eq "Normal"}
             {assign var='minusH' value='150'}
-            {if $mapv3.fullScreen eq 2}{assign var='minusH' value="`$minusH - 120`"}{/if}
-            {if $mapv3.ShowFilters eq "top" or $mapv3.ShowFilters eq "bottom"}{assign var='minusH' value="`$minusH + 25`"}{/if}
-            {if $mapv3.LegendPos eq 'top' or $mapv3.LegendPos eq 'bottom'}{assign var='minusH' value="`$minusH + 90`"}{/if}
-            {if $barPosition eq "top" or $barPosition eq "bottom"}{assign var='minusH' value="`$minusH + $mapv3.ThumbHeight + 25`"}{/if}
+            {if $mapv3.fullScreen eq 2}{assign var='minusH' value="$minusH - 120"}{/if}
+            {if $mapv3.ShowFilters eq "top" or $mapv3.ShowFilters eq "bottom"}{assign var='minusH' value="$minusH + 25"}{/if}
+            {if $mapv3.LegendPos eq 'top' or $mapv3.LegendPos eq 'bottom'}{assign var='minusH' value="$minusH + 90"}{/if}
+            {if $barPosition eq "top" or $barPosition eq "bottom"}{assign var='minusH' value="$minusH + `$mapv3.ThumbHeight` + 25"}{/if}
         {elseif $mapv3.mode eq "Pick"}
 	    {assign var='minusH' value='155'}
         {/if}
 
+	'minusH': '{$minusH}',
         {if $mapv3.HeightFormat eq "%"}
         'myHeight' : getmapheight({$mapv3.mapHeight},{$minusH});
         {else}
