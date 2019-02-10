@@ -27,7 +27,7 @@
  */
 class Bootstrap_MatrixTheme extends GalleryTheme {
 
-	function Bootstrap_MatrixTheme() {
+	function __construct() {
 		global $gallery;
 
 		$this->setId('bootstrap_matrix');
