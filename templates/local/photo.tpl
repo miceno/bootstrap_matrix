@@ -36,7 +36,7 @@
                     {else}
                         <span>
                     {/if}
-                    <span class="sr-only">{g->text text="previous"}{$suffix}</span>
+                    <span class="sr-only">{g->text text="previous"}</span>
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     {if isset($navigator.back)}</a>
                     {else}
@@ -55,7 +55,7 @@
                     {else}
                         <span>
                     {/if}
-                    <span class="sr-only">{g->text text="next"}{$suffix}</span>
+                    <span class="sr-only">{g->text text="next"}</span>
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     {if isset($navigator.next)}</a>
                     {else}
