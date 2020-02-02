@@ -26,7 +26,7 @@
     line-height: 1.5em;
     letter-spacing: 0;
     text-transform: none;
-    -webkit-font-smoothing: antialiased; 
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #fff;
 }
@@ -142,6 +142,10 @@ pre, tt {
 }
 
 .giInfo {
+}
+
+.giInfo .giWarning {
+    display: inline-block;
 }
 
 .giSuccess, .giWarning, .giError  {
@@ -269,11 +273,6 @@ div.gbTabBar a {
 .search-form .search-form-group {
   transition: all 0.35s, border-radius 0s;
   width: 100%;
-  /*height: 32px;*/
-  background-color: #fff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-  border-radius: 25px;
-  border: 1px solid #ccc;
   overflow: hidden;
 }
 .search-form .search-form-group input.form-control {
@@ -316,7 +315,11 @@ div.gbTabBar a {
 
 #searchCriteria {
     padding-bottom: 8px;
-    height: 32px;
+    background-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 1px solid #ccc;
 }
 
 .dropdown-menu .search-form {
