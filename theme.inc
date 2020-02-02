@@ -79,6 +79,11 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 			return array($ret, null);
 		}
 
+		$ret = $this->preloadBlock($template, 'search.SearchBlock');
+		if ($ret) {
+			return array($ret, null);
+		}
+
 		/* Add in our extra stuff */
 		$theme          =& $template->getVariableByReference('theme');
 		$theme['debug'] = $gallery->getDebug();
@@ -106,6 +111,11 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 			return array($ret, null);
 		}
 
+		$ret = $this->preloadBlock($template, 'search.SearchBlock');
+		if ($ret) {
+			return array($ret, null);
+		}
+
 		/* Add in our extra stuff */
 		$theme          =& $template->getVariableByReference('theme');
 		$theme['debug'] = $gallery->getDebug();
@@ -123,6 +133,12 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 		if ($ret) {
 			return array($ret, null);
 		}
+
+		$ret = $this->preloadBlock($template, 'search.SearchBlock');
+		if ($ret) {
+			return array($ret, null);
+		}
+
 		/* Add in our extra stuff */
 		$theme          =& $template->getVariableByReference('theme');
 		$theme['debug'] = $gallery->getDebug();
@@ -140,6 +156,12 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 		if ($ret) {
 			return array($ret, null);
 		}
+
+		$ret = $this->preloadBlock($template, 'search.SearchBlock');
+		if ($ret) {
+			return array($ret, null);
+		}
+
 		/* Add in our extra stuff */
 		$theme          =& $template->getVariableByReference('theme');
 		$theme['debug'] = $gallery->getDebug();
@@ -172,6 +194,11 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 
 		$ret = $this->loadCommonTemplateData(
 			$template, $item, $params, array('parents', 'systemLinks'));
+		if ($ret) {
+			return array($ret, null);
+		}
+
+		$ret = $this->preloadBlock($template, 'search.SearchBlock');
 		if ($ret) {
 			return array($ret, null);
 		}
