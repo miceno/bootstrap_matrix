@@ -275,9 +275,6 @@ div.gbTabBar a {
   width: 100%;
   /*height: 32px;*/
   background-color: #fff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-  border-radius: 25px;
-  border: 1px solid #ccc;
   overflow: hidden;
 }
 .search-form .search-form-group input.form-control {
@@ -320,7 +317,10 @@ div.gbTabBar a {
 
 #searchCriteria {
     padding-bottom: 8px;
-    height: 32px
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 1px solid #ccc;
 }
 
 .dropdown-menu .search-form {

@@ -20,15 +20,18 @@
       <input type="hidden" name="{g->formVar var="form[formName]"}" value="search_SearchBlock"/>
       <div class="search-form-group has-feedback form-group">
             <label for="searchCriteria" class="sr-only">{g->text text="Search"}</label>
-            <input type="text" id="searchCriteria" size="{$inputWidth}"
-      	     name="{g->formVar var="form[searchCriteria]"}"
-      	     value="{g->text text="Search your Gallery"}"
-      	     placeholder="{g->text text="Search your Gallery"}"
-      	     onfocus="search_SearchBlock_focus()"
-      	     onblur="search_SearchBlock_blur()"
-      	     class="form-control textbox"/>
-        
-            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+                <input type="text" id="searchCriteria" size="{$inputWidth}"
+                 name="{g->formVar var="form[searchCriteria]"}"
+                 value="{g->text text="Search your Gallery"}"
+                 placeholder="{g->text text="Search your Gallery"}"
+                 onfocus="search_SearchBlock_focus()"
+                 onblur="search_SearchBlock_blur()"
+                 class="form-control textbox"/>
+            </div>
       </div>
       <input class="hidden" type="hidden" name="{g->formVar var="form[useDefaultSettings]"}" value="1" />
 <!--    {if $showAdvancedLink}
