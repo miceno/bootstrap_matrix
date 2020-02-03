@@ -23,6 +23,7 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     {* Include this theme's style sheet *}
     <link rel="stylesheet" type="text/css" href="{g->theme url="theme.min.css"}"/>
+    <link rel="stylesheet" type="text/css" media="print" href="{g->theme url="print.css"}"/>
 
     {php}
         $includefilepath = GALLERY_CONFIG_DIR . '/ga.js';
