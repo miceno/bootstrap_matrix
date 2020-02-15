@@ -34,8 +34,8 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 		$this->setName($gallery->i18n('BootstrapMatrix'));
 		$this->setDescription($gallery->i18n('Bootstrap Gallery2 look and feel'));
 		$this->setVersion('1.2.1');
-		$this->setRequiredCoreApi(array(7, 20));
-		$this->setRequiredThemeApi(array(2, 4));
+		$this->setRequiredCoreApi(array(8, 0));
+		$this->setRequiredThemeApi(array(3, 0));
 		$this->setStandardSettings(
 			array(
 				'rows'            => 6,
