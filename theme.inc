@@ -175,11 +175,6 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 	function showErrorPage(&$template) {
 		global $gallery;
 
-		$ret = $this->preloadBlock($template, 'search.SearchBlock');
-		if ($ret) {
-			return array($ret, null);
-		}
-
 		/* Add in our extra stuff */
 		$theme          =& $template->getVariableByReference('theme');
 		$theme['debug'] = $gallery->getDebug();
