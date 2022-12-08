@@ -104,7 +104,7 @@
                 {/g->container}
                 {else}
                     {if isset($imageViewLink)}{$imageViewLink}{/if}
-                    {g->image class="photo pp" item=$theme.item image=$image fallback=$smarty.capture.fallback}
+                    {g->image class="photo" item=$theme.item image=$image fallback=$smarty.capture.fallback}
                     {if isset($imageViewLink)}</a>{/if}
                 {/if}
             {else}
