@@ -774,6 +774,14 @@ div.giAlbumCell table, div.giItemCell table {
     width: auto;
 }
 
+.giFullImage .photo {
+    max-width: initial;
+    width: initial;
+}
+.giFullImage {
+    overflow: scroll;
+}
+
 .photo-overlay {
     height: 100%;
     width: 100%;

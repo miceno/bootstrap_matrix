@@ -16,7 +16,7 @@
 </div>
 <div class="theme-photo-wrapper">
 
-    <div class="photo-container {if $boxesLayout == "right" }col-xs-12 col-sm-8{/if}">
+    <div class="photo-container {if $boxesLayout == "right" }col-xs-12 col-sm-8{/if}{if $theme.sourceImageViewIndex == $theme.imageViewsIndex} giFullImage{/if}">
 
         <div id="gsImageView" class="photo-overlay">
             {strip}
@@ -104,7 +104,7 @@
                 {/g->container}
                 {else}
                     {if isset($imageViewLink)}{$imageViewLink}{/if}
-                    {g->image class="photo" item=$theme.item image=$image fallback=$smarty.capture.fallback}
+                    {g->image class="photo pp" item=$theme.item image=$image fallback=$smarty.capture.fallback}
                     {if isset($imageViewLink)}</a>{/if}
                 {/if}
             {else}
