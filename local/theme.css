@@ -718,8 +718,9 @@ div.giAlbumCell table, div.giItemCell table {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 25%;
     z-index: 2;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .item-position {
@@ -749,11 +750,11 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .next .arrow{
-    right: 10px;
+    right: 25%;
 }
 
 .previous .arrow{
-    left: 10px;
+    left: 0px;
 }
 
 .gbDataTable p {
@@ -763,10 +764,9 @@ div.giAlbumCell table, div.giItemCell table {
 .photo-container {
     overflow: hidden;
     position: relative;
-    border-bottom: solid 1px #eeeff2;
     text-align: center;
     min-height: 40em;
-    height: 100%;
+    height: 75vh;
 }
 
 .photo.giPortrait {
@@ -777,16 +777,18 @@ div.giAlbumCell table, div.giItemCell table {
 .giFullImage .photo {
     max-width: initial;
     width: initial;
+    max-height: initial;
+    height: initial;
 }
+
 .giFullImage {
-    overflow: scroll;
+    overflow: auto;
 }
 
 .photo-overlay {
+    position: absolute;
+    font-size: 3em;
     height: 100%;
-    width: 100%;
-    top: 0;
-    bottom: 0;
 }
 
 .photo-overlay .block-core-BreadCrumb {
@@ -801,7 +803,7 @@ div.giAlbumCell table, div.giItemCell table {
     overflow-y: auto;
     border-left: solid 1px #eeeff2;
     position: relative;
-    top: -1px;
+    top: 0;
 }
 
 .album-title {
@@ -939,6 +941,8 @@ div.giAlbumCell table, div.giItemCell table {
 .theme-photo-wrapper {
     display: flex;
     overflow: hidden;
+    position: relative;
+    border-bottom: solid 1px #eeeff2;
 }
 
 .theme-photo-wrapper .giTitle h2 {
@@ -1072,7 +1076,6 @@ div.giAlbumCell table, div.giItemCell table {
 .photo {
     max-height: 100%;
     max-width: 100%;
-    width: 100%;
     height: auto;
 }
 
@@ -1135,10 +1138,6 @@ a.thumbnail
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
-    .photo.giPortrait {
-        height: auto;
-        width: auto;
-    }
     .theme-photo-wrapper {
         display: initial;
     }

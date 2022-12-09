@@ -9,59 +9,58 @@
     {assign var="navigator" value=$theme.navigator}
 {/if}
 
-<div>
 {if !isset($theme.params.boxesLayout) || !empty($theme.params.boxesLayout)}
     {assign var="boxesLayout" value=$theme.params.boxesLayout}
 {/if}
-</div>
-<div class="theme-photo-wrapper">
+<div class="row-fluid theme-photo-wrapper">
 
-    <div class="photo-container {if $boxesLayout == "right" }col-xs-12 col-sm-8{/if}{if $theme.sourceImageViewIndex == $theme.imageViewsIndex} giFullImage{/if}">
-
-        <div id="gsImageView" class="photo-overlay">
+    <div class="photo-overlay {if $boxesLayout == "right" }col-xs-12 col-sm-8{/if}">
+        {strip}
+            {if !empty($theme.item.title)}
+                {g->block type="core.BreadCrumb"}
+            {/if}
+        {/strip}
+        <div class="gbNavigator nav-arrow previous">
             {strip}
-                {if !empty($theme.item.title)}
-                    {g->block type="core.BreadCrumb"}
-                {/if}
-            {/strip}
-            <div class="gbNavigator nav-arrow previous">
-                {strip}
                 <div class="arrow">
                     {if isset($navigator.back)}
-                        <a href="{g->url params=$navigator.back.urlParams}" aria-label="{g->text text="previous"}"
-                        class="previous">
-                    {else}
+                    <a href="{g->url params=$navigator.back.urlParams}" aria-label="{g->text text="previous"}"
+                       class="previous">
+                        {else}
                         <span>
                     {/if}
                     <span class="sr-only">{g->text text="previous"}</span>
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    {if isset($navigator.back)}</a>
+                        {if isset($navigator.back)}</a>
                     {else}
-                        </span>
+                    </span>
                     {/if}
                 </div>
-                {/strip}
-            </div>
+            {/strip}
+        </div>
 
-            <div class="gbNavigator nav-arrow next">
-                {strip}
+        <div class="gbNavigator nav-arrow next">
+            {strip}
                 <div class="arrow">
                     {if isset($navigator.next)}
-                        <a href="{g->url params=$navigator.next.urlParams}" aria-label="{g->text text="next"}"
-                        class="next">
-                    {else}
+                    <a href="{g->url params=$navigator.next.urlParams}" aria-label="{g->text text="next"}"
+                       class="next">
+                        {else}
                         <span>
                     {/if}
                     <span class="sr-only">{g->text text="next"}</span>
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    {if isset($navigator.next)}</a>
+                        {if isset($navigator.next)}</a>
                     {else}
-                        </span>
+                    </span>
                     {/if}
                 </div>
-                {/strip}
-            </div>
+            {/strip}
         </div>
+    </div>
+
+    <div class="photo-container {if $boxesLayout == "right" }col-xs-12 col-sm-8{/if}{if $theme.sourceImageViewIndex == $theme.imageViewsIndex} giFullImage{/if}">
+
         {if !empty($theme.imageViews)}
             {capture name="fallback"}
                 <span class="h1 center-block">
@@ -144,7 +143,7 @@
 
 </div>
 {* Footer *}
-<div class="container-fluid">
+<div class="row-fluid">
     <div class="giTitle-wrapper row-fluid clearfix">
         <div class="giTitle col-xs-12 col-sm-8">
             {if !empty($theme.item.title)}
