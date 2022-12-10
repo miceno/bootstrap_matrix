@@ -19,8 +19,12 @@
     {/if}
 
     {* Bootstrap CSS *}
+    {if !empty($selfHostedAssets) }
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {else}
+    <link rel="stylesheet" href="themes/bootstrap_matrix/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    {/if}
     {* Include this theme's style sheet *}
     <link rel="stylesheet" type="text/css" href="{g->theme url="theme.css"}"/>
     <link rel="stylesheet" type="text/css" media="print" href="{g->theme url="print.css"}"/>
@@ -32,6 +36,7 @@
         }
     {/php}
     {* jQuery (necessary for Bootstrap's JavaScript plugins) *}
+    {if !empty($selfHostedAssets) }
     <script type="application/javascript"
             src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     {* Bootstrap JS *}
@@ -44,6 +49,18 @@
     <link rel="stylesheet" id="google-fonts-css"
           href="https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%7CMontserrat%3A400%7CRaleway%3A400%7CCrimson+Text%3A400Italic&amp;subset=latin&amp;ver=1472669696"
           type="text/css" media="all">
+        {else}
+        <script type="application/javascript"
+                src="themes/bootstrap_matrix/assets/jquery-1.12.4/jquery.min.js"></script>
+        {* Bootstrap JS *}
+        <script type="application/javascript"
+                src="themes/bootstrap_matrix/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"
+                async></script>
+        {* OpenSans font *}
+        <link rel="stylesheet" id="google-fonts-css"
+              href="themes/bootstrap_matrix/assets/google-fonts/open-sans-fonts.css"
+              type="text/css" media="all">
+    {/if}
 
     {* Favicon *}
     <link rel="apple-touch-icon" sizes="57x57" href="{g->theme url='images/favicon/apple-icon-57x57.png'}">
@@ -154,8 +171,14 @@
 </div>
 
 </body>
+{if !empty($selfHostedAssets) }
 <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.4/lazysizes.min.js"
         integrity="sha256-FRkZgEAdWoQnIbMoXkMPk7Fv3+jDX1SUUHJOBG4U/1M=" crossorigin="anonymous" async></script>
+{else}
+<script type="application/javascript" src="themes/bootstrap_matrix/assets/lazysizes-4.0.4/lazysizes.min.js"
+        async></script>
+
+{/if}
 
 </html>
 {/strip}
