@@ -61,6 +61,29 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 			));
 	}
 
+	function loadCommonTemplateData(&$template, $item, $params, $dataToLoad, $childIds = array(), $useCache = true)
+	{
+		$ret = parent::loadCommonTemplateData($template, $item, $params, $dataToLoad, $childIds, $useCache);
+		if ($ret) {
+			return $ret;
+		}
+		/*
+		* --------------------------------------------------------------------------------------
+		* Initialize
+		*/
+		$theme =& $template->getVariableByReference('theme');
+		$load = array();
+
+		foreach ($dataToLoad as $key) {
+			$load[$key] = true;
+		}
+
+		if(isset($load['selfHostedAssets'])){
+			$theme['selfHostedAssets'] = true;
+		}
+
+	}
+
 	/**
 	 * @see GalleryTheme::showAlbumPage
 	 */
@@ -101,7 +124,7 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 
 		$dataTypes = array(
 			'owner', 'parents', 'systemLinks', 'itemLinks', 'permissions',
-			'itemLinksDetailed', 'itemNavigator', 'imageViews',
+			'itemLinksDetailed', 'itemNavigator', 'imageViews', 'selfHostedAssets'
 		);
 		if (! empty($params['showMicroThumbs'])) {
 			$dataTypes[] = 'navThumbnails';
