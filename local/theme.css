@@ -939,7 +939,6 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .theme-photo-wrapper {
-    display: flex;
     overflow: hidden;
     position: relative;
     border-bottom: solid 1px #eeeff2;
@@ -1138,26 +1137,21 @@ a.thumbnail
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
-    .theme-photo-wrapper {
-        display: initial;
-    }
     .photo-container {
         min-height: initial;
     }
-    .sidebar-right {
+    .giFullImage.photo-container {
+        height: 75vh;
+    }
+    .photo.giPortrait{
         height: initial;
+    }
+    .photo-overlay{
+        height: 50%;
     }
 }
 
 @media only screen and (max-width : 320px) {
-    .theme-content{
-        float: right;
-    }
-
-    .theme-thumb{
-        float: left;
-        width: 100%;
-    }
 }
 
 
@@ -1171,6 +1165,9 @@ a.thumbnail
     }
     .sidebar-right {
         height: 75vh;
+    }
+    .photo-overlay{
+        height: 100%;
     }
 }
 
