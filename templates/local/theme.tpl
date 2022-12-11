@@ -130,14 +130,6 @@
         {elseif $theme.pageType == 'module'}
             {g->theme include="module.tpl"}
         {/if}
-        <div id="gsFooter row-fluid">
-{*
-            {g->logoButton type="validation"}
-            {g->logoButton type="gallery2"}
-            {g->logoButton type="gallery2-version"}
-            {g->logoButton type="donate"}
-*}
-        </div>
     {/if}  {* end of full screen check *}
 </div> {* container-fluid *}
 
