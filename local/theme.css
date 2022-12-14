@@ -759,15 +759,59 @@ div.giAlbumCell table, div.giItemCell table {
     margin: 0;
 }
 
+.theme-photo-wrapper-row {
+    overflow: hidden;
+    position: relative;
+    border-bottom: solid 1px #eeeff2;
+}
+
+.theme-photo-wrapper-row .giTitle h2 {
+    margin-bottom: 0.4em;
+}
+
+.photo-wrapper,
+.photo-overlay,
+.photo-container,
+.sidebar-right{
+    height: 75vh;
+}
+
+.giFullImage .photo-wrapper {
+}
+
 .photo-container {
     overflow: hidden;
     position: relative;
     text-align: center;
 }
+.giFullImage .photo-container{
+    overflow: auto;
+}
+
+.photo {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
 
 .photo.giPortrait {
     height: 100%;
     width: auto;
+}
+.giFullImage .photo {
+    height: initial;
+    width: initial;
+    max-height: initial;
+    max-width: initial;
+}
+.giFullImage .photo.giPortrait {
+    width: auto;
+    /*
+    height: initial;
+    max-height: initial;
+    max-width: initial;
+    */
 }
 
 .photo-overlay {
@@ -785,7 +829,6 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .sidebar-right {
-    height: 100%;
     overflow-y: auto;
     border-left: solid 1px #eeeff2;
     position: relative;
@@ -924,16 +967,6 @@ div.giAlbumCell table, div.giItemCell table {
     margin: 0 1em;
 }
 
-.theme-photo-wrapper-row {
-    overflow: hidden;
-    position: relative;
-    border-bottom: solid 1px #eeeff2;
-}
-
-.theme-photo-wrapper-row .giTitle h2 {
-    margin-bottom: 0.4em;
-}
-
 .input-wrapper input {
 }
 
@@ -1058,12 +1091,6 @@ div.giAlbumCell table, div.giItemCell table {
     display: block;
 }
 
-.photo {
-    max-height: 100%;
-    max-width: 100%;
-    height: auto;
-}
-
 a.thumbnail
 {
     padding: 0;
@@ -1122,7 +1149,20 @@ a.thumbnail
 @media only screen and (min-width : 320px) {
 }
 
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 480px) {
+    .photo-wrapper,
+    .photo-overlay,
+    .photo-container,
+    .sidebar-right {
+        height: 100%;
+    }
+    .giFullImage .photo-wrapper {
+        height: 75vh;
+    }
+
+    .photo-container.giPortrait {
+        height: 75vh;
+    }
 }
 
 

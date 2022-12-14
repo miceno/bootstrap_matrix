@@ -12,7 +12,7 @@
 {if !isset($theme.params.boxesLayout) || !empty($theme.params.boxesLayout)}
     {assign var="boxesLayout" value=$theme.params.boxesLayout}
 {/if}
-<div class="row-fluid equal theme-photo-wrapper-row{if $theme.sourceImageViewIndex == $theme.imageViewsIndex} giFullImage{/if}">
+<div class="row-fluid theme-photo-wrapper-row{if $theme.sourceImageViewIndex == $theme.imageViewsIndex} giFullImage{/if}">
     <div class="photo-wrapper{if $boxesLayout == "right" } col-xs-12 col-sm-8{/if} ">
         <div class="photo-overlay">
             {strip}
@@ -58,13 +58,13 @@
                 {/strip}
             </div>
         </div>
-        <div class="photo-container">
+        <div class="photo-container{if $image.height > $image.width} giPortrait{/if}">
 
             {if !empty($theme.imageViews)}
                 {capture name="fallback"}
                     <span class="h1 center-block">
                     {g->text text="Download %s" arg1=$theme.sourceImage.itemTypeName.1}
-                </span>
+                    </span>
                     <a href="{g->url arg1="view=core.DownloadItem" arg2="itemId=`$theme.item.id`"
                     forceFullUrl=true forceSessionId=true}" class="text-center link-{$theme.sourceImage.entityType}">
                         <h2>
