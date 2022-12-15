@@ -42,6 +42,7 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 				'columns'         => 4,
 				'aboveFoldImages' => 8,
 				'selfHostedAssets' => 0,
+				'useMinifiedCss'  => 1,
 				'boxesLayout'     => 'left',
 				'showImageOwner'  => 0, 'showAlbumOwner' => 1,
 				'albumFrame'      => '', 'itemFrame' => '', 'photoFrame' => '',
@@ -263,10 +264,19 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 		/* Add in our custom settings */
 		$settings[] = array(
 			'key'        => 'selfHostedAssets',
-			'name'       => $this->translate('Mark this flat to self-host assets on this server (less efficient)'.
+			'name'       => $this->translate('Mark this flag to self-host assets on this server (less efficient)'.
 				', otherwise CDN ready versions are used (more efficient, default).'),
 			'type'       => 'checkbox',
 			'value'      => $params['selfHostedAssets'],
+		);
+
+		/* Add in our custom settings */
+		$settings[] = array(
+			'key'        => 'useMinifiedCss',
+			'name'       => $this->translate('Mark this flag to use minified CSS (more efficient, default)'.
+				', otherwise plain CSS is used (less efficient).'),
+			'type'       => 'checkbox',
+			'value'      => $params['useMinifiedCss'],
 		);
 
 		return array(null, $settings, $params);

@@ -10,7 +10,12 @@
     {if isset($theme.params.selfHostedAssets)}
         {assign var="selfHostedAssets" value=$theme.params.selfHostedAssets}
     {else}
-        {assign var="selfHostedAssets" value="0"}
+        {assign var="selfHostedAssets" value=0}
+    {/if}
+    {if isset($theme.params.useMinifiedCss)}
+        {assign var="useMinifiedCss" value=$theme.params.useMinifiedCss}
+    {else}
+        {assign var="useMinifiedCss" value=0}
     {/if}
     <meta name="keywords" content="{$theme.item.keywords|markup:strip|default:$theme.item.pathComponent}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,8 +36,14 @@
     <link rel="stylesheet" href="themes/bootstrap_matrix/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     {/if}
     {* Include this theme's style sheet *}
-    <link rel="stylesheet" type="text/css" href="{g->theme url="theme.css"}"/>
-    <link rel="stylesheet" type="text/css" media="print" href="{g->theme url="print.css"}"/>
+    {assign var="theme_css_file" value="theme.css"}
+    {assign var="print_css_file" value="print.css"}
+    {if $useMinifiedCss}
+        {assign var="theme_css_file" value="theme.min.css"}
+        {assign var="print_css_file" value="print.min.css"}
+    {/if}
+    <link rel="stylesheet" type="text/css" href="{g->theme url=$theme_css_file}"/>
+    <link rel="stylesheet" type="text/css" media="print" href="{g->theme url=$print_css_file}"/>
 
     {php}
         $includefilepath = GALLERY_CONFIG_DIR . '/ga.js';
