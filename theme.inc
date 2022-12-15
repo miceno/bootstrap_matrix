@@ -41,6 +41,7 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 				'rows'            => 6,
 				'columns'         => 4,
 				'aboveFoldImages' => 8,
+				'selfHostedAssets' => 0,
 				'boxesLayout'     => 'left',
 				'showImageOwner'  => 0, 'showAlbumOwner' => 1,
 				'albumFrame'      => '', 'itemFrame' => '', 'photoFrame' => '',
@@ -76,10 +77,6 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 
 		foreach ($dataToLoad as $key) {
 			$load[$key] = true;
-		}
-
-		if(isset($load['selfHostedAssets'])){
-			$theme['selfHostedAssets'] = true;
 		}
 
 	}
@@ -124,7 +121,7 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 
 		$dataTypes = array(
 			'owner', 'parents', 'systemLinks', 'itemLinks', 'permissions',
-			'itemLinksDetailed', 'itemNavigator', 'imageViews', 'selfHostedAssets'
+			'itemLinksDetailed', 'itemNavigator', 'imageViews',
 		);
 		if (! empty($params['showMicroThumbs'])) {
 			$dataTypes[] = 'navThumbnails';
@@ -261,6 +258,15 @@ class Bootstrap_MatrixTheme extends GalleryTheme {
 			'type'       => 'text-field',
 			'typeParams' => array('size' => 2),
 			'value'      => $params['aboveFoldImages'],
+		);
+
+		/* Add in our custom settings */
+		$settings[] = array(
+			'key'        => 'selfHostedAssets',
+			'name'       => $this->translate('Mark this flat to self-host assets on this server (less efficient)'.
+				', otherwise CDN ready versions are used (more efficient, default).'),
+			'type'       => 'checkbox',
+			'value'      => $params['selfHostedAssets'],
 		);
 
 		return array(null, $settings, $params);

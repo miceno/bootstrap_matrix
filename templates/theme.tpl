@@ -7,6 +7,11 @@
 <html lang="{g->language}" xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:v="urn:schemas-microsoft-com:vml">
 <head>
+    {if isset($theme.params.selfHostedAssets)}
+        {assign var="selfHostedAssets" value=$theme.params.selfHostedAssets}
+    {else}
+        {assign var="selfHostedAssets" value="0"}
+    {/if}
     <meta name="keywords" content="{$theme.item.keywords|markup:strip|default:$theme.item.pathComponent}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,7 +24,7 @@
     {/if}
 
     {* Bootstrap CSS *}
-    {if !empty($selfHostedAssets) }
+    {if !$selfHostedAssets}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     {else}
@@ -36,7 +41,7 @@
         }
     {/php}
     {* jQuery (necessary for Bootstrap's JavaScript plugins) *}
-    {if !empty($selfHostedAssets) }
+    {if !$selfHostedAssets}
     <script type="application/javascript"
             src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     {* Bootstrap JS *}
@@ -163,7 +168,7 @@
 </div>
 
 </body>
-{if !empty($selfHostedAssets) }
+{if !$selfHostedAssets }
 <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.4/lazysizes.min.js"
         integrity="sha256-FRkZgEAdWoQnIbMoXkMPk7Fv3+jDX1SUUHJOBG4U/1M=" crossorigin="anonymous" async></script>
 {else}
