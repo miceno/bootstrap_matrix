@@ -1,5 +1,5 @@
 <div class="{$class} btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button id="album-nav-tree" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" name="Album" aria-label="Album" aria-haspopup="true" aria-expanded="false">
     <span class="glyphicon glyphicon-home"></span>
   </button>
   <ul class="dropdown-menu">
