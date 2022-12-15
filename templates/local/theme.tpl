@@ -82,7 +82,7 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body class="gallery">
-<div class="container-fluid" {g->mainDivAttributes}>
+<div class="container-fluid no-gutter" {g->mainDivAttributes}>
     {*
      * Some module views (eg slideshow) want the full screen.  So for those, we don't draw
      * a header, footer, navbar, etc.  Those views are responsible for drawing everything.
@@ -130,14 +130,6 @@
         {elseif $theme.pageType == 'module'}
             {g->theme include="module.tpl"}
         {/if}
-        <div id="gsFooter row-fluid">
-{*
-            {g->logoButton type="validation"}
-            {g->logoButton type="gallery2"}
-            {g->logoButton type="gallery2-version"}
-            {g->logoButton type="donate"}
-*}
-        </div>
     {/if}  {* end of full screen check *}
 </div> {* container-fluid *}
 

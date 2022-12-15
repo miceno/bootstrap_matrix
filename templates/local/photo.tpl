@@ -12,108 +12,110 @@
 {if !isset($theme.params.boxesLayout) || !empty($theme.params.boxesLayout)}
     {assign var="boxesLayout" value=$theme.params.boxesLayout}
 {/if}
-<div class="row-fluid theme-photo-wrapper">
-
-    <div class="photo-overlay {if $boxesLayout == "right" }col-xs-12 col-sm-8{/if}">
-        {strip}
-            {if !empty($theme.item.title)}
-                {g->block type="core.BreadCrumb"}
-            {/if}
-        {/strip}
-        <div class="gbNavigator nav-arrow previous">
+<div class="row-fluid no-gutter theme-photo-wrapper-row{if $theme.sourceImageViewIndex == $theme.imageViewsIndex} giFullImage{/if}
+{if $image.height > $image.width} giPortrait{/if}">
+    <div class="photo-wrapper{if $boxesLayout == "right" } col-xs-12 col-sm-8{/if} ">
+        <div class="photo-overlay">
             {strip}
-                <div class="arrow">
-                    {if isset($navigator.back)}
-                    <a href="{g->url params=$navigator.back.urlParams}" aria-label="{g->text text="previous"}"
-                       class="previous">
-                        {else}
-                        <span>
-                    {/if}
-                    <span class="sr-only">{g->text text="previous"}</span>
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        {if isset($navigator.back)}</a>
-                    {else}
-                    </span>
-                    {/if}
-                </div>
+                {if !empty($theme.item.title)}
+                    {g->block type="core.BreadCrumb"}
+                {/if}
             {/strip}
-        </div>
-
-        <div class="gbNavigator nav-arrow next">
-            {strip}
-                <div class="arrow">
-                    {if isset($navigator.next)}
-                    <a href="{g->url params=$navigator.next.urlParams}" aria-label="{g->text text="next"}"
-                       class="next">
+            <div class="gbNavigator nav-arrow previous">
+                {strip}
+                    <div class="arrow">
+                        {if isset($navigator.back)}
+                        <a href="{g->url params=$navigator.back.urlParams}" aria-label="{g->text text="previous"}"
+                           class="previous">
+                            {else}
+                            <span>
+                    {/if}
+                    {* <span class="sr-only">{g->text text="previous"}</span> *}
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            {if isset($navigator.back)}</a>
                         {else}
-                        <span>
+                        </span>
+                        {/if}
+                    </div>
+                {/strip}
+            </div>
+
+            <div class="gbNavigator nav-arrow next">
+                {strip}
+                    <div class="arrow">
+                        {if isset($navigator.next)}
+                        <a href="{g->url params=$navigator.next.urlParams}" aria-label="{g->text text="next"}"
+                           class="next">
+                            {else}
+                            <span>
                     {/if}
                     <span class="sr-only">{g->text text="next"}</span>
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        {if isset($navigator.next)}</a>
-                    {else}
+                            {if isset($navigator.next)}</a>
+                        {else}
+                        </span>
+                        {/if}
+                    </div>
+                {/strip}
+            </div>
+        </div>
+        <div class="photo-container">
+
+            {if !empty($theme.imageViews)}
+                {capture name="fallback"}
+                    <span class="h1 center-block">
+                    {g->text text="Download %s" arg1=$theme.sourceImage.itemTypeName.1}
                     </span>
+                    <a href="{g->url arg1="view=core.DownloadItem" arg2="itemId=`$theme.item.id`"
+                    forceFullUrl=true forceSessionId=true}" class="text-center link-{$theme.sourceImage.entityType}">
+                        <h2>
+                            {if !empty($theme.item.title)}
+                                {$theme.item.title|markup}
+                            {else}
+                                {g->text text="Download %s" arg1=$theme.sourceImage.itemTypeName.1}
+                            {/if}
+                        </h2>
+                    </a>
+                {/capture}
+
+                {if $image.viewInline}
+                    {if count($theme.imageViews) > 1}
+                        {capture assign="imageViewLink"}
+                            {if $theme.imageViewsIndex==1 && count($theme.imageViews)==2}
+                                <a href="{g->url params=$theme.pageUrl arg1="itemId=`$theme.item.id`"}">
+                            {else}
+                                {assign var="imageViewsLink" value=$theme.imageViewsIndex+1}
+                                {if $imageViewsLink==count($theme.imageViews)}
+                                    {assign var="imageViewsLink" value=$theme.imageViewsIndex-1}
+                                {/if}
+                                <a href="{g->url params=$theme.pageUrl arg1="itemId=`$theme.item.id`"
+                            arg2="imageViewsIndex=`$imageViewsLink`"}">
+                            {/if}
+                        {/capture}
                     {/if}
-                </div>
-            {/strip}
+                    {if isset($theme.photoFrame)}
+                        {g->container type="imageframe.ImageFrame" frame=$theme.photoFrame
+                    width=$image.width height=$image.height}
+                        {if isset($imageViewLink)}{$imageViewLink}{/if}
+                        {g->image id="%ID%" item=$theme.item image=$image
+                    fallback=$smarty.capture.fallback class="%CLASS%"}
+                        {if isset($imageViewLink)}</a>{/if}
+                    {/g->container}
+                    {else}
+                        {if isset($imageViewLink)}{$imageViewLink}{/if}
+                        {g->image class="photo" item=$theme.item image=$image fallback=$smarty.capture.fallback}
+                        {if isset($imageViewLink)}</a>{/if}
+                    {/if}
+                {else}
+                    {$smarty.capture.fallback}
+                {/if}
+            {else}
+                {g->text text="There is nothing to view for this item."}
+            {/if}
+
         </div>
     </div>
 
-    <div class="photo-container {if $boxesLayout == "right" }col-xs-12 col-sm-8{/if}{if $theme.sourceImageViewIndex == $theme.imageViewsIndex} giFullImage{/if}">
-
-        {if !empty($theme.imageViews)}
-            {capture name="fallback"}
-                <span class="h1 center-block">
-                    {g->text text="Download %s" arg1=$theme.sourceImage.itemTypeName.1}
-                </span>
-                <a href="{g->url arg1="view=core.DownloadItem" arg2="itemId=`$theme.item.id`"
-                forceFullUrl=true forceSessionId=true}" class="text-center link-{$theme.sourceImage.entityType}">
-                    <h2>
-                    {if !empty($theme.item.title)}
-                        {$theme.item.title|markup}
-                    {else}
-                        {g->text text="Download %s" arg1=$theme.sourceImage.itemTypeName.1}
-                    {/if}
-                    </h2>
-                </a>
-            {/capture}
-
-            {if $image.viewInline}
-                {if count($theme.imageViews) > 1}
-                    {capture assign="imageViewLink"}
-                        {if $theme.imageViewsIndex==1 && count($theme.imageViews)==2}
-                            <a href="{g->url params=$theme.pageUrl arg1="itemId=`$theme.item.id`"}">
-                        {else}
-                            {assign var="imageViewsLink" value=$theme.imageViewsIndex+1}
-                            {if $imageViewsLink==count($theme.imageViews)}
-                                {assign var="imageViewsLink" value=$theme.imageViewsIndex-1}
-                            {/if}
-                            <a href="{g->url params=$theme.pageUrl arg1="itemId=`$theme.item.id`"
-                        arg2="imageViewsIndex=`$imageViewsLink`"}">
-                        {/if}
-                    {/capture}
-                {/if}
-                {if isset($theme.photoFrame)}
-                    {g->container type="imageframe.ImageFrame" frame=$theme.photoFrame
-                width=$image.width height=$image.height}
-                    {if isset($imageViewLink)}{$imageViewLink}{/if}
-                    {g->image id="%ID%" item=$theme.item image=$image
-                fallback=$smarty.capture.fallback class="%CLASS%"}
-                    {if isset($imageViewLink)}</a>{/if}
-                {/g->container}
-                {else}
-                    {if isset($imageViewLink)}{$imageViewLink}{/if}
-                    {g->image class="photo" item=$theme.item image=$image fallback=$smarty.capture.fallback}
-                    {if isset($imageViewLink)}</a>{/if}
-                {/if}
-            {else}
-                {$smarty.capture.fallback}
-            {/if}
-        {else}
-            {g->text text="There is nothing to view for this item."}
-        {/if}
-
-    </div>
     {if $boxesLayout == "right" }
     {* Show any other photo blocks (comments, exif etc) *}
     <div class="sidebar-{$boxesLayout} col-xs-12 col-sm-4 ">
@@ -143,7 +145,7 @@
 
 </div>
 {* Footer *}
-<div class="row-fluid">
+<div class="row-fluid title-row">
     <div class="giTitle-wrapper row-fluid clearfix">
         <div class="giTitle col-xs-12 col-sm-8">
             {if !empty($theme.item.title)}
@@ -177,7 +179,7 @@
     {/if}
 
 </div>
-<div class="row-fluid">
+<div class="row-fluid photo-footer-row">
     {g->block type="core.GuestPreview" class="gbBlock col-xs-12"}
 </div>
 {* Our emergency edit link, if the user removes all blocks containing edit links *}
