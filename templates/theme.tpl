@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     {else}
-    <link rel="stylesheet" href="themes/bootstrap_matrix/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{g->theme url="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css?`$theme.params._version`"}">
     {/if}
     {* Include this theme's style sheet *}
     {assign var="theme_css_file" value="theme.css"}
@@ -42,8 +42,8 @@
         {assign var="theme_css_file" value="theme.min.css"}
         {assign var="print_css_file" value="print.min.css"}
     {/if}
-    <link rel="stylesheet" type="text/css" href="{g->theme url=$theme_css_file}"/>
-    <link rel="stylesheet" type="text/css" media="print" href="{g->theme url=$print_css_file}"/>
+    <link rel="stylesheet" type="text/css" href="{g->theme url=`$theme_css_file`?`$theme.params._version`}"/>
+    <link rel="stylesheet" type="text/css" media="print" href="{g->theme url=`$print_css_file`?`$theme.params._version`}"/>
 
     {php}
         $includefilepath = GALLERY_CONFIG_DIR . '/ga.js';
@@ -65,17 +65,17 @@
     <link rel="stylesheet" id="google-fonts-css"
           href="https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%7CMontserrat%3A400%7CRaleway%3A400%7CCrimson+Text%3A400Italic&amp;subset=latin&amp;ver=1472669696"
           type="text/css" media="all">
-        {else}
-        <script type="application/javascript"
-                src="themes/bootstrap_matrix/assets/jquery-1.12.4/jquery.min.js"></script>
-        {* Bootstrap JS *}
-        <script type="application/javascript"
-                src="themes/bootstrap_matrix/assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"
-                async></script>
-        {* OpenSans font *}
-        <link rel="stylesheet" id="google-fonts-css"
-              href="themes/bootstrap_matrix/assets/google-fonts/open-sans-fonts.css"
-              type="text/css" media="all">
+    {else}
+    <script type="application/javascript"
+            src="{g->theme url=assets/jquery-1.12.4/jquery.min.js?`$theme.params._version`}"></script>
+    {* Bootstrap JS *}
+    <script type="application/javascript"
+            src="{g->theme url=assets/bootstrap-3.3.7-dist/js/bootstrap.min.js?`$theme.params._version`}"
+            async></script>
+    {* OpenSans font *}
+    <link rel="stylesheet" id="google-fonts-css"
+          href="{g->theme url=assets/google-fonts/open-sans-fonts.css?`$theme.params._version`}"
+          type="text/css" media="all">
     {/if}
 
     {* Favicon *}
