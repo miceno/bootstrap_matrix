@@ -1,158 +1,4 @@
 /* ********************************************************************************
- * Building blocks
- * h2, h3, p, etc        Standard html tags
- * div.gbBlock           Sidebar or content section with style for contained lists
- * ul.gbBreadCrumb       List of links/path elements
- * table.gbDataTable     Table for data/form elements with styles for shading rows
- */
-
-p.giDescription + ul {
-padding-left: 20px;
-list-style-type: decimal;
-font-size: 110%;
-}
-
-#gallery h2, #gallery h3, #gallery h4, #gallery form {
-    margin: 0;
-    padding: 0;
-}
-
-#gallery p {
-    margin: 0.6em 0;
-    padding: 0;
-}
-
-.gbBlock {
-    padding: 0.7em;
-    border-width: 0 0 1px 0;
-    border-style: inherit;
-    border-color: inherit;
-    /* IE can't inherit these */
-    border-style: expression(parentElement.currentStyle.borderStyle);
-    border-color: expression(parentElement.currentStyle.borderColor);
-}
-
-.gbBlock ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.gbBlock ul ul {
-    margin: 0 0 0.5em 1.0em;
-}
-
-.gbBlock li {
-    padding: 1em 0 0 0;
-}
-
-#gallery .gbBlock h3 {
-    margin-bottom: 0.5em;
-}
-
-#gallery .gbBlock h4 {
-    margin-top: 0.5em;
-}
-
-
-#gsNavBar div.gbBreadCrumb {
-    margin: 0;
-/*    padding: 4px 8px;*/
-}
-
-table.gbDataTable {
-    padding-bottom: 4px;
-}
-
-table.gbDataTable th, table.gbDataTable td {
-    padding: 4px;
-}
-
-
-.giBlockToggle {
-    padding: 0 0.4em 0.1em;
-}
-.giBlockToggle:hover {
-    cursor: pointer;
-}
-
-
-.gbMarkupBar {
-    margin: 4px 0;
-}
-
-#gallery .gbMarkupBar input {
-    margin: 0;
-    padding: 0;
-}
-
-
-/* ********************************************************************************
- * Sections
- * body.gallery     Page body in G2 standalone (doesn't apply to embedded)
- * #gallery         Page container
- * #gsNavBar   Top bar with breadcrumb and other links
- * #gsSidebar       Sidebar
- * #gsContent       Main content
- */
-
-body.gallery {
-    margin: 0;
-    padding: 0;
-}
-
-#gallery {
-    padding: 8px;
-}
-#gallery.rtl {
-    direction: rtl;
-}
-
-#gsNavBar {
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-}
-
-#gsNavBar div.gbSystemLinks {
-/*    padding: 4px 6px;*/
-}
-
-#gsNavBar div.gbSystemLinks span {
-    padding: 0 4px;
-}
-
-#gsSidebar {
-    border-right-width: 1px;
-    width: 175px;
-    overflow: hidden;
-}
-#gsSidebarCol {
-    width: 1%; /* Expand to fit content ("0" bad4 firefox, "1px" bad4 opera) */
-}
-
-td.giAlbumCell, td.giItemCell {
-    padding: 1em;
-    text-align: center;
-}
-
-#gallery td.giAlbumCell select, #gallery td.giItemCell select {
-    margin-top: 0.8em;
-}
-
-/* So imageframed thumbs can be centered */
-td.giAlbumCell table, td.giItemCell table {
-    margin: auto;
-}
-
-#gsPages span {
-    padding: 0 0.3em;
-}
-
-#gallery #gsSidebar ul {
-    font-size: 1em;
-}
-
-/* ********************************************************************************
  * Matrix Theme for Gallery 2
  * by Ross A. Reyman, Jon Huang, and Chad Kieffer
  * updated by Alan Harder
@@ -173,13 +19,21 @@ td.giAlbumCell table, td.giItemCell table {
  */
 
 #gallery {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: 62.5%;
-    color: #333;
+    font: 400 16px sans-serif;
+
+    font-size: 100%;
+    color: #757575;
+    line-height: 1.5em;
+    letter-spacing: 0;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     background-color: #fff;
 }
 body.gallery {
     background-color: #fff;
+    padding: 4.5em 0 0;
+    margin: 0;
 }
 
 .gcBackground1 {
@@ -188,8 +42,12 @@ body.gallery {
 
 .gcBackground2 {
     background-color: #e7e7e7;
+    /*background-color: palevioletred;*/
 }
 
+.bgDebug {
+    background-color: palevioletred;
+}
 .gcBorder1 {
     border: 0 solid #ccc;
 }
@@ -198,52 +56,56 @@ body.gallery {
     border: 0 solid #888;
 }
 
-#gallery a {
-    font-weight: bold;
+a {
     text-decoration: none;
-    color: #6b8cb7;
 }
-#gallery a:hover {
+
+a:hover {
     text-decoration: underline;
     color: #f4560f;
 }
-#gallery a:active {
+
+a:active {
     text-decoration: none;
     color: #f9c190;
 }
 
-#gallery img {
+img {
     border-width: 0;
 }
 
-#gallery h2, #gallery h3, #gallery h4 {
-    font-family: "Trebuchet MS", Arial, Verdana, Helvetica, sans-serif;
-}
-
-#gallery input:focus, #gallery textarea:focus {
-    background-color: #ffc;
+input:focus, textarea:focus {
+    background-color: transparent;
     color: #000;
 }
 
-#gallery input.inputTypeSubmit, #gallery input.inputTypeButton {  /* No input[type=submit] in IE */
+input.inputTypeSubmit, input.inputTypeButton {  /* No input[type=submit] in IE */
     color: #333;
     background-color: #eee;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #e7e7e7 #666 #666 #e7e7e7;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
-#gallery select {
+select {
     font-size: 1em;
 }
 
-.giTitle, #gallery h2, #gallery h3, #gallery h4 {
-    font-size: 1.3em;
-    font-weight: bold;
+
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
 }
 
-#gallery pre, #gallery tt {
-    font-family: Courier New;
+p {
+    padding: 0;
+}
+
+
+
+pre, tt {
+    font-family: Courier New, monospace;
     font-size: 1.2em;
 }
 
@@ -254,8 +116,20 @@ body.gallery {
 }
 
 .giDescription {
-    font-size: 1.1em;
-    line-height: 1.4em;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+.album-header-wrapper {
+}
+
+.description-wrapper {
+    margin-top: 1em;
+}
+
+.header .giDescription {
+    font-size: inherit;
+    margin-top: 1em;
 }
 
 .gbEmptyAlbum {
@@ -268,8 +142,10 @@ body.gallery {
 }
 
 .giInfo {
-    font-size: 0.9em;
-    color: #888;
+}
+
+.giInfo .giWarning {
+    display: inline-block;
 }
 
 .giSuccess, .giWarning, .giError  {
@@ -281,8 +157,7 @@ body.gallery {
 .giError { color: #a44; }
 
 .giNew, .giUpdated {
-    border-width: 2px;
-    border-style: ridge;
+    border: 2px ridge;
     padding: 0 6px;
     line-height: 1.9em;
 }
@@ -292,9 +167,9 @@ body.gallery {
     font-weight: bold;
 }
 
-#gsNavBar div.gbBreadCrumb a, #gsNavBar div.gbBreadCrumb span {
-    padding: 0 0 0 14px;
-    background: url('images/icon_path_separator.gif') no-repeat left;
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 #gsNavBar div.gbBreadCrumb a.BreadCrumb-1 {   /* no :first-child in IE */
@@ -303,22 +178,9 @@ body.gallery {
     white-space: nowrap;
 }
 
-#gsThumbMatrix {
-    width: 100%;
-}
-
-#gallery.IE div.gbBreadCrumb span {
-    display: inline-block;   /* IE loses padding-left on wrapped inline nowrap element */
-    padding-right: 4px;      /* IE has less space at right of each span */
-}
-
 #gsNavBar div.gbBreadCrumb span.BreadCrumb-1 {   /* no :first-child in IE */
     padding-left: 0;
     background-image: none;
-}
-
-#gsNavBar div.gbSystemLinks {
-  float: right;
 }
 
 table.gbDataTable th {
@@ -343,29 +205,21 @@ div.gbTabBar {
     font-size: 0.9em;
     font-weight: bold;
     margin: 0.8em 0 0;
-    padding: 6px;
-    background: url('../mobile_matrix/images/tab_bg.gif') repeat-x bottom;
-    white-space: nowrap;
+    padding: 6px 6px 4px;
+    background: url('images/tab_bg.gif') repeat-x bottom;
 }
 
 div.gbTabBar span.o {
     padding: 6px 0 5px 8px;
-    background: url('../mobile_matrix/images/tab_left.jpg') no-repeat left top;
+    background: url('images/tab_left.jpg') no-repeat left top;
 }
-#gallery.IE div.gbTabBar span.o {
-    display: inline-block;   /* IE loses padding-left on wrapped inline nowrap element */
-    margin-bottom: 1px;      /* ..and then adds padding differently with inline-block.. */
-}
-/* IE may clip off the right end of a long set of tabs, so allow IE to wrap them */
-#gallery.IE div.gbTabBar { padding-bottom: 0; white-space: normal; }
-#gallery.IE div.gbTabBar span.giSelected { margin-bottom: 0; }
 
-#gallery div.gbTabBar span span {
+div.gbTabBar span span {
     padding: 6px 12px 5px 4px;
-    background: url('../mobile_matrix/images/tab_right.jpg') no-repeat right top;
+    background: url('images/tab_right.jpg') no-repeat right top;
 }
 
-#gallery div.gbTabBar a {
+div.gbTabBar a {
     color: #777;
     text-decoration: none;
 }
@@ -376,13 +230,13 @@ div.gbTabBar span.o {
 
 #gallery div.gbTabBar span.giSelected {
     padding-bottom: 6px;
-    background-image: url('../mobile_matrix/images/tab_left_on.jpg');
+    background-image: url('images/tab_left_on.jpg');
 }
 
 #gallery div.gbTabBar span.giSelected span {
     color: #333;
     padding-bottom: 6px;
-    background-image: url('../mobile_matrix/images/tab_right_on.jpg');
+    background-image: url('images/tab_right_on.jpg');
 }
 
 .autoCompleteShadow {
@@ -399,7 +253,10 @@ div.gbTabBar span.o {
 }
 
 #gallery .gbMarkupBar input {
-    font-size: 1.1em;
+    font-size: 0.9em;
+    line-height: 1em;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .giSearchHighlight {
@@ -407,6 +264,67 @@ div.gbTabBar span.o {
     background-color: #ff6;
 }
 
+/*
+ *
+ *
+ *
+ */
+
+.search-form .search-form-group {
+  transition: all 0.35s, border-radius 0s;
+  width: 100%;
+  overflow: hidden;
+}
+.search-form .search-form-group input.form-control {
+  padding-right: 20px;
+  border: 0 none;
+  background: transparent;
+  box-shadow: none;
+  display:block;
+  width: 100%;
+}
+.search-form .search-form-group input.form-control::-webkit-input-placeholder {
+  display: none;
+}
+.search-form .search-form-group input.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  display: none;
+}
+.search-form .search-form-group input.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  display: none;
+}
+.search-form .search-form-group input.form-control:-ms-input-placeholder {
+  display: none;
+}
+
+.search-form .search-form-group span.form-control-feedback {
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 36px;
+  text-align: center;
+  color: #3596e0;
+  left: initial;
+  font-size: 14px;
+}
+
+#searchCriteria {
+    padding-bottom: 8px;
+    background-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 1px solid #ccc;
+}
+
+.dropdown-menu .search-form {
+    float: none!important;
+}
 
 /* ********************************************************************************
  * Sections
@@ -421,6 +339,10 @@ div.gbTabBar span.o {
     font-weight: bold;
 }
 
+#gbSiteAdminLinks ul, ul#gbSiteAdminLinks {
+    -webkit-padding-start: 1em;
+}
+
 #gsSidebar div ul {   /* no > in IE */
     font-size: 1.1em;
     font-weight: bold;
@@ -431,91 +353,12 @@ div.gbTabBar span.o {
     color: #999;
 }
 
-div.gbNavigator div.next-and-last {
-  float: right;
-}
-div.gbNavigator div.next-and-last.no-previous {
-  float: none;
-  text-align: right;
-}
-
-div.gbNavigator a.first {
-  padding-left: 27px;
-  background: url('images/nav_first.gif') left no-repeat;
-}
-
-div.gbNavigator a.previous {
-  padding-left: 27px;
-  background: url('images/nav_prev.gif') left no-repeat;
-}
-
-div.gbNavigator a.next {
-  padding-right: 27px;
-  background: url('images/nav_next.gif') right no-repeat;
-}
-
-div.gbNavigator a.last {
-  padding-right: 27px;
-  background: url('images/nav_last.gif') right no-repeat;
-}
-
-div.gbNavigator div.first-and-previous img {
-  vertical-align: middle;
-  padding-right: 0.5em;
-}
-div.gbNavigator div.next-and-last img {
-  vertical-align: middle;
-  padding-left: 0.5em;
-}
-
-#gallery.rtl div.gbNavigator div.next-and-last {
-  float: left;
-}
-#gallery.rtl div.gbNavigator div.next-and-last.no-previous {
-  float: none;
-  text-align: left;
-}
-#gallery.rtl div.gbNavigator div.first-and-previous {
-  text-align: right;
-}
-/* Both IE and Gecko have bugs with omitting padding on rtl inline content */
-#gallery.IE.rtl div.gbNavigator a {
-  display: inline-block;
-}
-#gallery.gecko.rtl div.gbNavigator a {
-  display: -moz-inline-box;
-}
-
-#gallery.rtl div.gbNavigator a.first {
-  padding: 0 27px 0 0;
-  background: url('images/nav_last.gif') right no-repeat;
-}
-#gallery.rtl div.gbNavigator a.previous {
-  padding: 0 27px 0 0;
-  background: url('images/nav_next.gif') right no-repeat;
-}
-#gallery.rtl div.gbNavigator a.next {
-  padding: 0 0 0 27px;
-  background: url('images/nav_prev.gif') left no-repeat;
-}
-#gallery.rtl div.gbNavigator a.last {
-  padding: 0 0 0 27px;
-  background: url('images/nav_first.gif') left no-repeat;
-}
-#gallery.rtl div.gbNavigator div.first-and-previous img {
-  padding: 0 0 0 0.5em;
-}
-#gallery.rtl div.gbNavigator div.next-and-last img {
-  padding: 0 0.5em 0 0;
-}
-
-div.block-search-SearchBlock a.advanced {
-  display: block;
-  padding: 3px;
+#gsSidebar .dropdown-actions {
+    min-width: 18em;
 }
 
 div.block-core-ItemLinks {
-  margin: 3px 0;
+  margin: 0 0;
 }
 div.block-core-ItemLinks a {
   padding: 3px;
@@ -523,7 +366,6 @@ div.block-core-ItemLinks a {
 div#gsSidebar div.block-core-ItemLinks a {
   display: block;
 }
-
 div#gsSidebar div.block-core-PeerList a {
   display: block;
   padding: 3px;
@@ -537,6 +379,21 @@ div#gsSidebar div.block-core-PeerList span {
 
 div#gsSidebar div.block-core-PeerList span.current {
   color: #0b6cff;
+}
+
+.thumbnail-wrapper div.block-core-ItemLinks {
+	position: absolute;
+	top: 0;
+    right: 0;
+	padding-left: 1em;
+    height: 100%;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.6+100 */
+    background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000',GradientType=1 ); /* IE6-9 */
+
 }
 
 /* ***************************************************** */
@@ -566,18 +423,23 @@ div.block-comment-ViewComments p.info {
   font-size: 0.95em;
 }
 
+/*
 div.block-core-GuestPreview {
   float: right;
 }
+*/
+
+/*
 #gallery.rtl div.block-core-GuestPreview {
   float: left;
 }
+*/
 
 span.block-core-SystemLink {
 }
 
 div.block-exif-ExifInfo {
-  margin: 5px;
+  /*margin: 5px;*/
 }
 
 span.bsw_ButtonDisabled {
@@ -628,38 +490,33 @@ td.bsw_BlockCommands {
  * Overriden theme styles go here
 */
 
-#gsContent h2{
+.gHeader h2{
     font-size: 2em;
     font-weight: bold;
+    vertical-align: middle;
 }
 
-/*
-#gsContent .gcBackground1 .giDescription, #gsContent .gcBackground1 li {
-    font-size: 1.5em;
-}
-*/
-
-#gsContent .gcBackground1 td, 
+#gsContent .gcBackground1,
 .block-share-ShareBlock,
 .block-keyalbum-KeywordLinks,
 .block-tags-ImageTags,
 .block-map-ItemCoords{
-    font-size: 1.4em;
+/*    font-size: 1.4em;*/
 }
+.giInfo .block-keyalbum-KeywordLinks{
+    line-height: 1.5em;
+}
+
 .block-share-ShareBlock,
 .block-keyalbum-KeywordLinks,
 .block-tags-ImageTags,
 .block-map-ItemCoords{
-    padding: 5px;
+    margin: 5px;
 }
 
-/*
-div#gsContent {
-    font-size: 1.1em;
-}
-*/
 #gsImageView{
     font-size: 3em;
+    height: auto;
 }
 
 .giDescription br{
@@ -668,10 +525,685 @@ div#gsContent {
    content: " ";
 }
 
+.navbar-brand {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
 
-html, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
-    /* Set your content font stack here: */
-    font-family: Georgia, Times, "Times New Roman", serif;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+.opensans {
+	font-weight: 600;
+    font-size: inherit;
+    font-family: "Open Sans","Open Sans","Arial",sans-serif;
+}
+
+.form-inline {
+    display: inline;
+}
+
+
+/* ********************************************************************************
+ * Building blocks
+ * h2, h3, p, etc        Standard html tags
+ * div.gbBlock           Sidebar or content section with style for contained lists
+ * ul.gbBreadCrumb       List of links/path elements
+ * table.gbDataTable     Table for data/form elements with styles for shading rows
+ */
+
+p.giDescription + ul {
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+.thumbnail-wrapper {
+    position: relative;
+}
+
+.thumbnail-description-wrapper {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,e2e2e2+100&0+0,0.35+23,0.78+66,1+100 */
+    /*	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(52,52,52,0.35) 23%, rgba(149,149,149,0.78) 66%, rgba(226,226,226,1) 100%);*/ /* FF3.6-15 */
+    /*	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(52,52,52,0.35) 23%,rgba(149,149,149,0.78) 66%,rgba(226,226,226,1) 100%);*/ /* Chrome10-25,Safari5.1-6 */
+    /*	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(52,52,52,0.35) 23%,rgba(149,149,149,0.78) 66%,rgba(226,226,226,1) 100%);*/ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e2e2e2',GradientType=0 );*/ /* IE6-9 */
+
+    background: linear-gradient(rgba(0,0,0,0.25) 20%, rgba(0,0,0,0.9));
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 1%;
+    box-sizing: border-box;
+
+    color: white;
+
+    z-index: 2;
+}
+
+.thumbnail-description-wrapper .giTitle:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.thumbnail-description-wrapper .giTitle {
+    color: white;
+    opacity: 0.80;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+    line-height: 1.2em;
+}
+
+.thumbnail-description-wrapper .owner {
+    display: none;
+}
+
+.giThumbnail {
+    width: 100%;
+    height: 100%;
+}
+
+.gbBlock {
+    border: 0 inherit;
+}
+
+.gbBlock .thumbnail-wrapper .action-list {
+    padding: 4px;
+}
+
+.gbBlock .action-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.gbBlock ul ul {
+    margin: 0 0 0.5em 1.0em;
+}
+
+#gallery .gbBlock h3 {
+    margin-bottom: 0.5em;
+}
+
+#gallery .gbBlock h4 {
+    margin-top: 0.5em;
+}
+
+
+#gsNavBar div.gbBreadCrumb {
+    margin: 0;
+    /*    padding: 4px 8px;*/
+}
+
+.gbDataTable {
+    padding-bottom: 4px;
+}
+
+.gbDataTable th, .gbDataTable td {
+    padding: 4px;
+}
+
+
+.giBlockToggle {
+    padding: 0 0.4em 0.1em;
+}
+.giBlockToggle:hover {
+    cursor: pointer;
+}
+
+
+.gbMarkupBar {
+    margin: 4px 0;
+}
+
+.markup-italic {
+    font-style: italic;
+}
+
+.markup-bold {
+    font-weight: bold;
+}
+
+
+/* ********************************************************************************
+ * Sections
+ * body.gallery     Page body in G2 standalone (doesn't apply to embedded)
+ * #gallery         Page container
+ * #gsNavBar   Top bar with breadcrumb and other links
+ * #gsSidebar       Sidebar
+ * #gsContent       Main content
+ */
+
+
+#gallery.rtl {
+    direction: rtl;
+}
+
+
+#gsNavBar div.gbSystemLinks span {
+    padding: 0 4px;
+}
+
+#gsSidebar {
+}
+
+#gsSidebarCol {
+}
+
+
+div.giAlbumCell, div.giItemCell {
+}
+
+
+/* So imageframed thumbs can be centered */
+div.giAlbumCell table, div.giItemCell table {
+    margin: auto;
+}
+
+.giAlbumCell .giDescription, .giItemCell .giDescription {
+    font-size: 13px;
+}
+
+#gsPages span {
+    padding: 0 0.3em;
+}
+
+#gallery #gsSidebar ul {
+    font-size: 1em;
+}
+
+.vcenter {
+    display: flex;
+    align-items: center;
+}
+
+.nav-arrow {
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 1em;
+}
+
+.item-position {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 0.3em;
+    border-radius: 15px;
+}
+
+.nav-arrow.previous {
+    left: 0;
+}
+
+.nav-arrow.next {
+    right: 0;
+}
+
+.nav-arrow .arrow {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.next .arrow{
+}
+
+.previous .arrow{
+    left: 0px;
+}
+
+.gbDataTable p {
+    margin: 0;
+}
+
+.theme-photo-wrapper-row {
+    overflow: hidden;
+    position: relative;
+    border-bottom: solid 1px #eeeff2;
+}
+
+.theme-photo-wrapper-row .giTitle h2 {
+    margin-bottom: 0.4em;
+}
+
+.photo-wrapper,
+.photo-overlay,
+.photo-container,
+.sidebar-right{
+    height: 75vh;
+}
+
+.giFullImage .photo-wrapper {
+}
+
+.photo-container {
+    overflow: auto;
+    position: relative;
+    text-align: center;
+}
+.giFullImage .photo-container{
+    overflow: auto;
+}
+
+.photo {
+    height: 100%;
+    width: auto;
+}
+
+.photo.giPortrait {
+    /*height: 100%;*/
+    /*width: auto;*/
+}
+.giFullImage .photo {
+    height: initial;
+    width: initial;
+    max-height: initial;
+    max-width: initial;
+}
+.giFullImage .photo.giPortrait {
+    width: auto;
+    /*
+    height: initial;
+    max-height: initial;
+    max-width: initial;
+    */
+}
+
+.photo-overlay {
+    position: absolute;
+    font-size: 3em;
+    height: 100%;
+    width: 100%;
+}
+
+.photo-overlay .block-core-BreadCrumb {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 20;
+}
+
+.sidebar-right {
+    overflow-y: auto;
+    border-left: solid 1px #eeeff2;
+    position: relative;
+    top: 0;
+}
+
+.album-title {
+    opacity: 0.85;
+}
+.album-title:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#gallery .link-keyword {
+    opacity: 0.85;
+}
+
+#gallery .link-keyword:hover {
+    opacity: 1;
+    color: transparent;
+}
+
+.thumbnail-wrapper .gbAdminLink::after{
+    visibility: visible;
+}
+
+.thumbnail-wrapper .gbAdminLink{
+    position: relative;
+    visibility: hidden;
+    top: 1px;
+    font-size: 0.5em;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings', fantasy;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.thumbnail-wrapper .gbAdminLink.gbLink-geturls_GetUrls::after{
+    content: "\e144";
+    font-size: 3em;
+    visibility: visible;
+}
+
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemPermissions::after{
+    content: "\e033";
+    visibility: visible;
+    font-size: 3em;
+}
+
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemMakeHighlight::after{
+    content: "\e124";
+    visibility: visible;
+    font-size: 3em;
+}
+
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemMakeHighlight::after{
+    content: "\e124";
+    visibility: visible;
+    font-size: 3em;
+}
+
+
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemDelete-album::after,
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemDelete::after
+{
+    content: "\e020";
+    visibility: visible;
+    font-size: 3em;
+}
+
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemMove-album::after,
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemMove::after
+{
+    content: "\e068";
+    visibility: visible;
+    font-size: 3em;
+}
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemEdit-photo::after,
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemEdit::after
+{
+    content: "\e065";
+    visibility: visible;
+    font-size: 3em;
+}
+.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemReorder::after
+{
+    content: "\e155";
+    visibility: visible;
+    font-size: 3em;
+}
+
+.thumbnail-wrapper .block-expandable-header {
+    display:none;
+}
+
+.thumbnail-wrapper li.action-link {
+    text-align: right;
+}
+
+.thumbnail-wrapper .action-link a {
+    color: white;
+}
+
+.thumbnail-wrapper .action-link a:hover {
+    text-decoration: none;
+    opacity: 1;
+    color: #f4560f;
+}
+
+.g-pagination select.form-control {
+    padding: 4px;
+}
+
+.size.summary {
+    font-size: 0.75em;
+}
+
+.thumbnail-description-wrapper .glyphicon {
+    transition: .3s transform ease-in-out;
+}
+.thumbnail-description-wrapper .collapsed .glyphicon {
+    transform: rotate(180deg);
+}
+
+.album-header-wrapper .glyphicon {
+    transition: .3s transform ease-in-out;
+}
+.album-header-wrapper .collapsed .glyphicon {
+    transform: rotate(180deg);
+}
+
+.album-header-wrapper .indicator {
+    margin: 0 1em;
+}
+
+.input-wrapper input {
+}
+
+#SearchScan .action-list,
+#SearchShowAll .action-list {
+    z-index: 1;
+    background: inherit;
+    height: 7em;
+    border: solid 1px rgba(132, 132, 132, 0.46);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+}
+
+#SearchScan .action-list:hover,
+#SearchShowAll .action-list:hover {
+    z-index: 99;
+    overflow-y: auto;
+}
+
+.ResultKey.result-key-commenter,
+.ResultKey.result-key-title,
+.ResultKey.result-key-summary,
+.ResultKey.result-key-description,
+.ResultKey.result-key-keywords,
+.ResultKey.result-key-subject,
+.ResultKey.result-key-comment,
+.ResultKey.result-key-owner
+{
+    display: none;
+}
+
+.ResultData.result-data-summary,
+.ResultData.result-data-comment
+{
+    display: inline-block;
+    line-height: 1.4em;
+}
+
+.ResultData.result-data-title,
+.ResultData.result-data-subject
+{
+    font-weight: bold;
+}
+
+.ResultData.result-data-description,
+.ResultData.result-data-keywords,
+.ResultData.result-data-owner,
+.ResultData.result-data-commenter
+{
+    display: none;
+}
+
+.table-column {
+    position: relative;
+}
+
+@supports (zoom:2) {
+    .thumbnail-wrapper .checkbox {
+        zoom: 2;
+        margin: 0.2em 0 0 0.2em;
+    }
+}
+@supports not (zoom:2) {
+    .thumbnail-wrapper .checkbox{
+        transform: scale(2);
+        margin: 1em 0 0 1em;
+    }
+}
+
+.thumbnail-wrapper .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#gsThumbMatrix {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.item-action-matrix .thumbnail-description-wrapper{
+    position: absolute;
+    bottom: 0;
+}
+
+.thumbnail-wrapper label {
+    margin-bottom: 0;
+    display: block;
+}
+
+.edit-form {
+    border-bottom: 1px solid lightgray;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.edit-form .giThumbnail {
+    border-radius: 1em;
+}
+
+.form-buttons {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.item-action-matrix .giTitle p {
+    margin: 0;
+}
+
+#gallery .autoCompleteContainer .yui-ac-content ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-height: 11em;
+    overflow-y: auto;
+}
+
+.gbItemAlbum a {
+    background-image: url(images/folder-icon.min.svg);
+    padding: 15%;
+    display: block;
+}
+
+a.thumbnail
+{
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+.pagination .active .jump-pager {
+    padding: 0;
+    padding: 4px;
+}
+.g-pagination {
+    text-align: center;
+    display: table;
+    width: 100%;
+}
+.pagination>li{
+    display: table-cell;
+    text-align: center;
+}
+.pagination>li>a, .pagination>li>span{
+    width:100%;
+}
+
+.pagination {
+    margin: 0;
+}
+
+.pagination select.form-control{
+    height: inherit;
+    padding: 0;
+}
+
+.lazyload {
+    opacity: 0;
+}
+
+.lazyloading {
+    opacity: 1;
+    transition: opacity 300ms;
+    background: #f7f7f7 url('images/waiting.gif') no-repeat center;
+}
+
+.indicator.glyphicon {
+    cursor: pointer;
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+}
+
+@media only screen and (max-width : 480px) {
+    .photo-wrapper {
+        height: 100%;
+    }
+    .giFullImage .photo-wrapper,
+    .giPortrait .photo-wrapper {
+        height: 75vh;
+    }
+    .photo-overlay,
+    .photo-container,
+    .sidebar-right {
+        height: 100%;
+    }
+    .photo {
+        max-height: 100%;
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+    }
+    .giPortrait .photo-container {
+    }
+    .photo.giPortrait {
+        height: 100%;
+        width: auto;
+    }
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 768px) {
+}
+
+@media (min-width: 1024px) {
+    div#gallery {
+        font-family: "Open Sans","Open Sans","Arial",sans-serif;
+    }
+}
+
+@media (min-width: 768px) {
+    .row.equal, .row-fluid.equal {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.container-fluid.no-gutter,
+.no-gutter > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+.gallery #gsHeader {
+    border: 1px solid transparent;
 }
