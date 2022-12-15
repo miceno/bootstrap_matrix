@@ -183,7 +183,7 @@
 <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.0.4/lazysizes.min.js"
         integrity="sha256-FRkZgEAdWoQnIbMoXkMPk7Fv3+jDX1SUUHJOBG4U/1M=" crossorigin="anonymous" async></script>
 {else}
-<script type="application/javascript" src="themes/bootstrap_matrix/assets/lazysizes-4.0.4/lazysizes.min.js"
+<script type="application/javascript" src="{g->theme url=assets/lazysizes-4.0.4/lazysizes.min.js?`$theme.params._version`}"
         async></script>
 
 {/if}
