@@ -1148,7 +1148,13 @@ a.thumbnail
 }
 
 @media only screen and (max-width : 480px) {
-    .photo-wrapper,
+    .photo-wrapper {
+        height: 100%;
+    }
+    .giFullImage .photo-wrapper,
+    .giPortrait .photo-wrapper {
+        height: 75vh;
+    }
     .photo-overlay,
     .photo-container,
     .sidebar-right {
@@ -1157,16 +1163,14 @@ a.thumbnail
     .photo {
         max-height: 100%;
         max-width: 100%;
-    }
-    .giFullImage .photo-wrapper {
-        height: 75vh;
-    }
-
-    .photo-container.giPortrait {
-    }
-    .photo.giPortrait {
         height: auto;
         width: 100%;
+    }
+    .giPortrait .photo-container {
+    }
+    .photo.giPortrait {
+        height: 100%;
+        width: auto;
     }
 }
 

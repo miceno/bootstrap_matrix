@@ -12,7 +12,8 @@
 {if !isset($theme.params.boxesLayout) || !empty($theme.params.boxesLayout)}
     {assign var="boxesLayout" value=$theme.params.boxesLayout}
 {/if}
-<div class="row-fluid no-gutter theme-photo-wrapper-row{if $theme.sourceImageViewIndex == $theme.imageViewsIndex} giFullImage{/if}">
+<div class="row-fluid no-gutter theme-photo-wrapper-row{if $theme.sourceImageViewIndex == $theme.imageViewsIndex} giFullImage{/if}
+{if $image.height > $image.width} giPortrait{/if}">
     <div class="photo-wrapper{if $boxesLayout == "right" } col-xs-12 col-sm-8{/if} ">
         <div class="photo-overlay">
             {strip}
@@ -58,7 +59,7 @@
                 {/strip}
             </div>
         </div>
-        <div class="photo-container{if $image.height > $image.width} giPortrait{/if}">
+        <div class="photo-container">
 
             {if !empty($theme.imageViews)}
                 {capture name="fallback"}
