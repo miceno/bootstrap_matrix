@@ -780,7 +780,7 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .photo-container {
-    overflow: hidden;
+    overflow: auto;
     position: relative;
     text-align: center;
 }
@@ -789,13 +789,13 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .photo {
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: auto;
 }
 
 .photo.giPortrait {
-    height: 100%;
-    width: auto;
+    /*height: 100%;*/
+    /*width: auto;*/
 }
 .giFullImage .photo {
     height: initial;
@@ -816,7 +816,7 @@ div.giAlbumCell table, div.giItemCell table {
     position: absolute;
     font-size: 3em;
     height: 100%;
-    width: calc(100% - 30px);
+    width: 100%;
 }
 
 .photo-overlay .block-core-BreadCrumb {
