@@ -82,7 +82,7 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body class="gallery">
-<div class="container-fluid" {g->mainDivAttributes}>
+<div class="container-fluid no-gutter" {g->mainDivAttributes}>
     {*
      * Some module views (eg slideshow) want the full screen.  So for those, we don't draw
      * a header, footer, navbar, etc.  Those views are responsible for drawing everything.

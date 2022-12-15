@@ -789,8 +789,8 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .photo {
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 .photo.giPortrait {
@@ -1163,7 +1163,6 @@ a.thumbnail
     }
 
     .photo-container.giPortrait {
-        height: 75vh;
     }
     .photo.giPortrait {
         height: auto;
@@ -1188,3 +1187,16 @@ a.thumbnail
         flex-wrap: wrap;
     }
 }
+
+.no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.container-fluid.no-gutter,
+.no-gutter > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
