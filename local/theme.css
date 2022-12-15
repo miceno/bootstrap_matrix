@@ -1200,3 +1200,6 @@ a.thumbnail
 }
 
 
+.gallery #gsHeader {
+    border: 1px solid transparent;
+}
