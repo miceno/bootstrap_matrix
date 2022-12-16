@@ -16,7 +16,7 @@
 
 <div class="admin-container">
     <div class="row">
-        <div id="gsSidebarCol" class="col-xs-12 col-md-3">
+        <div id="gsSidebarCol" class="col-xs-12 col-sm-3">
 
 
         <div id="gsSidebar" class="gcBorder1">
@@ -44,7 +44,7 @@
       </div>
     </div></div>
 
-    <div id="admin-content" class="col-xs-12 col-md-9">
+    <div id="admin-content" class="col-xs-12 col-sm-9">
       <div id="gsContent" class="gcBorder1">
 	{include file="gallery:`$SiteAdmin.viewBodyFile`" l10Domain=$SiteAdmin.viewL10Domain}
       </div>
