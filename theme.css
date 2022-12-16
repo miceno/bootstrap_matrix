@@ -18,9 +18,14 @@
  * .autoComplete*        Styles for autoComplete popup lists
  */
 
-#gallery {
-    font: 400 16px sans-serif;
+body.gallery {
+    background-color: #fff;
+    font: 400 16px "Open Sans";
+    padding: 4em 0 0;
+    margin: 0;
+}
 
+#gallery {
     font-size: 100%;
     color: #757575;
     line-height: 1.5em;
@@ -30,10 +35,10 @@
     -moz-osx-font-smoothing: grayscale;
     background-color: #fff;
 }
-body.gallery {
-    background-color: #fff;
-    padding: 4.5em 0 0;
-    margin: 0;
+
+.theme-body.panel {
+    border-radius: 0;
+    border: 0;
 }
 
 .gcBackground1 {
@@ -42,7 +47,6 @@ body.gallery {
 
 .gcBackground2 {
     background-color: #e7e7e7;
-    /*background-color: palevioletred;*/
 }
 
 .bgDebug {
@@ -79,7 +83,8 @@ input:focus, textarea:focus {
     color: #000;
 }
 
-input.inputTypeSubmit, input.inputTypeButton {  /* No input[type=submit] in IE */
+input.inputTypeSubmit, input.inputTypeButton {
+    /* No input[type=submit] in IE */
     color: #333;
     background-color: #eee;
     padding-left: 0.5em;
@@ -116,8 +121,12 @@ pre, tt {
 }
 
 .giDescription {
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.2em;
+}
+
+#gsHeader{
+    height: 4em;
 }
 
 .album-header-wrapper {
@@ -172,13 +181,15 @@ pre, tt {
     padding-bottom: 0;
 }
 
-#gsNavBar div.gbBreadCrumb a.BreadCrumb-1 {   /* no :first-child in IE */
+#gsNavBar div.gbBreadCrumb a.BreadCrumb-1 {
+    /* no :first-child in IE */
     padding-left: 0;
     background-image: none;
     white-space: nowrap;
 }
 
-#gsNavBar div.gbBreadCrumb span.BreadCrumb-1 {   /* no :first-child in IE */
+#gsNavBar div.gbBreadCrumb span.BreadCrumb-1 {
+    /* no :first-child in IE */
     padding-left: 0;
     background-image: none;
 }
@@ -423,25 +434,6 @@ div.block-comment-ViewComments p.info {
   font-size: 0.95em;
 }
 
-/*
-div.block-core-GuestPreview {
-  float: right;
-}
-*/
-
-/*
-#gallery.rtl div.block-core-GuestPreview {
-  float: left;
-}
-*/
-
-span.block-core-SystemLink {
-}
-
-div.block-exif-ExifInfo {
-  /*margin: 5px;*/
-}
-
 span.bsw_ButtonDisabled {
   color: #999;
 }
@@ -501,7 +493,6 @@ td.bsw_BlockCommands {
 .block-keyalbum-KeywordLinks,
 .block-tags-ImageTags,
 .block-map-ItemCoords{
-/*    font-size: 1.4em;*/
 }
 .giInfo .block-keyalbum-KeywordLinks{
     line-height: 1.5em;
@@ -533,7 +524,7 @@ td.bsw_BlockCommands {
 .opensans {
 	font-weight: 600;
     font-size: inherit;
-    font-family: "Open Sans","Open Sans","Arial",sans-serif;
+    font-family: "Open Sans","Arial",sans-serif;
 }
 
 .form-inline {
@@ -628,11 +619,11 @@ p.giDescription + ul {
 
 #gsNavBar div.gbBreadCrumb {
     margin: 0;
-    /*    padding: 4px 8px;*/
 }
 
 .gbDataTable {
     padding-bottom: 4px;
+    margin-left: 2em;
 }
 
 .gbDataTable th, .gbDataTable td {
@@ -670,7 +661,6 @@ p.giDescription + ul {
  * #gsContent       Main content
  */
 
-
 #gallery.rtl {
     direction: rtl;
 }
@@ -679,17 +669,6 @@ p.giDescription + ul {
 #gsNavBar div.gbSystemLinks span {
     padding: 0 4px;
 }
-
-#gsSidebar {
-}
-
-#gsSidebarCol {
-}
-
-
-div.giAlbumCell, div.giItemCell {
-}
-
 
 /* So imageframed thumbs can be centered */
 div.giAlbumCell table, div.giItemCell table {
@@ -748,11 +727,8 @@ div.giAlbumCell table, div.giItemCell table {
     transform: translateY(-50%);
 }
 
-.next .arrow{
-}
-
 .previous .arrow{
-    left: 0px;
+    left: 0;
 }
 
 .gbDataTable p {
@@ -794,8 +770,6 @@ div.giAlbumCell table, div.giItemCell table {
 }
 
 .photo.giPortrait {
-    /*height: 100%;*/
-    /*width: auto;*/
 }
 .giFullImage .photo {
     height: initial;
@@ -805,11 +779,6 @@ div.giAlbumCell table, div.giItemCell table {
 }
 .giFullImage .photo.giPortrait {
     width: auto;
-    /*
-    height: initial;
-    max-height: initial;
-    max-width: initial;
-    */
 }
 
 .photo-overlay {
@@ -963,9 +932,6 @@ div.giAlbumCell table, div.giItemCell table {
 
 .album-header-wrapper .indicator {
     margin: 0 1em;
-}
-
-.input-wrapper input {
 }
 
 #SearchScan .action-list,
@@ -1179,8 +1145,9 @@ a.thumbnail
 }
 
 @media (min-width: 1024px) {
-    div#gallery {
-        font-family: "Open Sans","Open Sans","Arial",sans-serif;
+    div#gallery,
+    body#gallery {
+        font-family: "Open Sans","Arial",sans-serif;
     }
 }
 
@@ -1200,9 +1167,4 @@ a.thumbnail
 .no-gutter > [class*="col-"] {
     padding-right: 0;
     padding-left: 0;
-}
-
-
-.gallery #gsHeader {
-    border: 1px solid transparent;
 }
