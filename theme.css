@@ -398,8 +398,7 @@ div#gsSidebar div.block-core-PeerList span.current {
 	position: absolute;
 	top: 0;
     right: 0;
-	padding-left: 1em;
-    height: 100%;
+    height: auto;
 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.6+100 */
     background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%); /* FF3.6-15 */
@@ -592,7 +591,7 @@ p.giDescription + ul {
 }
 
 .gbBlock .thumbnail-wrapper .action-list {
-    padding: 4px;
+    padding: 4px 4px 0 0;
 }
 
 .gbBlock .action-list {
@@ -825,7 +824,7 @@ div.giAlbumCell table, div.giItemCell table {
     position: relative;
     visibility: hidden;
     top: 1px;
-    font-size: 0.5em;
+    font-size: 0;
     display: inline-block;
     font-family: 'Glyphicons Halflings', fantasy;
     font-style: normal;
@@ -836,35 +835,28 @@ div.giAlbumCell table, div.giItemCell table {
 }
 .thumbnail-wrapper .gbAdminLink.gbLink-geturls_GetUrls::after{
     content: "\e144";
-    font-size: 3em;
     visibility: visible;
+    font-size: 24px;
 }
 
 .thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemPermissions::after{
     content: "\e033";
     visibility: visible;
-    font-size: 3em;
+    font-size: 24px;
 }
 
 .thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemMakeHighlight::after{
     content: "\e124";
     visibility: visible;
-    font-size: 3em;
+    font-size: 24px;
 }
-
-.thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemMakeHighlight::after{
-    content: "\e124";
-    visibility: visible;
-    font-size: 3em;
-}
-
 
 .thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemDelete-album::after,
 .thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemDelete::after
 {
     content: "\e020";
     visibility: visible;
-    font-size: 3em;
+    font-size: 24px;
 }
 
 .thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemMove-album::after,
@@ -872,20 +864,20 @@ div.giAlbumCell table, div.giItemCell table {
 {
     content: "\e068";
     visibility: visible;
-    font-size: 3em;
+    font-size: 24px;
 }
 .thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemEdit-photo::after,
 .thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemEdit::after
 {
     content: "\e065";
     visibility: visible;
-    font-size: 3em;
+    font-size: 24px;
 }
 .thumbnail-wrapper .gbAdminLink.gbLink-core_ItemAdmin-core_ItemReorder::after
 {
     content: "\e155";
     visibility: visible;
-    font-size: 3em;
+    font-size: 24px;
 }
 
 .thumbnail-wrapper .block-expandable-header {
