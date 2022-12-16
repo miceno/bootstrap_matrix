@@ -373,6 +373,7 @@ div.block-core-ItemLinks {
 }
 div.block-core-ItemLinks a {
   padding: 3px;
+    font-size: 0.9em;
 }
 div#gsSidebar div.block-core-ItemLinks a {
   display: block;
@@ -602,6 +603,7 @@ p.giDescription + ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    line-height: 1.1em;
 }
 
 .gbBlock ul ul {
@@ -621,7 +623,7 @@ p.giDescription + ul {
     margin: 0;
 }
 
-.gbDataTable {
+#admin-content .gbDataTable {
     padding-bottom: 4px;
     margin-left: 2em;
 }
@@ -892,6 +894,10 @@ div.giAlbumCell table, div.giItemCell table {
 
 .thumbnail-wrapper .block-expandable-header {
     display:none;
+}
+
+.block-core-ItemLinks>.block-expandable-header {
+    font-weight: 600;
 }
 
 .thumbnail-wrapper li.action-link {
