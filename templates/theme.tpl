@@ -7,6 +7,18 @@
 <html lang="{g->language}" xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:v="urn:schemas-microsoft-com:vml">
 <head>
+    {capture name="page_type"}{strip}
+    {if $theme.pageType == 'album'}
+        {g->text text="Album"}
+    {elseif $theme.pageType == 'photo'}
+        {g->text text="Photo"}
+    {elseif $theme.pageType == 'admin'}
+        {g->text text="Admin"}
+    {elseif $theme.pageType == 'module'}
+        {g->text text="Module"}
+    {/if}
+    {/strip}{/capture}
+
     {if isset($theme.params.selfHostedAssets)}
         {assign var="selfHostedAssets" value=$theme.params.selfHostedAssets}
     {else}
@@ -19,6 +31,7 @@
     {/if}
     <meta name="keywords" content="{$theme.item.keywords|markup:strip|default:$theme.item.pathComponent}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{$smarty.capture.page_type} - {$theme.item.title} - {$theme.item.description}">
 
     {* Let Gallery print out anything it wants to put into the <head> element *}
     {g->head}
