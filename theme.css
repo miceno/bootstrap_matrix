@@ -655,7 +655,6 @@ p.giDescription + ul {
  * #gsContent       Main content
  */
 
-
 #gallery.rtl {
     direction: rtl;
 }
@@ -1113,16 +1112,14 @@ a.thumbnail
 }
 
 @media only screen and (max-width : 767px) {
-    .photo-wrapper {
-        height: 100%;
-    }
+    .giPortrait .photo-container,
     .giPortrait .photo-wrapper {
-
     }
     .giFullImage .photo-wrapper
      {
         height: 75vh;
     }
+    .photo-wrapper,
     .photo-overlay,
     .photo-container,
     .sidebar-right {
@@ -1133,8 +1130,6 @@ a.thumbnail
         max-width: 100%;
         height: auto;
         width: 100%;
-    }
-    .giPortrait .photo-container {
     }
     .photo.giPortrait {
         height: initial;
