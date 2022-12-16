@@ -129,6 +129,10 @@ pre, tt {
     height: 4em;
 }
 
+#gsHeader .navbar-collapse {
+    background-color: #f8f8f8;
+}
+
 .album-header-wrapper {
 }
 
