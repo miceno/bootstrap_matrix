@@ -34,7 +34,7 @@
           integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
           crossorigin="anonymous">
     {else}
-    <link rel="stylesheet" href="{g->theme url="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css?`$theme.params._version`"}">
+    <link rel="stylesheet" href="{g->theme url="assets/bootstrap-3.4.1-dist/css/bootstrap.min.css?`$theme.params._version`"}">
     {/if}
     {* Include this theme's style sheet *}
     {assign var="theme_css_file" value="theme.css"}
@@ -68,9 +68,10 @@
     {else}
     <script type="application/javascript"
             src="{g->theme url=assets/jquery-1.12.4/jquery.min.js?`$theme.params._version`}"></script>
+
     {* Bootstrap JS *}
     <script type="application/javascript"
-            src="{g->theme url=assets/bootstrap-3.3.7-dist/js/bootstrap.min.js?`$theme.params._version`}"
+            src="{g->theme url=assets/bootstrap-3.4.1-dist/js/bootstrap.min.js?`$theme.params._version`}"
             async></script>
     {* OpenSans font *}
     <link rel="stylesheet" id="google-fonts-css"
