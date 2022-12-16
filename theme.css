@@ -368,9 +368,6 @@ div.gbTabBar a {
     min-width: 18em;
 }
 
-div.block-core-ItemLinks {
-  margin: 0 0;
-}
 div.block-core-ItemLinks a {
   padding: 3px;
     font-size: 0.9em;
@@ -499,13 +496,6 @@ td.bsw_BlockCommands {
     line-height: 1.5em;
 }
 
-.block-share-ShareBlock,
-.block-keyalbum-KeywordLinks,
-.block-tags-ImageTags,
-.block-map-ItemCoords{
-    margin: 5px;
-}
-
 #gsImageView{
     font-size: 3em;
     height: auto;
@@ -593,6 +583,8 @@ p.giDescription + ul {
 
 .gbBlock {
     border: 0 inherit;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .gbBlock .thumbnail-wrapper .action-list {
