@@ -4,6 +4,9 @@
  *}
 {if !isset($showAdvancedLink)} {assign var="showAdvancedLink" value="false"} {/if}
 {if !isset($inputWidth)} {assign var="inputWidth" value="18"} {/if}
+{capture name="search_text"}{strip}
+    {g->text text="Search your Gallery"}
+{/strip}{/capture}
 
 {g->addToTrailer}
 <script type="text/javascript">
@@ -26,13 +29,20 @@
       <div class="search-form-group has-feedback form-group">
             <label for="searchCriteria" class="sr-only">{g->text text="Search"}</label>
             <div class="input-group">
+            {strip}
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    <button id="{g->formVar var="form[searchCriteria]"}-search"
+                            title="{$smarty.capture.search_text}"
+                            aria-label="{$smarty.capture.search_text}"
+                            class="btn btn-default" type="submit">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
                 </span>
+            {/strip}
                 <input type="text" id="searchCriteria" size="{$inputWidth}"
                  name="{g->formVar var="form[searchCriteria]"}"
-                 value="{g->text text="Search your Gallery"}"
-                 placeholder="{g->text text="Search your Gallery"}"
+                 value="{$smarty.capture.search_text}"
+                 placeholder="{$smarty.capture.search_text}"
                  onfocus="search_SearchBlock_focus()"
                  onblur="search_SearchBlock_blur()"
                  class="form-control textbox"/>
