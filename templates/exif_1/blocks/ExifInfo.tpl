@@ -48,7 +48,7 @@
     {/if}{* if empty($ajax) *}
         <div class="block-expandable-header">
             <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
-            <span class="hidden-xs hidden-sm">{g->text text="EXIF Photo Properties"}</span>
+            <span class="hidden-xs">{g->text text="EXIF Photo Properties"}</span>
         {if isset($exif.mode)}
             {strip}
             {if $isRegisteredUser}

@@ -13,7 +13,7 @@
     {if isset($showHeader) && $showHeader}
         <div class="block-expandable-header">
             <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
-            <span class="hidden-xs hidden-sm">{g->text text="Keywords"}</span>
+            <span class="hidden-xs">{g->text text="Keywords"}</span>
         </div>
     {/if}
     <div class="block-expandable-content">
