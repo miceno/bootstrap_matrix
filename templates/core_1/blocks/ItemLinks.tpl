@@ -44,7 +44,7 @@
             <ul class="action-list">
                 {foreach from=$links item="link"}
                     <li class="action-link">
-                        {g->itemLink link=$link onlyIcon=$onlyIcons lowercase=$lowercase}
+                        {g->itemLink link=$link onlyIcon=$onlyIcons title=$link.text lowercase=$lowercase}
                     </li>
                 {/foreach}
             </ul>
