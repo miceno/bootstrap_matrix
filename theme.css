@@ -1147,12 +1147,15 @@ a.thumbnail
 @media only screen and (min-width : 320px) {
 }
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 767px) {
     .photo-wrapper {
         height: 100%;
     }
-    .giFullImage .photo-wrapper,
     .giPortrait .photo-wrapper {
+
+    }
+    .giFullImage .photo-wrapper
+     {
         height: 75vh;
     }
     .photo-overlay,
@@ -1169,7 +1172,7 @@ a.thumbnail
     .giPortrait .photo-container {
     }
     .photo.giPortrait {
-        height: 100%;
+        height: initial;
         width: auto;
     }
 }

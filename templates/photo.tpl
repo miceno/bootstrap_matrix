@@ -157,7 +157,7 @@
                 </p>
             {/if}
         </div>
-        <div class="giInfo-wrapper hidden-xs pull-right">
+        <div class="giInfo-wrapper pull-right">
             {g->block type="core.ItemInfo"
             item=$theme.item
             showDate=true
