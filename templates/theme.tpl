@@ -67,8 +67,8 @@
     {/php}
     {* jQuery (necessary for Bootstrap's JavaScript plugins) *}
     {if !$selfHostedAssets}
-    <script src="https://code.jquery.com/jquery-3.6.2.min.js"
-            integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+    <script src="https://code.jquery.com/jquery-3.6.2.slim.min.js"
+            integrity="sha256-E3P3OaTZH+HlEM7f1gdAT3lHAn4nWBZXuYe89DFg2d0="
             crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.4.0.min.js"
             integrity="sha256-mBCu5+bVfYzOqpYyK4jm30ZxAZRomuErKEFJFIyrwvM="
@@ -84,7 +84,9 @@
           type="text/css" media="all">
     {else}
     <script type="application/javascript"
-            src="{g->theme url=assets/jquery-1.12.4/jquery.min.js?`$theme.params._version`}"></script>
+            src="{g->theme url=assets/jquery-3.6.2/jquery-3.6.2.slim.min.js?`$theme.params._version`}"></script>
+    <script type="application/javascript"
+            src="{g->theme url=assets/jquery-3.6.2/jquery-migrate-3.4.0.min.js?`$theme.params._version`}"></script>
 
     {* Bootstrap JS *}
     <script type="application/javascript"
