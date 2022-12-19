@@ -2,10 +2,10 @@
  * $Revision: 16297 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
-{if $forItem|default:true} {* Links for keywords of current item *}
-{if empty($item)} {assign var=item value=$theme.item} {/if}
 {assign var=showCloud value=$showCloud|default:false}
 {assign var=showHeader value=$showHeader|default:true}
+{if $forItem|default:true} {* Links for keywords of current item *}
+{if empty($item)} {assign var=item value=$theme.item} {/if}
 
 {if !empty($item.keywords)}
 {g->callback type="keyalbum.SplitKeywords" keywords=$item.keywords}
@@ -37,6 +37,9 @@
 
 {if !empty($block.keyalbum.keywords)}
 <div class="{$class}">
+    <div class="block-expandable-header">
+    {g->text text="Keyword cloud"}
+    </div>
   {if $showCloud}
     {foreach from=$block.keyalbum.keywords item=keyword}
       &nbsp;<a href="{g->url arg1="view=keyalbum.KeywordAlbum" arg2="keyword=`$keyword.raw`"}"{if
