@@ -103,7 +103,10 @@
 
         <div class="gallery-google-map-wrapper">
             <div class="block-expandable-header">
-                <h3>{g->text text="%s Location Map" arg1=$block.mapv3.MiniMap.ItemType}</h3>
+                {capture name=itemTranslation}
+                    {g->text text=$block.mapv3.MiniMap.ItemType}
+                {/capture}
+                <h3>{g->text text="%s Location Map" arg1=$smarty.capture.itemTranslation}</h3>
             </div>
             <div id="minimap-{$block.mapv3.MiniMap.blockNum}" class="MiniGMap block-expandable-content gallery-google-map-container"></div>
         </div>

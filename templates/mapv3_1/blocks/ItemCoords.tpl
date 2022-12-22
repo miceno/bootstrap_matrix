@@ -12,7 +12,10 @@
 <div class="{$class}">
     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
 {if !empty($block.mapv3.ItemCoords) and !empty($block.mapv3.ItemCoords.lat) and !empty($block.mapv3.ItemCoords.lng)}
-    <span class="hidden-xs">{g->text text="%s Coordinates:" arg1=$block.mapv3.ItemCoords.ItemType}</span>
+    {capture name=itemTypeTranslation}
+        {g->text text=$block.mapv3.ItemCoords.ItemType}
+    {/capture}
+    <span class="hidden-xs">{g->text text="%s Coordinates:" arg1=$smarty.capture.itemTypeTranslation}</span>
 {if $coordStyle eq 1}
 {$block.mapv3.ItemCoords.lat.deg}&deg;, {$block.mapv3.ItemCoords.lng.deg}&deg;
 {elseif $coordStyle eq 2}
