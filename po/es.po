@@ -22,22 +22,63 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Gallery: MobileMatrix Theme 1.1.7\n"
+"Project-Id-Version: Gallery: BootstrapMatrix Theme 1.2.2\n"
 "Report-Msgid-Bugs-To: gallery-translations@lists.sourceforge.net\n"
 "POT-Creation-Date: 2005-10-30 16:42+0100\n"
-"PO-Revision-Date: 2006-11-07 16:11+0100\n"
+"PO-Revision-Date: 2022-12-22 01:49+0100\n"
 "Last-Translator: Óscar García Amor <oscar.garcia@moire.org>\n"
 "Language-Team: Spanish <gallery-translations@lists.sourceforge.net>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
 
-msgid "MobileMatrix"
-msgstr "MobileMatrix"
+msgid "BootstrapMatrix"
+msgstr "BootstrapMatrix"
 
-msgid "Standard Gallery2 look and feel"
+msgid "Bootstrap Gallery2 look and feel"
 msgstr "\"Look and feel\" estándar de Gallery2"
+
+msgid "Block layout"
+msgstr "Diseño del bloque"
+
+msgid "To the left"
+msgstr "A la izquierda"
+
+msgid "To the bottom"
+msgstr "Abajo"
+
+msgid "To the right"
+msgstr "A la derecha"
+
+msgid "Disable"
+msgstr "Desactivar"
+
+msgid ""
+"Number of above-the-fold images.\n"
+"\t    Above-the-fold images will load immediately, while below-the-fold images will be lazy\n"
+"\t    loaded."
+msgstr ""
+"Número de imágenes por encima del pliegue.\n"
+"\t    Las imágenes por encima del pliegue se cargarán inmediatamente, mientras que las "
+"imágenes por debajo del pliegue serán perezosas\n"
+"\t    cargado."
+
+msgid ""
+"Mark this flag to self-host assets on this server (less efficient), otherwise CDN ready "
+"versions are used (more efficient, default)."
+msgstr ""
+"Marque esta marca para autohospedar activos en este servidor (menos eficiente), de lo "
+"contrario se utilizan versiones listas para CDN (más eficientes, predeterminadas)."
+
+msgid ""
+"Mark this flag to use minified CSS (more efficient, default), otherwise plain CSS is used "
+"(less efficient)."
+msgstr ""
+"Marque esta marca para usar CSS minimizado (más eficiente, predeterminado), de lo contrario "
+"se usa CSS simple (menos eficiente)."
 
 msgid "This album is empty."
 msgstr "Este ábum está vacío."
@@ -45,8 +86,8 @@ msgstr "Este ábum está vacío."
 msgid "Add a photo!"
 msgstr "&iexcl;Añade una foto!"
 
-msgid "no thumbnail"
-msgstr "sin miniatura"
+msgid "No Thumbnail"
+msgstr "Sin miniatura"
 
 #, c-format
 msgid "Album: %s"
@@ -55,6 +96,12 @@ msgstr "Álbum: %s"
 msgid "Error!"
 msgstr "&iexcl;Error!"
 
+msgid "previous"
+msgstr "anterior"
+
+msgid "next"
+msgstr "siguiente"
+
 #, c-format
 msgid "Download %s"
 msgstr "Descargar %s"
@@ -62,12 +109,1014 @@ msgstr "Descargar %s"
 msgid "There is nothing to view for this item."
 msgstr "No hay nada que ver para este elemento."
 
-msgid "View in original album"
-msgstr "Ver en el álbum original"
-
 #, c-format
 msgid "Download %s in original format"
 msgstr "Descarga %s en formato original"
 
+msgid "View in original album"
+msgstr "Ver en el álbum original"
+
 msgid "Continue..."
 msgstr "Continuar..."
+
+msgid "Actions"
+msgstr "Acciones"
+
+msgid "Album"
+msgstr "Álbum"
+
+msgid "Photo"
+msgstr "Foto"
+
+msgid "Admin"
+msgstr "Administración"
+
+msgid "Module"
+msgstr "Módulo"
+
+msgid ""
+"Your webserver is configured to disallow file uploads from your web browser at this time.  "
+"Please contact your system administrator for assistance."
+msgstr ""
+"Tu servidor web está configurado para rechazar la subida de archivos desde el navegador en "
+"este momento.  Por favor contacta con el administrador del sistema para recibir ayuda."
+
+msgid "There was a problem processing your request, see below for details."
+msgstr "Ha habido un problema procesando tu petición, mira más abajo para ver los detalles."
+
+msgid "Upload an XLSX with image descriptions and a ZIP file with the images."
+msgstr "Sube un XLSX con descripciones de imágenes y un archivo ZIP con las imágenes."
+
+msgid "[help]"
+msgstr "[ayuda]"
+
+#, c-format
+msgid ""
+"<b>Note:</b> You can upload up to %s at one time.  If you want to upload more than that, you "
+"must upload the files separately, use a different upload format, or ask your system "
+"administrator to allow larger uploads."
+msgstr ""
+"<b>Nota:</b> Puedes subir hasta %s de cada vez.  Si quieres subir una mayor cantidad de "
+"datos, debes subir los archivos por bloques, usar un formato diferente de subida, o pedirle "
+"al administrador de sistemas que habilite un mayor límite de subida."
+
+#, c-format
+msgid ""
+"<b>Note:</b> You can upload up to %s at one time.  No individual file may be larger than %s. "
+"If you want to upload more than that, you must upload the files separately, use a different "
+"upload format, or ask your system administrator to allow larger uploads."
+msgstr ""
+"<b>Nota:</b> Puedes subir hasta %s de por vez.  Los ficheros no deben sobrepasar los %s "
+"megas de forma individual.  Si quieres subir una mayor cantidad de datos, debes subir los "
+"archivos por bloques, usar un formato diferente de subida, o pedirle al administrador de "
+"sistemas que habilite un mayor ratio de subida."
+
+#, c-format
+msgid ""
+"Create an XSLX file containing the Number, Reference, Term, Media, Description, Place, "
+"Author and Date for each image.  Then create a ZIP with the image files, and enter the path "
+"to the XLSX and ZIP files in the box below.  For convenience, you can author the data file "
+"in Excel and then save it in the XLSX format.  Images you want to add must be on the ZIP "
+"file in the same order as they are on the XLSX file.  Here is a %ssample data file%s and a "
+"%ssample excel spreadsheet%s."
+msgstr ""
+"Cree un archivo XSLX que contenga el número, la referencia, el término, el medio, la "
+"descripción, el lugar, el autor y la fecha de cada imagen.  Luego cree un ZIP con los "
+"archivos de imagen e ingrese la ruta a los archivos XLSX y ZIP en el cuadro a continuación.  "
+"Para mayor comodidad, puede crear el archivo de datos en Excel y luego guardarlo en formato "
+"XLSX.  Las imágenes que desee agregar deben estar en el archivo ZIP en el mismo orden en que "
+"están en el archivo XLSX.  Aquí hay un %sarchivo de datos de muestra%s y una %shoja de "
+"cálculo de Excel de muestra%s."
+
+msgid "Excel File"
+msgstr "Archivo de Excel"
+
+msgid "Invalid path for Excel file."
+msgstr "Ruta de acceso no válida para el archivo de Excel."
+
+msgid "Missing path for Excel file."
+msgstr "Falta la ruta de acceso para el archivo de Excel."
+
+msgid "Read header"
+msgstr "Leer encabezado"
+
+msgid "Zip File"
+msgstr "Archivo Zip"
+
+msgid "Invalid path for ZIP file."
+msgstr "Ruta no válida para el archivo ZIP."
+
+msgid "Missing path for ZIP file."
+msgstr "Falta la ruta para el archivo ZIP."
+
+msgid "Add Items"
+msgstr "Agregar Elementos"
+
+msgid "Add many files at once with pre-prepared title, summary, description and keywords."
+msgstr ""
+"Agregue muchos archivos a la vez con título, resumen, descripción y palabras clave "
+"preparados previamente."
+
+#, c-format
+msgid ""
+"The photos you want to add must already be uploaded to your web server.  Create a data file "
+"containing the title, summary, description and keywords along with the path to each photo, "
+"and then enter the path to the text file in the box below.  For convenience, you can author "
+"the data file in Excel and then save it in the %sText (tab delimited)%s format.  Here is a "
+"%ssample data file%s and a %ssample excel spreadsheet%s."
+msgstr ""
+"Las fotos que desea agregar ya deben estar cargadas en su servidor web.  Cree un archivo de "
+"datos que contenga el título, el resumen, la descripción y las palabras clave junto con la "
+"ruta a cada foto y, a continuación, introduzca la ruta al archivo de texto en el cuadro "
+"siguiente.  Para mayor comodidad, puede crear el archivo de datos en Excel y, a "
+"continuación, guardarlo en el formato %sTexto (delimitado por tabulaciones)%s.  Aquí hay un "
+"%sarchivo de datos de muestra%s y una %shoja de cálculo de Excel de muestra%s."
+
+msgid "Data File"
+msgstr "Archivo de datos"
+
+msgid "Invalid path."
+msgstr "La ruta no es válida."
+
+msgid "Add Sub-Album"
+msgstr "Agregar Sub-Álbum"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "(required)"
+msgstr "(requerido)"
+
+msgid ""
+"The name of this album on your hard disk.  It must be unique in this album.  Only use "
+"alphanumeric characters, underscores or dashes.  You will be able to rename it later."
+msgstr ""
+"El nombre de este álbum en tu disco duro.  Debe de ser único en este álbum.  Usa solamente "
+"carácteres alfanuméricos, líneas bajas o guiones.  Podrás renombrarlo mas adelante."
+
+msgid "Your name contains invalid characters.  Please enter another."
+msgstr "El nombre contiene carácteres no válidos. Por favor introduce otro."
+
+msgid "You must enter a name for this album."
+msgstr "Debes introducir un nombre para este álbum."
+
+msgid "The name you entered is already in use.  Please enter another."
+msgstr "El nombre que has escogido ya esta en uso.  Por favor escoge otro."
+
+msgid "Title"
+msgstr "Título"
+
+msgid "This is the album title."
+msgstr "Este es el título del álbum."
+
+msgid "Summary"
+msgstr "Resumen"
+
+msgid "This is the album summary."
+msgstr "Este es el resumen del álbum."
+
+msgid "Keywords"
+msgstr "Palabras clave"
+
+msgid "Keywords are not visible, but are searchable."
+msgstr "Las palabras clave no son visibles, pero se puede buscar por ellas."
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "This is the long description of the album."
+msgstr "Esta es la descripción larga del álbum."
+
+msgid "Create"
+msgstr "Crear"
+
+msgid "Back"
+msgstr "Atrás"
+
+msgid "Upload Complete"
+msgstr "Carga Completa"
+
+#, c-format
+msgid "Successfully added %d file."
+msgid_plural "Successfully added %d files."
+msgstr[0] "%d archivo agregado con éxito."
+msgstr[1] "%d archivos agregados con éxito."
+
+msgid "No files added."
+msgstr "No se agregaron ficheros."
+
+#, c-format
+msgid "Added %s"
+msgstr "Agregado %s"
+
+#, c-format
+msgid "Failed to add %s"
+msgstr "Fallo al agregar %s"
+
+msgid "Add more files"
+msgstr "Agregar mas archivos"
+
+msgid "Upload files directly from your computer."
+msgstr "Subir archivos directamente desde tu ordenador."
+
+msgid "Enter the full path to the file and an optional caption in the boxes below."
+msgstr ""
+"Introduce a continuación en las cajas de texto la ruta completa al archivo, de forma "
+"opcional puedes introducir un título."
+
+msgid "File"
+msgstr "Archivo"
+
+msgid "Caption"
+msgstr "Leyenda"
+
+msgid "More Upload Boxes..."
+msgstr "Mas Cajas de Subida..."
+
+msgid "Set item titles from:"
+msgstr "Establecer los títulos de los elementos de:"
+
+msgid "Assign caption to:"
+msgstr "Asignar etiqueta a:"
+
+msgid "Folders"
+msgstr "Carpetas"
+
+msgid "Options"
+msgstr "Opciones"
+
+msgid "Delete Items"
+msgstr "Borrar Elementos"
+
+msgid "No items were selected for deletion"
+msgstr "No se han seleccionado elementos para eliminar"
+
+#, c-format
+msgid "Successfully deleted %d item"
+msgid_plural "Successfully deleted %d items"
+msgstr[0] "%d elemento eliminado con éxito"
+msgstr[1] "%d elementos eliminados con éxito"
+
+msgid "Check All"
+msgstr "Seleccionar todos"
+
+msgid "Check None"
+msgstr "Deseleccionar todos"
+
+msgid "Invert"
+msgstr "Invertir"
+
+msgid "Previous Page"
+msgstr "Página Anterior"
+
+msgid "Next Page"
+msgstr "Página Siguiente"
+
+msgid "Delete"
+msgstr "Borrar"
+
+#. HINT: Discard changes
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "This album contains no items to delete"
+msgstr "Este ábum no contiene elementos para eliminar"
+
+msgid "Choose the items you want to delete"
+msgstr "Elige los elementos que quieres eliminar"
+
+#, c-format
+msgid "(page %d of %d)"
+msgstr "(página %d de %d)"
+
+msgid "Items selected here will remain selected when moving between pages."
+msgstr ""
+"Los elementos que has seleccionado aquí quedaran seleccionados mientras te mueves entre las "
+"páginas."
+
+#, c-format
+msgid "One item selected on other pages."
+msgid_plural "%d items selected on other pages."
+msgstr[0] "Un elemento seleccionado en otras páginas."
+msgstr[1] "%d elementos seleccionados en otras páginas."
+
+msgid "(data)"
+msgstr "(datos)"
+
+#, c-format
+msgid "(album containing %d item)"
+msgid_plural "(album containing %d items)"
+msgstr[0] "(el álbum contiene %d elemento)"
+msgstr[1] "(el álbum contiene %d elementos)"
+
+msgid "(empty album)"
+msgstr "(álbum vacío)"
+
+msgid "Warning!"
+msgstr "&iexcl;Atención!"
+
+#, c-format
+msgid "Do you really want to delete %s?"
+msgstr "&iquest;Estás seguro de que quieres borrar %s?"
+
+msgid "Yes"
+msgstr "Sí"
+
+msgid "No"
+msgstr "No"
+
+msgid "Delete more items..."
+msgstr "Borrar mas elementos..."
+
+msgid "Save and Done"
+msgstr "Guardar y Listo"
+
+msgid "Save"
+msgstr "Guardar"
+
+#, c-format
+msgid "Save and Edit Previous %s"
+msgstr "Guardar y Editar los %s anteriores"
+
+#, c-format
+msgid "Save and Edit Next %s"
+msgstr "Guardar y Editar los %s próximos"
+
+msgid "Edit Captions"
+msgstr "Editar Etiquetas"
+
+msgid "There were errors saving some items"
+msgstr "Ha habido errores guardando algunos elementos"
+
+msgid "There were errors saving all items"
+msgstr "Ha habido errores guardando todos los elementos"
+
+msgid "Successfully saved all items"
+msgstr "Todos los elementos guardados con éxito"
+
+msgid "This album contains no items"
+msgstr "Este álbum está vacío"
+
+msgid "Photo Date and Time"
+msgstr "Fecha y Hora"
+
+msgid "Link Date and Time"
+msgstr "Fecha y Hora del Enlace"
+
+msgid "Date:"
+msgstr "Fecha:"
+
+msgid "Time:"
+msgstr "Hora:"
+
+msgid "Use the original capture date and time from file information (e.g. Exif tag):"
+msgstr ""
+"Usar la fecha y hora de la captura original desde la información del archivo (ej. Exif tag):"
+
+msgid "You must enter a valid date and time"
+msgstr "Debes escribir una fecha y hora válidas"
+
+msgid "Set the date and time when this image was captured."
+msgstr "Ajusta la fecha y hora a cuando la imagen fue capturada."
+
+msgid "Entity date is not available. Change it using the Edit action of the element."
+msgstr ""
+"La fecha de la entidad no está disponible. Cámbielo mediante la acción Editar del elemento."
+
+msgid "Saved successfully."
+msgstr "Guardado con éxito."
+
+msgid "This item was modified by somebody else at the same time.  Your changes were lost."
+msgstr ""
+"Este elemento ha sido modificado por alguien más en el mismo momento.  Tus cambios se "
+"perdieron."
+
+msgid "You do not have permissions to modify this item."
+msgstr "No tienes permisos para modificar este elemento."
+
+msgid ""
+"The name of this item on your hard disk.  It must be unique in this album.  Only use "
+"alphanumeric characters, underscores or dashes."
+msgstr ""
+"El nombre de este elemento en el disco duro.  Debe de ser único en este álbum.  Usa "
+"solamente caracteres alfanuméricos, líneas bajas o guiones."
+
+msgid "Your name contains invalid characters.  Please choose another."
+msgstr "El nombre contiene caracteres no válidos.   Por favor escoge otro."
+
+msgid "You must enter a name for this item."
+msgstr "Debes escribir un nombre para este elemento."
+
+msgid "The name you entered is already in use.  Please choose another."
+msgstr "El nombre que has escrito ya está en uso.  Por favor escoge otro."
+
+msgid "The root album must have a title."
+msgstr "El álbum principal debe tener un título."
+
+msgid "The title of this item."
+msgstr "El titulo de este elemento."
+
+msgid "The summary of this item."
+msgstr "El resumen para este elemento."
+
+msgid "This is the long description of the item."
+msgstr "Esta es la descripción larga del elemento."
+
+#, c-format
+msgid "%s Date and Time"
+msgstr "%s Fecha y Hora"
+
+msgid "Set the date and time to be displayed for this item."
+msgstr "Ajusta la fecha y hora para ser mostrada por este elemento."
+
+#, c-format
+msgid "Set the date and time to be displayed for this %s."
+msgstr "Ajusta la fecha y hora para ser mostrada por este %s."
+
+msgid "Set the date and time to be displayed for this link."
+msgstr "Ajusta la fecha y hora para ser mostrada por este enlace."
+
+msgid "Thumbnail"
+msgstr "Sin miniatura"
+
+msgid ""
+"There are no graphics toolkits enabled that support this type of item, so we cannot create "
+"or modify a thumbnail."
+msgstr ""
+"No hay herramientas gráficas habilitadas que soporten este tipo de elemento, de modo que no "
+"podemos crear o modificar una miniatura."
+
+msgid "site admin"
+msgstr "administrar sitio"
+
+msgid ""
+"Set the size of the thumbnail.  The largest side of the thumbnail will be no larger than "
+"this value. Leave this field blank if you don't want a thumbnail."
+msgstr ""
+"Establece el tamaño de la miniatura. El lado más grande de la miniatura no será mayor que "
+"este valor. Deja este campo en blanco si no quieres miniatura."
+
+msgid "You must enter a number (greater than zero)"
+msgstr "Debes escribir un numero (mayor que cero)"
+
+msgid "Unable to create a thumbnail for this item"
+msgstr "No es posible crear una miniatura para este elemento"
+
+msgid "Reset"
+msgstr "Reiniciar"
+
+msgid "Move an Item"
+msgstr "Mover un Elemento"
+
+#, c-format
+msgid "Successfully moved %d item"
+msgid_plural "Successfully moved %d items"
+msgstr[0] "%d elemento movido con éxito"
+msgstr[1] "%d elementos movidos con éxito"
+
+msgid "There was a problem processing your request."
+msgstr "Ha habido un problema procesando tu petición."
+
+msgid "This album contains no items to move."
+msgstr "Este álbum no contiene elementos para mover."
+
+msgid "Source"
+msgstr "Fuente"
+
+msgid "Choose the items you want to move"
+msgstr "Escoge los elementos que quieres mover"
+
+msgid "OK"
+msgstr "De acuerdo"
+
+msgid ""
+"The destination you chose does not accept sub-albums, so all sub-albums have been deselected."
+msgstr ""
+"El destino que has elegido no acepta sub-álbumes, de modo que todos los sub-álbumes han sido "
+"deseleccionados."
+
+msgid "Warning"
+msgstr "Aviso"
+
+msgid ""
+"The destination you chose only accepts sub-albums, so all non-albums have been deselected."
+msgstr ""
+"El destino que has elegido solo acepta sub-álbumes, de modo que todo lo que no sea álbum ha "
+"sido deseleccionado."
+
+msgid "You are not allowed to move this item away from here."
+msgstr "No estas autorizado a mover este elemento fuera de aquí."
+
+msgid "You are not allowed to move an album to the chosen destination."
+msgstr "No estas autorizado a mover el álbum al destino escogido."
+
+msgid "You are not allowed to move an item to the chosen destination."
+msgstr "No estas autorizado a mover un elemento al destino escogido."
+
+msgid "You cannot move an album into its own subtree."
+msgstr "No puedes mover un álbum dentro de su propio subárbol."
+
+msgid "Destination"
+msgstr "Destino"
+
+msgid "Choose a new album for them"
+msgstr "Escoje un nuevo álbum para ellos"
+
+msgid "You don't have the permission to add items in this album"
+msgstr "No tienes permiso para agregar elementos en este álbum"
+
+msgid "No destination chosen"
+msgstr "No se escogió un destino"
+
+msgid "Move"
+msgstr "Mover"
+
+msgid "Enter a URL"
+msgstr "Escribe la URL"
+
+msgid "Enter some text describing the URL"
+msgstr "Escribe algún texto describiendo la URL"
+
+msgid "Enter an image URL"
+msgstr "Escribe la URL de la imagen"
+
+#. HINT: Button label for Bold
+msgid "B"
+msgstr "B"
+
+#. HINT: Button label for italic
+msgid "i"
+msgstr "i"
+
+msgid "list"
+msgstr "lista"
+
+msgid "bullet"
+msgstr "elemento de lista"
+
+msgid "url"
+msgstr "url"
+
+msgid "image"
+msgstr "imagen"
+
+msgid "color"
+msgstr "color"
+
+#, c-format
+msgid "You can also use the %scolor name%s for example: %sYour Text%s"
+msgstr "Puedes usar tambien el %snombre del color%s, por ejemplo: %sTu Texto%s"
+
+msgid "Admin Options"
+msgstr "Opciones del Administrador"
+
+msgid "Login to your account"
+msgstr "Iniciar sesión con tu usuario"
+
+msgid "Your password has been recovered, please login."
+msgstr "Tu contraseña ha sido recuperada, por favor inicia sesión."
+
+msgid ""
+"The administration session has expired, please re-authenticate to access the administration "
+"area."
+msgstr ""
+"La sesión de administración ha expirado, por favor re-autenticate para acceder al área de "
+"administración."
+
+msgid "Username"
+msgstr "Usuario"
+
+msgid "You must enter a username"
+msgstr "Debes introducir un nombre para el usuario"
+
+#, c-format
+msgid ""
+"Logins to this account are temporarily disabled due to multiple failed login attempts.  Wait "
+"for access to be restored, or use the %srecover password%s page to re-enable this account."
+msgstr ""
+"La conexión a esta cuenta se encuentra deshabilitada temporalmente debido a multiples "
+"intentos fallidos de autenticación.  Espera a que el acceso sea reestablecido o usa la "
+"%spágina de recuperación de contraseña%s para rehabilitar esta cuenta."
+
+msgid "Password"
+msgstr "Contraseña"
+
+msgid "You must enter a password"
+msgstr "Debes introducir una contraseña"
+
+msgid "Your login information is incorrect.  Please try again."
+msgstr "Tu información de inicio de sesión es incorrecta. Por favor inténtalo de nuevo."
+
+#, c-format
+msgid "Lost or forgotten passwords can be retrieved using the %srecover password%s page"
+msgstr ""
+"Las contraseñas perdidas u olvidadas se pueden recuperar usando la página de %srecuperar "
+"contraseña%s"
+
+msgid "Login"
+msgstr "Inicio de sesión"
+
+#, c-format
+msgid "Welcome, %s!"
+msgstr "&iexcl;Bienvenido, %s!"
+
+#, c-format
+msgid "Date: %s"
+msgstr "Fecha: %s"
+
+#, c-format
+msgid "Owner: %s"
+msgstr "Propietario: %s"
+
+#, c-format
+msgid "Size: %d item"
+msgid_plural "Size: %d items"
+msgstr[0] "%d elemento"
+msgstr[1] "%d elementos"
+
+#, c-format
+msgid "(%d item total)"
+msgid_plural "(%d items total)"
+msgstr[0] "(%d elemento en total)"
+msgstr[1] "(%d elementos en total)"
+
+#, c-format
+msgid "Views: %d"
+msgstr "Visitas: %d"
+
+msgid "&laquo; album actions &raquo;"
+msgstr "&laquo; acciones del álbum &raquo;"
+
+msgid "&laquo; item actions &raquo;"
+msgstr "&laquo; acciones del elemento &raquo;"
+
+msgid "Album actions"
+msgstr "Acciones para el álbum"
+
+msgid "Item actions"
+msgstr "Acciones de los elementos"
+
+msgid "Pagination"
+msgstr "Paginación"
+
+msgid "last"
+msgstr "último"
+
+msgid "first"
+msgstr "primero"
+
+msgid "Loading.."
+msgstr "Cargando.."
+
+msgid "EXIF Photo Properties"
+msgstr "Propiedades EXIF"
+
+msgid "details"
+msgstr "detalles"
+
+msgid "summary"
+msgstr "resumen"
+
+msgid "Quick URLs"
+msgstr "URLs rápidas"
+
+msgid "Show URLs"
+msgstr "Mostrar direcciones URL"
+
+msgid ""
+"Warning! The permissions for this item are set so that unauthenticated users may not view "
+"it. If you are planning on linking to this item in a public forum or HTML page, the viewers "
+"will most likely not be able to access it."
+msgstr ""
+"¡Advertencia! Los permisos para este elemento se establecen para que los usuarios no "
+"autenticados no puedan verlo. Si planea vincular a este elemento en un foro público o página "
+"HTML, lo más probable es que los espectadores no puedan acceder a él."
+
+msgid ""
+"Warning! The permissions for this item are set so that unauthenticated users may not view "
+"the full sized version, but the resized version is available. Links to the resized version "
+"are being used, this may not be what you want."
+msgstr ""
+"¡Advertencia! Los permisos para este elemento se establecen para que los usuarios no "
+"autenticados no puedan ver la versión de tamaño completo, pero la versión redimensionada "
+"está disponible. Se están utilizando enlaces a la versión redimensionada, esto puede no ser "
+"lo que desea."
+
+msgid "Through this page you can quickly get formatted URLs for this item."
+msgstr "A través de esta página puede obtener rápidamente URL formateadas para este elemento."
+
+msgid ""
+"These can be used to post the item/image in forums and HTML pages by copying the code in the "
+"boxes below and pasting it into your application/browser."
+msgstr ""
+"Estos se pueden usar para publicar el elemento / imagen en foros y páginas HTML copiando el "
+"código en los cuadros a continuación y pegándolo en su aplicación / navegador."
+
+msgid "HTML Formatted Links"
+msgstr "Enlaces con formato HTML"
+
+msgid "Link to the page of the item:"
+msgstr "Enlace a la página del elemento:"
+
+msgid "CLK"
+msgstr "EMPLEADO"
+
+msgid "Show image directly:"
+msgstr "Mostrar imagen directamente:"
+
+msgid "Show image directly (resized version will be shown):"
+msgstr "Mostrar imagen directamente (se mostrará la versión redimensionada):"
+
+msgid "Show clickable resized image linking to original:"
+msgstr "Mostrar imagen redimensionada en la que se puede hacer clic vinculando al original:"
+
+msgid "Show a clickable thumbnail linking to the item:"
+msgstr "Mostrar una miniatura en la que se puede hacer clic que vincula al elemento:"
+
+msgid "TMB"
+msgstr "TMB"
+
+msgid "BBCode Formatted Links"
+msgstr "Enlaces con formato BBCode"
+
+msgid "Show a clickable resized image linking to the original:"
+msgstr ""
+"Mostrar una imagen redimensionada en la que se puede hacer clic que enlaza con el original:"
+
+msgid "Show a clickable thumbnail linking to the original:"
+msgstr "Mostrar una miniatura en la que se puede hacer clic que enlace al original:"
+
+msgid "Misc."
+msgstr "Otros."
+
+#, c-format
+msgid "The ID for this item is %s"
+msgstr "El identificador de este artículo es %s"
+
+msgid "Download URL for original item:"
+msgstr "URL de descarga del formato original:"
+
+#, c-format
+msgid "The ID of the resized version that we're using is %s,"
+msgstr "El ID de la versión redimensionada que estamos usando es %s,"
+
+msgid "URL for resized version:"
+msgstr "URL para la versión redimensionada:"
+
+#, c-format
+msgid "The ID of the thumbnail is %s."
+msgstr "El identificador de la miniatura es %s."
+
+msgid "URL for thumbnail:"
+msgstr "URL de la miniatura:"
+
+msgid "Hidden"
+msgstr "Oculto"
+
+msgid ""
+"Hidden items are not visible to guest users until the page for the item is accessed directly."
+msgstr ""
+"Los elementos ocultos no son visibles para los usuarios invitados hasta que se accede "
+"directamente a la página del elemento."
+
+msgid "Contents of hidden albums are restricted until the URL for the album is visited."
+msgstr ""
+"El contenido de los álbumes ocultos está restringido hasta que se visita la URL del álbum."
+
+msgid ""
+"Note that guests need permission to view resizes and/or original items, as visiting the "
+"direct URL grants only simple view permission; access to resizes/originals is still "
+"controlled by item permissions."
+msgstr ""
+"Tenga en cuenta que los invitados necesitan permiso para ver los cambios de tamaño y / o los "
+"elementos originales, ya que visitar la URL directa solo otorga permiso de vista simple; El "
+"acceso a los cambios de tamaño/originales sigue estando controlado por los permisos de los "
+"elementos."
+
+msgid "Keyword cloud"
+msgstr "Nube de palabras"
+
+msgid "&laquo; Keyword Album &raquo;"
+msgstr "&laquo; Álbum de palabras clave &raquo;"
+
+#, c-format
+msgid "%s Location Map"
+msgstr "Mapa de %s"
+
+msgid "Move history"
+msgstr "Historial de movimientos"
+
+msgid "move"
+msgstr "mover"
+
+msgid "zoom"
+msgstr "ampliar"
+
+msgid "start"
+msgstr "inicio"
+
+msgid "window"
+msgstr "ventana"
+
+msgid "Photo Map"
+msgstr "Mapa"
+
+msgid "Filtered on"
+msgstr "Filtrado por"
+
+msgid "Grab coordinates from Map"
+msgstr "Obtener coordenadas del mapa"
+
+msgid ""
+"There was a hacking attempt on the filter name, please remove the filter option from the "
+"address bar."
+msgstr ""
+"Hubo un intento de piratería en el nombre del filtro, elimine la opción de filtro de la "
+"barra de direcciones."
+
+#, c-format
+msgid ""
+"There are no markers created or a bad marker set is currently selected. Please review "
+"settings in the %scontrol panel%s."
+msgstr ""
+"No hay marcadores creados o un conjunto de marcadores incorrecto está seleccionado "
+"actualmente. Revise la configuración en el %spanel de control%s."
+
+msgid "There are no items with GPS coordinates"
+msgstr "No hay elementos con coordenadas GPS"
+
+msgid "Check the Wiki for more information"
+msgstr "Consulte el Wiki para obtener más información"
+
+msgid "There are no items available to be mapped"
+msgstr "No hay elementos disponibles para mostrar"
+
+#, c-format
+msgid "There were no items found in the selected %s, what would you like to do?"
+msgstr "No se encontraron elementos en el %s seleccionado, ¿qué le gustaría hacer?"
+
+#, c-format
+msgid "%sGo Back%s to the Album and add coordinates to items"
+msgstr "%sVolver atrás%s al álbum y agregar coordenadas a los elementos"
+
+#, c-format
+msgid "Show me the %sdefault map%s"
+msgstr "Muéstrame el mapa %spredeterminado%s"
+
+#, c-format
+msgid ""
+"You do not have a profile setup for this website to use the Google Map. Review your settings "
+"in the %sAdmin Panel%s or %scheck the Wiki%s."
+msgstr ""
+"No tiene una configuración de perfil para que este sitio web use Google Map. Revise su "
+"configuración en el %sPanel de administración%s o %sconsulte el Wiki%s."
+
+msgid "Loading, please wait..."
+msgstr "Cargando, espere por favor..."
+
+#. HINT: Hints or suggestions
+msgid "Tips"
+msgstr "Consejos"
+
+msgid "Click on the map to choose the point."
+msgstr "Haga clic en el mapa para elegir el punto."
+
+msgid "Each click will create a marker to ease aiming."
+msgstr "Cada clic creará un marcador para facilitar la puntería."
+
+msgid ""
+"When you are satisfied with the coordinates, click <B>Save</B> above and the center of the "
+"map and the zoom level will be copied in the GPS and ZoomLevel fields of the item."
+msgstr ""
+"Cuando esté satisfecho con las coordenadas, haga clic en <B>Guardar</B> arriba y el centro "
+"del mapa y el nivel de zoom se copiarán en los campos GPS y ZoomLevel del elemento."
+
+msgid "MENU"
+msgstr "MENÚ"
+
+msgid "Save these coordinates"
+msgstr "Guardar estas coordenadas"
+
+msgid "Coordinates"
+msgstr "Coordenadas"
+
+msgid "Zoom level"
+msgstr "Nivel de zoom"
+
+msgid "Google Map Administration"
+msgstr "Administración de Google Map"
+
+msgid "Loading..."
+msgstr "Cargando..."
+
+#. HINT: Address not found
+msgid "Not found"
+msgstr "No encontrado"
+
+msgid "No Value"
+msgstr "Sin valor"
+
+msgid "Get via a Map"
+msgstr "Obtener a través de un mapa"
+
+msgid "Get via EXIF headers"
+msgstr "Obtener a través de propiedades EXIF"
+
+msgid "Write GPS to EXIF header"
+msgstr "Escribir GPS en las propiedades EXIF"
+
+msgid "No GPS coordinates to write."
+msgstr "No hay coordenadas GPS para escribir."
+
+msgid "This picture already has GPS coordinates in the header"
+msgstr "Esta imagen ya tiene coordenadas GPS en el encabezado"
+
+msgid "Get via address"
+msgstr "Obtener a través de una dirección postal"
+
+#, c-format
+msgid "%s Coordinates:"
+msgstr "Coordenadas de %s:"
+
+msgid "No coordinates defined"
+msgstr "No tiene coordenadas"
+
+msgid "Search"
+msgstr "Buscar"
+
+msgid "Uncheck All"
+msgstr "Desmarcar todos"
+
+msgid "You must enter some text to search for!"
+msgstr "¡Debes indicar algún texto para buscar!"
+
+#, c-format
+msgid "Results %d - %d"
+msgstr "Resultados %d - %d"
+
+#, c-format
+msgid "Show all %d"
+msgstr "Mostrar todos los %d"
+
+msgid "No results found for"
+msgstr "No se encontraron resultados para"
+
+msgid "View these results in a slideshow"
+msgstr "Ver estos resultados en una presentación de diapositivas"
+
+#, c-format
+msgid "%s Search Results for "
+msgstr "%s resultados de "
+
+msgid "Search Criteria"
+msgstr "Criterios de búsqueda"
+
+msgid "Search All Modules"
+msgstr "Buscar en todos los módulos"
+
+#, c-format
+msgid "Results %d - %d of %d, Page %d of %d"
+msgstr "Resultados %d - %d de %d, Página %d de %d"
+
+msgid "&laquo; Back"
+msgstr "&laquo; Anterior"
+
+msgid "Next &raquo;"
+msgstr "Siguiente &raquo;"
+
+msgid "Search your Gallery"
+msgstr "Busca en tu galería"
+
+msgid "Please enter a search term."
+msgstr "Introduce un término de búsqueda."
+
+msgid "Searching in progress, please wait!"
+msgstr "Búsqueda en curso, por favor espere!"
+
+msgid "Custom Thumbnail"
+msgstr "Sin miniatura"
+
+msgid "Remove custom thumbnail for this item"
+msgstr "Eliminar la miniatura personalizada de este elemento"
+
+msgid "Upload a JPEG image to use as the thumbnail for this item."
+msgstr "Cargue una imagen JPEG para usarla como miniatura de este elemento."
+
+msgid "Image does not need to be thumbnail size; it will be resized as needed."
+msgstr ""
+"La imagen no necesita ser del tamaño de la miniatura; Se cambiará de tamaño según sea "
+"necesario."
+
+msgid "No toolkit available for resizing so uploaded image must be thumbnail sized."
+msgstr ""
+"No hay ningún kit de herramientas disponible para cambiar el tamaño, por lo que la imagen "
+"cargada debe tener el tamaño de una miniatura."
+
+msgid "Missing image file"
+msgstr "Falta el archivo de imagen"
+
+msgid "Thumbnail image must be a JPEG"
+msgstr "La imagen en miniatura debe ser JPEG"
+
+#~ msgid "MobileMatrix"
+#~ msgstr "MobileMatrix"

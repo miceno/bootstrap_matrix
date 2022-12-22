@@ -1,4 +1,4 @@
-# $Id: ca.po 18175 2008-10-17 08:00:24Z andy_st $
+# $Id: ca.po 18173 2008-10-17 07:14:30Z andy_st $
 #
 # Gallery - a web based photo album viewer and editor
 # Copyright (C) 2000-2008 Bharat Mediratta
@@ -22,93 +22,4002 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Gallery: BootstrapMatrix Theme 1.0.0\n"
-"Report-Msgid-Bugs-To: <gallery-devel@lists.sourceforge.net>\n"
-"POT-Creation-Date: 2005-10-30 16:42+0100\n"
-"PO-Revision-Date: 2006-06-15 15:08+0100\n"
-"Last-Translator: Juan Vega Aiguadé <joan.vega@andornet.ad>\n"
-"Language-Team: Spanish <gallery-translations@lists.sourceforge.net>\n"
-"Language: es\n"
+"Project-Id-Version: Gallery: BootstrapMatrix Theme 1.2.2\n"
+"Report-Msgid-Bugs-To: gallery-translations@lists.sourceforge.net\n"
+"POT-Creation-Date: 2022-12-22 00:17+0100\n"
+"PO-Revision-Date: 2022-12-22 01:28+0100\n"
+"Last-Translator: Roger Cervantes <cervantes_roger@yahoo.es>\n"
+"Language-Team: Catalan <gallery-translations@lists.sourceforge.net>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
 
 msgid "BootstrapMatrix"
-msgstr ""
+msgstr "BootstrapMatrix"
 
-#, fuzzy
 msgid "Bootstrap Gallery2 look and feel"
-msgstr "\"Look and feel\" est&agrave;ndar de Gallery2"
+msgstr "Aparença de Bootstrap per a Gallery2"
+
+msgid "Block layout"
+msgstr "Disposició del bloc"
+
+msgid "To the left"
+msgstr "Esquerra"
+
+msgid "To the bottom"
+msgstr "Abaix"
+
+msgid "To the right"
+msgstr "Dreta"
+
+msgid "Disable"
+msgstr "Deshabilitar"
+
+msgid ""
+"Number of above-the-fold images.\n"
+"\t    Above-the-fold images will load immediately, while below-the-fold images will be lazy\n"
+"\t    loaded."
+msgstr ""
+"Nombre d'imatges per sobre del plec.\n"
+"\t    Les imatges per sobre del plec es carregaran immediatament, mentre que les imatges per "
+"sota del plec seran mandroses\n"
+"\t    carregat."
+
+msgid ""
+"Mark this flag to self-host assets on this server (less efficient), otherwise CDN ready "
+"versions are used (more efficient, default)."
+msgstr ""
+"Marqueu aquesta bandera als recursos d'autoallotjament d'aquest servidor (menys eficients), "
+"en cas contrari s'utilitzen versions preparades per a CDN (més eficients, per defecte)."
+
+msgid ""
+"Mark this flag to use minified CSS (more efficient, default), otherwise plain CSS is used "
+"(less efficient)."
+msgstr ""
+"Marqueu aquesta bandera per utilitzar CSS minificat (més eficient, per defecte), en cas "
+"contrari s'utilitza CSS senzill (menys eficient)."
 
 msgid "This album is empty."
-msgstr "Aquest &agrave;lbum &eacute;s buit "
+msgstr "Àlbum buit."
 
 msgid "Add a photo!"
 msgstr "Afegeix una foto!"
 
-msgid "no thumbnail"
-msgstr "sense miniatura"
+msgid "No Thumbnail"
+msgstr "Sense Miniatura"
 
 #, c-format
 msgid "Album: %s"
 msgstr "Àlbum: %s"
 
 msgid "Error!"
-msgstr "&iexcl;Error!"
+msgstr "¡Error!"
+
+msgid "previous"
+msgstr "anterior"
+
+msgid "next"
+msgstr "següent"
 
 #, c-format
 msgid "Download %s"
-msgstr "Descarregar %s"
+msgstr "Descarregant %s"
 
 msgid "There is nothing to view for this item."
-msgstr "No hi ha res a veure per aquest element."
-
-msgid "View in original album"
-msgstr ""
+msgstr "No hi ha res a veure per a aquest element."
 
 #, c-format
 msgid "Download %s in original format"
-msgstr "Descarrega %s en format original"
+msgstr "Baixeu %s en format original"
+
+msgid "View in original album"
+msgstr "Veure a l'àlbum original"
 
 msgid "Continue..."
 msgstr "Continuar..."
 
-msgid "Pagination"
-msgstr ""
+msgid "Actions"
+msgstr "Accions"
 
-msgid "next"
+msgid "Album"
+msgstr "Àlbum"
+
+msgid "Photo"
+msgstr "Foto"
+
+msgid "Admin"
+msgstr "Administrador"
+
+msgid "Module"
+msgstr "Mòdul"
+
+msgid ""
+"Your webserver is configured to disallow file uploads from your web browser at this time.  "
+"Please contact your system administrator for assistance."
 msgstr ""
+"El teu servidor web està configurat per rebutjar la pujada d'arxius desde el navegador en "
+"aquest moment.  Si us plau contacta amb l'administrador del sistema per rebre ajuda."
+
+msgid "There was a problem processing your request, see below for details."
+msgstr "Hi ha hagut un problema processant la teva petició, veure abaix els detalls."
+
+msgid "Upload an XLSX with image descriptions and a ZIP file with the images."
+msgstr "Puja un fitxer XLSX amb la descripció de les fotografies i un fitxer ZIP amb elles."
+
+msgid "[help]"
+msgstr "[ajuda]"
+
+#, c-format
+msgid ""
+"<b>Note:</b> You can upload up to %s at one time.  If you want to upload more than that, you "
+"must upload the files separately, use a different upload format, or ask your system "
+"administrator to allow larger uploads."
+msgstr ""
+"<b>Nota:</b> Pots pujar fins %s a la vegada.  Si vols pujar una major quantitat de dades, "
+"has de pujar els arxius per blocs, usar un format diferent de pujada, o demanar-li a "
+"l'administrador del sistema que habiliti un major ample de banda de pujada."
+
+#, c-format
+msgid ""
+"<b>Note:</b> You can upload up to %s at one time.  No individual file may be larger than %s. "
+"If you want to upload more than that, you must upload the files separately, use a different "
+"upload format, or ask your system administrator to allow larger uploads."
+msgstr ""
+"<b>Nota:</b> Pots pujar fins %s a la vegada. Els fitxers no han de sobrepassar els %s megues "
+"de forma individual.  Si vols punar una major quantitat de dades, has de pujar els arxius "
+"per blocs, fer servir un format diferent de pujada, o demanar-li a l'administrador del "
+"sistema que habiliti un major ample de banda de pujada."
+
+#, c-format
+msgid ""
+"Create an XSLX file containing the Number, Reference, Term, Media, Description, Place, "
+"Author and Date for each image.  Then create a ZIP with the image files, and enter the path "
+"to the XLSX and ZIP files in the box below.  For convenience, you can author the data file "
+"in Excel and then save it in the XLSX format.  Images you want to add must be on the ZIP "
+"file in the same order as they are on the XLSX file.  Here is a %ssample data file%s and a "
+"%ssample excel spreadsheet%s."
+msgstr ""
+"Crea un fitxer en format XSLX que contingui les columnes Numero, Referència, Termes, Format, "
+"Descripció, Lloc, Autor i Data de cada fotografia.\n"
+" A continuació crea un fitxer ZIP amb les fotografies, assegura't que estan en el mateix "
+"ordre que en el fitxer XLSX. Després introdueix les rutes dels fitxers en el formulari de "
+"més a baix.\n"
+" Perquè et sigui més fàcil, pots utilitzar MS Excel per a crear el fitxer i després gravar-"
+"lo en format XLSX.\n"
+" Aquí tens un %sejemplo de fitxer ZIP%s i de %sfichero XLSX%s."
+
+msgid "Excel File"
+msgstr "Fitxer Excel"
+
+msgid "Invalid path for Excel file."
+msgstr "Camí no vàlid per al fitxer de l'Excel."
+
+msgid "Missing path for Excel file."
+msgstr "Falta camí per al fitxer de l'Excel."
+
+msgid "Read header"
+msgstr "Llegir capçalera"
+
+msgid "Zip File"
+msgstr "Fitxer ZIP"
+
+msgid "Invalid path for ZIP file."
+msgstr "Camí no vàlid per al fitxer ZIP."
+
+msgid "Missing path for ZIP file."
+msgstr "Falta camí per al fitxer ZIP."
+
+msgid "Add Items"
+msgstr "Agregar Elements"
+
+msgid "Add many files at once with pre-prepared title, summary, description and keywords."
+msgstr ""
+"Afegiu molts fitxers alhora amb títol, resum, descripció i paraules clau preparats "
+"prèviament."
+
+#, c-format
+msgid ""
+"The photos you want to add must already be uploaded to your web server.  Create a data file "
+"containing the title, summary, description and keywords along with the path to each photo, "
+"and then enter the path to the text file in the box below.  For convenience, you can author "
+"the data file in Excel and then save it in the %sText (tab delimited)%s format.  Here is a "
+"%ssample data file%s and a %ssample excel spreadsheet%s."
+msgstr ""
+"Les fotos que vulgueu afegir ja s'han de penjar al vostre servidor web.  Creeu un fitxer de "
+"dades que contingui el títol, el resum, la descripció i les paraules clau juntament amb el "
+"camí a cada foto i, a continuació, introduïu el camí cap al fitxer de text al quadre "
+"següent.  Per comoditat, podeu crear el fitxer de dades a Excel i desar-lo al format %sText "
+"(pestanya delimitada)%s.  Aquí teniu un fitxer de dades de %ssample%s i un full de càlcul "
+"excel de %sample%s."
+
+msgid "Data File"
+msgstr "Fitxer de dades"
+
+msgid "Invalid path."
+msgstr "Camí no vàlid."
+
+msgid "Add Sub-Album"
+msgstr "Afegir Sub-Álbum"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "(required)"
+msgstr "(requerit)"
+
+msgid ""
+"The name of this album on your hard disk.  It must be unique in this album.  Only use "
+"alphanumeric characters, underscores or dashes.  You will be able to rename it later."
+msgstr ""
+"El nom d'aquest àlbum en el teu disc dur. Ha de ser únic en aquest àlbum. Usa solament "
+"caràcters alfanumérics, línees baixes o guions.  Podràs renombrar-lo més endavant."
+
+msgid "Your name contains invalid characters.  Please enter another."
+msgstr "El nom conté caràcters no vàlids. Si us plau introdueix un altre."
+
+msgid "You must enter a name for this album."
+msgstr "Has d'introduïr un nom per aquest àlbum."
+
+msgid "The name you entered is already in use.  Please enter another."
+msgstr "El nom que has escollit ja està en ús.  Si us plau escull un altre."
+
+msgid "Title"
+msgstr "Títol"
+
+msgid "This is the album title."
+msgstr "Aquest és el títol de l'àlbum."
+
+msgid "Summary"
+msgstr "Resum"
+
+msgid "This is the album summary."
+msgstr "Aquest és el resum de l'album."
+
+msgid "Keywords"
+msgstr "Paraules clau"
+
+msgid "Keywords are not visible, but are searchable."
+msgstr "Les paraules clau no son visibles, però es pot buscar amb elles."
+
+msgid "Description"
+msgstr "Descripció"
+
+msgid "This is the long description of the album."
+msgstr "Aquesta és la descripció llarga de l'àlbum."
+
+msgid "Create"
+msgstr "Crear"
+
+msgid "Back"
+msgstr "Enrere"
+
+msgid "Upload Complete"
+msgstr "Càrrega Completa"
+
+#, c-format
+msgid "Successfully added %d file."
+msgid_plural "Successfully added %d files."
+msgstr[0] "%d arxiu agregat amb èxit."
+msgstr[1] "%d arxius agregats amb éxit."
+
+msgid "No files added."
+msgstr "No s'han agregat fitxers."
+
+#, c-format
+msgid "Added %s"
+msgstr "Agregat %s"
+
+#, c-format
+msgid "Failed to add %s"
+msgstr "Error en agregar %s"
+
+msgid "Add more files"
+msgstr "Agregar més arxius"
+
+msgid "Upload files directly from your computer."
+msgstr "Pujar arxius directament desde el teu ordinador."
+
+msgid "Enter the full path to the file and an optional caption in the boxes below."
+msgstr ""
+"Introdueix a continuació en les caixes de texte la ruta completa a l'arxiu, de forma "
+"opcional pots introduïr un títol."
+
+msgid "File"
+msgstr "Arxiu"
+
+msgid "Caption"
+msgstr "Etiqueta"
+
+msgid "More Upload Boxes..."
+msgstr "Més caixes de pujada..."
+
+msgid "Set item titles from:"
+msgstr "Establir els títols dels elements de:"
+
+msgid "Assign caption to:"
+msgstr "Assignar etiqueta a:"
+
+msgid "Folders"
+msgstr "Carpetes"
+
+msgid "Options"
+msgstr "Opcions"
+
+msgid "Delete Items"
+msgstr "Borrar Elements"
+
+msgid "No items were selected for deletion"
+msgstr "No s'han seleccionat elements per eliminar"
+
+#, c-format
+msgid "Successfully deleted %d item"
+msgid_plural "Successfully deleted %d items"
+msgstr[0] "%d element eliminat amb èxit"
+msgstr[1] "%d elements eliminats amb èxit"
+
+msgid "Check All"
+msgstr "Seleccionar tots"
+
+msgid "Check None"
+msgstr "Deseleccionar tots"
+
+msgid "Invert"
+msgstr "Invertir"
+
+msgid "Previous Page"
+msgstr "Pàgina Anterior"
+
+msgid "Next Page"
+msgstr "Pàgina Siguiente"
+
+msgid "Delete"
+msgstr "Borrar"
+
+#. HINT: Discard changes
+msgid "Cancel"
+msgstr "Cancel·lar"
+
+msgid "This album contains no items to delete"
+msgstr "Aquest àlbum no conté elements per eliminar"
+
+msgid "Choose the items you want to delete"
+msgstr "Elegeix els elements que vols eliminar"
+
+#, c-format
+msgid "(page %d of %d)"
+msgstr "(pàgina %d de %d)"
+
+msgid "Items selected here will remain selected when moving between pages."
+msgstr ""
+"Els elements que has seleccionat aquí quedaran seleccionats mentres et mous per altres "
+"pàgines."
+
+#, c-format
+msgid "One item selected on other pages."
+msgid_plural "%d items selected on other pages."
+msgstr[0] "Un element seleccionat en altres pàgines."
+msgstr[1] "%d elements seleccionats en altres pàgines."
+
+msgid "(data)"
+msgstr "(dades)"
+
+#, c-format
+msgid "(album containing %d item)"
+msgid_plural "(album containing %d items)"
+msgstr[0] "(l'àlbum conté %d element)"
+msgstr[1] "(l'àlbum conté %d elements)"
+
+msgid "(empty album)"
+msgstr "(àlbum buit)"
+
+msgid "Warning!"
+msgstr "Avís!"
+
+#, c-format
+msgid "Do you really want to delete %s?"
+msgstr "Realment voleu suprimir %s?"
+
+msgid "Yes"
+msgstr "Si"
+
+msgid "No"
+msgstr "No"
+
+msgid "Delete more items..."
+msgstr "Borrar més elements..."
+
+msgid "Save and Done"
+msgstr "Guardar i Llest"
+
+msgid "Save"
+msgstr "Guardar"
+
+#, c-format
+msgid "Save and Edit Previous %s"
+msgstr "Guardar i Editar els %s anteriors"
+
+#, c-format
+msgid "Save and Edit Next %s"
+msgstr "Guardar i Editar els %s propers"
+
+msgid "Edit Captions"
+msgstr "Editar Etiquetes"
+
+msgid "There were errors saving some items"
+msgstr "Hi ha hagut errors guardant alguns elements"
+
+msgid "There were errors saving all items"
+msgstr "Hi ha hagut errors guardant tots els elements"
+
+msgid "Successfully saved all items"
+msgstr "Tots els elements guardats amb èxit"
+
+msgid "This album contains no items"
+msgstr "Aquest àlbum no conté elements"
+
+msgid "Photo Date and Time"
+msgstr "Data/Hora de la foto"
+
+msgid "Link Date and Time"
+msgstr "Data i Hora de l'enllaç"
+
+msgid "Date:"
+msgstr "Data:"
+
+msgid "Time:"
+msgstr "Hora:"
+
+msgid "Use the original capture date and time from file information (e.g. Exif tag):"
+msgstr ""
+"Usar la data i hora de la captura original desde la informació de l'arxiu (ex. Exif tag):"
+
+msgid "You must enter a valid date and time"
+msgstr "Has d'escriure una data i hora vàlides"
+
+msgid "Set the date and time when this image was captured."
+msgstr "Ajusta la data i hora a cuan la imatge va ser capturada."
+
+msgid "Entity date is not available. Change it using the Edit action of the element."
+msgstr ""
+"La data de l'entitat no està disponible. Canvieu-lo mitjançant l'acció Edita de l'element."
+
+msgid "Saved successfully."
+msgstr "Guardat amb èxit."
+
+msgid "This item was modified by somebody else at the same time.  Your changes were lost."
+msgstr ""
+"Aquest element ha estat modificat per algú més en el mateix moment.  Els canvis s'han perdut."
+
+msgid "You do not have permissions to modify this item."
+msgstr "No tens permisos per modificar aquest element."
+
+msgid ""
+"The name of this item on your hard disk.  It must be unique in this album.  Only use "
+"alphanumeric characters, underscores or dashes."
+msgstr ""
+"El nom d'aquest element en el disc dur.  Ha de ser únic en aquest àlbum.  Usa solament "
+"caràcters alfanumèrics, linies baixes o guions."
+
+msgid "Your name contains invalid characters.  Please choose another."
+msgstr "El nom conté caràcters no vàlids. Si us plau escull un altre."
+
+msgid "You must enter a name for this item."
+msgstr "Has d'escriure un nom per a aquest element."
+
+msgid "The name you entered is already in use.  Please choose another."
+msgstr "El nom que has escrit ja està en ús. Si us plau escull un altre."
+
+msgid "The root album must have a title."
+msgstr "L'àlbum principal ha de tenir un títol."
+
+msgid "The title of this item."
+msgstr "El títol d'aquest element."
+
+msgid "The summary of this item."
+msgstr "El resum per aquest element."
+
+msgid "This is the long description of the item."
+msgstr "Aquesta és la descripció llarga de l'element."
+
+#, c-format
+msgid "%s Date and Time"
+msgstr "%s Data i Hora"
+
+msgid "Set the date and time to be displayed for this item."
+msgstr "Ajusta la data i hora per a ser mostrada per aquest element."
+
+#, c-format
+msgid "Set the date and time to be displayed for this %s."
+msgstr "Ajusta la data i hora per a ser mostrada per aquest %s."
+
+msgid "Set the date and time to be displayed for this link."
+msgstr "Ajusta la data i hora per a ser mostrada per aquest element."
+
+msgid "Thumbnail"
+msgstr "Vista en Miniatura"
+
+msgid ""
+"There are no graphics toolkits enabled that support this type of item, so we cannot create "
+"or modify a thumbnail."
+msgstr ""
+"No hi han eines gràfiques habilitades que suporten aquest tipus d'element, de forma que no "
+"podem crear o modificar una miniatura."
+
+msgid "site admin"
+msgstr "administrar web"
+
+msgid ""
+"Set the size of the thumbnail.  The largest side of the thumbnail will be no larger than "
+"this value. Leave this field blank if you don't want a thumbnail."
+msgstr ""
+"Estableix la mida de la vista en miniatura. El costat més gran de la miniatura no serà major "
+"que aquest valor. Deixa aquest camp en blanc si no vols vista en miniatura."
+
+msgid "You must enter a number (greater than zero)"
+msgstr "Has d'escriure un número (major que zero)"
+
+msgid "Unable to create a thumbnail for this item"
+msgstr "No es pot crear una miniatura per a aquest element"
+
+msgid "Reset"
+msgstr "Reiniciar"
+
+msgid "Move an Item"
+msgstr "Moure un Element"
+
+#, c-format
+msgid "Successfully moved %d item"
+msgid_plural "Successfully moved %d items"
+msgstr[0] "%d element mogut amb éxit"
+msgstr[1] "%d elements moguts amb èxit"
+
+msgid "There was a problem processing your request."
+msgstr "Hi ha hagut un problema processant la seva petició."
+
+msgid "This album contains no items to move."
+msgstr "Aquest àlbum no conté elements per moure."
+
+msgid "Source"
+msgstr "Font"
+
+msgid "Choose the items you want to move"
+msgstr "Escull els elements que vols moure"
+
+msgid "OK"
+msgstr "D'acord"
+
+msgid ""
+"The destination you chose does not accept sub-albums, so all sub-albums have been deselected."
+msgstr ""
+"El destí que has escollit no accepta sub-àlbums, de forma que tots els sub-àlbums han estat "
+"deseleccionats."
+
+msgid "Warning"
+msgstr "Avís"
+
+msgid ""
+"The destination you chose only accepts sub-albums, so all non-albums have been deselected."
+msgstr ""
+"El destí que has escollit només accepta sub-àlbums, de forma que tot el que no sigui àlbum "
+"ha estat deseleccionat."
+
+msgid "You are not allowed to move this item away from here."
+msgstr "No estàs autoritzat a moure aquest element fora d'aquí."
+
+msgid "You are not allowed to move an album to the chosen destination."
+msgstr "No estàs autoritzat a moure l'àlbum al destí escollit."
+
+msgid "You are not allowed to move an item to the chosen destination."
+msgstr "No estàs autoritzat a moure aquest element al destí escollit."
+
+msgid "You cannot move an album into its own subtree."
+msgstr "No pots moure un àlbum dins del seu propi subarbre."
+
+msgid "Destination"
+msgstr "Destí"
+
+msgid "Choose a new album for them"
+msgstr "Escull un nou àlbum per a ells"
+
+msgid "You don't have the permission to add items in this album"
+msgstr "No tens permís per a afegir elements en aquest àlbum"
+
+msgid "No destination chosen"
+msgstr "No s'ha escollit un destí"
+
+msgid "Move"
+msgstr "Moure"
+
+msgid "Enter a URL"
+msgstr "Escriu la URL"
+
+msgid "Enter some text describing the URL"
+msgstr "Escriu algun texte descrivint la URL"
+
+msgid "Enter an image URL"
+msgstr "Escriu la URL de la imatge"
+
+#. HINT: Button label for Bold
+msgid "B"
+msgstr "B"
+
+#. HINT: Button label for italic
+msgid "i"
+msgstr "i"
+
+msgid "list"
+msgstr "llista"
+
+msgid "bullet"
+msgstr "element de llista"
+
+msgid "url"
+msgstr "url"
+
+msgid "image"
+msgstr "imatge"
+
+msgid "color"
+msgstr "color"
+
+#, c-format
+msgid "You can also use the %scolor name%s for example: %sYour Text%s"
+msgstr "També podeu utilitzar el nom %scolor%s per exemple: %sEl vostre text%s"
+
+msgid "Admin Options"
+msgstr "Opcions de l'Administrador"
+
+msgid "Login to your account"
+msgstr "Iniciar sessió amb el teu compte"
+
+msgid "Your password has been recovered, please login."
+msgstr "Tu contrasenya ha sigut recuperada, si us plau inicia sessió."
+
+msgid ""
+"The administration session has expired, please re-authenticate to access the administration "
+"area."
+msgstr ""
+"La sessió d'administració ha caducat, si us plau, torneu a autenticar-vos per accedir a "
+"l'àrea d'administració."
+
+msgid "Username"
+msgstr "Usuari"
+
+msgid "You must enter a username"
+msgstr "Has d'introduïr un nom per a l'usuari"
+
+#, c-format
+msgid ""
+"Logins to this account are temporarily disabled due to multiple failed login attempts.  Wait "
+"for access to be restored, or use the %srecover password%s page to re-enable this account."
+msgstr ""
+"Els inicis de sessió a aquest compte es desactiven temporalment a causa de diversos intents "
+"d'inici de sessió fallits.  Espereu que es restableixi l'accés o utilitzeu la pàgina de "
+"%srecuperar contrasenya%s per tornar a habilitar aquest compte."
+
+msgid "Password"
+msgstr "Contrasenya"
+
+msgid "You must enter a password"
+msgstr "Has d'introduïr una contrasenya"
+
+msgid "Your login information is incorrect.  Please try again."
+msgstr "La teva informació d'inici de sessió és incorrecta. Si us plau intenta-ho de nou."
+
+#, c-format
+msgid "Lost or forgotten passwords can be retrieved using the %srecover password%s page"
+msgstr ""
+"Les contrasenyes perdudes o oblidades es poden recuperar fent servir la pàgina de "
+"%srecuperar contrasenya%s"
+
+msgid "Login"
+msgstr "Iniciar Sessió"
+
+#, c-format
+msgid "Welcome, %s!"
+msgstr "Benvingut, %s!"
+
+#, c-format
+msgid "Date: %s"
+msgstr "Data: %s"
+
+#, c-format
+msgid "Owner: %s"
+msgstr "Propietari: %s"
+
+#, c-format
+msgid "Size: %d item"
+msgid_plural "Size: %d items"
+msgstr[0] "%d element"
+msgstr[1] "%d elements"
+
+#, c-format
+msgid "(%d item total)"
+msgid_plural "(%d items total)"
+msgstr[0] "(%d element en total)"
+msgstr[1] "(%d elements en total)"
+
+#, c-format
+msgid "Views: %d"
+msgstr "Visites: %d"
+
+msgid "&laquo; album actions &raquo;"
+msgstr "&laquo; accions de l'àlbum &raquo;"
+
+msgid "&laquo; item actions &raquo;"
+msgstr "&laquo; accions de l'element &raquo;"
+
+msgid "Album actions"
+msgstr "Accions de l'àlbum"
+
+msgid "Item actions"
+msgstr "Accions dels elements"
+
+msgid "Pagination"
+msgstr "Paginació"
 
 msgid "last"
-msgstr ""
+msgstr "últim"
 
 msgid "first"
-msgstr ""
+msgstr "primer"
 
-msgid "previous"
-msgstr ""
+msgid "Loading.."
+msgstr "Càrrega..."
 
-msgid "Page navigation"
-msgstr ""
+msgid "EXIF Photo Properties"
+msgstr "Propietats de fotos EXIF"
 
-msgid "Page:"
-msgstr ""
+msgid "details"
+msgstr "detalls"
 
-msgid "More"
-msgstr "Més"
+msgid "summary"
+msgstr "resum"
 
-msgid "Search your Gallery"
-msgstr ""
+msgid "Quick URLs"
+msgstr "URL ràpids"
 
-msgid "Please enter a search term."
-msgstr ""
+msgid "Show URLs"
+msgstr "Mostra els URL"
 
-msgid "Searching in progress, please wait!"
+msgid ""
+"Warning! The permissions for this item are set so that unauthenticated users may not view "
+"it. If you are planning on linking to this item in a public forum or HTML page, the viewers "
+"will most likely not be able to access it."
 msgstr ""
+"Advertiment! Els permisos d'aquest element s'estableixen de manera que els usuaris no "
+"autenticats no el puguin veure. Si teniu previst enllaçar a aquest element en un fòrum "
+"públic o en una pàgina HTML, és probable que els espectadors no hi puguin accedir."
+
+msgid ""
+"Warning! The permissions for this item are set so that unauthenticated users may not view "
+"the full sized version, but the resized version is available. Links to the resized version "
+"are being used, this may not be what you want."
+msgstr ""
+"Advertiment! Els permisos d'aquest element s'estableixen de manera que els usuaris no "
+"autenticats no poden veure la versió completa, però la versió redimensionada està "
+"disponible. S'estan utilitzant enllaços a la versió redimensionada, és possible que això no "
+"sigui el que voleu."
+
+msgid "Through this page you can quickly get formatted URLs for this item."
+msgstr "A través d'aquesta pàgina podeu obtenir ràpidament URL per a aquest element."
+
+msgid ""
+"These can be used to post the item/image in forums and HTML pages by copying the code in the "
+"boxes below and pasting it into your application/browser."
+msgstr ""
+"Es poden utilitzar per publicar l'element/imatge en fòrums i pàgines HTML copiant el codi "
+"als quadres següents i enganxant-lo a la vostra aplicació/navegador."
+
+msgid "HTML Formatted Links"
+msgstr "Enllaços amb format HTML"
+
+msgid "Link to the page of the item:"
+msgstr "Enllaç a la pàgina de l'article:"
+
+msgid "CLK"
+msgstr "CLK"
+
+msgid "Show image directly:"
+msgstr "Mostra la imatge directament:"
+
+msgid "Show image directly (resized version will be shown):"
+msgstr "Mostra la imatge directament (es mostrarà la versió redimensionada):"
+
+msgid "Show clickable resized image linking to original:"
+msgstr "Mostra la imatge redimensionada en què es pot fer clic enllaçant amb l'original:"
+
+msgid "Show a clickable thumbnail linking to the item:"
+msgstr "Mostra una miniatura en què es pot fer clic enllaçant a l'element:"
+
+msgid "TMB"
+msgstr "TMB"
+
+msgid "BBCode Formatted Links"
+msgstr "Enllaços amb format BBCode"
+
+msgid "Show a clickable resized image linking to the original:"
+msgstr "Mostra una imatge redimensionada clicable que enllaci amb l'original:"
+
+msgid "Show a clickable thumbnail linking to the original:"
+msgstr "Mostra una miniatura en què es pot fer clic enllaçant amb l'original:"
+
+msgid "Misc."
+msgstr "Misc."
+
+#, c-format
+msgid "The ID for this item is %s"
+msgstr "L'identificador d'aquest element és %s"
+
+msgid "Download URL for original item:"
+msgstr "URL de baixada de l'element original:"
+
+#, c-format
+msgid "The ID of the resized version that we're using is %s,"
+msgstr "L'identificador de la versió redimensionada que estem utilitzant és %s,"
+
+msgid "URL for resized version:"
+msgstr "URL per a la versió redimensionada:"
+
+#, c-format
+msgid "The ID of the thumbnail is %s."
+msgstr "L'identificador de la miniatura és %s."
+
+msgid "URL for thumbnail:"
+msgstr "URL de la miniatura:"
+
+msgid "Hidden"
+msgstr "Ocult"
+
+msgid ""
+"Hidden items are not visible to guest users until the page for the item is accessed directly."
+msgstr ""
+"Els elements ocults no són visibles per als usuaris convidats fins que no s'accedeix "
+"directament a la pàgina de l'element."
+
+msgid "Contents of hidden albums are restricted until the URL for the album is visited."
+msgstr "El contingut dels àlbums ocults està restringit fins que es visita l'URL de l'àlbum."
+
+msgid ""
+"Note that guests need permission to view resizes and/or original items, as visiting the "
+"direct URL grants only simple view permission; access to resizes/originals is still "
+"controlled by item permissions."
+msgstr ""
+"Tingues en compte que els hostes necessiten permís per veure les redimensions i/o els "
+"elements originals, ja que si visites l'URL directe només concedeix permís de visualització "
+"simple; l'accés a redimensions/originals encara està controlat pels permisos d'elements."
+
+msgid "Keyword cloud"
+msgstr "Núvol de paraules clau"
+
+msgid "&laquo; Keyword Album &raquo;"
+msgstr "&laquo; Àlbum de paraules clau &raquo;"
+
+#, c-format
+msgid "%s Location Map"
+msgstr "%s Mapa d'ubicació"
+
+msgid "Move history"
+msgstr "Història de moviment"
+
+msgid "move"
+msgstr "moure"
+
+msgid "zoom"
+msgstr "zoom"
+
+msgid "start"
+msgstr "inici"
+
+msgid "window"
+msgstr "finestra"
+
+msgid "Photo Map"
+msgstr "Mapa"
+
+msgid "Filtered on"
+msgstr "S'ha filtrat"
+
+msgid "Grab coordinates from Map"
+msgstr "Agafa les coordenades del mapa"
+
+msgid ""
+"There was a hacking attempt on the filter name, please remove the filter option from the "
+"address bar."
+msgstr ""
+"Hi va haver un intent de pirateria al nom del filtre, traieu l'opció de filtre de la barra "
+"d'adreces."
+
+#, c-format
+msgid ""
+"There are no markers created or a bad marker set is currently selected. Please review "
+"settings in the %scontrol panel%s."
+msgstr ""
+"No hi ha marcadors creats o actualment s'ha seleccionat un mal conjunt de marcadors. Reviseu "
+"la configuració al tauler de control %s%s."
+
+msgid "There are no items with GPS coordinates"
+msgstr "No hi ha elements amb coordenades GPS"
+
+msgid "Check the Wiki for more information"
+msgstr "Consulteu el Wiki per a més informació"
+
+msgid "There are no items available to be mapped"
+msgstr "No hi ha elements disponibles per ser mapejats"
+
+#, c-format
+msgid "There were no items found in the selected %s, what would you like to do?"
+msgstr "No s'han trobat articles a les %s seleccionades, què t'agradaria fer?"
+
+#, c-format
+msgid "%sGo Back%s to the Album and add coordinates to items"
+msgstr "%s Tornar enrere%s a l'àlbum i afegir coordenades als elements"
+
+#, c-format
+msgid "Show me the %sdefault map%s"
+msgstr "Mostra'm el %smapa predeterminat%s"
+
+#, c-format
+msgid ""
+"You do not have a profile setup for this website to use the Google Map. Review your settings "
+"in the %sAdmin Panel%s or %scheck the Wiki%s."
+msgstr ""
+"No teniu una configuració de perfil per a aquest lloc web per utilitzar el mapa de Google. "
+"Reviseu la vostra configuració al tauler d'administració %s%s o %scomproveu el wiki%s."
+
+msgid "Loading, please wait..."
+msgstr "Carregant, esperi, si us plau…"
+
+#. HINT: Hints or suggestions
+msgid "Tips"
+msgstr "Consells"
+
+msgid "Click on the map to choose the point."
+msgstr "Feu clic al mapa per triar el punt."
+
+msgid "Each click will create a marker to ease aiming."
+msgstr "Cada clic crearà un marcador per facilitar l'objectiu."
+
+msgid ""
+"When you are satisfied with the coordinates, click <B>Save</B> above and the center of the "
+"map and the zoom level will be copied in the GPS and ZoomLevel fields of the item."
+msgstr ""
+"Quan estigueu satisfet amb les coordenades, feu clic a <B>Desa</B> més amunt i el centre del "
+"mapa i el nivell de zoom es copiaran als camps GPS i ZoomLevel de l'element."
+
+msgid "MENU"
+msgstr "Menú"
+
+msgid "Save these coordinates"
+msgstr "Deseu aquestes coordenades"
+
+msgid "Coordinates"
+msgstr "Coordenades"
+
+msgid "Zoom level"
+msgstr "Nivell d'ampliació"
+
+msgid "Google Map Administration"
+msgstr "Administració de Google Maps"
+
+msgid "Loading..."
+msgstr "Càrrega..."
+
+#. HINT: Address not found
+msgid "Not found"
+msgstr "No trobat"
+
+msgid "No Value"
+msgstr "Sense valor"
+
+msgid "Get via a Map"
+msgstr "Fer-ho a través d'un mapa"
+
+msgid "Get via EXIF headers"
+msgstr "Obteniu-lo mitjançant capçaleres EXIF"
+
+msgid "Write GPS to EXIF header"
+msgstr "Escriviu GPS a la capçalera EXIF"
+
+msgid "No GPS coordinates to write."
+msgstr "No hi ha coordenades GPS per escriure."
+
+msgid "This picture already has GPS coordinates in the header"
+msgstr "Aquesta imatge ja té coordenades GPS a la capçalera"
+
+msgid "Get via address"
+msgstr "Obteniu a través de l'adreça"
+
+#, c-format
+msgid "%s Coordinates:"
+msgstr "Coordenades de %s:"
+
+msgid "No coordinates defined"
+msgstr "Sense coordenades"
 
 msgid "Search"
-msgstr ""
+msgstr "Cerca"
 
-msgid "Advanced Search"
-msgstr ""
+msgid "Uncheck All"
+msgstr "Desmarqueu Tot"
 
+msgid "You must enter some text to search for!"
+msgstr "Heu d'introduir un text per cercar!"
+
+#, c-format
+msgid "Results %d - %d"
+msgstr "%d de %d"
+
+#, c-format
+msgid "Show all %d"
+msgstr "Mostra tot %d"
+
+msgid "No results found for"
+msgstr "No s'ha trobat cap resultat per a"
+
+msgid "View these results in a slideshow"
+msgstr "Veure aquests resultats en una presentació de diapositives"
+
+#, c-format
+msgid "%s Search Results for "
+msgstr "%s resultats de la cerca per a "
+
+msgid "Search Criteria"
+msgstr "Criteris de cerca"
+
+msgid "Search All Modules"
+msgstr "Cerca tots els mòduls"
+
+#, c-format
+msgid "Results %d - %d of %d, Page %d of %d"
+msgstr "Resultats %d - %d de %d, Pàgina %d de %d"
+
+msgid "&laquo; Back"
+msgstr "&laquo; Tornar"
+
+msgid "Next &raquo;"
+msgstr "Següent &raquo;"
+
+msgid "Search your Gallery"
+msgstr "Cerca a la teva galeria"
+
+msgid "Please enter a search term."
+msgstr "Introdueixi una cerca, si us plau."
+
+msgid "Searching in progress, please wait!"
+msgstr "Cerca en curs, si us plau esperi!"
+
+msgid "Custom Thumbnail"
+msgstr "Miniatura personalitzada"
+
+msgid "Remove custom thumbnail for this item"
+msgstr "Elimina la miniatura personalitzada d'aquest element"
+
+msgid "Upload a JPEG image to use as the thumbnail for this item."
+msgstr "Pengeu una imatge JPEG per utilitzar-la com a miniatura d'aquest element."
+
+msgid "Image does not need to be thumbnail size; it will be resized as needed."
+msgstr ""
+"La imatge no necessita tenir la mida de les miniatures; es redimensionarà segons sigui "
+"necessari."
+
+msgid "No toolkit available for resizing so uploaded image must be thumbnail sized."
+msgstr ""
+"No hi ha cap conjunt d'eines disponible per canviar la mida, de manera que la imatge "
+"carregada ha de tenir una mida de miniatura."
+
+msgid "Missing image file"
+msgstr "Falta un fitxer d'imatge"
+
+msgid "Thumbnail image must be a JPEG"
+msgstr "La imatge en miniatura ha de ser JPEG"
+
+#~ msgid "Gallery Email Test"
+#~ msgstr "Prova de Correu de Gallery"
+
+#, c-format
+#~ msgid "%d minute"
+#~ msgid_plural "%d minutes"
+#~ msgstr[0] "%d minut"
+#~ msgstr[1] "%d minuts"
+
+#, c-format
+#~ msgid "%d hour"
+#~ msgid_plural "%d hours"
+#~ msgstr[0] "%d hora"
+#~ msgstr[1] "%d hores"
+
+#, c-format
+#~ msgid "%d day"
+#~ msgid_plural "%d days"
+#~ msgstr[0] "%d dia"
+#~ msgstr[1] "%d dies"
+
+#, c-format
+#~ msgid "%d week"
+#~ msgid_plural "%d weeks"
+#~ msgstr[0] "%d setmana"
+#~ msgstr[1] "%d setmanes"
+
+#~ msgid "forever"
+#~ msgstr "per sempre"
+
+#~ msgid "High Priority (Me first!)"
+#~ msgstr "Prioritat Alta (jo primer!)"
+
+#~ msgid "Low Priority (I want to share!)"
+#~ msgstr "Prioritat baixa (vull compartir!)"
+
+#~ msgid "No Markup"
+#~ msgstr "Sense format"
+
+#~ msgid "BBCode"
+#~ msgstr "BBCode"
+
+#~ msgid "Raw HTML"
+#~ msgstr "HTML Raw"
+
+#~ msgid "Database"
+#~ msgstr "Base de Dades"
+
+#~ msgid "&lt;none&gt;"
+#~ msgstr "&lt;ningun&gt;"
+
+#, fuzzy
+#~ msgid "Link"
+#~ msgstr "Iniciar Sessió"
+
+#, c-format
+#~ msgid "Page %d of %d"
+#~ msgstr "Pàgina %d de %d"
+
+#~ msgid "Updating Language Settings"
+#~ msgstr "Actualitzar la configuració de idioma"
+
+#, fuzzy
+#~ msgid "Update completed with errors."
+#~ msgstr "Càrrega Completa"
+
+#, fuzzy
+#~ msgid "Update complete."
+#~ msgstr "Càrrega Completa"
+
+#, fuzzy
+#~ msgid "Deleting Language Packs"
+#~ msgstr "Idioma per defecte"
+
+#, fuzzy
+#~ msgid "Synchronizing Language Packs"
+#~ msgstr "Idioma per defecte"
+
+#~ msgid "No acceleration"
+#~ msgstr "Sense acceleració"
+
+#~ msgid "Partial acceleration"
+#~ msgstr "Acceleració Parcial"
+
+#~ msgid "Full acceleration"
+#~ msgstr "Acceleració Total"
+
+#~ msgid "Themes"
+#~ msgstr "Temes"
+
+#~ msgid "install"
+#~ msgstr "instal·lar"
+
+#~ msgid "upgrade"
+#~ msgstr "actualitzar"
+
+#~ msgid "activate"
+#~ msgstr "activar"
+
+#~ msgid "uninstall"
+#~ msgstr "desinstal·lar"
+
+#~ msgid "deactivate"
+#~ msgstr "desactivar"
+
+#~ msgid "Inherit settings from parent album"
+#~ msgstr "Heretar configuració de l'àlbum superior"
+
+#~ msgid "Use these settings"
+#~ msgstr "Usar aquesta configuració"
+
+#~ msgid "Installing the core module"
+#~ msgstr "Mòdul central de Gallery"
+
+#~ msgid "All access"
+#~ msgstr "Accés Total"
+
+#~ msgid "[core] View item"
+#~ msgstr "[core] Veure element"
+
+#~ msgid "[core] View original version"
+#~ msgstr "[core] Veure la versió original"
+
+#~ msgid "[core] View all versions"
+#~ msgstr "[core] Veure totes les versions"
+
+#~ msgid "[core] Add sub-album"
+#~ msgstr "[core] Agregar sub-àlbum"
+
+#~ msgid "[core] Add sub-item"
+#~ msgstr "[core] Agregar sub-element"
+
+#~ msgid "[core] Edit item"
+#~ msgstr "[core] Editar element"
+
+#~ msgid "[core] Change item permissions"
+#~ msgstr "[core] Canviar els permisos de l'element"
+
+#~ msgid "[core] Delete item"
+#~ msgstr "[core] Borrar element"
+
+#~ msgid "Upgrading permissions"
+#~ msgstr "Actualitzant permisos"
+
+#, c-format
+#~ msgid "Upgrading permissions (%d items complete, %d remaining)"
+#~ msgstr "Permissos de millora (%d items completats, %d pendents)"
+
+#~ msgid "Deleting old permission tables"
+#~ msgstr "Borrant les taules de permisos antigues"
+
+#~ msgid "Registered Users"
+#~ msgstr "Usuaris Registrats"
+
+#~ msgid "All Users"
+#~ msgstr "Tots els Usuaris"
+
+#~ msgid "Detecting broken derivatives"
+#~ msgstr "Detectant derivades trencades"
+
+#, fuzzy, c-format
+#~ msgid "Detecting broken derivatives, loading (%d derivatives checked, %d remaining)"
+#~ msgstr "Detectant derivades trencades, carregant "
+
+#, fuzzy, c-format
+#~ msgid "Detecting broken derivatives (%d derivatives checked, %d remaining)"
+#~ msgstr "Detectant derivades trencades, guardant"
+
+#, fuzzy, c-format
+#~ msgid "Detecting broken derivatives, saving (%d derivatives checked, %d remaining)"
+#~ msgstr "Detectant derivades trencades, guardant"
+
+#, fuzzy, c-format
+#~ msgid ""
+#~ "Detecting broken derivatives, saving item %d of %d (%d derivatives complete, %d remaining)"
+#~ msgstr "Permissos de millora (%d items completats, %d pendents)"
+
+#~ msgid "Clearing fast-download cache"
+#~ msgstr "Borrant la cache de descàrrega ràpida"
+
+#~ msgid "Deleting old fast-download cache"
+#~ msgstr "Borrant la cache de descàrrega ràpida"
+
+#, c-format
+#~ msgid "Deleting old session files (iteration %d)"
+#~ msgstr "Borrant arxius de sessi&oacute; antics (iteraci&oacute;  %d)"
+
+#, fuzzy
+#~ msgid "Upgrading Plugin Translations"
+#~ msgstr "Traduccions actualitzades"
+
+#, fuzzy
+#~ msgid "Creating Package Map"
+#~ msgstr "Data de creació"
+
+#~ msgid "Site Admins"
+#~ msgstr "Administradors de la Web"
+
+#~ msgid "Everybody"
+#~ msgstr "Tots"
+
+#~ msgid "Guest"
+#~ msgstr "Convidat"
+
+#~ msgid "Gallery"
+#~ msgstr "Galeria"
+
+#~ msgid "This is the main page of your Gallery"
+#~ msgstr "Aquesta és la pàgina principal de la teva Galeria"
+
+#~ msgid "Converting MySQL data to UTF8"
+#~ msgstr "Convertint dades de MySQL a UTF8"
+
+#, fuzzy
+#~ msgid "Adding items"
+#~ msgstr "agregar elements"
+
+#, fuzzy
+#~ msgid "Processing items"
+#~ msgstr "Procesant element %d de %d"
+
+#~ msgid "add items"
+#~ msgstr "agregar elements"
+
+#~ msgid "Album created successfully."
+#~ msgstr "Àlbum creat amb èxit."
+
+#~ msgid "add sub-album"
+#~ msgstr "agregar sub-àlbum"
+
+#~ msgid "add items confirmation"
+#~ msgstr "confirmació per agregar elements"
+
+#, c-format
+#~ msgid "%d megabyte"
+#~ msgid_plural "%d megabytes"
+#~ msgstr[0] "%d megabyte"
+#~ msgstr[1] "%d megabytes"
+
+#, c-format
+#~ msgid "%d kilobytes"
+#~ msgid_plural "%d kilobytes"
+#~ msgstr[0] "%d kilobyte"
+#~ msgstr[1] "%d kilobytes"
+
+#~ msgid "Base filename"
+#~ msgstr "Nom del fitxer rael"
+
+#~ msgid "Blank"
+#~ msgstr "En blanc"
+
+#~ msgid "From Web Browser"
+#~ msgstr "Desde el Navegador"
+
+#~ msgid "delete an item"
+#~ msgstr "borrar un element"
+
+#, c-format
+#~ msgid "edit %s"
+#~ msgstr "editar %s"
+
+#~ msgid "Settings saved successfully."
+#~ msgstr "Configuracions guardades amb èxit."
+
+#, fuzzy
+#~ msgid "Apply resized image settings"
+#~ msgstr "Restaurar la configuració del tema"
+
+#, c-format
+#~ msgid "Processing image %d of %d"
+#~ msgstr "Processant imatge %d de %d"
+
+#~ msgid "Rebuilding thumbnails..."
+#~ msgstr "Refer miniatures..."
+
+#~ msgid "Changes saved successfully"
+#~ msgstr "Els canvis han estat guardats amb èxit"
+
+#~ msgid "Animation Size"
+#~ msgstr "Mida de la animació"
+
+#~ msgid "edit captions"
+#~ msgstr "editar etiquetes"
+
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid "Movie Size"
+#~ msgstr "Mida de la Pel·lícula"
+
+#~ msgid "Thumbnail cropped successfully"
+#~ msgstr "Miniatura retallada amb èxit"
+
+#~ msgid "Thumbnail reset successfully"
+#~ msgstr "Miniatura reiniciada amb èxit"
+
+#~ msgid "Photo 5x3"
+#~ msgstr "Fotografia 5x3"
+
+#~ msgid "Photo 6x4"
+#~ msgstr "Fotografia 6x4"
+
+#~ msgid "Photo 7x5"
+#~ msgstr "Fotografia 7x5"
+
+#~ msgid "Photo 10x8"
+#~ msgstr "Fotografia 10x8"
+
+#~ msgid "Fullscreen 4x3"
+#~ msgstr "Pantalla completa 4x3"
+
+#~ msgid "Widescreen 16x9"
+#~ msgstr "Format Panoràmic 16x9"
+
+#~ msgid "CinemaScope 2.35x1"
+#~ msgstr "CinemaScope 2.35x1"
+
+#~ msgid "Square 1x1"
+#~ msgstr "Quadrat 1x1"
+
+#~ msgid "As Image"
+#~ msgstr "Com Imatge"
+
+#~ msgid "Landscape"
+#~ msgstr "Apaïsat"
+
+#~ msgid "Portrait"
+#~ msgstr "Retrat"
+
+#~ msgid "Reverted rotate and scale changes successfully"
+#~ msgstr "S'ha desfet la rotació i l'escalat amb èxit"
+
+#~ msgid "Rotated photo successfully"
+#~ msgstr "Foto rotada amb èxit"
+
+#~ msgid "Scaled photo successfully"
+#~ msgstr "Foto escalada amb èxit"
+
+#~ msgid "Modify Photo"
+#~ msgstr "Modificar foto"
+
+#, fuzzy
+#~ msgid "Successfully changed theme"
+#~ msgstr "Tema %s activat amb èxit"
+
+#~ msgid "&laquo; default theme &raquo;"
+#~ msgstr "&laquo; tema per defecte &raquo;"
+
+#~ msgid "Theme"
+#~ msgstr "Tema"
+
+#~ msgid "make highlight"
+#~ msgstr "destacar"
+
+#~ msgid "move item"
+#~ msgstr "moure element"
+
+#, c-format
+#~ msgid "move %s"
+#~ msgstr "moure %s"
+
+#, c-format
+#~ msgid "edit %s permissions"
+#~ msgstr "editar els permisos de %s"
+
+#~ msgid "reorder items"
+#~ msgstr "reordenar elements"
+
+#~ msgid "Maintenance"
+#~ msgstr "Manteniment"
+
+#~ msgid "Gallery Site Administration"
+#~ msgstr "Administració de Gallery"
+
+#~ msgid "Gallery User Administration"
+#~ msgstr "Administrador d'usuaris"
+
+#~ msgid "change password"
+#~ msgstr "canviar contrasenya"
+
+#~ msgid "your account"
+#~ msgstr "el teu compte"
+
+#~ msgid "Password Recovery"
+#~ msgstr "Recuperar contrasenya"
+
+#~ msgid "Core"
+#~ msgstr "Central"
+
+#~ msgid "Gallery 2 Core Module"
+#~ msgstr "Mòdul Central de Gallery 2"
+
+#~ msgid "Edit Album"
+#~ msgstr "Editar Àlbum"
+
+#~ msgid "Edit Photo"
+#~ msgstr "Editar Foto"
+
+#~ msgid "Edit Movie"
+#~ msgstr "Editar Pel·lícula"
+
+#, c-format
+#~ msgid "Edit %s"
+#~ msgstr "Editar %s"
+
+#~ msgid "Add Album"
+#~ msgstr "Agregar Àlbum"
+
+#~ msgid "Edit Permissions"
+#~ msgstr "Editar Permisos"
+
+#~ msgid "View Permissions"
+#~ msgstr "Veure Permisos"
+
+#~ msgid "Delete Album"
+#~ msgstr "Borrar Àlbum"
+
+#~ msgid "Delete Photo"
+#~ msgstr "Borrar Foto"
+
+#~ msgid "Delete Movie"
+#~ msgstr "Borrar Pel·lícula"
+
+#, c-format
+#~ msgid "Delete %s"
+#~ msgstr "Borrar %s"
+
+#~ msgid "Move Album"
+#~ msgstr "Moure Àlbum"
+
+#~ msgid "Move Movie"
+#~ msgstr "Moure Pel·lícula"
+
+#, c-format
+#~ msgid "Move %s"
+#~ msgstr "Moure %s"
+
+#~ msgid "Make Highlight"
+#~ msgstr "Destacar"
+
+#~ msgid "Reorder Items"
+#~ msgstr "Reordenar Elements"
+
+#~ msgid "Your Account"
+#~ msgstr "El teu compte"
+
+#~ msgid "Logout"
+#~ msgstr "Tancar Sessió"
+
+#~ msgid "Users"
+#~ msgstr "Usuaris"
+
+#~ msgid "Groups"
+#~ msgstr "Grups"
+
+#~ msgid "Performance"
+#~ msgstr "Rendiment"
+
+#~ msgid "Language Settings"
+#~ msgstr "Configuració de l'Idioma"
+
+#~ msgid "Toolkit Priority"
+#~ msgstr "Prioritat de las Eines"
+
+#~ msgid "Graphics Toolkits"
+#~ msgstr "Eines Gràfiques"
+
+#~ msgid "Account Settings"
+#~ msgstr "Propietats del Compte"
+
+#~ msgid "Change Password"
+#~ msgstr "Canviar Contrasenya"
+
+#, fuzzy, c-format
+#~ msgid "Activating %s"
+#~ msgstr "Accions"
+
+#, fuzzy
+#~ msgid "Updating Repository Index"
+#~ msgstr "Actualitza l'índex"
+
+#, fuzzy
+#~ msgid "Update Plugin List"
+#~ msgstr "Millora tots els plugins"
+
+#~ msgid "Done."
+#~ msgstr "Fet."
+
+#~ msgid "Build all thumbnails/resizes"
+#~ msgstr "Crear totes les vistes en miniatura/Imatges redimensionades"
+
+#~ msgid ""
+#~ "Ensure data files for all derivatives (thumbnails, etc) have been built and rebuild "
+#~ "broken ones."
+#~ msgstr ""
+#~ "Assegurat que els arxius de dades per totes les derivades (vistes en miniatura, etc.) han "
+#~ "estat construïts i reconstrueix els que estiguin corruptes."
+
+#~ msgid "Build All Thumbnails/Resizes"
+#~ msgstr "Crear Totes les vistes en miniatura/imatges redimensionades"
+
+#, c-format
+#~ msgid "Checked %d items"
+#~ msgstr "%d elements sel·leccionats"
+
+#, c-format
+#~ msgid "%d items built"
+#~ msgstr "%d elements creats"
+
+#, c-format
+#~ msgid "%d items failed"
+#~ msgstr "%d elements que han fallat"
+
+#~ msgid "Debug output for failed items:"
+#~ msgstr "Sortida de depuració per als elements que han fallat:"
+
+#, fuzzy
+#~ msgid "Convert MySQL database to UTF8"
+#~ msgstr "Convertint dades de MySQL a UTF8"
+
+#, fuzzy
+#~ msgid "Database successfully converted to UTF8"
+#~ msgstr "Element eliminat amb èxit"
+
+#, fuzzy
+#~ msgid "Backup the database"
+#~ msgstr "Optimitzar base de dades"
+
+#, fuzzy
+#~ msgid "Exporting..."
+#~ msgstr "Processant..."
+
+#~ msgid "Delete user sessions"
+#~ msgstr "Permisos del Sistema d'Arxius"
+
+#~ msgid ""
+#~ "Delete all persistent user sessions according to your current session expiration settings."
+#~ msgstr ""
+#~ "Elimina totes les sessions d'usuaris persistents d'acord a la vostra configuració "
+#~ "d'expiració de sessió."
+
+#, fuzzy, c-format
+#~ msgid "Deleted %d sessions."
+#~ msgstr "Permisos del Sistema d'Arxius"
+
+#~ msgid "Delete database cache"
+#~ msgstr "Borrar la cache de la base de dades"
+
+#~ msgid ""
+#~ "Gallery stores commonly used database information on disk for increased performance. If "
+#~ "you modify the database directly, you should run this task to clean out the cache and "
+#~ "force Gallery to reload the information from the database."
+#~ msgstr ""
+#~ "Gallery emmagatzema la informació de la base de dades més freqüentment usada en disc per "
+#~ "incrementar el rendiment. Si modifiques directament la base de dades, has d'executar "
+#~ "aquesta tasca per borrar la cache y forçar a Gallery a recarregar la informació de la "
+#~ "base de dades."
+
+#, c-format
+#~ msgid "Successfully deleted directory: %s"
+#~ msgstr "El directori %s s'ha eliminat amb èxit"
+
+#, c-format
+#~ msgid "Unable to delete directory: %s"
+#~ msgstr "No es possible eliminar el directori %s"
+
+#~ msgid "Delete template cache"
+#~ msgstr "Borrar la cache de les plantilles"
+
+#, fuzzy
+#~ msgid ""
+#~ "Gallery compiles template files and saves them for increased performance.  If you're "
+#~ "experiencing problems that say <i>Smarty error</i> then you might try running this task.  "
+#~ "Also run this if you add or remove any local/*.tpl or theme override so Smarty will find "
+#~ "the right file."
+#~ msgstr ""
+#~ "Gallery compila els fitxers de las plantilles i els guarda per incrementar el "
+#~ "rendimient.  Si estàs experimentant problemes del tipus <i>Smarty error</i> pots intentar "
+#~ "executar aquesta tasca.  Executa tambè aquesta tasca si borres algún fitxer de local/*."
+#~ "tpl per a que &laquo;Smarty&raquo; torni a l'arxiu tpl per defecte."
+
+#~ msgid "Template cache deleted successfully"
+#~ msgstr "La cache de plantilles s'ha borrat amb èxit"
+
+#~ msgid "album"
+#~ msgstr "àlbum"
+
+#~ msgid "Animation"
+#~ msgstr "Animació"
+
+#~ msgid "Gallery Core"
+#~ msgstr "Central de Gallery"
+
+#~ msgid "Gallery Core Module"
+#~ msgstr "Mòdul central de Gallery"
+
+#~ msgid "Search descriptions"
+#~ msgstr "Buscar en les descripcions"
+
+#~ msgid "Search keywords"
+#~ msgstr "Buscar en les paraules clau"
+
+#~ msgid "Search summaries"
+#~ msgstr "Buscar en els sumaris"
+
+#~ msgid "Owner"
+#~ msgstr "Propietari"
+
+#, fuzzy
+#~ msgid "Dynamic Album"
+#~ msgstr "Editar Àlbum"
+
+#, fuzzy
+#~ msgid "dynamic album"
+#~ msgstr "Editar Àlbum"
+
+#~ msgid "Group"
+#~ msgstr "Grup"
+
+#~ msgid "group"
+#~ msgstr "grup"
+
+#~ msgid "Other"
+#~ msgstr "Altre(s)"
+
+#~ msgid "Movie"
+#~ msgstr "Pel·lícula"
+
+#~ msgid "movie"
+#~ msgstr "pel·lícula"
+
+#~ msgid "photo"
+#~ msgstr "foto"
+
+#~ msgid "Couldn't create repository cache path."
+#~ msgstr "No s'ha pogut crear el cache de magatzems."
+
+#~ msgid ""
+#~ "Couldn't create cache subdirectory. Make sure the web server has write permissions in it."
+#~ msgstr ""
+#~ "No s'ha pogut crear el subdirectori de cache. Assegureu-vos que el servidor web hi té "
+#~ "permís d'escriptura."
+
+#, fuzzy, c-format
+#~ msgid "Preparing %s"
+#~ msgstr "Processant..."
+
+#, c-format
+#~ msgid "Downloading %s"
+#~ msgstr "Descarregant %s"
+
+#, fuzzy
+#~ msgid "Experimental Repository"
+#~ msgstr "Magatzem"
+
+#, fuzzy
+#~ msgid "Community Repository"
+#~ msgstr "Magatzem"
+
+#, c-format
+#~ msgid "Error downloading index from '%s'."
+#~ msgstr "S'ha produït un error descarregar l'índex desde '%s'."
+
+#, c-format
+#~ msgid "Error downloading index hash from '%s'."
+#~ msgstr "S'ha produït un error mentre es descarregavà l'índex de \"hash\" desde '%s'."
+
+#~ msgid "Index integrity check failed."
+#~ msgstr "S'ha produït un error en comprovar l'integritat de l'índex."
+
+#~ msgid "&laquo; default sort order &raquo;"
+#~ msgstr "&laquo; ordre de col·locació per defecte &raquo;"
+
+#~ msgid "Manual sort order"
+#~ msgstr "Ordre de col·locació manual"
+
+#~ msgid "Origination Date"
+#~ msgstr "Data d'origen"
+
+#~ msgid "Creation Date"
+#~ msgstr "Data de creació"
+
+#~ msgid "Last Changed Date"
+#~ msgstr "Data de l'últim canvi"
+
+#~ msgid "View Count"
+#~ msgstr "Ver Comptador"
+
+#~ msgid "Random"
+#~ msgstr "Aleatori"
+
+#~ msgid "Albums First"
+#~ msgstr "Àlbums Primer"
+
+#~ msgid "Most Viewed First"
+#~ msgstr "Les més vistes primer"
+
+#~ msgid "Ascending"
+#~ msgstr "Ascendent"
+
+#~ msgid "Descending"
+#~ msgstr "Descendent"
+
+#~ msgid "Validation disabled until you set allowSessionAccess in config.php"
+#~ msgstr "Validació deshabilitada fins que es configuri allowSessionAccess al config.php"
+
+#~ msgid "This page is valid XHTML 1.0"
+#~ msgstr "Aquesta pàgina es XHTML 1.0 vàlid"
+
+#~ msgid "Donate to the Gallery project"
+#~ msgstr "Dóna al projecte Gallery"
+
+#, c-format
+#~ msgid "Estimated time remaining: %d:%02d"
+#~ msgstr "Temps restant estimat: %d:%02d"
+
+#, c-format
+#~ msgid "Memory used: %s, total: %s"
+#~ msgstr "Memòria usada: %s, total: %s"
+
+#~ msgid "Rows per album page"
+#~ msgstr "Files per pàgina de àlbum"
+
+#~ msgid "Columns per album page"
+#~ msgstr "Columnes per pàgina de àlbum"
+
+#~ msgid "Number of items to show per page"
+#~ msgstr "Número d'elements per pàgina"
+
+#~ msgid "Row height (pixels)"
+#~ msgstr "Alçada de la fila (en píxels)"
+
+#~ msgid "Column width (pixels)"
+#~ msgstr "Amplada de la columna (en píxels)"
+
+#~ msgid "Show album owners"
+#~ msgstr "Mostrar propietaris dels àlbums"
+
+#~ msgid "Show micro navigation thumbnails"
+#~ msgstr "Mostrar micro miniatures de navegació"
+
+#~ msgid "Blocks to show in the sidebar"
+#~ msgstr "Blocs per mostrar en la barra lateral"
+
+#~ msgid "Blocks to show on album pages"
+#~ msgstr "Blocs per mostrar en las pàgines dels àlbums"
+
+#~ msgid "Blocks to show on photo pages"
+#~ msgstr "Blocs per mostrar en las pàgines de les fotos"
+
+#, fuzzy
+#~ msgid "Thumbnail links in dynamic albums"
+#~ msgstr "Utilitza aquestes mides de miniatura per a tots els subàlbums"
+
+#, fuzzy
+#~ msgid "Browse dynamic album"
+#~ msgstr "Elegeix un àlbum de destí"
+
+#~ msgid "View Samples"
+#~ msgstr "Veure Exemples"
+
+#~ msgid "Album Frame"
+#~ msgstr "Quadre de l'Àlbum"
+
+#~ msgid "Item Frame"
+#~ msgstr "Quadre de l'Element"
+
+#~ msgid "Photo Frame"
+#~ msgstr "Quadre de la foto"
+
+#~ msgid "Color Pack"
+#~ msgstr "Pack de Color"
+
+#~ msgid "You must enter a number greater than 0"
+#~ msgstr "Has d'escriure un número major que zero"
+
+#, c-format
+#~ msgid "%dx%d"
+#~ msgstr "%dx%d"
+
+#~ msgid "Audio"
+#~ msgstr "Audio"
+
+#~ msgid "audio"
+#~ msgstr "audio"
+
+#~ msgid "Archive"
+#~ msgstr "Arxiu"
+
+#~ msgid "archive"
+#~ msgstr "arxiu"
+
+#~ msgid "Document"
+#~ msgstr "Document"
+
+#~ msgid "document"
+#~ msgstr "document"
+
+#~ msgid "Spreadsheet"
+#~ msgstr "Fulles de Càlcul"
+
+#~ msgid "spreadsheet"
+#~ msgstr "fulles de càlcul"
+
+#, fuzzy
+#~ msgid "file"
+#~ msgstr "Arxiu"
+
+#~ msgid "User"
+#~ msgstr "Usuari"
+
+#~ msgid "user"
+#~ msgstr "usuari"
+
+#~ msgid "Optimize database"
+#~ msgstr "Optimitzar base de dades"
+
+#~ msgid ""
+#~ "Improve the performance of your database.  Results will vary depending on which database "
+#~ "you're using, but this routine maintenance will make your Gallery run faster.  Especially "
+#~ "useful after adding or deleting many items."
+#~ msgstr ""
+#~ "Millora el rendimient de la teva base de dades.  Els resultats variaran depenent amb "
+#~ "quina base de dades estiguis treballant, però aquesta rutina de mantenimient farà que el "
+#~ "teu Gallery funcioni més ràpid.  Especialment pràctic després d'agregar o borrar molts "
+#~ "elements."
+
+#~ msgid "Database optimized successfully"
+#~ msgstr "La Base de Dades s'ha optimitzat amb èxit"
+
+#~ msgid "Reset view counts"
+#~ msgstr "Reiniciar contadors de visites"
+
+#~ msgid ""
+#~ "Reset number of views to zero for all albums and items.  This task flushes the database "
+#~ "cache as well."
+#~ msgstr ""
+#~ "Reinicia el número de visites a zero en tots els àlbums y elements. Aquesta tasca borra "
+#~ "també la cache de la base de dades."
+
+#~ msgid "View counts reset successfully"
+#~ msgstr "Els contadors de visites s'han reiniciat amb èxit"
+
+#~ msgid "Refresh capture dates"
+#~ msgstr "Actualitzar les dates de les captures"
+
+#~ msgid ""
+#~ "Update capture date stored in Gallery for all items with an available date in the "
+#~ "original data file (usually from EXIF data)."
+#~ msgstr ""
+#~ "Actualitza la data de captura emmagatzemada en Gallery en tots els elements que la "
+#~ "tinguin disponible en el fitxer original (normalment desde les dades EXIF)."
+
+#~ msgid "Processing..."
+#~ msgstr "Processant..."
+
+#~ msgid "Refresh Capture Dates"
+#~ msgstr "Actualitzar les Dates de les Captures"
+
+#, c-format
+#~ msgid "Processing item %d of %d"
+#~ msgstr "Procesant element %d de %d"
+
+#, c-format
+#~ msgid "Updated %d of %d items"
+#~ msgstr "Actualitzats %d de %d elements"
+
+#~ msgid "System information"
+#~ msgstr "Informació del Sistema"
+
+#~ msgid "Get system details; useful for copy/paste into G2 support forum."
+#~ msgstr ""
+#~ "Obté els detalls del sistema; pràctic per a fer un copiar/pegar en el fòrum de suport de "
+#~ "G2."
+
+#~ msgid "core"
+#~ msgstr "central"
+
+#~ msgid "unknown"
+#~ msgstr "desconegut"
+
+#, fuzzy
+#~ msgid "Gallery URL"
+#~ msgstr "Galeria"
+
+#~ msgid "Gallery version"
+#~ msgstr "Versió de Gallery"
+
+#~ msgid "PHP version"
+#~ msgstr "Versió de PHP"
+
+#~ msgid "Webserver"
+#~ msgstr "Servidor Web"
+
+#~ msgid "Toolkits"
+#~ msgstr "Eines"
+
+#~ msgid "Acceleration"
+#~ msgstr "Acció"
+
+#~ msgid "Operating system"
+#~ msgstr "Sistema Operatiu"
+
+#~ msgid "Default theme"
+#~ msgstr "Tema per defecte"
+
+#~ msgid "gettext"
+#~ msgstr "gettext"
+
+#, fuzzy
+#~ msgid "enabled"
+#~ msgstr "Instal·lat"
+
+#~ msgid "Locale"
+#~ msgstr "Locale"
+
+#~ msgid "Browser"
+#~ msgstr "Buscador"
+
+#~ msgid "theme"
+#~ msgstr "tema"
+
+#, fuzzy, c-format
+#~ msgid "Unable to close import file: %s"
+#~ msgstr "No es possible eliminar el directori %s"
+
+#, fuzzy, c-format
+#~ msgid "Unable to open import file: %s"
+#~ msgstr "No es possible eliminar el directori %s"
+
+#~ msgid "Successfully saved theme settings"
+#~ msgstr "La configuració del tema s'ha guardat amb èxit"
+
+#~ msgid "General Settings"
+#~ msgstr "Configuració General"
+
+#~ msgid "Settings saved successfully"
+#~ msgstr "La configuració s'ha guardat amb èxit"
+
+#~ msgid "Added local upload directory successfully"
+#~ msgstr "S'ha creat el directori local de pujada amb èxit"
+
+#~ msgid "Removed local upload directory successfully"
+#~ msgstr "S'ha eliminat el directori local de pujada amb èxit"
+
+#~ msgid "Test email sent successfully"
+#~ msgstr "Prova de enviament de correu conclosa amb èxit"
+
+#~ msgid "Error sending test email, see below for details."
+#~ msgstr "Hi ha hagut un problema enviant el correu de prova, veure abaix els detalls."
+
+#~ msgid "Date Formats"
+#~ msgstr "Formats de Data"
+
+#, c-format
+#~ msgid ""
+#~ "Specify how dates and times are displayed by Gallery.  See %sphp.net%s for details of how "
+#~ "to enter a format string.  Note that the display of some tokens varies according to the "
+#~ "active language."
+#~ msgstr ""
+#~ "Especifica com les Dates i les hores es mostren en Gallery.  Visita %sphp.net%s per veure "
+#~ "detalls de com introduïr el format de les cadenes.  Nota que la representació de les "
+#~ "cadenes varia depenent de l'idioma actiu."
+
+#~ msgid "Style"
+#~ msgstr "Model"
+
+#~ msgid "Format"
+#~ msgstr "Format"
+
+#~ msgid "Sample"
+#~ msgstr "Exemple"
+
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#~ msgid "Time"
+#~ msgstr "Hora"
+
+#~ msgid "Date/Time"
+#~ msgstr "Data/Hora"
+
+#~ msgid "Filesystem Permissions"
+#~ msgstr "Permisos del Sistema d'Arxius"
+
+#~ msgid ""
+#~ "Specify the default permissions for files and directories that Gallery creates. This "
+#~ "doesn't apply to files/directories that Gallery has already created."
+#~ msgstr ""
+#~ "Especifica els permisos per defecte per als arxius i directoris que Gallery crea. Això no "
+#~ "és aplicable als arxius/directoris que Gallery ja ha creat."
+
+#~ msgid "New directories"
+#~ msgstr "Nous directoris"
+
+#~ msgid "New files"
+#~ msgstr "Nous fitxers"
+
+#~ msgid "Session Settings"
+#~ msgstr "Ajustaments de la Sessió"
+
+#~ msgid "Session Lifetime"
+#~ msgstr "Temps de vida de la Sessió"
+
+#~ msgid "Inactivity Timeout"
+#~ msgstr "Interrupció per Inactivitat"
+
+#, fuzzy
+#~ msgid "Site Administration Session Timeout"
+#~ msgstr "Administració de Gallery"
+
+#~ msgid "Embedded Markup"
+#~ msgstr "Format Embedit"
+
+#~ msgid ""
+#~ "What kind of markup should we allow in user-entered fields?  For security reasons we do "
+#~ "not recommend that you allow raw HTML.  BBCode is a special kind of markup that is secure "
+#~ "and allows for simple text formatting like bold, italics, lists, images and urls."
+#~ msgstr ""
+#~ "&iquest;Quin tipus de format hem d'usar en els camps d'usuaris? Per qüestions de "
+#~ "seguritat recomanem que no s'utilitzi HTML pur.  El codi BB es una clase especial de "
+#~ "format segur que permet el formateig simple del texte com: negretes, itáliques, llistes, "
+#~ "imatges i urls."
+
+#~ msgid "Markup"
+#~ msgstr "Format"
+
+#~ msgid "Email"
+#~ msgstr "Correu Electrònic"
+
+#~ msgid ""
+#~ "By default Gallery uses PHP's built in mail function to send email which requires no "
+#~ "configuration.  To use a smtp/mail server enter the information below, including "
+#~ "authentication information if required.  Optionally add :port after the server name to "
+#~ "use a non-default port."
+#~ msgstr ""
+#~ "Per defecte Gallery usa la funció de correu interna de PHP per a enviar correus sense "
+#~ "demanar configuració prèvia.  Per usar un servidor de correu smtp introdueix la "
+#~ "informació a continuació, incloient la informació d'autenticació si es necessari.  "
+#~ "Opcionalment agrega :port després del nom del servidor per usar un port no estàndard."
+
+#~ msgid "Server"
+#~ msgstr "Servidor"
+
+#~ msgid "SMTP From Address"
+#~ msgstr "Adreça de Resposta"
+
+#~ msgid ""
+#~ "Send a test email to verify your settings are correct (whether using PHP mail or SMTP "
+#~ "settings above).  Below enter a recipient email address for a test message."
+#~ msgstr ""
+#~ "Envia un missatge de correu de prova per verificar que la teva configuració és correcta "
+#~ "(tant si s'usa la funció de correu PHP com la configuració SMTP).  A continuació "
+#~ "introdueix l'adreça del destinatari per al missatge de prova."
+
+#~ msgid "Send Email"
+#~ msgstr "Enviar Correu Electrònic"
+
+#~ msgid "Email Test Error"
+#~ msgstr "La Prova de Correu ha notificat Error"
+
+#~ msgid "Cookies"
+#~ msgstr "Cookies"
+
+#~ msgid ""
+#~ "When Gallery is embedded in another application (portal, CMS, forum, etc.), then you have "
+#~ "the choice between two options. Everyone else does not have to care about the cookie "
+#~ "settings. Read on for more details."
+#~ msgstr ""
+#~ "Cuan Gallery està embebida en un altra aplicació (portal, CMS, forum, etc.), pots "
+#~ "escollir entre dues opcions. En qualsevol altre cas no has de preocupar-te per els "
+#~ "ajustaments de la cookie. Segueix llegint per a més detalls."
+
+#~ msgid ""
+#~ "If your Gallery is embedded and you leave the following fields empty, then all "
+#~ "DownloadItem links (the URLs of the images and other items) in the embedded Gallery have "
+#~ "<b>an appended GALLERYSID string</b> in the URL which is <b>a minor security risk</b> "
+#~ "when your Gallery users start copy'n'pasting image URLs in forums, guestbooks, etc. The "
+#~ "alternative is to set the <b>cookie path</b>. Gallery will then <b>not append the "
+#~ "GALLERYSID to the embedded DownloadItem URLs</b>. E.g. when Gallery is reachable at "
+#~ "http://www.example.com/application/gallery2/ and the embedding application is at http://"
+#~ "www.example.com/application/, then you have to compare the path /application/gallery2/ "
+#~ "with /application/. The cookie path is the part of the paths that is equal, in this case "
+#~ "it is '/application/'. Most often it is just '/'."
+#~ msgstr ""
+#~ "Si Gallery està embebida i deixes els següents camps buits, llavors tots els enllaços "
+#~ "Descarregar Element (les URLs de les imatges i altres objectes) en la Gallery embebida "
+#~ "tindran <b>una cadena de texte GALLERYSID afegida</b> a la URL el que suposa <b>un risc "
+#~ "de seguretat menor</b> quant els usuaris de Gallery comencen a copiar i pegar les URLs de "
+#~ "las imatges en fòrums, llibres de visita, etc. L'alternativa és configurar la <b>ruta a "
+#~ "la cookie</b>. Gallery llavors <b>no afegirà la GALLERYSID a les URLs embebides de "
+#~ "Descarregar Element</b>. la ruta /application/gallery2/ con /application/. La ruta de la "
+#~ "cookie es la parte de las rutas que es igual, en este caso es '/application/'. Por lo "
+#~ "general suele ser solo '/'."
+
+#~ msgid ""
+#~ "The <b>cookie domain</b> is also only needed for embedded Gallery installs and only if "
+#~ "you want to get rid of the GALLERYSID string in the embedded DownloadItem URLs. <b>In "
+#~ "most cases, the cookie domain can be left blank.</b> Set it only, if Gallery and the "
+#~ "embedding application are only reachable with <b>different subdomains</b>. E.g. when "
+#~ "Gallery is at http://photos.example.com/ and the application is at http://www.example."
+#~ "com/, then you have to set the cookie domain example.com (the part of the host string "
+#~ "that is common to both, Gallery and the embedding application)."
+#~ msgstr ""
+#~ "El <b>domini de la cookie</b> és solament necessari per a instal·lacions embebides de "
+#~ "Gallery i solament si et vols desfer de la cadena de texte GALLERYSID en les URLs "
+#~ "embebides de Descarregar Element. <b>En la majoria dels casos, el domini de la cookie es "
+#~ "pot deixar en blanc.</b> Habilíta-ho només si Gallery i la aplicació que la esta embebent "
+#~ "siguin únicament abastable amb <b>diferents subdominis</b>. Ej. quan Gallery estigui en "
+#~ "http://photos.exemple.com/ i la aplicació estigui en http://www.exemple.com/, llavors "
+#~ "hauràs d'habilitar el domini de la cookie exemple.com (la part de la cadena de texte del "
+#~ "servidor que és comú en les dues, Gallery i  la aplicació que la està embebent."
+
+#~ msgid ""
+#~ "Once you change the cookie settings, <b>all registered users</b> of your Gallery will "
+#~ "<b>have to clear their browser cookie cache</b>. If they do not, they will experience "
+#~ "login / logout / lost session problems."
+#~ msgstr ""
+#~ "Un cop que canvïis les configuracions de la cookie, <b>tots els usuaris registrats</b> de "
+#~ "la teva Gallery <b>hauran de netejar la caché de les cookies dels seus navegadors</b>. Si "
+#~ "no ho fan, experimentaran problemes d'autentificació / tancament de sessió / pèrdua de "
+#~ "sessió."
+
+#~ msgid "Path"
+#~ msgstr "Ruta"
+
+#~ msgid "Domain"
+#~ msgstr "Domini"
+
+#~ msgid "Invalid cookie domain"
+#~ msgstr "El domini de la cookie no és vàlid"
+
+#~ msgid "Locking System"
+#~ msgstr "Sistema de Bloqueig"
+
+#~ msgid ""
+#~ "Gallery uses a system of locks to prevent simultaneous changes from interfering with each "
+#~ "other.  There are two types of locking, each with its advantages and disadvantages.  "
+#~ "<b>File</b> based locking is fast and efficient, but won't work on NFS filesystems and "
+#~ "will be unreliable on Windows.  <b>Database</b> locking is slower but is more reliable.  "
+#~ "If you are unsure which to choose, we recommend using file locking.  If you're getting "
+#~ "many lock timeouts, you can try switching to database locking instead.  It's ok to switch "
+#~ "back and forth."
+#~ msgstr ""
+#~ "Gallery utilitza un sistema de bloquejos que prevenen canvis simultànis que interfereixin "
+#~ "amb altres. Hi ha dos tipus de bloqueig, cada un amb els seus avantatges i "
+#~ "inconvenients.  El sistema de bloqueig basat en <b>Archivo</b> es ràpid i eficient, però "
+#~ "no funciona en un sistema de fitxers NFS i en Windows es poc fiable.   El sistema de "
+#~ "bloqueig basat en <b>Base de Dades</b> es mes lent pero mes fiable.  Si no estas segur "
+#~ "del què escollir, nosaltres recomanem el sistema de bloqueig basat en arxiu. Si estàs "
+#~ "tenint molts problemes de temps d'espera, pots intentar canviar a la base de dades. Es "
+#~ "pot canviar de un sistema a un altre sense problemes."
+
+#~ msgid "Lock system"
+#~ msgstr "Sistema de bloqueig"
+
+#~ msgid "Helper Processes"
+#~ msgstr "Processos d'ajuda"
+
+#~ msgid ""
+#~ "Some Gallery modules will use programs on your server to do image processing, archiving "
+#~ "and other operations.  These programs can be very computationally intensive and can "
+#~ "impact the overall performance of a shared web server.  You can make these programs run "
+#~ "at a lower priority so that they play nice.  If you're in a shared hosting environment "
+#~ "and your web host is complaining, try setting your priority low."
+#~ msgstr ""
+#~ "Alguns mòduls de Gallery utilitzen programes del servidor per al processament d'imatges, "
+#~ "emmagatzemament i altres operacions. Aquests programes poden comportàr fortes càrregues "
+#~ "computacinals i impactar en el rendiment global d'un servidor web compartit. Podeu "
+#~ "executar aquests programes en un nivell més baix de prioritat per a que funcionin "
+#~ "correctament. Si us trobeu en un sistema d'allotjament compartit i rebeu queixes, proveu "
+#~ "de baixar la vostra prioritat."
+
+#~ msgid "Priority"
+#~ msgstr "Prioritat de les Eines"
+
+#~ msgid "Create A New Group"
+#~ msgstr "Crear Un Nou Grup"
+
+#~ msgid "Group Name"
+#~ msgstr "Nom del Grup"
+
+#~ msgid "You must enter a group name"
+#~ msgstr "Has d'instroduïr un nom per al grup"
+
+#, c-format
+#~ msgid "Group '%s' already exists"
+#~ msgstr "El grup '%s' ja existeix"
+
+#~ msgid "Create Group"
+#~ msgstr "Crear Grup"
+
+#~ msgid "Create A New User"
+#~ msgstr "Crear Un Nou Usuari"
+
+#, c-format
+#~ msgid "Username '%s' already exists"
+#~ msgstr "L'usuari '%s' ja existeix"
+
+#~ msgid "Full Name"
+#~ msgstr "Nom Complet"
+
+#~ msgid "Email Address"
+#~ msgstr "Adreça de Correu Electrònic"
+
+#~ msgid "You must enter an email address"
+#~ msgstr "Has d'introduïr una adreça de correu electrònic"
+
+#~ msgid "Language"
+#~ msgstr "Idioma"
+
+#~ msgid "Verify Password"
+#~ msgstr "Verificar Contrasenya"
+
+#~ msgid "You must enter the password a second time"
+#~ msgstr "Has d'introduïr una contrasenya per segon cop"
+
+#~ msgid "The passwords you entered did not match"
+#~ msgstr "Las contrasenyes que has escrit no coincideixen"
+
+#~ msgid "Create User"
+#~ msgstr "Crear Usuari"
+
+#~ msgid "Delete A Group"
+#~ msgstr "Borrar Un Grup"
+
+#~ msgid "Are you sure?"
+#~ msgstr "&iquest;Estàs segur?"
+
+#, c-format
+#~ msgid "This will completely remove %s from Gallery.  There is no undo!"
+#~ msgstr "Això eliminarà completament a %s de Gallery. &iexcl;No hi ha volta enrere!"
+
+#~ msgid "Delete a User"
+#~ msgstr "Borrar un Usuari"
+
+#, c-format
+#~ msgid "User %s is the owner of %s items."
+#~ msgstr "L'usuari %s es el propietari de %s elements."
+
+#, c-format
+#~ msgid "Delete user <strong>%s</strong> and..."
+#~ msgstr "Borrar usuari <strong>%s</strong> i ..."
+
+#, c-format
+#~ msgid "Assign a new owner for all items of %s"
+#~ msgstr "Assignar un nou propietari per a tots els elements de %s"
+
+#, c-format
+#~ msgid ""
+#~ "Delete all items of %s and assign a new owner for all remaining non empty albums. Items "
+#~ "that %s doesn't have permission to delete will also be reassigned to a new owner."
+#~ msgstr ""
+#~ "Borrar tots els elements de %s i assignar un nou creador per tots els àlbums no buits que "
+#~ "quedin. Els elements que %s no tinguin permisos per borrar seran reasignats al nou "
+#~ "creador."
+
+#~ msgid "New owner (leaving blank means one of the Site Admins):"
+#~ msgstr ""
+#~ "Nou propietari (si es deixa en blanc s'interpreta un dels Administradors de la Web):"
+
+#, c-format
+#~ msgid "User '%s' does not exist! Cannot assign items to a nonexistent user."
+#~ msgstr ""
+#~ "&iexcl;L'usuari '%s' no existeix! No puc assignar elements a un usuari que no existeix."
+
+#~ msgid "The new owner must be a different user than the user we are deleting!"
+#~ msgstr "&iexcl;El nou propietari ha de ser diferent a l'usuari que estem borrant!"
+
+#~ msgid "The new owner cannot be a Guest / Anonymous user!"
+#~ msgstr "&iexcl;El nou propietari no pot ser un usuari Invitat / Anònim!"
+
+#, c-format
+#~ msgid "This will completely remove <strong>%s</strong> from Gallery.  There is no undo!"
+#~ msgstr ""
+#~ "Això eliminarà completament <strong>%s</strong> de Gallery. &iexcl;No hi ha volta enrere!"
+
+#~ msgid "Edit a group"
+#~ msgstr "Editar un grup"
+
+#, c-format
+#~ msgid "Edit Members of Group '%s'"
+#~ msgstr "Editar els Membres del Grup '%s'"
+
+#, c-format
+#~ msgid "Added user '%s' to group '%s'"
+#~ msgstr "Afegit l'usuari '%s' al grup '%s'"
+
+#, c-format
+#~ msgid "Removed user '%s' from group '%s'"
+#~ msgid_plural "Removed %s users from group '%s'"
+#~ msgstr[0] "Eliminat l'usuari '%s' del grup '%s'"
+#~ msgstr[1] "Eliminats els usuaris %s del grup '%s'"
+
+#, c-format
+#~ msgid "This group contains %d user"
+#~ msgid_plural "This group contains %d users"
+#~ msgstr[0] "Aquest grup conté %d usuari"
+#~ msgstr[1] "Aquest grup conté %d usuaris"
+
+#~ msgid "Members"
+#~ msgstr "Membres"
+
+#~ msgid "&laquo; first"
+#~ msgstr "&laquo; primer"
+
+#, c-format
+#~ msgid "Viewing page %d of %d"
+#~ msgstr "Mostrant pàgina %d de %d"
+
+#~ msgid "last &raquo;"
+#~ msgstr "últim &raquo;"
+
+#~ msgid "Clear"
+#~ msgstr "Netejar"
+
+#, c-format
+#~ msgid "%d user matches your filter"
+#~ msgid_plural "%d users match your filter"
+#~ msgstr[0] "%d usuari coincideix amb el teu filtre"
+#~ msgstr[1] "%d usuaris coincideixen amb el teu filtre"
+
+#~ msgid "Remove selected"
+#~ msgstr "Eliminar seleccionat"
+
+#~ msgid "You must select a user to remove."
+#~ msgstr "Has d'escollir un usuari per eliminar."
+
+#~ msgid "You can't remove yourself from this group."
+#~ msgstr "No pots eliminar-te a tu mateix d'aquest grup."
+
+#~ msgid "Add Member"
+#~ msgstr "Agregar Membre"
+
+#~ msgid "Add"
+#~ msgstr "Agregar"
+
+#~ msgid "You must enter a username."
+#~ msgstr "Has d'introduïr un nom d'usuari."
+
+#, c-format
+#~ msgid "User '%s' does not exist."
+#~ msgstr "L'usuari '%s' no existeix."
+
+#~ msgid "This user already is in this group."
+#~ msgstr "Aquest usuari ja pertany a aquest grup."
+
+#~ msgid "Done"
+#~ msgstr "Fet"
+
+#~ msgid "Edit a user"
+#~ msgstr "Editar un usuari"
+
+#~ msgid "That username is already in use"
+#~ msgstr "El nom d'usuari ja està en ús"
+
+#~ msgid "You must enter a new username"
+#~ msgstr "Has d'introduïr un nou nom d'usuari"
+
+#~ msgid "E-mail Address"
+#~ msgstr "Adreça de Correu Electrònic"
+
+#~ msgid "(suggested)"
+#~ msgstr "(suggerit)"
+
+#, fuzzy
+#~ msgid "Lock user."
+#~ msgstr "Sistema de bloqueig"
+
+#, fuzzy
+#~ msgid "Reset failed login count."
+#~ msgstr "Reiniciar contadors de visites"
+
+#, fuzzy
+#~ msgid "Recent Events"
+#~ msgstr "Reiniciar contadors de visites"
+
+#~ msgid "Type"
+#~ msgstr "Tipus"
+
+#, fuzzy
+#~ msgid "Client"
+#~ msgstr "llista"
+
+#, fuzzy
+#~ msgid "No events have been reported yet."
+#~ msgstr "No s'ha seleccionat cap paquet."
+
+#, fuzzy
+#~ msgid "Event Details"
+#~ msgstr "Detall de l'Error"
+
+#, fuzzy
+#~ msgid "User Id"
+#~ msgstr "Usuari"
+
+#, fuzzy
+#~ msgid "Referer"
+#~ msgstr "Reordenar"
+
+#, fuzzy
+#~ msgid "no summary"
+#~ msgstr "Resum"
+
+#, fuzzy
+#~ msgid "An error occurred while retrieving the event log entry details."
+#~ msgstr "S'ha produït un error interactuant amb la base de dades."
+
+#~ msgid "Group Management"
+#~ msgstr "Gestió de Grups"
+
+#, c-format
+#~ msgid "Removed group '%s'"
+#~ msgstr "Eliminat grup '%s'"
+
+#, c-format
+#~ msgid "Created group '%s'"
+#~ msgstr "Creat grup '%s'"
+
+#, c-format
+#~ msgid "Modified group '%s'"
+#~ msgstr "Modificat grup '%s'"
+
+#, c-format
+#~ msgid "There is %d group in the system."
+#~ msgid_plural "There are %d total groups in the system."
+#~ msgstr[0] "Hi ha %d grup al sistema."
+#~ msgstr[1] "Hi ha un total de %d grups al sistema."
+
+#~ msgid "Edit Group"
+#~ msgstr "Editar Grup"
+
+#~ msgid "Edit"
+#~ msgstr "Editar"
+
+#~ msgid "Add/Remove Users"
+#~ msgstr "Agregar/Eliminar Usuaris"
+
+#, c-format
+#~ msgid "Group '%s' does not exist."
+#~ msgstr "El grup '%s' no existeix."
+
+#~ msgid "You cannot delete that group"
+#~ msgstr "No pots eliminar aquest grup"
+
+#~ msgid "You cannot edit that group's users"
+#~ msgstr "No pots editar els usuaris d'aquest grup"
+
+#~ msgid "Edit Group (by list)"
+#~ msgstr "Editar Grup (per llista)"
+
+#~ msgid "Action"
+#~ msgstr "Acció"
+
+#~ msgid "edit"
+#~ msgstr "editar"
+
+#~ msgid "delete"
+#~ msgstr "eliminar"
+
+#~ msgid "members"
+#~ msgstr "membres"
+
+#, c-format
+#~ msgid "%d group matches your filter"
+#~ msgid_plural "%d groups match your filter"
+#~ msgstr[0] "%d grup coincideix amb el teu filtre"
+#~ msgstr[1] "%d grups coincideixen amb el teu filtre"
+
+#~ msgid ""
+#~ "Please make sure that your internet connection is set up properly or try again later."
+#~ msgstr ""
+#~ "Assegureu-vos que la vostra connexió a internet està ben configurada i torneu a intentar-"
+#~ "ho més tard."
+
+#, fuzzy, c-format
+#~ msgid "Failed to delete the locale directory for %s."
+#~ msgstr "No es possible eliminar el directori %s"
+
+#, fuzzy
+#~ msgid "The repository index has been successfully refreshed."
+#~ msgstr "S'ha actualitzat correctament l'índex del magatzem."
+
+#, fuzzy
+#~ msgid "The language settings have been saved."
+#~ msgstr "No s'ha seleccionat cap paquet."
+
+#~ msgid ""
+#~ "Select language defaults for Gallery. Individual users can override this setting in their "
+#~ "personal preferences or via the language selector block if available. Gallery will try to "
+#~ "automatically detect the language preference of each user if the browser preference check "
+#~ "is enabled."
+#~ msgstr ""
+#~ "Selecciona l'idioma per defecte de Gallery. Els usuaris poden anul·lar aquesta "
+#~ "configuració en les seves preferències personals o via bloc selector d'idioma si hi és "
+#~ "disponible."
+
+#~ msgid "Default language"
+#~ msgstr "Idioma per defecte"
+
+#~ msgid "Check Browser Preference"
+#~ msgstr "Comprova la preferència del navegador"
+
+#, c-format
+#~ msgid ""
+#~ "Your webserver does not support localization.  Please instruct your system administrator "
+#~ "to reconfigure PHP with the %s option enabled."
+#~ msgstr ""
+#~ "El teu servidor web no suporta localització.  Si us plau, avisa al teu administrador del "
+#~ "sistema que reconfiguri PHP amb la opció %s habilitada."
+
+#, fuzzy
+#~ msgid "Check Again"
+#~ msgstr "Seleccionar tots"
+
+#, fuzzy
+#~ msgid "Add or Remove Languages"
+#~ msgstr "Agregar/Eliminar Usuaris"
+
+#, fuzzy
+#~ msgid "Administer Repositories"
+#~ msgstr "Magatzem"
+
+#, fuzzy
+#~ msgid "Upgrade"
+#~ msgstr "actualitzar"
+
+#, fuzzy
+#~ msgid "Download"
+#~ msgstr "baixar"
+
+#, fuzzy
+#~ msgid "No Change"
+#~ msgstr "Canviar"
+
+#, fuzzy
+#~ msgid "Select All"
+#~ msgstr "Seleccionat"
+
+#~ msgid "System Maintenance"
+#~ msgstr "Mantenimient del Sistema"
+
+#, c-format
+#~ msgid "Completed %s task successfully."
+#~ msgstr "Completada la tasca %s amb èxit."
+
+#, c-format
+#~ msgid "The %s task failed to complete successfully."
+#~ msgstr "La tasca %s ha fallat abans de completar-se."
+
+#, fuzzy
+#~ msgid "Maintenance Mode"
+#~ msgstr "Manteniment"
+
+#, fuzzy
+#~ msgid "Maintenance Mode Url"
+#~ msgstr "Manteniment"
+
+#, fuzzy
+#~ msgid "Set"
+#~ msgstr "Configuració"
+
+#~ msgid "Task name"
+#~ msgstr "Nom de la tasca"
+
+#~ msgid "Last run"
+#~ msgstr "Últim cop que es va executar"
+
+#~ msgid "Success/Fail"
+#~ msgstr "Èxit/Fracàs"
+
+#~ msgid "Success"
+#~ msgstr "Èxit"
+
+#~ msgid "Failed"
+#~ msgstr "Fracàs"
+
+#~ msgid "run now"
+#~ msgstr "executar ara"
+
+#~ msgid "Last Run Details:"
+#~ msgstr "Detalls de l'última execució:"
+
+#~ msgid "Performance Tuning"
+#~ msgstr "Ajust de rendiment"
+
+#~ msgid "Updated performance settings successfully"
+#~ msgstr "Prova d'enviament de correu conclosa amb èxit"
+
+#~ msgid "Deleted all saved pages"
+#~ msgstr "Borrar totes les pàgines guardades"
+
+#~ msgid ""
+#~ "Improve your Gallery performance by storing entire web pages in the database.  This can "
+#~ "considerably reduce the amount of webserver and database resources required to display a "
+#~ "web page.  The tradeoff is that the web page you see may be a little bit out of date, "
+#~ "however you can always get the most recent version of the page by forcing a refresh in "
+#~ "your browser (typically by holding down the shift key and clicking the reload button)."
+#~ msgstr ""
+#~ "Milloreu el rendiment del vostre Gallery emmagatzemant pàgines web senceres a la base de "
+#~ "dades. Això pot reduir considerablement la quantitat de recursos del servidor web i la "
+#~ "base de dades que es requereixen per a mostrar una pàgina web. El punt en contra és que "
+#~ "la pàgina web que veureu pot estar lleugerament desfasada, tot i que sempre podeu tenir "
+#~ "la versió més recent de la pàgina forçant un refresc en el navegador (normalment "
+#~ "mantenint apretat la tecla shift i clicant el botó de recàrrega)."
+
+#~ msgid "Partial Acceleration"
+#~ msgstr "Acceleració parcial"
+
+#, no-c-format
+#~ msgid ""
+#~ "Partial acceleration gives you roughly 10-25% performance increase, but some forms of "
+#~ "dynamic data (like view counts) will not get updated right away.  All content that "
+#~ "appears in blocks (like the random image block, any sidebar blocks, etc) will always be "
+#~ "updated."
+#~ msgstr ""
+#~ "L'acceleració parcial incrementa entre un 10-25% el rendiment, però algunes dades "
+#~ "dinàmiques (comptadors de vistes, etc) no s'actualitzaran correctament. Tot el contigut "
+#~ "que apareix en blocs (com el bloc d'imatge aleatoria, qualsevol bloc de la barra lateral, "
+#~ "etc) sempre estarà actualitzat."
+
+#~ msgid "Full Acceleration"
+#~ msgstr "Acceleració completa"
+
+#, no-c-format
+#~ msgid ""
+#~ "Full acceleration gives roughly a 90% performance increase, but no dynamic data (random "
+#~ "image block, other sidebar blocks, number of items in your shopping cart, view counts, "
+#~ "etc) will get updated until the saved page expires."
+#~ msgstr ""
+#~ "L'acceleració completa incrementa en quasi un 90% el rendiment, però les dades dinàmiques "
+#~ "(bloc d'imatge aleatòria, altres blocs de la barra lateral, número d'items a la cistella "
+#~ "de la compra, comptadors de vistes, etc) no s'actualitzaran fins que la pàgina salvada "
+#~ "expiri."
+
+#~ msgid ""
+#~ "You can additionally specify when saved pages expire.  Setting a longer expiration time "
+#~ "will reduce the load on your server, but will increase the interval before users see "
+#~ "changes.  Lower expiration times mean that users will see more current data, but they "
+#~ "will place a higher load on your server."
+#~ msgstr ""
+#~ "Podeu especificar addicionalment quan expiren les pàgines desades. Un temps d'expiració "
+#~ "més gran reduirà la càrrega del servidor, però incrementarà l'interval abans que els "
+#~ "usuaris vegin canvis. Un temps d'expiració més petit significa que els usuaris veuran les "
+#~ "dades més actuals, però implica una càrrega major per al servidor."
+
+#~ msgid "Here are some standard acceleration profiles:"
+#~ msgstr "Aquí hi ha alguns perfils d'acceleració estàndard:"
+
+#~ msgid "Medium acceleration"
+#~ msgstr "Acceleració Mitja"
+
+#~ msgid "High acceleration"
+#~ msgstr "Acceleració alta"
+
+#~ msgid "Guest Users"
+#~ msgstr "Usuaris Registrats"
+
+#~ msgid "Expires after:"
+#~ msgstr "Expira després de:"
+
+#, fuzzy
+#~ msgid "Template Cache"
+#~ msgstr "Borrar la cache de les plantilles"
+
+#, fuzzy
+#~ msgid "Enable template caching"
+#~ msgstr "Borrar la cache de les plantilles"
+
+#~ msgid "Clear Saved Pages"
+#~ msgstr "Borra les pàgines desades"
+
+#~ msgid "Status: Inactive"
+#~ msgstr "Estat: Inactiu"
+
+#, fuzzy
+#~ msgid "__PLUGIN__ deactivated"
+#~ msgstr "desactivar __PLUGIN__"
+
+#~ msgid "Status: Active"
+#~ msgstr "Estat: Actiu"
+
+#~ msgid "Status: Not Installed"
+#~ msgstr "Estat: No Instal·lat"
+
+#~ msgid "Status: Upgrade Required (Inactive)"
+#~ msgstr "Estat: Requereix actualizació (Inactiu)"
+
+#, fuzzy
+#~ msgid "Status: Incompatible Plugin (Inactive)"
+#~ msgstr "Estat: Mòdul Incompatible (Inactivo)"
+
+#, fuzzy
+#~ msgid "Do you really want to uninstall __PLUGIN__?"
+#~ msgstr "&iquest;Estàs segur de voler desinstal·lar el mòdul __PLUGIN__?"
+
+#~ msgid "This will also remove any permissions and clean up any data created by this module."
+#~ msgstr ""
+#~ "Això també traurà qualsevol permís i netejarà qualsevol informació temporal creada per "
+#~ "aquest mòdul."
+
+#, fuzzy
+#~ msgid "Do you really want to delete __PLUGIN__?"
+#~ msgstr "&iquest;Estàs segur de voler desinstal·lar el mòdul __PLUGIN__?"
+
+#, fuzzy
+#~ msgid "Gallery Plugins"
+#~ msgstr "Mòduls de Gallery"
+
+#, fuzzy
+#~ msgid ""
+#~ "Gallery features come as separate plugins.  You can download and install plugins to add "
+#~ "more features to your Gallery, or you can disable features if you don't want to use "
+#~ "them.  In order to use a feature, you must install, configure (if necessary) and activate "
+#~ "it.  If you don't wish to use a feature, you can deactivate it."
+#~ msgstr ""
+#~ "Les característiques de Gallery venen com mòduls separats.  Pots descarregar i instal·lar "
+#~ "mòduls para afegir més característiques a Gallery, o bè pots deshabilitar les "
+#~ "característiques que no vulguis usar. Per usar una característica cal instal·lar-la, "
+#~ "configurar-la (si es necessari) i activar-la.  Si no vols usar una característica, pots "
+#~ "desactivar-la."
+
+#, fuzzy
+#~ msgid "Plugin Name"
+#~ msgstr "Nom Complet"
+
+#~ msgid "Installed"
+#~ msgstr "Instal·lat"
+
+#~ msgid "Version"
+#~ msgstr "Versió"
+
+#~ msgid "Incompatible plugin!"
+#~ msgstr "&iexcl;Mòdul Incompatible!"
+
+#, c-format
+#~ msgid "Core API Required: %s (available: %s)"
+#~ msgstr "API del Core Requerida: %s (disponible: %s)"
+
+#, c-format
+#~ msgid "Plugin API Required: %s (available: %s)"
+#~ msgstr "API del Mòdul Requerida: %s (disponible: %s)"
+
+#~ msgid "configure"
+#~ msgstr "configurar"
+
+#, fuzzy
+#~ msgid "up to date"
+#~ msgstr "Data"
+
+#, fuzzy
+#~ msgid "upgrade required"
+#~ msgstr "(requerit)"
+
+#, fuzzy
+#~ msgid "not installed"
+#~ msgstr "desinstal·lar"
+
+#, fuzzy
+#~ msgid "incompatible"
+#~ msgstr "&iexcl;Mòdul Incompatible"
+
+#~ msgid "Repository"
+#~ msgstr "Magatzem"
+
+#~ msgid "The repository index has been successfully updated."
+#~ msgstr "S'ha actualitzat correctament l'índex del magatzem."
+
+#~ msgid "All plugins are already up-to-date."
+#~ msgstr "Tots els plugins estan actualitzats."
+
+#, fuzzy
+#~ msgid "Repository Error"
+#~ msgstr "Magatzem"
+
+#, fuzzy
+#~ msgid "You must select at least one repository."
+#~ msgstr "Has d'escollir un usuari per eliminar"
+
+#, fuzzy
+#~ msgid "Download Plugin List"
+#~ msgstr "Descarrega les proves d'unitat"
+
+#, fuzzy
+#~ msgid "Show Repository List"
+#~ msgstr "Magatzem"
+
+#~ msgid "Upgrade Gallery"
+#~ msgstr "Galeria"
+
+#~ msgid ""
+#~ "A new version of Gallery is available, but it cannot be upgraded through this interface. "
+#~ "Upgrading it might make some of your current plugins stop working, but others that rely "
+#~ "on the features of the new version may become available. Here are the recommended steps "
+#~ "for upgrading:"
+#~ msgstr ""
+#~ "Està disponible una nova versió de Gallery, peò no es pot millorar a través d'aquesta "
+#~ "interfície. La millora pot fer deixar de funcionar alguns dels vostres plugins, però "
+#~ "altres basats en la nova versió estaran disponibles. Aquests són els passos recomanats "
+#~ "per a efectuar la millora:"
+
+#, fuzzy, c-format
+#~ msgid "%sDownload%s the new Gallery package"
+#~ msgstr "%sDescarrega%s el nucli de Gallery"
+
+#, c-format
+#~ msgid "Read the %supgrade instructions%s and perform the upgrade"
+#~ msgstr "Llegiu les %sinstruccions de millora%s i procediu a la millora"
+
+#~ msgid "Incompatible plugins are marked with an exclamation icon."
+#~ msgstr "Els plugins incompatibles estan marcats amb una icona d'exclamació."
+
+#, c-format
+#~ msgid ""
+#~ "A new core module version is available. There may be plugins that are incompatible with "
+#~ "the installed core module, which are not shown here. You can view a %scomplete list%s of "
+#~ "plugins, including incompatible ones, which are marked with a red icon."
+#~ msgstr ""
+#~ "Està disponible una nova versió del mòdul del nucli. Poden haver-hi plugins incompatibles "
+#~ "amb el mòdul del nucli instal·lat que no es mostrin aquí. Podeu veure una %sllista "
+#~ "completa%s de plugins, incloent els que són incompatibles, marcats amb una icona vermella."
+
+#, fuzzy
+#~ msgid "upgrade available"
+#~ msgstr "Galeria"
+
+#~ msgid "Theme Name"
+#~ msgstr "Nom del Tema"
+
+#~ msgid "Latest"
+#~ msgstr "Últim"
+
+#~ msgid "Incompatible Plugin"
+#~ msgstr "&iexcl;Mòdul Incompatible"
+
+#, fuzzy
+#~ msgid "Upgrade Available"
+#~ msgstr "actualitzar"
+
+#~ msgid "download"
+#~ msgstr "baixar"
+
+#~ msgid "modify"
+#~ msgstr "modificar"
+
+#~ msgid "Upgrade All Plugins"
+#~ msgstr "Millora tots els plugins"
+
+#~ msgid ""
+#~ "Gallery can automatically upgrade your themes and modules to the latest available "
+#~ "versions. No new plugins will be downloaded."
+#~ msgstr ""
+#~ "Gallery pot millorar automàticament els vostres temes i mòduls a l'última versió "
+#~ "disponible. No es descarregaran nous plugins."
+
+#~ msgid "Upgrade All"
+#~ msgstr "Actualitzar"
+
+#~ msgid "No packages have been selected."
+#~ msgstr "No s'ha seleccionat cap paquet."
+
+#, fuzzy
+#~ msgid "Base Packages"
+#~ msgstr "Nom del fitxer rael"
+
+#, fuzzy, c-format
+#~ msgid "%s version %s"
+#~ msgstr "Versió de PHP"
+
+#~ msgid "Update"
+#~ msgstr "Data"
+
+#~ msgid "Gallery Themes"
+#~ msgstr "Temes de Gallery"
+
+#, c-format
+#~ msgid "Successfully activated theme %s"
+#~ msgstr "Tema %s activat amb èxit"
+
+#, c-format
+#~ msgid "Successfully deactivated theme %s"
+#~ msgstr "Tema %s  desactivat amb èxit"
+
+#, c-format
+#~ msgid "Successfully installed theme %s"
+#~ msgstr "Tema %s instal·lat amb èxit"
+
+#, c-format
+#~ msgid "Successfully uninstalled theme %s"
+#~ msgstr "Tema %s  desinstal·lat amb èxit"
+
+#, c-format
+#~ msgid "Successfully upgraded theme %s"
+#~ msgstr "Tema %s actualitzat amb èxit"
+
+#~ msgid "Successfully saved default album settings"
+#~ msgstr "Configuració de l'àlbum per defecte guardada amb èxit"
+
+#~ msgid "Restored theme settings"
+#~ msgstr "Restaurar la configuració del tema"
+
+#~ msgid "Defaults"
+#~ msgstr "Per defecte"
+
+#~ msgid ""
+#~ "These are default display settings for albums in your gallery.  They can be overridden in "
+#~ "each album."
+#~ msgstr ""
+#~ "Aquesta és la configuració visual per defecte dels àlbums en Gallery.  Pot ser anul·lada "
+#~ "en cada àlbum."
+
+#~ msgid "Default sort order"
+#~ msgstr "Ordre de col·locació per defecte"
+
+#~ msgid "with"
+#~ msgstr "amb"
+
+#~ msgid "New albums"
+#~ msgstr "Nous àlbums"
+
+#, fuzzy
+#~ msgid "Save Defaults"
+#~ msgstr "Per defecte"
+
+#, c-format
+#~ msgid "%s Theme Settings"
+#~ msgstr "Configuració del Tema %s"
+
+#~ msgid ""
+#~ "These are the global settings for the theme.  They can be overridden at the album level."
+#~ msgstr "Aquesta és la configuració global per al tema.  Pot ser anul·lada a nivell d'àlbum."
+
+#~ msgid "Available"
+#~ msgstr "Disponible"
+
+#~ msgid "Choose a block"
+#~ msgstr "Escull un bloc"
+
+#~ msgid "Selected"
+#~ msgstr "Seleccionat"
+
+#~ msgid "Move Up"
+#~ msgstr "Pujar"
+
+#~ msgid "Move Down"
+#~ msgstr "Baixar"
+
+#~ msgid "Parameter"
+#~ msgstr "Paràmetre"
+
+#, fuzzy
+#~ msgid "Save Theme Settings"
+#~ msgstr "Configuració del Tema %s"
+
+#~ msgid ""
+#~ "The toolkits shown below have some overlap in supported operations and mime types.  Rank "
+#~ "the toolkits here to determine which will perform these operations."
+#~ msgstr ""
+#~ "Les eines mostrades a continuació poden solapar-se en les operacions i tipus mime que "
+#~ "suporten. Classifica les eines aquí per determinar qué realitzarà aquestes tasques."
+
+#~ msgid "Toolkit"
+#~ msgstr "Eina"
+
+#~ msgid "Order"
+#~ msgstr "Ordre"
+
+#~ msgid "up"
+#~ msgstr "pujar"
+
+#~ msgid "down"
+#~ msgstr "baixar"
+
+#~ msgid "User Management"
+#~ msgstr "Gestió d'Usuaris"
+
+#, c-format
+#~ msgid "Removed user '%s'"
+#~ msgstr "Usuari '%s' eliminat"
+
+#, c-format
+#~ msgid "Created user '%s'"
+#~ msgstr "Usuari '%s' creat"
+
+#, c-format
+#~ msgid "Modified user '%s'"
+#~ msgstr "Usuari '%s' modificat"
+
+#, c-format
+#~ msgid "There is %d user in the system."
+#~ msgid_plural "There are %d total users in the system."
+#~ msgstr[0] "Hi ha %d usuari en el sistema."
+#~ msgstr[1] "Hi ha un total de %d usuaris en el sistema."
+
+#~ msgid "Edit User"
+#~ msgstr "Editar Usuari"
+
+#~ msgid "You cannot delete yourself!"
+#~ msgstr "&iexcl;No et pots eliminar a tú mateix!"
+
+#~ msgid "You cannot delete the special guest user."
+#~ msgstr "No pots eliminar l'usuari especial invitat."
+
+#~ msgid "Edit User (by list)"
+#~ msgstr "Editar Usuari (per llista)"
+
+#, fuzzy
+#~ msgid "Locked"
+#~ msgstr "Locale"
+
+#, fuzzy
+#~ msgid "Failed Logins"
+#~ msgstr "Fracàs"
+
+#~ msgid "Thumbnails"
+#~ msgstr "Vistes en Miniatura"
+
+#~ msgid ""
+#~ "Gallery can create thumbnails at upload time, or create them the first time you want to "
+#~ "see the thumbnail itself.  Either way, it will create the thumbnail once and save it, but "
+#~ "if you create them at upload time it makes viewing albums for the first time go faster at "
+#~ "the expense of a longer upload time."
+#~ msgstr ""
+#~ "Gallery pot crear las miniatures en temps de pujada, o el primer cop que es visualitzen. "
+#~ "En qualsevol cas, crearà i guardarà la miniatura només un cop, però si les crees en el "
+#~ "moment de la pujada els àlbums es mostraran més ràpid el primer cop a canvi d'un major "
+#~ "temps de pujada."
+
+#~ msgid "Create thumbnails now"
+#~ msgstr "Crear vistes en miniatura ara"
+
+#~ msgid "This is a test email from Gallery2"
+#~ msgstr "Això és un correu de prova de Gallery2"
+
+#~ msgid "Edit Conflict!"
+#~ msgstr "&iexcl;Conflicte de Revisió!"
+
+#~ msgid "Security Violation"
+#~ msgstr "Violació de Seguretat"
+
+#~ msgid "Database Error"
+#~ msgstr "Error en la Base de Dades"
+
+#~ msgid "Platform Error"
+#~ msgstr "A ocorregut un error"
+
+#, fuzzy
+#~ msgid "Authentication Failure"
+#~ msgstr "Autorització Confirmada"
+
+#~ msgid ""
+#~ "Your change cannot be completed because somebody else has made a conflicting change to "
+#~ "the same item.  Use the back button in your browser to go back to the page you were on, "
+#~ "then <b>reload that page</b> and try your change again."
+#~ msgstr ""
+#~ "El canvi no s'ha pogut completar perque algú mes ha fet un canvi conflictiu en el mateix "
+#~ "element. Fes servir el botó d'enrere del navegador per retornar a la pàgina on et "
+#~ "trobaves, després <b> recarrega aquella pàgina</b> i intenta fer el canvi de nou."
+
+#~ msgid "Go back and try again"
+#~ msgstr "Torna-ho a intentar novament"
+
+#, fuzzy
+#~ msgid "Clear the cache"
+#~ msgstr "Borra les pàgines desades"
+
+#~ msgid "Alternatively, you can return to the main Gallery page and resume browsing."
+#~ msgstr ""
+#~ "Com alternativa, pots tornar a la página principal de Gallery i reprendre la recerca."
+
+#~ msgid "The action you attempted is not permitted."
+#~ msgstr "L'acció que has intentat fer no està permesa."
+
+#~ msgid "An error has occurred while interacting with the database."
+#~ msgstr "S'ha produït un error interactuant amb la base de dades."
+
+#~ msgid ""
+#~ "The exact nature of database errors is not captured unless Gallery debug mode is enabled "
+#~ "in config.php.  Before seeking support for this error please enable buffered debug output "
+#~ "and retry the operation.  Look near the bottom of the lengthy debug output to find error "
+#~ "details."
+#~ msgstr ""
+#~ "La naturalesa exacta dels errors de la base de dades no és capturada si no està activat "
+#~ "el mode de depuració de Gallery en config.php.  Abans de demanar ajuda per aquest error "
+#~ "si us plau habilita la sortida de depuració de memoria intermitja i reintenta "
+#~ "l'operació.  Revisa l'última part de la llarga sortida de depuració per trobar detalls "
+#~ "sobre l'error."
+
+#~ msgid "An error has occurred while interacting with the platform."
+#~ msgstr "Hi ha hagut un error interactuant amb la base de dades."
+
+#~ msgid ""
+#~ "The exact nature of the platform error is unknown. A common cause are insufficient file "
+#~ "system permissions. This can happen if you or your webhost changed something in the file "
+#~ "system, e.g. by restoring data from a backup."
+#~ msgstr ""
+#~ "La naturalesa exacta de l'error de la plataforma és desconeguda. Una causa comú és la "
+#~ "manca de permissos en el sistema d'arxius. Això pot succeir si s'ha canviat alguna cosa "
+#~ "al sistema d'arxius, ex. restaurar dades d'una còpia de seguretat."
+
+#~ msgid "An error has occurred."
+#~ msgstr "Ha ocorregut un error."
+
+#~ msgid "Error Detail"
+#~ msgstr "Detall de l'Error"
+
+#~ msgid "System Information"
+#~ msgstr "Informació del sistema"
+
+#~ msgid ""
+#~ "You don't have any Graphics Toolkit activated that can handle JPEG images.  If you add "
+#~ "images, you will probably not have any thumbnails."
+#~ msgstr ""
+#~ "No tens ninguna Eina Gràfica activada que pugui manejar imatges JPEG. Si afegeixes "
+#~ "imatges, probablement no es generará ninguna miniatura."
+
+#, c-format
+#~ msgid "Visit the %sModules%s page to activate a Graphics Toolkit."
+#~ msgstr "Visita la pàgina de %sMòduls%s per activar una Eina Gràfica."
+
+#~ msgid "Sort order"
+#~ msgstr "Ordre de Col·locació"
+
+#~ msgid ""
+#~ "This sets the sort order for the album.  This applies to all current items, and any newly "
+#~ "added items."
+#~ msgstr ""
+#~ "Configura l'ordre de col·locació per a l'àlbum.  S'aplica tant a tots els elements "
+#~ "actuals com als nous elements afegits."
+
+#~ msgid "Apply to all subalbums"
+#~ msgstr "Aplicar als subelements"
+
+#~ msgid " Every item requires a thumbnail. Set the default size in pixels here."
+#~ msgstr ""
+#~ " Tot element requereix una miniatura. Selecciona la mida per defecte en píxels aquí."
+
+#~ msgid "Use this thumbnail size in all subalbums"
+#~ msgstr "Utilitza aquestes mides de miniatura per a tots els subàlbums"
+
+#~ msgid "Resized Images"
+#~ msgstr "Imatges Redimensionades"
+
+#~ msgid "Each item in your album can have multiple sizes. Define the default sizes here."
+#~ msgstr ""
+#~ "Tot element en el teu àlbum pot tenir múltiples tamanys. Defineix les mides per defecte "
+#~ "aquí."
+
+#~ msgid "Active"
+#~ msgstr "Actiu"
+
+#~ msgid "Target Size (pixels)"
+#~ msgstr "Mida de l'Objecte (píxels)"
+
+#~ msgid "You must enter a valid size"
+#~ msgstr "Has d'escriure una mida vàlida"
+
+#~ msgid "Use these target sizes in all subalbums"
+#~ msgstr "Utilitza aquestes mides per a tots els subàlbums"
+
+#, fuzzy
+#~ msgid "Apply settings to existing items"
+#~ msgstr "Aplicar als subelements"
+
+#, fuzzy
+#~ msgid "... and for all subalbums"
+#~ msgstr "Aplicar als subelements"
+
+#, fuzzy
+#~ msgid "Build thumbnails too"
+#~ msgstr "Refer miniatures"
+
+#, fuzzy
+#~ msgid "Apply album setting to resized images"
+#~ msgstr "Refer imatges redimensionades"
+
+#~ msgid ""
+#~ "In order for Gallery to properly display this animation, it has to know the animation's "
+#~ "width and height.  If you have installed a graphics toolkit that can handle animation "
+#~ "types, then these values may already be set.  If not, they may be set to 0.  If you do "
+#~ "not enter the correct values here, the animation may appear distorted when viewed in your "
+#~ "web browser.  Note that changing these values does <b>not</b> change the animation itself "
+#~ "so experimenting won't cause harm."
+#~ msgstr ""
+#~ "Per a que Gallery mostri correctament aquesta animació, ha de saber l'altura i l'amplada "
+#~ "de la mateixa.  Si tens instal·lada una eina gr&agrave;fica que manegui arxius "
+#~ "d'animació, llavors aquests valors haurien d'estar ja configurats.  En cas contrari, "
+#~ "haurien d'estar posats a 0.  Si no introdueixes aquí els valors correctes, l'animació "
+#~ "podria aparèixer distorssionada cuan es visioni en el teu navegador web. Donat compte que "
+#~ "canviar aquests valors <b>no</b> canvia l'animació en sí mateixa per lo que experimentar "
+#~ "no causa ningún dany."
+
+#~ msgid "Width"
+#~ msgstr "Ample"
+
+#~ msgid "You must enter a value greater than or equal to 0"
+#~ msgstr "Has d'escriure un valor major o igual a zero"
+
+#~ msgid "Height"
+#~ msgstr "Alçada"
+
+#~ msgid ""
+#~ "In order for Gallery to properly display this movie, it has to know the movie's width and "
+#~ "height.  If you have installed a graphics toolkit that can handle movie types, then these "
+#~ "values may already be set.  If not, they may be set to 0.  If you do not enter the "
+#~ "correct values here, the movie may appear distorted when viewed in your web browser.  "
+#~ "Note that changing these values do <b>not</b> change the movie itself so experimentation "
+#~ "won't cause harm."
+#~ msgstr ""
+#~ "Per a que Gallery mostri correctament aquesta pel·lícula, ha de saber l'altura i "
+#~ "l'amplada de la mateixa.  Si tens instal·lada una eina gr&agrave;fica que manegui arxius "
+#~ "de vídeo, llavors aquests valor haurien d'estar ja configurats. En cas contrari, haurien "
+#~ "d'estar posats a 0.  Si no introdueixes aqui els valors correctes, la pel·lícula podria "
+#~ "apareixer distorssionada cuan es vegi en el teu navegador web. Donat compte que canviar "
+#~ "aquets valors <b>no</b> canvia la pel·lícula en sí mateixa per lo que experimentar no "
+#~ "causa ningún dany."
+
+#~ msgid "Resized Photos"
+#~ msgstr "Fotos Redimensionades"
+
+#~ msgid ""
+#~ "These sizes are alternate resized versions of the original you would like to have "
+#~ "available for viewing."
+#~ msgstr ""
+#~ "Aquestes mides son versions alternatives redimensionades de l'original que t'agradaria "
+#~ "tenir disponibles per mostrar."
+
+#~ msgid ""
+#~ "There are no graphics toolkits enabled that support this type of photo, so we cannot "
+#~ "create or modify resized versions."
+#~ msgstr ""
+#~ "No hi han eines gràfiques habilitades que suportin aquest tipus de foto, de forma que no "
+#~ "podem crear o modificar les versions redimensionades."
+
+#~ msgid ""
+#~ "You can select which part of the photo will be used for the thumbnail.  This will have no "
+#~ "effect on the resized or original versions of the image."
+#~ msgstr ""
+#~ "Pots seleccionar quina part de la foto serà usada per a la vista en miniatura. Això no "
+#~ "afectarà a les versions redimensionades o a l'original de la imatge."
+
+#~ msgid "Aspect Ratio: "
+#~ msgstr "Relació d'Aspecte: "
+
+#~ msgid "Crop"
+#~ msgstr "Retallar"
+
+#, fuzzy
+#~ msgid "Undo Changes"
+#~ msgstr "Canviar"
+
+#~ msgid "Reset to default"
+#~ msgstr "Reiniciar a valors per defecte"
+
+#~ msgid ""
+#~ "There are no graphics toolkits enabled that support this type of photo, so we cannot crop "
+#~ "the thumbnail."
+#~ msgstr ""
+#~ "No hi han eines gràfiques habilitades que suportin aquest tipus de foto, de forma que no "
+#~ "podem tallar la miniatura."
+
+#~ msgid "Rotate"
+#~ msgstr "Girar"
+
+#~ msgid "You can only rotate the photo in 90 degree increments."
+#~ msgstr "Solament pots girar la foto en intervals de 90 graus."
+
+#~ msgid "CC 90&deg;"
+#~ msgstr "CC 90&deg;"
+
+#~ msgid "180&deg;"
+#~ msgstr "180&deg;"
+
+#~ msgid "C 90&deg;"
+#~ msgstr "C 90&deg;"
+
+#~ msgid ""
+#~ "There are no graphics toolkits enabled that support this type of photo, so we cannot "
+#~ "rotate it."
+#~ msgstr ""
+#~ "No hi han eines gràfiques habilitades que suportin aquest tipus de foto, de forma que no "
+#~ "podem girar-la."
+
+#~ msgid "Scale"
+#~ msgstr "Escalar"
+
+#~ msgid ""
+#~ "Shrink or enlarge the original photo.  When Gallery scales a photo, it maintains the same "
+#~ "aspect ratio (height to width) of the original photo to avoid distortion.  Your photo "
+#~ "will be scaled until it fits inside a bounding box with the size you enter here."
+#~ msgstr ""
+#~ "Encollir o engrandir la foto original.  Cuan Gallery escala una foto, manté la mateixa "
+#~ "relació d'aspecte (altura per amplada) que la foto original per evitar distorsió. La teva "
+#~ "foto sera escalada fins que càpiga dins del recuadre que forma la mida que introdueixis "
+#~ "aquí."
+
+#~ msgid ""
+#~ "There are no graphics toolkits enabled that support this type of photo, so we cannot "
+#~ "scale it."
+#~ msgstr ""
+#~ "No hi han eines gràfiques habilitades que suportin aquest tipus de foto, de forma que no "
+#~ "podem escalar-la."
+
+#~ msgid "You must enter a size"
+#~ msgstr "Has d'escriure una mida"
+
+#~ msgid "Preserve Original"
+#~ msgstr "Mantenir l'Original"
+
+#~ msgid ""
+#~ "Gallery does not modify your original photo when rotating and scaling. Instead, it "
+#~ "duplicates your photo and works with copies.  This requires a little extra disk space but "
+#~ "prevents your original from getting damaged.  Disabling this option will cause any "
+#~ "actions (rotating, scaling, etc) to modify the original."
+#~ msgstr ""
+#~ "Gallery no modifica la teva foto original cuan la gira i la escala. En canvi, duplica la "
+#~ "foto i treballa amb copies. Això requereix una petita quantitat d'espai extra en el disc "
+#~ "però preveu que l'original es danyi.  Deshabilitant aquesta opció, es provocarà que "
+#~ "qualsevol acció (girar, escalar, etc) modifiqui l'original."
+
+#~ msgid "This is a link to another photo, so you cannot change the original"
+#~ msgstr "Aquest es un enllaç a un altra foto, de forma que no pots canviar l'original"
+
+#~ msgid "There are links to this photo, so you cannot change the original"
+#~ msgstr "Hi ha enllaços a aquesta foto, de forma que no pots canviar l'original"
+
+#~ msgid "Preserve Original Photo"
+#~ msgstr "Mantenir la Foto Original"
+
+#~ msgid "Modified Photo"
+#~ msgstr "Foto Modificada"
+
+#~ msgid ""
+#~ "You are using a copy of the original photo that has been scaled or rotated.  The original "
+#~ "photo is still available, but is no longer being used.  Any changes you make will be "
+#~ "applied to the copy instead."
+#~ msgstr ""
+#~ "Estàs usant una còpia de la foto original que ha estat escalada o girada.  La foto "
+#~ "original encara està disponible, però ja no s'utilitza.  Qualsevol canvi que fagis "
+#~ "s'aplicarà a la còpia."
+
+#~ msgid "Restore original"
+#~ msgstr "Restaurar original"
+
+#, fuzzy
+#~ msgid "Choose a theme"
+#~ msgstr "Escull un bloc"
+
+#~ msgid "Use this theme in all subalbums"
+#~ msgstr "Utilitza aquest tema per a tots els subàlbums"
+
+#, fuzzy, c-format
+#~ msgid "Configure the %s theme"
+#~ msgstr "Tema de prova d'unitat"
+
+#, fuzzy
+#~ msgid "These settings only apply to the theme for this album."
+#~ msgstr ""
+#~ "Aquest álbum està configurat per usar el tema <b>%s</b>. Aquestes configuracions només "
+#~ "s'apliquen al tema d'aquest àlbum."
+
+#, fuzzy, c-format
+#~ msgid "Use these settings in all subalbums that use the %s theme"
+#~ msgstr "Utilitza aquesta configuració per a tots els àlbums que utilitzin el tema %s"
+
+#~ msgid "Album Highlight"
+#~ msgstr "Destacar Álbum"
+
+#~ msgid "You can make this item the thumbnail for its parent or any ancestor album."
+#~ msgstr "Pots fer d'aquest element la vista en miniatura per a qualsevol àlbum superior."
+
+#~ msgid "Highlight for:"
+#~ msgstr "Destacar per a:"
+
+#~ msgid "Highlight"
+#~ msgstr "Destacar"
+
+#~ msgid "Successfully moved"
+#~ msgstr "Mogut amb èxit"
+
+#~ msgid "Choose a destination album"
+#~ msgstr "Elegeix un àlbum de destí"
+
+#~ msgid "Permissions"
+#~ msgstr "Permisos"
+
+#~ msgid "Owner changed successfully"
+#~ msgstr "Propietari modificat amb èxit"
+
+#~ msgid "Group permission added successfully"
+#~ msgstr "Permís de grup agregat amb èxit"
+
+#~ msgid "User permission added successfully"
+#~ msgstr "Permís d'usuari agregat amb èxito"
+
+#~ msgid "Group permission removed successfully"
+#~ msgstr "Permís de grup eliminat amb èxit"
+
+#~ msgid "User permission removed successfully"
+#~ msgstr "Permís d'usuari eliminat amb èxit"
+
+#~ msgid ""
+#~ "Each item has its own independent set of permissions.  Changing the parent's permissions "
+#~ "has no effect on the permissions of the child.  This allows you to restrict access to the "
+#~ "parent of this item, but still grant full access to this item, or vice versa.  The most "
+#~ "efficient way to use this permission system is to create groups and assign permissions to "
+#~ "them.  Then if you want to grant permissions to a specific user, you can add (or remove) "
+#~ "the user from the appropriate group."
+#~ msgstr ""
+#~ "Cada element té el seu propi joc independent de permisos.  El canvi de permisos en "
+#~ "l'objecte pare no té ningún efecte sobre l'objecte fill. Això permet restringir l'accès a "
+#~ "l'objecte pare d'aquest element, però concedir accès total al mateix, o viceversa.  El "
+#~ "mode més eficient d'usar aquest sistema de permisos es crear grups i assignar-los "
+#~ "permisos. Llavors si es volen concedir permisos a un usuari específic, pots agregar (o "
+#~ "treure) dit usuari del grup apropiat."
+
+#, c-format
+#~ msgid "This item is owned by user: %s"
+#~ msgstr "Aquest element és propiedad de l'usuari: %s"
+
+#, c-format
+#~ msgid "This item is owned by user: %s (%s)"
+#~ msgstr "Aquest element és propiedad de l'usuari: %s (%s)"
+
+#~ msgid "New owner"
+#~ msgstr "Nou propietari"
+
+#~ msgid "Change"
+#~ msgstr "Canviar"
+
+#~ msgid "Apply new owner to sub-items"
+#~ msgstr "Aplicar el nou propietari als subelements"
+
+#~ msgid "You must enter a user name"
+#~ msgstr "Has d'escriure un nom d'usuari"
+
+#~ msgid "The user name you entered is invalid"
+#~ msgstr "El nom d'usuari que has escrit no es vàlid"
+
+#~ msgid "Apply changes"
+#~ msgstr "Aplicar canvis"
+
+#~ msgid ""
+#~ "This item has sub-items.  The changes you make here can be applied to just this item, or "
+#~ "you can apply them to all sub-items.  Note that applying changes to sub-items will merge "
+#~ "your change into the existing permissions of the sub-items and may be very time consuming "
+#~ "if you have many sub-items.  It's more efficient to grant permissions to groups and then "
+#~ "add and remove users from groups whenever possible. Changes are applied to sub-items by "
+#~ "default."
+#~ msgstr ""
+#~ "Aquest element conté subelements. Els canvis que fagis aquí poden aplicar-se a aquest "
+#~ "element, o bè poden aplicar-se a tots els subelements. Donat compte que aplicar els "
+#~ "canvis als subelements combinarà dits canvis amb els permisos existents en els "
+#~ "subelements i podria conumir molt temps si es tenen molts subelements. És més eficient "
+#~ "concedir permisos a grups i després afegir o treure usuaris dels mateixos sempre que "
+#~ "sigui possible. Els canvis s'aplicaràn als subelements per defecte."
+
+#~ msgid "Apply to sub-items"
+#~ msgstr "Aplicar als subelements"
+
+#~ msgid "Group Permissions"
+#~ msgstr "Permisos de Grup"
+
+#~ msgid "Group name"
+#~ msgstr "Nom del grup"
+
+#~ msgid "Permission"
+#~ msgstr "Permís"
+
+#~ msgid "New Group Permission"
+#~ msgstr "Nou Permís de Grup"
+
+#~ msgid "Add Permission"
+#~ msgstr "Afegir Permis"
+
+#~ msgid "The permission you chose is invalid"
+#~ msgstr "El permís que has escollit no és vàlid"
+
+#~ msgid "The group name you entered is invalid"
+#~ msgstr "El nom del grup que has escrit no és vàlid"
+
+#~ msgid "Group already has this permission (check sub-permissions)"
+#~ msgstr "El grup ja té aquest permís (comprova els sub-permisos)"
+
+#~ msgid "User Permissions"
+#~ msgstr "Permisos d'Usuari"
+
+#~ msgid "User name"
+#~ msgstr "Nom d'usuari"
+
+#~ msgid "New User Permission"
+#~ msgstr "Nou Permís d'Usuari"
+
+#~ msgid "The user already has this permission (check sub-permissions)"
+#~ msgstr "L'usuari ja té aquest permís (comprova els sub-permisos)"
+
+#~ msgid "Reorder Album"
+#~ msgstr "Reordenar Álbum"
+
+#~ msgid "Order saved successfully"
+#~ msgstr "Els canvis han estat guardats amb èxit"
+
+#~ msgid ""
+#~ "This album has an automatic sort order specified, so you cannot change the order of items "
+#~ "manually.  You must remove the automatic sort order to continue."
+#~ msgstr ""
+#~ "Aquest àlbum té un ordre de col·locació automàtic especificat, de forma que no pots "
+#~ "canviar l'ordre dels elementos manualmente.  Hauries de treure el ordre de col·locació "
+#~ "automàtic per continuar."
+
+#~ msgid "change"
+#~ msgstr "canviar"
+
+#~ msgid "Change the order of the items in this album."
+#~ msgstr "Canvia l'ordre dels elements en aquest àlbum."
+
+#~ msgid "Move this item"
+#~ msgstr "Moure aquest element"
+
+#~ msgid "before"
+#~ msgstr "abans"
+
+#~ msgid "after"
+#~ msgstr "després"
+
+#~ msgid "Reorder"
+#~ msgstr "Reordenar"
+
+#~ msgid "Site is temporarily down for maintenance."
+#~ msgstr "Aquest lloc està fora de servei degut a manteniment."
+
+#~ msgid "Admin Login"
+#~ msgstr "Opcions de l'Administrador"
+
+#~ msgid "Configuration Error: Missing Theme"
+#~ msgstr "Error de configuració: No es troba el Tema"
+
+#, c-format
+#~ msgid ""
+#~ "This page is configured to use the %s theme, but it is either inactive, not installed, or "
+#~ "incompatible."
+#~ msgstr ""
+#~ "Aquest àlbum està configurat per utilitzar el tema %s, però es troba inactiu o no està "
+#~ "instal·lat."
+
+#, c-format
+#~ msgid ""
+#~ "This album is configured to use the %s theme, but it is either inactive, not installed, "
+#~ "or incompatible."
+#~ msgstr ""
+#~ "Aquest àlbum està configurat per utilitzar el tema %s, però es troba inactiu o no està "
+#~ "instal·lat."
+
+#, c-format
+#~ msgid ""
+#~ "To fix this problem you can %sinstall or activate this theme%s or select another default "
+#~ "theme."
+#~ msgstr ""
+#~ "Per arreglar aquest problema pots %sinstal·lar o activar aquest tema%s o seleccionar un "
+#~ "altre tema per defecte."
+
+#, c-format
+#~ msgid ""
+#~ "To fix this problem you can %slogin as a site administrator%s and then %sinstall or "
+#~ "activate this theme%s or select another default theme."
+#~ msgstr ""
+#~ "Per arreglar aquest problema pots %sentrar com administrador de la web%s y després "
+#~ "%sinstal·lar o activar aquest tema%s o seleccionar un altre tema per defecte."
+
+#, c-format
+#~ msgid ""
+#~ "To fix this problem you can either %schoose a new theme for this album%s or %sinstall or "
+#~ "activate this theme%s."
+#~ msgstr ""
+#~ "Per arreglar aquest problema pots %sescollir un nou tema per aquest àlbum%s o "
+#~ "%sinstal·lar o activar aquest tema%s."
+
+#, c-format
+#~ msgid ""
+#~ "To fix this problem you can either %schoose a new theme for this album%s or %slogin as a "
+#~ "site administrator%s and then %sinstall or activate this theme%s."
+#~ msgstr ""
+#~ "Per arreglar aquest problema pots %sescollir un nou tema per aquest àlbum%s o %sentrar "
+#~ "com administrador de la Web%s i després %sinstal·lar o activar aquest tema%s."
+
+#, c-format
+#~ msgid ""
+#~ "To fix this problem you can either %slogin%s and then %schoose a new theme for this album"
+#~ "%s or %slogin as a site administrator%s and then %sinstall or activate this theme%s."
+#~ msgstr ""
+#~ "Per arreglar aquest problema pots %sidentificar-te%s i després %sescollir un nou tema per "
+#~ "aquest àlbum%s o %sentrar com administrador de la Web%s i després %sinstal·lar o activar "
+#~ "aquest tema%s."
+
+#~ msgid "User Options"
+#~ msgstr "Opcions de l'Usuari"
+
+#~ msgid "Password changed successfully"
+#~ msgstr "Contrasenya modificada amb èxit"
+
+#~ msgid ""
+#~ "You must enter your current password to prove that it's you, then enter your new password "
+#~ "twice to make sure that you didn't make a mistake."
+#~ msgstr ""
+#~ "Has d'introducir la teva contrasenya actual per comprovar que ets tú, després introdueix "
+#~ "la nova contrasenya dues vegades per a assegurar-te que no hi ha cap error."
+
+#~ msgid "Current Password"
+#~ msgstr "Contrasenya Actual"
+
+#~ msgid "You must enter your current password"
+#~ msgstr "Has d'escriure la teva contrasenya actual"
+
+#~ msgid "Incorrect password"
+#~ msgstr "Contrasenya incorrecta"
+
+#~ msgid "New Password"
+#~ msgstr "Nova Contrasenya"
+
+#~ msgid "You must enter a new password"
+#~ msgstr "Has d'escriure una nova contrasenya"
+
+#~ msgid "Verify New Password"
+#~ msgstr "Verifica la nova contrasenya"
+
+#~ msgid "You must enter your new password again!"
+#~ msgstr "&iexcl;Has d'escriure un altre cop la nova contrasenya!"
+
+#~ msgid "Account settings saved successfully"
+#~ msgstr "La configuració del compte s'ha guardat amb èxit"
+
+#~ msgid "(required, password required for change)"
+#~ msgstr "(Canvi de contrasenya obligatori)"
+
+#~ msgid "(suggested, password required for change)"
+#~ msgstr "(Canvi la contrasenya recomanat)"
+
+#~ msgid "(required to change the e-mail address)"
+#~ msgstr "Has d'introduïr una adreça de correu electrònic"
+
+#~ msgid "You must enter your current password to change the e-mail address"
+#~ msgstr "Has d'escriure la teva contrasenya actual"
+
+#~ msgid "Recover a lost or forgotten password"
+#~ msgstr "Recuperar contrasenya perduda o oblidada"
+
+#~ msgid ""
+#~ "Recovering your password requires that your user account has an email address assigned, "
+#~ "and that you have access to the listed email address.  A confirmation will be emailed to "
+#~ "you containing a URL which you must visit to set a new password for your account.  To "
+#~ "prevent abuse, password recovery requests can not be attempted more than once in a 20 "
+#~ "minute period.  A recovery confirmation is valid for seven days.  If it is not used "
+#~ "during that time, it will be purged from the system and a new request will have to be "
+#~ "made."
+#~ msgstr ""
+#~ "Recuperar la teva contrasenya requereix que el teu compte d'usuari tingui una adreça de "
+#~ "correu electronic contenint una URL que has de visitar per configurar una nova contraseña "
+#~ "no poder ser sol·licitades més d'un cop en un període de 20 minuts. Una confirmació de "
+#~ "recuperació es válida durant set dies. Si no s'utilitza durant aquest temps, es purgarà "
+#~ "del sistema i s'haurà de demanar novament."
+
+#~ msgid "Your recovery request has been sent!"
+#~ msgstr "&iexcl;La teva demanda de recuperació ha estat enviada!"
+
+#~ msgid ""
+#~ "Note that if the account does not have an email address, you may not receive the email "
+#~ "and you should contact your system administrator for help."
+#~ msgstr ""
+#~ "Donat compte de si el teu compte no té associada una adreça de correu electrònic, no "
+#~ "podràs rebre el correu electrònic i hauràs de posar-te en contacte amb el teu "
+#~ "administrador del sistema per rebre assistència."
+
+#, c-format
+#~ msgid ""
+#~ "Administrators can use the %sEmergency Password Recovery%s page to recover the admin "
+#~ "account if they fail to receive recovery email due to server problems, or lack of a "
+#~ "working email address."
+#~ msgstr ""
+#~ "Els administradors poden usar la pàgina de %sRecuperació de Contrasenya d'Emergencia%s "
+#~ "per recuperar el compte d'administració si els manca la recepció del correu electrònic de "
+#~ "recuperacio degut a un problema amb els servidor, o a la manca d'una adreça de correu "
+#~ "electònic funcional."
+
+#~ msgid "Recover"
+#~ msgstr "Recuperar"
+
+#, c-format
+#~ msgid ""
+#~ "In order to proceed with the password reset, we have to verify that you are who you "
+#~ "claim.  The best way to be sure is to ask you to make a tiny change in the Gallery "
+#~ "directory which will prove that you have the right permissions.  So, we're going to ask "
+#~ "that you create a new text file called %s in your gallery2 directory. It must contain the "
+#~ "following randomly generated characters:"
+#~ msgstr ""
+#~ "Per continuar amb el reinici de la contrasenya, hem de verificar que ets qui dius que "
+#~ "ets.  La millor forma d'estar segur és de demanar-te que fagis un canvi diminut en el "
+#~ "directori de Gallery el que demostrarà que tens els permisos correctes.  Així, et "
+#~ "demanarem que creïs un nou arxiu de texte amb el nom %s en el directori de gallery2. "
+#~ "Aquest arxiu ha de contenir els següents caràcters generats a l'atzar:"
+
+#, c-format
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#, fuzzy, c-format
+#~ msgid ""
+#~ "As a convenience to you, we've prepared a %scorrect version of login.txt%s for you.  "
+#~ "Download that and copy it into your install directory and you're all set."
+#~ msgstr ""
+#~ "Per la teva comoditat, hem preparat una %sversió correcta de l'arxiu authFile.txt%s per a "
+#~ "tú.  Descarrega-la i cópiala en el teu directori d'instal·lació i estarà tot llest."
+
+#~ msgid "Once you've uploaded the file, click refresh to continue."
+#~ msgstr "Un cop que hagis pujat el fitxer, fes click en refrescar per continuar."
+
+#~ msgid "Emergency Administrator Password Reset"
+#~ msgstr "Recuperació d'Emergència de la Contrasenya d'Administrador"
+
+#~ msgid ""
+#~ "This page can be used by a system administrator to securely reset the password on any "
+#~ "account."
+#~ msgstr ""
+#~ "Aquesta pàgina pot ser usada per un administrador del sistema per a reiniciar de forma "
+#~ "segura la contrasenya de qualsevol compte."
+
+#~ msgid "Authorization Confirmed"
+#~ msgstr "Autorització Confirmada"
+
+#~ msgid ""
+#~ "Your authorization has been confirmed.  Please enter your new password below.  After "
+#~ "setting your new password you will be taken to the login page."
+#~ msgstr ""
+#~ "La teva autorització ha estat confirmada.  Si us plau introdueix la teva nova contrasenya "
+#~ "a continuació.  Després de configurar la teva nova contrasenya seràs portat a la pàgina "
+#~ "d'inici de sessió."
+
+#~ msgid "Recover Password for Username"
+#~ msgstr "Recuperar Contrasenya per l'Usuari"
+
+#~ msgid "The username you entered does not exist."
+#~ msgstr "El nom d'usuari que has escrit no existeix."
+
+#~ msgid "Authorization Incorrect"
+#~ msgstr "Autorització Incorrecta"
+
+#~ msgid "Recovery Instructions"
+#~ msgstr "Instruccions de Recuperació"
+
+#~ msgid "AuthFile Missing"
+#~ msgstr "Fitxer d'Autenticació no trobat"
+
+#~ msgid "AuthFile Unreadable"
+#~ msgstr "Fitxer d'Autenticació il·legible"
+
+#, c-format
+#~ msgid "Your %s file is not readable. Please give Gallery read permissions on the file."
+#~ msgstr ""
+#~ "El teu fitxer %s no té permisos de lectura. Si us plau dona a Gallery permisos de lectura "
+#~ "sobre el fitxer."
+
+#~ msgid "Refresh"
+#~ msgstr "Refrescar"
+
+#~ msgid "This page will allow you to reset the password on your account."
+#~ msgstr "Aquesta pàgina et permet reiniciar la contrasenya del teu compte."
+
+#, c-format
+#~ msgid ""
+#~ "There is no request which matches the username and authorization provided. Request a new "
+#~ "authorization from the %slost password page%s."
+#~ msgstr ""
+#~ "No hi ha ninguna petició que coincideixi amb el nom d'usuari i la autorització "
+#~ "facilitada. Sol·licita una nova autorizació desde la %sp&agrave;gina per recordar "
+#~ "contrasenyes%s."
+
+#, c-format
+#~ msgid ""
+#~ "The request you are trying to access has expired.  Request a new authorization from the "
+#~ "%slost password page%s."
+#~ msgstr ""
+#~ "La petició a la que estàs intentant accedir ha expirat.  Sol·licita una nova autorizació "
+#~ "desde la %sp&agrave;gina per recordar contrasenyes%s."
+
+#~ msgid "Authorization missing"
+#~ msgstr "Autorizació no trobada"
+
+#~ msgid "Username missing"
+#~ msgstr "Nom d'usuari no trobat"
+
+#~ msgid "Submit"
+#~ msgstr "Enviar"
+
+#, c-format
+#~ msgid "Hello %s,"
+#~ msgstr "Hola %s,"
+
+#, c-format
+#~ msgid "You receive this email because a password recovery for %s was requested by %s at %s"
+#~ msgstr ""
+#~ "Has rebut aquest correu perque una recuperació de contrasenya per a %s ha estat "
+#~ "sol·licitada per %s a les %s"
+
+#, c-format
+#~ msgid "Your username is: %s"
+#~ msgstr "El teu nom d'usuari és: %s"
+
+#~ msgid ""
+#~ "To finish the password recovery process please click the following link and enter the "
+#~ "required information:"
+#~ msgstr ""
+#~ "Per finalitzar el procès de recuperació de contrasenya per favor fes click en el següent "
+#~ "vincle i introdueix la informació sol·licitada:"
+
+#~ msgid "If you did not request this recovery email, you may safely ignore it."
+#~ msgstr "Si no has sol·licitat aquest correu electrónic, pots ignorar-lo."
+
+#~ msgid "Thank you!"
+#~ msgstr "¡Gràcies!"
+
+#~ msgid "guest"
+#~ msgstr "invitat"
+
+#, c-format
+#~ msgid "display mode: %s"
+#~ msgstr "mode de visualització: %s"
+
+#~ msgid "Go"
+#~ msgstr "Anar"
+
+#, fuzzy, c-format
+#~ msgid "WARNING: block %s doesn't exist."
+#~ msgstr "El grup '%s' no existeix."
+
+#, c-format
+#~ msgid "%d of %d"
+#~ msgstr "%d de %d"
+
+#~ msgid "Page:"
+#~ msgstr "Pàgina:"
+
+#, c-format
+#~ msgid "%d. %s"
+#~ msgstr "%d. %s"
+
+#~ msgid "Size: "
+#~ msgstr "Mida: "
+
+#~ msgid "Unknown"
+#~ msgstr "Desconegut"
+
+#~ msgid "Full size: "
+#~ msgstr "Mida total: "
+
+#~ msgid "Setting"
+#~ msgstr "Configuració"
+
+#~ msgid "Use Global"
+#~ msgstr "Usar Globals"
+
+#~ msgid "Language selector"
+#~ msgstr "Selecció d'idioma"
+
+#~ msgid "Use dropdown menu"
+#~ msgstr "Usa el menú desplegable"
+
+#~ msgid "Login block"
+#~ msgstr "Bloc d'Inici de Sessió"
+
+#~ msgid "Links to album/photo peers"
+#~ msgstr "Enllaços als parells d'àlbum/foto"
+
+#, fuzzy
+#~ msgid "Language Packages"
+#~ msgstr "Configuració de l'Idioma"
+
+#~ msgid "Back to %s"
+#~ msgstr "Tornar a %s"
+
+#~ msgid "Navigation"
+#~ msgstr "Navegació"
+
+#~ msgid "delete confirmation"
+#~ msgstr "confirmació de borrat"
+
+#~ msgid "delete %s"
+#~ msgstr "borrar %s"
+
+#~ msgid "Deletion Complete"
+#~ msgstr "Borrat Complet"
+
+#~ msgid "Item successfully deleted"
+#~ msgstr "Element eliminat amb èxit"
+
+#~ msgid "Are you sure you want to delete this %s?"
+#~ msgstr "&iquest;Estàs segur de voler eliminar aquest %s?"
+
+#~ msgid "It contains %d item."
+#~ msgid_plural "It contains %d items."
+#~ msgstr[0] "Conté %d element."
+#~ msgstr[1] "Conté %d elements."
+
+#~ msgid "There is no undo!"
+#~ msgstr "&iexcl;No es pot desfer!"
+
+#~ msgid "key"
+#~ msgstr "clau"
