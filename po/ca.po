@@ -80,6 +80,9 @@ msgstr ""
 "Marqueu aquesta bandera per utilitzar CSS minificat (més eficient, per defecte), en cas "
 "contrari s'utilitza CSS senzill (menys eficient)."
 
+msgid "<em>No title</em>"
+msgstr "<em>Sense titol</em>"
+
 msgid "This album is empty."
 msgstr "Àlbum buit."
 

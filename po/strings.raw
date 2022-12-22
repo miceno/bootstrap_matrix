@@ -13,6 +13,7 @@ gettext("Mark this flag to self-host assets on this server (less efficient), oth
 gettext("Mark this flag to use minified CSS (more efficient, default), otherwise plain CSS is used (less efficient).")
 
 /* templates/album.tpl */
+gettext("<em>No title</em>")
 gettext("This album is empty.")
 gettext("Add a photo!")
 gettext("No Thumbnail") /* also in: templates/core_1/ItemAdmin.tpl templates/search_1/SearchScan.tpl templates/search_1/SearchShowAll.tpl */

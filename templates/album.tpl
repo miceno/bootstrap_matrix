@@ -13,13 +13,14 @@
     {*  <div id="gsContent" class="container-fluid"> *}
 
     <div class="gHeader panel-heading clearfix">
-        {if !empty($theme.item.title)}
+            {capture name="default_title"} {g->text text='<em>No title</em>'} {/capture}
+            {assign var="album_title_text" value=$theme.item.title|default:$smarty.capture.default_title}
             <div class="album-header-wrapper">
             {g->block type="core.BreadCrumb"}
             {strip}
             <h2 class="visible-xs-inline collapsed visible-sm-inline visible-md-inline visible-lg-inline panel-title"
                 data-toggle="collapse" data-target="#description-{$theme.item.id}">
-                <span class="album-title">{$theme.item.title|markup}</span>
+                <span class="album-title">{$album_title_text|markup}</span>
                 <i class="indicator glyphicon glyphicon-chevron-up"></i>
             </h2>
             {/strip}
@@ -27,7 +28,6 @@
                 {g->theme include="sidebar.tpl"}
             {/if}
             </div>
-        {/if}
 
         <div id="description-{$theme.item.id}" class="description-wrapper collapse">
             {if !empty($theme.item.description)}
@@ -115,19 +115,18 @@
                                 </a>
                             {/if}
                             <div class="thumbnail-description-wrapper opensans">
-                                {if !empty($child.title)}
+                                    {assign var="children_title_text" value=$child.title|default:$smarty.capture.default_title}
                                     <p class="giTitle collapsed" data-toggle="collapse"
                                        data-target="#description-{$smarty.foreach.child.index}">
                                         {if $child.canContainChildren && (!isset($theme.params.albumFrame)
                                         || $theme.params.albumFrame == $theme.params.itemFrame)}
                                             {* Add prefix for albums unless imageframe will differentiate *}
-                                            {g->text text="Album: %s" arg1=$child.title|markup}
+                                            {g->text text="Album: %s" arg1=$children_title_text|markup}
                                         {else}
-                                            {$child.title|markup}
+                                            {$children_title_text|markup}
                                         {/if}
                                         <i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
                                     </p>
-                                {/if}
 
                                 <div id="description-{$smarty.foreach.child.index}" class="collapse">
                                     {if !empty($child.summary)}
