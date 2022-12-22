@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: Gallery: BootstrapMatrix Theme 1.2.2\n"
 "Report-Msgid-Bugs-To: gallery-translations@lists.sourceforge.net\n"
 "POT-Creation-Date: 2022-12-22 00:17+0100\n"
-"PO-Revision-Date: 2022-12-22 01:28+0100\n"
+"PO-Revision-Date: 2022-12-22 17:59+0100\n"
 "Last-Translator: Roger Cervantes <cervantes_roger@yahoo.es>\n"
 "Language-Team: Catalan <gallery-translations@lists.sourceforge.net>\n"
 "Language: ca\n"
@@ -447,7 +447,7 @@ msgid "Save and Edit Next %s"
 msgstr "Guardar i Editar els %s propers"
 
 msgid "Edit Captions"
-msgstr "Editar Etiquetes"
+msgstr "Editar camps"
 
 msgid "There were errors saving some items"
 msgstr "Hi ha hagut errors guardant alguns elements"
@@ -901,7 +901,7 @@ msgstr "&laquo; Àlbum de paraules clau &raquo;"
 
 #, c-format
 msgid "%s Location Map"
-msgstr "%s Mapa d'ubicació"
+msgstr "Mapa d'ubicació de %s"
 
 msgid "Move history"
 msgstr "Història de moviment"
