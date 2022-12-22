@@ -2,6 +2,7 @@
  * $Revision: 16297 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
+{assign var=viewL10domain value="themes_bootstrap_matrix"}
 {if !isset($showCloud) }{assign var=showCloud value=false}{/if}
 {if !isset($showHeader) }{assign var=showHeader value=true}{/if}
 {if !isset($forItem) }{assign var=forItem value=true}{/if}

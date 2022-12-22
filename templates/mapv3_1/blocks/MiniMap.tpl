@@ -3,6 +3,7 @@
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
 {* Set defaults *}
+{assign var=viewL10domain value="themes_bootstrap_matrix"}
 {if !isset($item)}{assign var=item value=$theme.item}{/if}
 {if !isset($mapHeight)}{assign var=mapHeight value=150}{/if}
 {if !isset($mapWidth)}{assign var=mapWidth value="100%"}{/if}

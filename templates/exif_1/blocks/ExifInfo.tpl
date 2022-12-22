@@ -2,6 +2,7 @@
  * $Revision: 17380 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
+{assign var=viewL10domain value="themes_bootstrap_matrix"}
 {if empty($item)} {assign var=item value=$theme.item} {/if}
 {assign var=isRegisteredUser value=false}
 {if isset($user.isRegisteredUser)}{assign var=isRegisteredUser value=`$user.isRegisteredUser`}{/if}
