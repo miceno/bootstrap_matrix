@@ -2,9 +2,10 @@
  * $Revision: 16297 $
  * Read this before changing templates!  http://codex.gallery2.org/Gallery2:Editing_Templates
  *}
-{assign var=showCloud value=$showCloud|default:false}
-{assign var=showHeader value=$showHeader|default:true}
-{if $forItem|default:true} {* Links for keywords of current item *}
+{if !isset($showCloud) }{assign var=showCloud value=false}{/if}
+{if !isset($showHeader) }{assign var=showHeader value=true}{/if}
+{if !isset($forItem) }{assign var=forItem value=true}{/if}
+{if $forItem} {* Links for keywords of current item *}
 {if empty($item)} {assign var=item value=$theme.item} {/if}
 
 {if !empty($item.keywords)}
