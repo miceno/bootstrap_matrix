@@ -5,13 +5,13 @@
 {if !isset($showAdvancedLink)} {assign var="showAdvancedLink" value="false"} {/if}
 {if !isset($inputWidth)} {assign var="inputWidth" value="18"} {/if}
 {capture name="search_text"}{strip}
-    {g->text text="Search your Gallery"}
+    {g->text text="Search your Gallery" l10Domain="themes_bootstrap_matrix"}
 {/strip}{/capture}
 
 {g->addToTrailer}
 <script type="text/javascript">
   // <![CDATA[
-  search_SearchBlock_init('{g->text text="Search your Gallery" forJavascript=true}', '{g->text text="Please enter a search term." forJavascript=true}', '{g->text text="Searching in progress, please wait!" forJavascript=true}');
+  search_SearchBlock_init('{g->text text="Search your Gallery" l10Domain="themes_bootstrap_matrix" forJavascript=true}', '{g->text text="Please enter a search term." l10Domain="themes_bootstrap_matrix" forJavascript=true}', '{g->text text="Searching in progress, please wait!" l10Domain="themes_bootstrap_matrix" forJavascript=true}');
   // ]]>
 </script>
 {/g->addToTrailer}
@@ -27,7 +27,7 @@
       <input type="hidden" name="{g->formVar var="form[options][GalleryCoreSearch][summaries]"}" value="on"/>
       <input type="hidden" name="{g->formVar var="form[options][GalleryCoreSearch][titles]"}" value="on"/>
       <div class="search-form-group has-feedback form-group">
-            <label for="searchCriteria" class="sr-only">{g->text text="Search"}</label>
+            <label for="searchCriteria" class="sr-only">{g->text text="Search" l10Domain="$l10Domain"}</label>
             <div class="input-group">
             {strip}
                 <span class="input-group-btn">

@@ -35,9 +35,9 @@
     {else}
         <div class="block-expandable-header">
         {if $item.canContainChildren}
-            {g->text text="Album actions"}
+            {g->text text="Album actions" l10Domain="themes_bootstrap_matrix"}
         {else}
-            {g->text text="Item actions"}
+            {g->text text="Item actions" l10Domain="themes_bootstrap_matrix"}
         {/if}
         </div>
         <div class="block-expandable-content">
