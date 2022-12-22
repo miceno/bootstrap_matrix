@@ -3,42 +3,370 @@
 /* theme.inc */
 gettext("BootstrapMatrix")
 gettext("Bootstrap Gallery2 look and feel")
+gettext("Block layout")
+gettext("To the left")
+gettext("To the bottom")
+gettext("To the right")
+gettext("Disable")
+gettext("Number of above-the-fold images.\n	    Above-the-fold images will load immediately, while below-the-fold images will be lazy\n	    loaded.")
+gettext("Mark this flag to self-host assets on this server (less efficient), otherwise CDN ready versions are used (more efficient, default).")
+gettext("Mark this flag to use minified CSS (more efficient, default), otherwise plain CSS is used (less efficient).")
 
 /* templates/album.tpl */
-gettext("This album is empty.") /* also in: templates/local/album.tpl */
-gettext("Add a photo!") /* also in: templates/local/album.tpl */
-gettext("no thumbnail") /* also in: templates/local/album.tpl */
-gettext("Album: %s") /* also in: templates/local/album.tpl */
+gettext("This album is empty.")
+gettext("Add a photo!")
+gettext("No Thumbnail") /* also in: templates/core_1/ItemAdmin.tpl templates/search_1/SearchScan.tpl templates/search_1/SearchShowAll.tpl */
+gettext("Album: %s")
 
 /* templates/error.tpl */
 gettext("Error!")
 
 /* templates/photo.tpl */
-gettext("Download %s") /* also in: templates/local/photo.tpl */
-gettext("There is nothing to view for this item.") /* also in: templates/local/photo.tpl */
-gettext("View in original album") /* also in: templates/local/photo.tpl */
-gettext("Download %s in original format") /* also in: templates/local/photo.tpl */
+gettext("previous") /* also in: templates/core_1/blocks/Navigator.tpl */
+gettext("next") /* also in: templates/core_1/blocks/Navigator.tpl */
+gettext("Download %s")
+gettext("There is nothing to view for this item.")
+gettext("Download %s in original format")
+gettext("View in original album")
 
 /* templates/progressbar.tpl */
 gettext("Continue...")
 
+/* templates/sidebar.tpl */
+gettext("Actions")
+
+/* templates/theme.tpl */
+gettext("Album")
+gettext("Photo")
+gettext("Admin")
+gettext("Module")
+
+/* templates/bulkexcelupload_1/ItemAddBulkExcelUpload.tpl */
+gettext("Your webserver is configured to disallow file uploads from your web browser at this time.  Please contact your system administrator for assistance.") /* also in: templates/core_1/ItemAddFromBrowser.tpl */
+gettext("There was a problem processing your request, see below for details.") /* also in: templates/bulkupload_0/ItemAddBulk.tpl templates/core_1/ItemAddFromBrowser.tpl */
+gettext("Upload an XLSX with image descriptions and a ZIP file with the images.")
+gettext("[help]") /* also in: templates/bulkupload_0/ItemAddBulk.tpl */
+gettext("<b>Note:</b> You can upload up to %s at one time.  If you want to upload more than that, you must upload the files separately, use a different upload format, or ask your system administrator to allow larger uploads.") /* also in: templates/core_1/ItemAddFromBrowser.tpl */
+gettext("<b>Note:</b> You can upload up to %s at one time.  No individual file may be larger than %s. If you want to upload more than that, you must upload the files separately, use a different upload format, or ask your system administrator to allow larger uploads.") /* also in: templates/core_1/ItemAddFromBrowser.tpl */
+gettext("Create an XSLX file containing the Number, Reference, Term, Media, Description, Place, Author and Date for each image.  Then create a ZIP with the image files, and enter the path to the XLSX and ZIP files in the box below.  For convenience, you can author the data file in Excel and then save it in the XLSX format.  Images you want to add must be on the ZIP file in the same order as they are on the XLSX file.  Here is a %ssample data file%s and a %ssample excel spreadsheet%s.")
+gettext("Excel File")
+gettext("Invalid path for Excel file.")
+gettext("Missing path for Excel file.")
+gettext("Read header")
+gettext("Zip File")
+gettext("Invalid path for ZIP file.")
+gettext("Missing path for ZIP file.")
+gettext("Add Items") /* also in: templates/bulkupload_0/ItemAddBulk.tpl templates/core_1/ItemAddFromBrowser.tpl */
+
+/* templates/bulkupload_0/ItemAddBulk.tpl */
+gettext("Add many files at once with pre-prepared title, summary, description and keywords.")
+gettext("The photos you want to add must already be uploaded to your web server.  Create a data file containing the title, summary, description and keywords along with the path to each photo, and then enter the path to the text file in the box below.  For convenience, you can author the data file in Excel and then save it in the %sText (tab delimited)%s format.  Here is a %ssample data file%s and a %ssample excel spreadsheet%s.")
+gettext("Data File")
+gettext("Invalid path.")
+
+/* templates/core_1/ItemAddAlbum.tpl */
+gettext("Add Sub-Album")
+gettext("Name") /* also in: templates/core_1/ItemEditItem.tpl */
+gettext("(required)") /* also in: templates/core_1/ItemEditItem.tpl */
+gettext("The name of this album on your hard disk.  It must be unique in this album.  Only use alphanumeric characters, underscores or dashes.  You will be able to rename it later.")
+gettext("Your name contains invalid characters.  Please enter another.")
+gettext("You must enter a name for this album.")
+gettext("The name you entered is already in use.  Please enter another.")
+gettext("Title") /* also in: templates/core_1/ItemEditCaptions.tpl templates/core_1/ItemEditItem.tpl */
+gettext("This is the album title.")
+gettext("Summary") /* also in: templates/core_1/ItemAddFromBrowser.tpl templates/core_1/ItemEditCaptions.tpl templates/core_1/ItemEditItem.tpl templates/mapv3_1/ShowMap.tpl */
+gettext("This is the album summary.")
+gettext("Keywords") /* also in: templates/core_1/ItemEditCaptions.tpl templates/core_1/ItemEditItem.tpl templates/keyalbum_1/blocks/KeywordLinks.tpl templates/mapv3_1/ShowMap.tpl */
+gettext("Keywords are not visible, but are searchable.") /* also in: templates/core_1/ItemEditItem.tpl */
+gettext("Description") /* also in: templates/core_1/ItemAddFromBrowser.tpl templates/core_1/ItemEditCaptions.tpl templates/core_1/ItemEditItem.tpl templates/mapv3_1/ShowMap.tpl */
+gettext("This is the long description of the album.")
+gettext("Create")
+gettext("Back")
+
+/* templates/core_1/ItemAddConfirmation.tpl */
+gettext("Upload Complete")
+ngettext("Successfully added %d file.", "Successfully added %d files.")
+gettext("No files added.")
+gettext("Added %s")
+gettext("Failed to add %s")
+gettext("Add more files")
+
+/* templates/core_1/ItemAddFromBrowser.tpl */
+gettext("Upload files directly from your computer.")
+gettext("Enter the full path to the file and an optional caption in the boxes below.")
+gettext("File")
+gettext("Caption")
+gettext("More Upload Boxes...")
+gettext("Set item titles from:")
+gettext("Assign caption to:")
+
+/* templates/core_1/ItemAdmin.tpl */
+gettext("Folders")
+gettext("Options")
+
+/* templates/core_1/ItemDelete.tpl */
+gettext("Delete Items")
+gettext("No items were selected for deletion")
+ngettext("Successfully deleted %d item", "Successfully deleted %d items")
+gettext("Check All") /* also in: templates/core_1/ItemMove.tpl templates/search_1/SearchScan.tpl templates/search_1/SearchShowAll.tpl */
+gettext("Check None") /* also in: templates/core_1/ItemMove.tpl */
+gettext("Invert") /* also in: templates/core_1/ItemMove.tpl templates/search_1/SearchScan.tpl templates/search_1/SearchShowAll.tpl */
+gettext("Previous Page") /* also in: templates/core_1/ItemMove.tpl */
+gettext("Next Page") /* also in: templates/core_1/ItemMove.tpl */
+gettext("Delete")
+gettext("Cancel") /* also in: templates/core_1/ItemEditCaptions.tpl templates/core_1/ItemMove.tpl templates/core_1/UserLogin.tpl */
+gettext("This album contains no items to delete")
+gettext("Choose the items you want to delete")
+gettext("(page %d of %d)") /* also in: templates/core_1/ItemEditCaptions.tpl templates/core_1/ItemMove.tpl */
+gettext("Items selected here will remain selected when moving between pages.") /* also in: templates/core_1/ItemMove.tpl */
+ngettext("One item selected on other pages.", "%d items selected on other pages.") /* also in: templates/core_1/ItemMove.tpl */
+gettext("(data)")
+ngettext("(album containing %d item)", "(album containing %d items)") /* also in: templates/core_1/ItemMove.tpl */
+gettext("(empty album)") /* also in: templates/core_1/ItemMove.tpl */
+
+/* templates/core_1/ItemDeleteJs.tpl */
+gettext("Warning!") /* also in: templates/core_1/ItemMove.tpl */
+gettext("Do you really want to delete %s?")
+gettext("Yes")
+gettext("No")
+gettext("Delete more items...")
+
+/* templates/core_1/ItemEditCaptions.tpl */
+gettext("Save and Done")
+gettext("Save") /* also in: templates/core_1/ItemEditItem.tpl templates/mapv3_1/mapItemEdit.tpl */
+gettext("Save and Edit Previous %s")
+gettext("Save and Edit Next %s")
+gettext("Edit Captions")
+gettext("There were errors saving some items")
+gettext("There were errors saving all items")
+gettext("Successfully saved all items")
+gettext("This album contains no items")
+gettext("Photo Date and Time")
+gettext("Link Date and Time") /* also in: templates/core_1/ItemEditItem.tpl */
+gettext("Date:") /* also in: templates/core_1/ItemEditItem.tpl */
+gettext("Time:") /* also in: templates/core_1/ItemEditItem.tpl */
+gettext("Use the original capture date and time from file information (e.g. Exif tag):") /* also in: templates/core_1/ItemEditItem.tpl */
+gettext("You must enter a valid date and time") /* also in: templates/core_1/ItemEditItem.tpl */
+gettext("Set the date and time when this image was captured.") /* also in: templates/core_1/ItemEditItem.tpl */
+gettext("Entity date is not available. Change it using the Edit action of the element.")
+gettext("Saved successfully.")
+gettext("This item was modified by somebody else at the same time.  Your changes were lost.")
+gettext("You do not have permissions to modify this item.")
+
+/* templates/core_1/ItemEditItem.tpl */
+gettext("The name of this item on your hard disk.  It must be unique in this album.  Only use alphanumeric characters, underscores or dashes.")
+gettext("Your name contains invalid characters.  Please choose another.")
+gettext("You must enter a name for this item.")
+gettext("The name you entered is already in use.  Please choose another.")
+gettext("The root album must have a title.")
+gettext("The title of this item.")
+gettext("The summary of this item.")
+gettext("This is the long description of the item.")
+gettext("%s Date and Time")
+gettext("Set the date and time to be displayed for this item.")
+gettext("Set the date and time to be displayed for this %s.")
+gettext("Set the date and time to be displayed for this link.")
+gettext("Thumbnail")
+gettext("There are no graphics toolkits enabled that support this type of item, so we cannot create or modify a thumbnail.")
+gettext("site admin")
+gettext("Set the size of the thumbnail.  The largest side of the thumbnail will be no larger than this value. Leave this field blank if you don't want a thumbnail.")
+gettext("You must enter a number (greater than zero)")
+gettext("Unable to create a thumbnail for this item")
+gettext("Reset") /* also in: templates/mapv3_1/mapItemEdit.tpl */
+
+/* templates/core_1/ItemMove.tpl */
+gettext("Move an Item")
+ngettext("Successfully moved %d item", "Successfully moved %d items")
+gettext("There was a problem processing your request.")
+gettext("This album contains no items to move.")
+gettext("Source")
+gettext("Choose the items you want to move")
+gettext("OK")
+gettext("The destination you chose does not accept sub-albums, so all sub-albums have been deselected.")
+gettext("Warning")
+gettext("The destination you chose only accepts sub-albums, so all non-albums have been deselected.")
+gettext("You are not allowed to move this item away from here.")
+gettext("You are not allowed to move an album to the chosen destination.")
+gettext("You are not allowed to move an item to the chosen destination.")
+gettext("You cannot move an album into its own subtree.")
+gettext("Destination")
+gettext("Choose a new album for them")
+gettext("You don't have the permission to add items in this album")
+gettext("No destination chosen")
+gettext("Move")
+
+/* templates/core_1/MarkupBar.tpl */
+gettext("Enter a URL")
+gettext("Enter some text describing the URL")
+gettext("Enter an image URL")
+// HINT: Button label for Bold
+gettext("B")
+// HINT: Button label for italic
+gettext("i")
+gettext("list")
+gettext("bullet")
+gettext("url")
+gettext("image")
+gettext("color")
+gettext("You can also use the %scolor name%s for example: %sYour Text%s")
+
+/* templates/core_1/SiteAdmin.tpl */
+gettext("Admin Options")
+
+/* templates/core_1/UserLogin.tpl */
+gettext("Login to your account")
+gettext("Your password has been recovered, please login.")
+gettext("The administration session has expired, please re-authenticate to access the administration area.")
+gettext("Username")
+gettext("You must enter a username")
+gettext("Logins to this account are temporarily disabled due to multiple failed login attempts.  Wait for access to be restored, or use the %srecover password%s page to re-enable this account.")
+gettext("Password")
+gettext("You must enter a password")
+gettext("Your login information is incorrect.  Please try again.")
+gettext("Lost or forgotten passwords can be retrieved using the %srecover password%s page")
+gettext("Login")
+gettext("Welcome, %s!")
+
+/* templates/core_1/blocks/ItemInfo.tpl */
+gettext("Date: %s")
+gettext("Owner: %s")
+ngettext("Size: %d item", "Size: %d items")
+ngettext("(%d item total)", "(%d items total)")
+gettext("Views: %d")
+
+/* templates/core_1/blocks/ItemLinks.tpl */
+gettext("&laquo; album actions &raquo;")
+gettext("&laquo; item actions &raquo;")
+gettext("Album actions")
+gettext("Item actions")
+
 /* templates/core_1/blocks/Navigator.tpl */
 gettext("Pagination")
-gettext("next")
 gettext("last")
 gettext("first")
-gettext("previous")
 
-/* templates/core_1/blocks/Pager.tpl */
-gettext("Page navigation")
-gettext("Page:")
+/* templates/exif_1/blocks/ExifInfo.tpl */
+gettext("Loading..")
+gettext("EXIF Photo Properties")
+gettext("details")
+gettext("summary")
 
-/* templates/local/sidebar.tpl */
-gettext("More")
+/* templates/geturls_0/GetUrls.tpl */
+gettext("Quick URLs")
+gettext("Show URLs")
+gettext("Warning! The permissions for this item are set so that unauthenticated users may not view it. If you are planning on linking to this item in a public forum or HTML page, the viewers will most likely not be able to access it.")
+gettext("Warning! The permissions for this item are set so that unauthenticated users may not view the full sized version, but the resized version is available. Links to the resized version are being used, this may not be what you want.")
+gettext("Through this page you can quickly get formatted URLs for this item.")
+gettext("These can be used to post the item/image in forums and HTML pages by copying the code in the boxes below and pasting it into your application/browser.")
+gettext("HTML Formatted Links")
+gettext("Link to the page of the item:")
+gettext("CLK")
+gettext("Show image directly:")
+gettext("Show image directly (resized version will be shown):")
+gettext("Show clickable resized image linking to original:")
+gettext("Show a clickable thumbnail linking to the item:")
+gettext("TMB")
+gettext("BBCode Formatted Links")
+gettext("Show a clickable resized image linking to the original:")
+gettext("Show a clickable thumbnail linking to the original:")
+gettext("Misc.")
+gettext("The ID for this item is %s")
+gettext("Download URL for original item:")
+gettext("The ID of the resized version that we're using is %s,")
+gettext("URL for resized version:")
+gettext("The ID of the thumbnail is %s.")
+gettext("URL for thumbnail:")
+
+/* templates/hidden_1/HiddenItemOption.tpl */
+gettext("Hidden")
+gettext("Hidden items are not visible to guest users until the page for the item is accessed directly.")
+gettext("Contents of hidden albums are restricted until the URL for the album is visited.")
+gettext("Note that guests need permission to view resizes and/or original items, as visiting the direct URL grants only simple view permission; access to resizes/originals is still controlled by item permissions.")
+
+/* templates/keyalbum_1/blocks/KeywordLinks.tpl */
+gettext("Keyword cloud")
+gettext("&laquo; Keyword Album &raquo;")
+
+/* templates/map_0/blocks/MiniMap.tpl */
+gettext("%s Location Map") /* also in: templates/mapv3_1/blocks/MiniMap.tpl */
+
+/* templates/mapv3_1/MapHeader.tpl */
+gettext("Move history")
+gettext("move")
+gettext("zoom")
+gettext("start")
+gettext("window")
+
+/* templates/mapv3_1/ShowMap.tpl */
+gettext("Photo Map")
+gettext("Filtered on")
+gettext("Grab coordinates from Map")
+gettext("There was a hacking attempt on the filter name, please remove the filter option from the address bar.")
+gettext("There are no markers created or a bad marker set is currently selected. Please review settings in the %scontrol panel%s.")
+gettext("There are no items with GPS coordinates")
+gettext("Check the Wiki for more information")
+gettext("There are no items available to be mapped")
+gettext("There were no items found in the selected %s, what would you like to do?")
+gettext("%sGo Back%s to the Album and add coordinates to items")
+gettext("Show me the %sdefault map%s")
+gettext("You do not have a profile setup for this website to use the Google Map. Review your settings in the %sAdmin Panel%s or %scheck the Wiki%s.")
+gettext("Loading, please wait...")
+// HINT: Hints or suggestions
+gettext("Tips")
+gettext("Click on the map to choose the point.")
+gettext("Each click will create a marker to ease aiming.")
+gettext("When you are satisfied with the coordinates, click <B>Save</B> above and the center of the map and the zoom level will be copied in the GPS and ZoomLevel fields of the item.")
+gettext("MENU")
+gettext("Save these coordinates")
+// HINT: Discard changes
+gettext("Cancel")
+gettext("Coordinates")
+gettext("Zoom level")
+gettext("Google Map Administration")
+
+/* templates/mapv3_1/mapItemEdit.tpl */
+gettext("Loading...")
+// HINT: Address not found
+gettext("Not found")
+gettext("No Value")
+gettext("Get via a Map")
+gettext("Get via EXIF headers")
+gettext("Write GPS to EXIF header")
+gettext("No GPS coordinates to write.")
+gettext("This picture already has GPS coordinates in the header")
+gettext("Get via address")
+
+/* templates/mapv3_1/blocks/ItemCoords.tpl */
+gettext("%s Coordinates:")
+gettext("No coordinates defined")
+
+/* templates/search_1/SearchScan.tpl */
+gettext("Search") /* also in: templates/search_1/SearchShowAll.tpl templates/search_1/blocks/SearchBlock.tpl */
+gettext("Uncheck All") /* also in: templates/search_1/SearchShowAll.tpl */
+gettext("You must enter some text to search for!") /* also in: templates/search_1/SearchShowAll.tpl */
+gettext("Results %d - %d")
+gettext("Show all %d")
+gettext("No results found for") /* also in: templates/search_1/SearchShowAll.tpl */
+gettext("View these results in a slideshow")
+
+/* templates/search_1/SearchShowAll.tpl */
+gettext("%s Search Results for ")
+gettext("Search Criteria")
+gettext("Search All Modules")
+gettext("Results %d - %d of %d, Page %d of %d")
+gettext("&laquo; Back")
+gettext("Next &raquo;")
 
 /* templates/search_1/blocks/SearchBlock.tpl */
 gettext("Search your Gallery")
 gettext("Please enter a search term.")
 gettext("Searching in progress, please wait!")
-gettext("Search")
-gettext("Advanced Search")
+
+/* templates/thumbnail_1/CustomThumbnail.tpl */
+gettext("Custom Thumbnail")
+gettext("Remove custom thumbnail for this item")
+gettext("Upload a JPEG image to use as the thumbnail for this item.")
+gettext("Image does not need to be thumbnail size; it will be resized as needed.")
+gettext("No toolkit available for resizing so uploaded image must be thumbnail sized.")
+gettext("Missing image file")
+gettext("Thumbnail image must be a JPEG")

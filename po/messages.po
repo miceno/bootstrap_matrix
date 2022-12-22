@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: gallery-translations@lists.sourceforge.net\n"
-"POT-Creation-Date: 2018-04-14 01:46+0200\n"
+"POT-Creation-Date: 2022-12-22 00:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,11 +30,44 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 msgid "BootstrapMatrix"
 msgstr ""
 
 msgid "Bootstrap Gallery2 look and feel"
+msgstr ""
+
+msgid "Block layout"
+msgstr ""
+
+msgid "To the left"
+msgstr ""
+
+msgid "To the bottom"
+msgstr ""
+
+msgid "To the right"
+msgstr ""
+
+msgid "Disable"
+msgstr ""
+
+msgid ""
+"Number of above-the-fold images.\n"
+"\t    Above-the-fold images will load immediately, while below-the-fold "
+"images will be lazy\n"
+"\t    loaded."
+msgstr ""
+
+msgid ""
+"Mark this flag to self-host assets on this server (less efficient), "
+"otherwise CDN ready versions are used (more efficient, default)."
+msgstr ""
+
+msgid ""
+"Mark this flag to use minified CSS (more efficient, default), otherwise "
+"plain CSS is used (less efficient)."
 msgstr ""
 
 msgid "This album is empty."
@@ -43,7 +76,7 @@ msgstr ""
 msgid "Add a photo!"
 msgstr ""
 
-msgid "no thumbnail"
+msgid "No Thumbnail"
 msgstr ""
 
 #, c-format
@@ -53,6 +86,12 @@ msgstr ""
 msgid "Error!"
 msgstr ""
 
+msgid "previous"
+msgstr ""
+
+msgid "next"
+msgstr ""
+
 #, c-format
 msgid "Download %s"
 msgstr ""
@@ -60,20 +99,619 @@ msgstr ""
 msgid "There is nothing to view for this item."
 msgstr ""
 
-msgid "View in original album"
-msgstr ""
-
 #, c-format
 msgid "Download %s in original format"
+msgstr ""
+
+msgid "View in original album"
 msgstr ""
 
 msgid "Continue..."
 msgstr ""
 
-msgid "Pagination"
+msgid "Actions"
 msgstr ""
 
-msgid "next"
+msgid "Album"
+msgstr ""
+
+msgid "Photo"
+msgstr ""
+
+msgid "Admin"
+msgstr ""
+
+msgid "Module"
+msgstr ""
+
+msgid ""
+"Your webserver is configured to disallow file uploads from your web browser "
+"at this time.  Please contact your system administrator for assistance."
+msgstr ""
+
+msgid "There was a problem processing your request, see below for details."
+msgstr ""
+
+msgid "Upload an XLSX with image descriptions and a ZIP file with the images."
+msgstr ""
+
+msgid "[help]"
+msgstr ""
+
+#, c-format
+msgid ""
+"<b>Note:</b> You can upload up to %s at one time.  If you want to upload "
+"more than that, you must upload the files separately, use a different upload "
+"format, or ask your system administrator to allow larger uploads."
+msgstr ""
+
+#, c-format
+msgid ""
+"<b>Note:</b> You can upload up to %s at one time.  No individual file may be "
+"larger than %s. If you want to upload more than that, you must upload the "
+"files separately, use a different upload format, or ask your system "
+"administrator to allow larger uploads."
+msgstr ""
+
+#, c-format
+msgid ""
+"Create an XSLX file containing the Number, Reference, Term, Media, "
+"Description, Place, Author and Date for each image.  Then create a ZIP with "
+"the image files, and enter the path to the XLSX and ZIP files in the box "
+"below.  For convenience, you can author the data file in Excel and then save "
+"it in the XLSX format.  Images you want to add must be on the ZIP file in "
+"the same order as they are on the XLSX file.  Here is a %ssample data file%s "
+"and a %ssample excel spreadsheet%s."
+msgstr ""
+
+msgid "Excel File"
+msgstr ""
+
+msgid "Invalid path for Excel file."
+msgstr ""
+
+msgid "Missing path for Excel file."
+msgstr ""
+
+msgid "Read header"
+msgstr ""
+
+msgid "Zip File"
+msgstr ""
+
+msgid "Invalid path for ZIP file."
+msgstr ""
+
+msgid "Missing path for ZIP file."
+msgstr ""
+
+msgid "Add Items"
+msgstr ""
+
+msgid ""
+"Add many files at once with pre-prepared title, summary, description and "
+"keywords."
+msgstr ""
+
+#, c-format
+msgid ""
+"The photos you want to add must already be uploaded to your web server.  "
+"Create a data file containing the title, summary, description and keywords "
+"along with the path to each photo, and then enter the path to the text file "
+"in the box below.  For convenience, you can author the data file in Excel "
+"and then save it in the %sText (tab delimited)%s format.  Here is a %ssample "
+"data file%s and a %ssample excel spreadsheet%s."
+msgstr ""
+
+msgid "Data File"
+msgstr ""
+
+msgid "Invalid path."
+msgstr ""
+
+msgid "Add Sub-Album"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "(required)"
+msgstr ""
+
+msgid ""
+"The name of this album on your hard disk.  It must be unique in this album.  "
+"Only use alphanumeric characters, underscores or dashes.  You will be able "
+"to rename it later."
+msgstr ""
+
+msgid "Your name contains invalid characters.  Please enter another."
+msgstr ""
+
+msgid "You must enter a name for this album."
+msgstr ""
+
+msgid "The name you entered is already in use.  Please enter another."
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "This is the album title."
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "This is the album summary."
+msgstr ""
+
+msgid "Keywords"
+msgstr ""
+
+msgid "Keywords are not visible, but are searchable."
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "This is the long description of the album."
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Upload Complete"
+msgstr ""
+
+#, c-format
+msgid "Successfully added %d file."
+msgid_plural "Successfully added %d files."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "No files added."
+msgstr ""
+
+#, c-format
+msgid "Added %s"
+msgstr ""
+
+#, c-format
+msgid "Failed to add %s"
+msgstr ""
+
+msgid "Add more files"
+msgstr ""
+
+msgid "Upload files directly from your computer."
+msgstr ""
+
+msgid ""
+"Enter the full path to the file and an optional caption in the boxes below."
+msgstr ""
+
+msgid "File"
+msgstr ""
+
+msgid "Caption"
+msgstr ""
+
+msgid "More Upload Boxes..."
+msgstr ""
+
+msgid "Set item titles from:"
+msgstr ""
+
+msgid "Assign caption to:"
+msgstr ""
+
+msgid "Folders"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "Delete Items"
+msgstr ""
+
+msgid "No items were selected for deletion"
+msgstr ""
+
+#, c-format
+msgid "Successfully deleted %d item"
+msgid_plural "Successfully deleted %d items"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Check All"
+msgstr ""
+
+msgid "Check None"
+msgstr ""
+
+msgid "Invert"
+msgstr ""
+
+msgid "Previous Page"
+msgstr ""
+
+msgid "Next Page"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+#. HINT: Discard changes
+msgid "Cancel"
+msgstr ""
+
+msgid "This album contains no items to delete"
+msgstr ""
+
+msgid "Choose the items you want to delete"
+msgstr ""
+
+#, c-format
+msgid "(page %d of %d)"
+msgstr ""
+
+msgid "Items selected here will remain selected when moving between pages."
+msgstr ""
+
+#, c-format
+msgid "One item selected on other pages."
+msgid_plural "%d items selected on other pages."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "(data)"
+msgstr ""
+
+#, c-format
+msgid "(album containing %d item)"
+msgid_plural "(album containing %d items)"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "(empty album)"
+msgstr ""
+
+msgid "Warning!"
+msgstr ""
+
+#, c-format
+msgid "Do you really want to delete %s?"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Delete more items..."
+msgstr ""
+
+msgid "Save and Done"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+#, c-format
+msgid "Save and Edit Previous %s"
+msgstr ""
+
+#, c-format
+msgid "Save and Edit Next %s"
+msgstr ""
+
+msgid "Edit Captions"
+msgstr ""
+
+msgid "There were errors saving some items"
+msgstr ""
+
+msgid "There were errors saving all items"
+msgstr ""
+
+msgid "Successfully saved all items"
+msgstr ""
+
+msgid "This album contains no items"
+msgstr ""
+
+msgid "Photo Date and Time"
+msgstr ""
+
+msgid "Link Date and Time"
+msgstr ""
+
+msgid "Date:"
+msgstr ""
+
+msgid "Time:"
+msgstr ""
+
+msgid ""
+"Use the original capture date and time from file information (e.g. Exif tag):"
+msgstr ""
+
+msgid "You must enter a valid date and time"
+msgstr ""
+
+msgid "Set the date and time when this image was captured."
+msgstr ""
+
+msgid ""
+"Entity date is not available. Change it using the Edit action of the element."
+msgstr ""
+
+msgid "Saved successfully."
+msgstr ""
+
+msgid ""
+"This item was modified by somebody else at the same time.  Your changes were "
+"lost."
+msgstr ""
+
+msgid "You do not have permissions to modify this item."
+msgstr ""
+
+msgid ""
+"The name of this item on your hard disk.  It must be unique in this album.  "
+"Only use alphanumeric characters, underscores or dashes."
+msgstr ""
+
+msgid "Your name contains invalid characters.  Please choose another."
+msgstr ""
+
+msgid "You must enter a name for this item."
+msgstr ""
+
+msgid "The name you entered is already in use.  Please choose another."
+msgstr ""
+
+msgid "The root album must have a title."
+msgstr ""
+
+msgid "The title of this item."
+msgstr ""
+
+msgid "The summary of this item."
+msgstr ""
+
+msgid "This is the long description of the item."
+msgstr ""
+
+#, c-format
+msgid "%s Date and Time"
+msgstr ""
+
+msgid "Set the date and time to be displayed for this item."
+msgstr ""
+
+#, c-format
+msgid "Set the date and time to be displayed for this %s."
+msgstr ""
+
+msgid "Set the date and time to be displayed for this link."
+msgstr ""
+
+msgid "Thumbnail"
+msgstr ""
+
+msgid ""
+"There are no graphics toolkits enabled that support this type of item, so we "
+"cannot create or modify a thumbnail."
+msgstr ""
+
+msgid "site admin"
+msgstr ""
+
+msgid ""
+"Set the size of the thumbnail.  The largest side of the thumbnail will be no "
+"larger than this value. Leave this field blank if you don't want a thumbnail."
+msgstr ""
+
+msgid "You must enter a number (greater than zero)"
+msgstr ""
+
+msgid "Unable to create a thumbnail for this item"
+msgstr ""
+
+msgid "Reset"
+msgstr ""
+
+msgid "Move an Item"
+msgstr ""
+
+#, c-format
+msgid "Successfully moved %d item"
+msgid_plural "Successfully moved %d items"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "There was a problem processing your request."
+msgstr ""
+
+msgid "This album contains no items to move."
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "Choose the items you want to move"
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid ""
+"The destination you chose does not accept sub-albums, so all sub-albums have "
+"been deselected."
+msgstr ""
+
+msgid "Warning"
+msgstr ""
+
+msgid ""
+"The destination you chose only accepts sub-albums, so all non-albums have "
+"been deselected."
+msgstr ""
+
+msgid "You are not allowed to move this item away from here."
+msgstr ""
+
+msgid "You are not allowed to move an album to the chosen destination."
+msgstr ""
+
+msgid "You are not allowed to move an item to the chosen destination."
+msgstr ""
+
+msgid "You cannot move an album into its own subtree."
+msgstr ""
+
+msgid "Destination"
+msgstr ""
+
+msgid "Choose a new album for them"
+msgstr ""
+
+msgid "You don't have the permission to add items in this album"
+msgstr ""
+
+msgid "No destination chosen"
+msgstr ""
+
+msgid "Move"
+msgstr ""
+
+msgid "Enter a URL"
+msgstr ""
+
+msgid "Enter some text describing the URL"
+msgstr ""
+
+msgid "Enter an image URL"
+msgstr ""
+
+#. HINT: Button label for Bold
+msgid "B"
+msgstr ""
+
+#. HINT: Button label for italic
+msgid "i"
+msgstr ""
+
+msgid "list"
+msgstr ""
+
+msgid "bullet"
+msgstr ""
+
+msgid "url"
+msgstr ""
+
+msgid "image"
+msgstr ""
+
+msgid "color"
+msgstr ""
+
+#, c-format
+msgid "You can also use the %scolor name%s for example: %sYour Text%s"
+msgstr ""
+
+msgid "Admin Options"
+msgstr ""
+
+msgid "Login to your account"
+msgstr ""
+
+msgid "Your password has been recovered, please login."
+msgstr ""
+
+msgid ""
+"The administration session has expired, please re-authenticate to access the "
+"administration area."
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "You must enter a username"
+msgstr ""
+
+#, c-format
+msgid ""
+"Logins to this account are temporarily disabled due to multiple failed login "
+"attempts.  Wait for access to be restored, or use the %srecover password%s "
+"page to re-enable this account."
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "You must enter a password"
+msgstr ""
+
+msgid "Your login information is incorrect.  Please try again."
+msgstr ""
+
+#, c-format
+msgid ""
+"Lost or forgotten passwords can be retrieved using the %srecover password%s "
+"page"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+#, c-format
+msgid "Welcome, %s!"
+msgstr ""
+
+#, c-format
+msgid "Date: %s"
+msgstr ""
+
+#, c-format
+msgid "Owner: %s"
+msgstr ""
+
+#, c-format
+msgid "Size: %d item"
+msgid_plural "Size: %d items"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "(%d item total)"
+msgid_plural "(%d items total)"
+msgstr[0] ""
+msgstr[1] ""
+
+#, c-format
+msgid "Views: %d"
+msgstr ""
+
+msgid "&laquo; album actions &raquo;"
+msgstr ""
+
+msgid "&laquo; item actions &raquo;"
+msgstr ""
+
+msgid "Album actions"
+msgstr ""
+
+msgid "Item actions"
+msgstr ""
+
+msgid "Pagination"
 msgstr ""
 
 msgid "last"
@@ -82,16 +720,303 @@ msgstr ""
 msgid "first"
 msgstr ""
 
-msgid "previous"
+msgid "Loading.."
 msgstr ""
 
-msgid "Page navigation"
+msgid "EXIF Photo Properties"
 msgstr ""
 
-msgid "Page:"
+msgid "details"
 msgstr ""
 
-msgid "More"
+msgid "summary"
+msgstr ""
+
+msgid "Quick URLs"
+msgstr ""
+
+msgid "Show URLs"
+msgstr ""
+
+msgid ""
+"Warning! The permissions for this item are set so that unauthenticated users "
+"may not view it. If you are planning on linking to this item in a public "
+"forum or HTML page, the viewers will most likely not be able to access it."
+msgstr ""
+
+msgid ""
+"Warning! The permissions for this item are set so that unauthenticated users "
+"may not view the full sized version, but the resized version is available. "
+"Links to the resized version are being used, this may not be what you want."
+msgstr ""
+
+msgid "Through this page you can quickly get formatted URLs for this item."
+msgstr ""
+
+msgid ""
+"These can be used to post the item/image in forums and HTML pages by copying "
+"the code in the boxes below and pasting it into your application/browser."
+msgstr ""
+
+msgid "HTML Formatted Links"
+msgstr ""
+
+msgid "Link to the page of the item:"
+msgstr ""
+
+msgid "CLK"
+msgstr ""
+
+msgid "Show image directly:"
+msgstr ""
+
+msgid "Show image directly (resized version will be shown):"
+msgstr ""
+
+msgid "Show clickable resized image linking to original:"
+msgstr ""
+
+msgid "Show a clickable thumbnail linking to the item:"
+msgstr ""
+
+msgid "TMB"
+msgstr ""
+
+msgid "BBCode Formatted Links"
+msgstr ""
+
+msgid "Show a clickable resized image linking to the original:"
+msgstr ""
+
+msgid "Show a clickable thumbnail linking to the original:"
+msgstr ""
+
+msgid "Misc."
+msgstr ""
+
+#, c-format
+msgid "The ID for this item is %s"
+msgstr ""
+
+msgid "Download URL for original item:"
+msgstr ""
+
+#, c-format
+msgid "The ID of the resized version that we're using is %s,"
+msgstr ""
+
+msgid "URL for resized version:"
+msgstr ""
+
+#, c-format
+msgid "The ID of the thumbnail is %s."
+msgstr ""
+
+msgid "URL for thumbnail:"
+msgstr ""
+
+msgid "Hidden"
+msgstr ""
+
+msgid ""
+"Hidden items are not visible to guest users until the page for the item is "
+"accessed directly."
+msgstr ""
+
+msgid ""
+"Contents of hidden albums are restricted until the URL for the album is "
+"visited."
+msgstr ""
+
+msgid ""
+"Note that guests need permission to view resizes and/or original items, as "
+"visiting the direct URL grants only simple view permission; access to "
+"resizes/originals is still controlled by item permissions."
+msgstr ""
+
+msgid "Keyword cloud"
+msgstr ""
+
+msgid "&laquo; Keyword Album &raquo;"
+msgstr ""
+
+#, c-format
+msgid "%s Location Map"
+msgstr ""
+
+msgid "Move history"
+msgstr ""
+
+msgid "move"
+msgstr ""
+
+msgid "zoom"
+msgstr ""
+
+msgid "start"
+msgstr ""
+
+msgid "window"
+msgstr ""
+
+msgid "Photo Map"
+msgstr ""
+
+msgid "Filtered on"
+msgstr ""
+
+msgid "Grab coordinates from Map"
+msgstr ""
+
+msgid ""
+"There was a hacking attempt on the filter name, please remove the filter "
+"option from the address bar."
+msgstr ""
+
+#, c-format
+msgid ""
+"There are no markers created or a bad marker set is currently selected. "
+"Please review settings in the %scontrol panel%s."
+msgstr ""
+
+msgid "There are no items with GPS coordinates"
+msgstr ""
+
+msgid "Check the Wiki for more information"
+msgstr ""
+
+msgid "There are no items available to be mapped"
+msgstr ""
+
+#, c-format
+msgid ""
+"There were no items found in the selected %s, what would you like to do?"
+msgstr ""
+
+#, c-format
+msgid "%sGo Back%s to the Album and add coordinates to items"
+msgstr ""
+
+#, c-format
+msgid "Show me the %sdefault map%s"
+msgstr ""
+
+#, c-format
+msgid ""
+"You do not have a profile setup for this website to use the Google Map. "
+"Review your settings in the %sAdmin Panel%s or %scheck the Wiki%s."
+msgstr ""
+
+msgid "Loading, please wait..."
+msgstr ""
+
+#. HINT: Hints or suggestions
+msgid "Tips"
+msgstr ""
+
+msgid "Click on the map to choose the point."
+msgstr ""
+
+msgid "Each click will create a marker to ease aiming."
+msgstr ""
+
+msgid ""
+"When you are satisfied with the coordinates, click <B>Save</B> above and the "
+"center of the map and the zoom level will be copied in the GPS and ZoomLevel "
+"fields of the item."
+msgstr ""
+
+msgid "MENU"
+msgstr ""
+
+msgid "Save these coordinates"
+msgstr ""
+
+msgid "Coordinates"
+msgstr ""
+
+msgid "Zoom level"
+msgstr ""
+
+msgid "Google Map Administration"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+#. HINT: Address not found
+msgid "Not found"
+msgstr ""
+
+msgid "No Value"
+msgstr ""
+
+msgid "Get via a Map"
+msgstr ""
+
+msgid "Get via EXIF headers"
+msgstr ""
+
+msgid "Write GPS to EXIF header"
+msgstr ""
+
+msgid "No GPS coordinates to write."
+msgstr ""
+
+msgid "This picture already has GPS coordinates in the header"
+msgstr ""
+
+msgid "Get via address"
+msgstr ""
+
+#, c-format
+msgid "%s Coordinates:"
+msgstr ""
+
+msgid "No coordinates defined"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Uncheck All"
+msgstr ""
+
+msgid "You must enter some text to search for!"
+msgstr ""
+
+#, c-format
+msgid "Results %d - %d"
+msgstr ""
+
+#, c-format
+msgid "Show all %d"
+msgstr ""
+
+msgid "No results found for"
+msgstr ""
+
+msgid "View these results in a slideshow"
+msgstr ""
+
+#, c-format
+msgid "%s Search Results for "
+msgstr ""
+
+msgid "Search Criteria"
+msgstr ""
+
+msgid "Search All Modules"
+msgstr ""
+
+#, c-format
+msgid "Results %d - %d of %d, Page %d of %d"
+msgstr ""
+
+msgid "&laquo; Back"
+msgstr ""
+
+msgid "Next &raquo;"
 msgstr ""
 
 msgid "Search your Gallery"
@@ -103,8 +1028,24 @@ msgstr ""
 msgid "Searching in progress, please wait!"
 msgstr ""
 
-msgid "Search"
+msgid "Custom Thumbnail"
 msgstr ""
 
-msgid "Advanced Search"
+msgid "Remove custom thumbnail for this item"
+msgstr ""
+
+msgid "Upload a JPEG image to use as the thumbnail for this item."
+msgstr ""
+
+msgid "Image does not need to be thumbnail size; it will be resized as needed."
+msgstr ""
+
+msgid ""
+"No toolkit available for resizing so uploaded image must be thumbnail sized."
+msgstr ""
+
+msgid "Missing image file"
+msgstr ""
+
+msgid "Thumbnail image must be a JPEG"
 msgstr ""
