@@ -13,7 +13,7 @@
     {assign var="boxesLayout" value=$theme.params.boxesLayout}
 {/if}
 <div class="row-fluid no-gutter theme-photo-wrapper-row{if !empty($theme.sourceImageViewIndex) && $theme.sourceImageViewIndex == $theme.imageViewsIndex} giFullImage{/if}
-{if $image.viewInLine && $image.height > $image.width} giPortrait{/if}">
+{if $image.viewInline && $image.height > $image.width} giPortrait{/if}">
     <div class="photo-wrapper{if $boxesLayout == "right" } col-xs-12 col-sm-8{/if} ">
         <div class="photo-overlay">
             {strip}
