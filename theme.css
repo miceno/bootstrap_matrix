@@ -18,6 +18,7 @@
  * .autoComplete*        Styles for autoComplete popup lists
  */
 
+
 body.gallery {
     background-color: #fff;
     font: 400 16px "Open Sans";
@@ -488,6 +489,7 @@ td.bsw_BlockCommands {
     font-size: 2em;
     font-weight: bold;
     vertical-align: middle;
+    text-shadow: 2px 2px 1px rgba(0,0,0,.3);
 }
 
 #gsContent .gcBackground1,
