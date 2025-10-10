@@ -55,10 +55,9 @@
     {if $useMinifiedCss}
         {assign var="theme_css_file" value="theme.min.css"}
         {assign var="print_css_file" value="print.min.css"}
-    {else}
+    {/if}
     <link rel="stylesheet" type="text/css" href="{g->theme url=`$theme_css_file`?`$theme.params._version`}"/>
     <link rel="stylesheet" type="text/css" media="print" href="{g->theme url=`$print_css_file`?`$theme.params._version`}"/>
-    {/if}
 
     {php}
         $includefilepath = GALLERY_CONFIG_DIR . '/ga.js';
