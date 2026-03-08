@@ -157,6 +157,10 @@ pre, tt {
     margin-top: 1em;
 }
 
+.logo {
+    width: 141px;
+}
+
 .header .giDescription {
     font-size: inherit;
     margin-top: 1em;
