@@ -142,7 +142,7 @@
                     </button>
                     {strip}
                     <a class="navbar-brand" href="{g->url}">
-                        <img class="logo" src="{g->theme url="`$theme.themeUrl`/images/gallery_logo.png"}" alt="Logo de l'Arxiu Històric del Poblenou"/>
+                        <img class="logo" src="{g->theme url="/images/gallery_logo.png"}" alt="Logo de l'Arxiu Històric del Poblenou"/>
                     </a>
                     {/strip}
                 </div> {* navbar-header *}
