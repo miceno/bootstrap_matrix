@@ -127,7 +127,7 @@
         {include file="gallery:`$theme.moduleTemplate`" l10Domain=$theme.moduleL10Domain}
     {elseif $theme.pageType == 'progressbar'}
         <div id="gsHeader" class="row-fluid">
-            <img src="{g->url href="images/galleryLogo_sm.gif"}" width="107" height="48" alt=""/>
+            <img class="logo" src="{g->url href="images/gallery-logo-sm.png"}" width="107" height="48" alt=""/>
         </div>
         {g->theme include="progressbar.tpl"}
     {else}
@@ -142,7 +142,7 @@
                     </button>
                     {strip}
                     <a class="navbar-brand" href="{g->url}">
-                        <img src="{g->url href="`$theme.themeUrl`/images/gallery_logo.png"}" alt="Logo de l'Arxiu Històric del Poblenou"/>
+                        <img class="logo" src="{g->url href="`$theme.themeUrl`/images/gallery_logo.png"}" alt="Logo de l'Arxiu Històric del Poblenou"/>
                     </a>
                     {/strip}
                 </div> {* navbar-header *}
